@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './apple-watch.component.scss'
 })
 export class AppleWatchComponent {
+  selectedImage = 0;
 
+  selectImage(index: number): void {
+    this.selectedImage = index;
+  }
 }

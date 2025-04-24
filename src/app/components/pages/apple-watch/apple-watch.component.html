@@ -3,8 +3,175 @@
     <div class="page-title-area">
         <div class="container">
             <div class="hero-content">
-                <img src="assets/images/watch/hero.png" alt="Apple Watch" class="hero-image">
-                <p class="gradient-text">A healthy leap ahead</p>
+                <img src="assets/images/watch/videoframe.png" alt="Apple Watch" class="hero-image">
+                <img src="assets/images/watch/logo_s10.png" alt="Apple Watch Logo" class="watch-logo">
+                <p class="classic-text">Thinstant classic.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section">
+    <div class="container">
+        <div class="features-row">
+            <div class="feature-card">
+                <div class="watch-feature-text">
+                    <h2>The thinnest Apple Watch ever, with our biggest display.</h2>
+                </div>
+                <div class="watch-feature-image">
+                    <img src="assets/images/watch/highlights.jpg" alt="Apple Watch Display">
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="charging-feature">
+                    <h2>Fastest-charging Apple Watch ever.</h2>
+                    <p>Get 80% battery in 30 minutes.</p>
+                </div>
+                <div class="charging-image">
+                    <img src="assets/images/watch/highlights_charge.jpg" alt="Apple Watch Charging">
+                </div>
+            </div>
+        </div>
+
+        <div class="features-row third-row">
+            <div class="feature-card water-card" style="background-image: url('assets/images/watch/highlights_sensors.jpg')">
+                <div class="water-feature">
+                    <h2>Enhance your aquatic adventures with depth and water temperature sensors.</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="features-row second-row">
+            <div class="feature-card">
+                <div class="health-feature">
+                    <h2>Get invaluable health insights, including sleep apnea notifications</h2>
+                </div>
+                <div class="health-image">
+                    <img src="assets/images/watch/sleep.jpg" alt="Apple Watch Health Features">
+                </div>
+            </div>
+            <div class="feature-card fitness-card" style="background-image: url('assets/images/watch/fit.jpg')">
+                <div class="fitness-feature">
+                    <h2>Motivation on your wrist. Apple Watch inspires you to stay active, day after day.</h2>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+</section>
+
+<!-- Dark Theme Section -->
+<section class="dark-theme-section">
+    <div class="container">
+        <div class="features-row">
+            <div class="feature-card jet-black-card" style="background-image: url('assets/images/watch/hero1.jpg')">
+                <div class="jet-black-feature">
+                    <h2>Jet Black.</h2>
+                    <h3>Hi, gloss.</h3>
+                    <p>For the first time, Apple Watch comes in an eye-catching Jet Black aluminum.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery-row" [class.active]="selectedImage === 0">
+            <div class="gallery-card">
+                <img src="assets/images/watch/finish.jpg" alt="Digital Crown Detail" class="gallery-image">
+            </div>
+            <div class="gallery-card">
+                <img src="assets/images/watch/finish2.jpg" alt="Watch Display" class="gallery-image">
+            </div>
+        </div>
+        <div class="gallery-row" [class.active]="selectedImage === 1">
+            <div class="gallery-card">
+                <img src="assets/images/watch/finish3.jpg" alt="Watch Hero 1" class="gallery-image">
+            </div>
+            <div class="gallery-card">
+                <img src="assets/images/watch/finish4.jpg" alt="Watch Hero 2" class="gallery-image">
+            </div>
+        </div>
+        <div class="gallery-row" [class.active]="selectedImage === 2">
+            <div class="gallery-card">
+                <img src="assets/images/watch/finish5.jpg" alt="Watch Side View" class="gallery-image">
+            </div>
+            <div class="gallery-card">
+                <img src="assets/images/watch/finish6.jpg" alt="Watch Front View" class="gallery-image">
+            </div>
+        </div>
+        <div class="gallery-dots">
+            <button class="dot" [class.active]="selectedImage === 0" (click)="selectImage(0)"></button>
+            <button class="dot" [class.active]="selectedImage === 1" (click)="selectImage(1)"></button>
+            <button class="dot" [class.active]="selectedImage === 2" (click)="selectImage(2)"></button>
+        </div>
+
+        <div class="features-row">
+            <div class="feature-card titanium-card" style="background-image: url('assets/images/watch/t.png')">
+                <div class="titanium-feature">
+                    <h2>Titanium.</h2>
+                    <p>Polished to perfection.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- White Theme Section -->
+<section class="white-theme-section">
+    <div class="container">
+        <div class="features-row">
+            <div class="feature-card connected-card" style="background-image: url('assets/images/watch/connected.jpg')">
+                <div class="connected-feature">
+                    <h2>Intelligent ways to stay connected.</h2>
+                    <p>Stay connected to the people and things that you care about most. Cellular lets you keep in touch, even when you don't have your iPhone nearby.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="features-row dual-cards">
+            <div class="feature-card image-card" style="background-image: url('assets/images/watch/call.jpg')">
+                <div class="card-text bottom-text">
+                    <h3>Go without your phone.</h3>
+                </div>
+            </div>
+            <div class="feature-card image-card" style="background-image: url('assets/images/watch/song.jpg')">
+                <div class="card-text top-text">
+                    <h3>Hear here.</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="features-row">
+            <div class="feature-card safety-card" style="background-image: url('assets/images/watch/safety.png')">
+                <div class="safety-content">
+                    <h2>Keep help close at hand.</h2>
+                    <p>Life is full of the unexpected. That's why Apple Watch is there to call for help when you need it most. It can even let someone know when you've safely made it to a destination.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="features-row">
+            <div class="feature-card safety-features-card">
+                <div class="safety-features">
+                    <div class="feature-column">
+                        <div class="icon">
+                            <img src="assets/images/watch/icon_sos.png" alt="SOS Icon">
+                        </div>
+                        <p>Need help? Apple Watch has your back. Just press and hold the side button to <strong>call emergency services and share your location.</strong></p>
+                    </div>
+                    <div class="feature-column">
+                        <div class="icon">
+                            <img src="assets/images/watch/icon_fall.png" alt="Fall Detection Icon">
+                        </div>
+                        <p>Apple Watch can automatically <strong>detect if you've taken a hard fall or been in a severe car crash.</strong> If you need help, it will call emergency services, share your location, and notify your emergency contacts.</p>
+                    </div>
+                    <div class="feature-column">
+                        <div class="icon">
+                            <img src="assets/images/watch/icon_check.png" alt="Check In Icon">
+                        </div>
+                        <p>Check In notifies someone when you arrive at a destination. If you're going for a run after dark, you can start a <strong>Check In for the duration of your workout</strong> to automatically notify a friend when you're done.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

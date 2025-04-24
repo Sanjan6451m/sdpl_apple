@@ -82,6 +82,7 @@ import { AppleUpgradeComponent } from './components/pages/apple-upgrade/apple-up
 import { ImacComponent } from './components/pages/imac/imac.component'; 
 import { MacMiniComponent } from './components/pages/mac-mini/mac-mini.component';
 import { AppleWatchComponent } from './components/pages/apple-watch/apple-watch.component';
+import { AppleProgramscreenComponent } from './components/pages/apple-programscreen/apple-programscreen.component';
 
 const routes: Routes = [
     {path: '', component: HomeOneComponent},
@@ -166,6 +167,7 @@ const routes: Routes = [
     {path: 'imac', component: ImacComponent},
     {path: 'mac-mini', component: MacMiniComponent},
     {path: 'apple-watch', component: AppleWatchComponent},
+    {path: 'apple-programscreen', component: AppleProgramscreenComponent},
     // Here add new pages component
 
     {path: '**', component: ErrorComponent} // This line will remain down from the whole pages component list

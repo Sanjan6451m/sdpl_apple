@@ -774,9 +774,16 @@
 
             &.action-button-card, &.crash-card {
                 .action-image img, .crash-image img {
-                    width: 45%;
+                    width: 100% !important;
+                    margin-right: 0px !important;
                 }
             }
+        }
+    }
+
+    .camera-background {
+        img {
+            margin-top: 56% !important;
         }
     }
 }

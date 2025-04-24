@@ -590,11 +590,23 @@
 }
 
 @media (max-width: 768px) {
+    .hero-section {
+        min-height: 80vh;
+    }
+
+    .page-title-area {
+        padding: 80px 0;
+    }
+
     .hero-content {
         .hero-layout {
+            gap: 30px;
+
             .hero-text {
+                gap: 15px;
+
                 .introducing {
-                    font-size: 18px;
+                    font-size: 24px;
                 }
 
                 .hero-logo {
@@ -602,34 +614,205 @@
                 }
 
                 .hero-description {
-                    font-size: 24px;
+                    font-size: 26px;
                 }
             }
 
             .hero-image {
+                gap: 20px;
+
                 .hero-main {
-                    width: 85%;
+                    width: 80%;
                 }
 
                 .ai-text {
-                    font-size: 32px;
+                    font-size: 28px;
                 }
             }
         }
     }
 
     .features-section {
+        padding: 60px 0;
+
         .feature-card {
-            padding: 40px 20px;
-            
+            padding: 30px 25px;
+
             &.display-card {
                 .text-content {
+                    margin-bottom: 15px;
+
                     h2 {
-                        font-size: 32px;
+                        font-size: 26px;
+                        margin-bottom: 6px;
                     }
+
                     .subtitle {
-                        font-size: 16px;
+                        font-size: 14px;
                     }
+                }
+            }
+
+            &.durability-card {
+                .content-wrapper {
+                    min-height: 400px;
+
+                    .text-content {
+                        top: 60px;
+                        padding: 0 25px;
+
+                        h2 {
+                            font-size: 28px;
+                        }
+                    }
+                }
+            }
+
+            &.battery-card {
+                padding: 40px 30px;
+
+                .content-wrapper {
+                    h2 {
+                        font-size: 26px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+
+                    .battery-stats {
+                        h3 {
+                            font-size: 28px;
+                        }
+
+                        p {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        min-height: 70vh;
+    }
+
+    .page-title-area {
+        padding: 60px 0;
+    }
+
+    .hero-content {
+        .hero-layout {
+            gap: 20px;
+
+            .hero-text {
+                gap: 12px;
+
+                .introducing {
+                    font-size: 20px;
+                }
+
+                .hero-logo {
+                    width: 90%;
+                }
+
+                .hero-description {
+                    font-size: 22px;
+                }
+            }
+
+            .hero-image {
+                gap: 15px;
+
+                .hero-main {
+                    width: 90%;
+                }
+
+                .ai-text {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+    .features-section {
+        padding: 40px 0;
+
+        .feature-card {
+            padding: 20px;
+
+            &.display-card {
+                .text-content {
+                    margin-bottom: 12px;
+
+                    h2 {
+                        font-size: 22px;
+                        margin-bottom: 5px;
+                    }
+
+                    .subtitle {
+                        font-size: 13px;
+                    }
+                }
+            }
+
+            &.durability-card {
+                .content-wrapper {
+                    min-height: 350px;
+
+                    .text-content {
+                        top: 40px;
+                        padding: 0 20px;
+
+                        h2 {
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+
+            &.battery-card {
+                padding: 30px 20px;
+
+                .content-wrapper {
+                    h2 {
+                        font-size: 22px;
+                        margin-bottom: 10px;
+                    }
+
+                    p {
+                        font-size: 13px;
+                    }
+
+                    .battery-stats {
+                        h3 {
+                            font-size: 24px;
+                            margin-bottom: 5px;
+                        }
+
+                        p {
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+
+            .feature-image {
+                margin-top: 15px;
+            }
+
+            .feature-content {
+                h2 {
+                    font-size: 22px;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    font-size: 13px;
+                    line-height: 1.4;
                 }
             }
         }

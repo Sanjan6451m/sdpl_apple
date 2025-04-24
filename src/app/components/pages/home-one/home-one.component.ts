@@ -147,7 +147,7 @@ export class HomeOneComponent implements OnInit {
             description1: 'Flexible leasing plans to equip your teams without upfront investment.',
             description2: 'Upgrade without the upfront cost—lease the latest tech today.',
             description3: 'Scalable leasing models to stay future-ready and financially agile.',
-            img: 'assets/images/leasing_banner_new.jpeg',
+            img: 'assets/images/leasing_new_bannerimg.png',
             alt: 'Leasing Services',
             pageLink: '/leasing'
         },
@@ -157,7 +157,7 @@ export class HomeOneComponent implements OnInit {
             description1: 'Finance your Apple ecosystem with custom plans that fit your budget.',
             description2: 'Get the tech you need—pay the way that works for you.',
             description3: 'Smart financing options for seamless IT expansion and upgrades.',
-            img: 'assets/images/financing_banner_new.jpeg',
+            img: 'assets/images/financing_b1.png',
             alt: 'Financing Solutions',
             pageLink: '/apple-financing'
         }

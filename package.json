@@ -5,7 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --configuration production",
-    "test": "ng test"
+    "test": "ng test",
+    "vercel-build": "ng build --configuration production"
   },
   "private": true,
   "dependencies": {

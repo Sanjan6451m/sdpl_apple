@@ -1,22 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-training',
-  // standalone: true,
-  // imports: [],
+  standalone: true,
+  imports: [],
   templateUrl: './training.component.html',
   styleUrl: './training.component.scss'
 })
-export class TrainingComponent implements OnInit {
+export class TrainingComponent {
 
-  constructor() { }
-
-    ngOnInit(): void {}
-    
-    // Tabs
-    currentTab = 'tab1';
-    switchTab(event: MouseEvent, tab: string) {
-        event.preventDefault();
-        this.currentTab = tab;
-    }
 }

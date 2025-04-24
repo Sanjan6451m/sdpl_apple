@@ -1,11 +1,11 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule, Router } from '@angular/router';
 
 @Component({
   selector: 'app-mobility',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './mobility.component.html',
   styleUrl: './mobility.component.scss'
 })
@@ -121,5 +121,4 @@ export class MobilityComponent implements OnInit {
   navigateToHome(): void {
     this.router.navigate(['/']);
   }
-
 }

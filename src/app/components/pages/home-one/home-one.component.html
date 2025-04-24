@@ -1,919 +1,1351 @@
-<section class="hero-section">
-    <div class="container">
-        <div class="logo-container">
-            <img src="assets/images/Minimal-Business-Logo-Reveal-f-unscreen.gif" alt="Superior Digital Logo" class="main-logo">
+<section class="">
+    <owl-carousel-o [options]="customOptions">
+        <ng-container *ngFor="let slide of slides">
+            <ng-template carouselSlide [id]="slide.id">
+                <div class="d-table">
+                    <div class="d-table-cell">
+                        <div class="container-fluid">
+                            <div class="row align-items-center">
+                                <div class="col-lg-12" style="padding: 0px !important;">
+                                    <div class="banner-content" [style.background-image]="'url(' + slide.img + ')'"
+                                        style="object-fit: contain;">
+                                        <div class="banner-text">
+                                            <h1>{{slide.title}}</h1>
+                                            <p>{{slide.description1}}</p>
+                                            <p>{{slide.description2}}</p>
+                                            <p>{{slide.description3}}</p>
+                                            <div class="banner-btn">
+                                                <a [href]="slide.pageLink" class="box-btn border-btn"
+                                                    target="_blank">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </ng-container>
+    </owl-carousel-o>
+
+    <!--  <div class="home-shape">
+        <div class="shape1"><img src="assets/images/shape/1.png" alt="shape"></div>
+        <div class="shape2"><img src="assets/images/shape/2.png" alt="shape"></div>
+        <div class="shape3"><img src="assets/images/shape/3.png" alt="shape"></div>
+        <div class="shape4"><img src="assets/images/shape/4.png" alt="shape"></div>
+        <div class="shape5"><img src="assets/images/shape/5.png" alt="shape"></div>
+        <div class="shape6"><img src="assets/images/shape/6.png" alt="shape"></div>
+    </div> -->
+</section>
+
+<section class="home-service-area pt-60 pb-70 mobile-superior-container" id="superior_digital">
+    <div class="home-one-container">
+        <div class="text-section-web">
+            <h4 style="color: red; font-size: 18px;">Why Superior Digital</h4>
+            <h1 style="font-size: 36px;">Future-Ready IT, Designed for Your Business Today.</h1>
         </div>
-        
-        <div class="circles-container">
-            <div class="circle circle-1" [@circleAnimation]="circleState">
-                <i class="bx bx-devices"></i>
+        <div class="text-section">
+            <div class="text-section-inner">
+                <h4>Why Superior Digital</h4>
+                <h1>Future-Ready IT, Designed for Your Business Today.</h1>
             </div>
-            
-            <div class="circle circle-2" [@circleAnimation]="circleState">
-                <i class="bx bx-cloud"></i>
-            </div>
-            
-            <div class="circle circle-3" [@circleAnimation]="circleState">
-                <i class="bx bx-shield-quarter"></i>
-            </div>
-            
-            <div class="circle circle-4" [@circleAnimation]="circleState">
-                <i class="bx bx-wifi"></i>
-            </div>
-            
-            <div class="circle circle-5" [@circleAnimation]="circleState">
-                <i class="bx bx-cog"></i>
-            </div>
-            
-            <div class="circle circle-6" [@circleAnimation]="circleState">
-                <i class="bx bx-code-alt"></i>
+            <p class="subtext">The way we work is evolving—your IT infrastructure should evolve with it.</p>
+            <p>At Superior Digital, we empower businesses with cutting-edge Apple technology and integrated solutions
+                designed to scale with your vision.</p>
+            <p>
+                The way we work is evolving—your IT infrastructure should evolve with it.</p>
+            <p>At Superior Digital, we empower businesses with cutting-edge Apple technology and integrated solutions
+                designed to scale with your vision.</p>
+            <p>From device deployment and mobility to AV setups, networking, and flexible financing, we make IT simple,
+                smart, and seamless.</p>
+            <p>Backed by strong partnerships and a team of certified experts, we deliver more than just products—we
+                deliver possibilities.</p>
+            <p>Let's transform the way your business works, connects, and grows—together.</p>
+        </div>
+    
+        <div class="image-section">
+            <img src="assets/images/home1.jpeg" alt="stats" class="office-image" width="70%" height="70%" />
+            <div class="stats-card">
+                <h3 style="color: #ea4747de;
+                font-weight: 200;
+                font-size: 20px;">Helping customer across the globe</h3>
+                <div class="stats-grid">
+                    <div>
+                        <p class="stat-number">{{customerCount}}+</p>
+                        <p class="stat-number-text">Customers</p>
+                    </div>
+                    <div>
+                        <p class="stat-number">{{partnerCount}}+</p>
+                        <p class="stat-number-text">Partners</p>
+                    </div>
+                    <div>
+                        <p class="stat-number">{{deviceCount | number:'1.0-0'}}+</p>
+                        <p class="stat-number-text">Devices Deployed</p>
+                    </div>
+                    <div>
+                        <p class="stat-number">{{projectCount}}+</p>
+                        <p class="stat-number-text">Projects</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<div class="content-sections" [class.visible]="contentVisible">
-    <section class="stats-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center mb-4">
-                    <h2>Our Achievements</h2>
-                    <p>Delivering excellence in digital solutions</p>
+<style>
+.superior-container {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.text-section {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.text-section h4 {
+    color: var(--mainColor);
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.text-section h1 {
+    font-size: 36px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: #293a5c;
+}
+
+.text-section p {
+    color: #7a7e9a;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.text-section .subtext {
+    font-weight: 600;
+    color: #293a5c;
+}
+
+.image-section {
+    flex: 1;
+    position: relative;
+    margin-top: 3%;
+}
+
+.office-image {
+    /* width: 100%; */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.stats-card {
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffffff6e;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 500px;
+}
+
+.stats-card h3 {
+    color: #ea4747de;
+    font-weight: 200;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 24px;
+    font-weight: 700;
+    color: #293a5c;
+    margin-bottom: 5px;
+}
+
+.stat-number-text {
+    font-size: 14px;
+    color: #7a7e9a;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .superior-container {
+        max-width: 1000px;
+    }
+    
+    .text-section h1 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 991px) {
+    .superior-container {
+        flex-direction: column;
+        gap: 60px;
+    }
+    
+    .text-section {
+        padding-right: 0;
+    }
+    
+    .image-section {
+        margin-top: 20px;
+    }
+    
+    .stats-card {
+        position: relative;
+        bottom: 0;
+        margin: -50% 0px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .superior-container {
+        padding: 0 15px;
+    }
+    
+    .text-section h1 {
+        font-size: 28px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stats-card {
+        padding: 20px;
+    }
+    
+    .stat-number {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .text-section h1 {
+        font-size: 24px;
+    }
+    
+    .text-section h4 {
+        font-size: 16px;
+    }
+    
+    .text-section p {
+        font-size: 14px;
+    }
+    
+    .stats-card h3 {
+        font-size: 18px;
+    }
+    
+    .stats-grid {
+        gap: 10px;
+    }
+    
+    .stat-number {
+        font-size: 18px;
+    }
+    
+    .stat-number-text {
+        font-size: 12px;
+    }
+}
+</style>
+
+<section class="services-section">
+    <div class="services-intro">    
+        <div class="intro-content">
+            <h2>Our Services</h2>
+            <p>Adding value to every aspect of your business through reliable end-to-end IT solutions.</p>
+            <a href="#" class="explore-btn">Explore All Services <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+    <div class="services-carousel-section bg-color">
+        <owl-carousel-o [options]="customOptions1" class="services-carousel">
+            <ng-template carouselSlide>
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="assets/images/case/m3.png" alt="Pre-Sales">
+                    </div>
+                    <div class="card-content">
+                        <h3>Apple Pre-Sales Expertise</h3>
+                        <p>We help you choose the right Apple devices with expert guidance tailored to your business needs and budget.
+                            Avoid overbuying and make smart, confident investments from the start.</p>
+                            <!-- <p>We guide you through product selection, configuration, and compatibility.
+                                Reduce risk, avoid overbuying, and invest smartly from the start.
+                                Make confident decisions backed by real Apple expertise.</p> -->
+                        <a routerLink="/presales-support" class="learn-more">Know More »</a>
+                    </div>
+                </div>
+            </ng-template>
+
+            <ng-template carouselSlide>
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="assets/images/case/m7.png" alt="Demos">
+                    </div>
+                    <div class="card-content">
+                        <h3>Apple Demos & Proof of Concept Solutions</h3>
+                        <p>Experience how Apple fits your business with live demos and custom proof of concepts.
+                            Test devices and workflows in your environment before you invest.</p>
+                        <!-- <p>We offer live demos and real-world proof of concepts customised to your needs.</p> -->
+                        <a routerLink="/demo" class="learn-more">Know More »</a>
+                    </div>
+                </div>
+            </ng-template>
+
+            <ng-template carouselSlide>
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="assets/images/case/m8.png" alt="Trade-In">
+                    </div>
+                    <div class="card-content">
+                        <h3>Apple Device Trade-In Program</h3>
+                        <p>Easily upgrade with our Apple Trade-In program—get value for old devices toward new ones.
+                            Secure, eco-friendly, and seamless for single or fleet replacements.</p>
+                        <a routerLink="/buy-back" class="learn-more">Know More »</a>
+                    </div>
+                </div>
+            </ng-template>
+
+            <ng-template carouselSlide>
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="assets/images/case/m6.png" alt="Support">
+                    </div>
+                    <div class="card-content">
+                        <h3>Apple Services with Expert Onsite Support</h3>
+                        <p>Get expert Apple support onsite or remotely—from setup to troubleshooting.
+                            Certified engineers ensure smooth performance, tailored to your team's needs.</p>
+                        <a routerLink="/onsite-support" class="learn-more">Know More »</a>
+                    </div>
+                </div>
+            </ng-template>
+
+            <ng-template carouselSlide>
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="assets/images/case/m5.png" alt="Partnerships">
+                    </div>
+                    <div class="card-content">
+                        <h3>Strategic Partnerships with Leading Brands</h3>
+                        <p>Apple is just the start—we integrate top brands like Logitech, Bose, and Jabra.
+                            Create complete, reliable solutions that boost productivity and performance.</p>
+                        <a routerLink="/partnering" class="learn-more">Know More »</a>
+                    </div>
+                </div>
+            </ng-template>
+
+            <ng-template carouselSlide>
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="assets/images/case/m4.png" alt="Purchase">
+                    </div>
+                    <div class="card-content">
+                        <h3>Tailored Apple Purchase Programs</h3>
+                        <p>Every business is unique—our Apple purchase plans are too.
+                            Get flexible options, volume pricing, and financing tailored to your needs.</p>
+                        <a routerLink="/purchase-program" class="learn-more">Know More »</a>
+                    </div>
+                </div>
+            </ng-template>
+
+            <ng-template carouselSlide>
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="assets/images/case/m4.png" alt="Purchase">
+                    </div>
+                    <div class="card-content">
+                        <h3>Seamless Apple Deployment & Integration</h3>
+                        <p>Zero-touch Apple deployment with MDM and Business Manager—fast, secure, and seamless.
+                            Ideal for startups to enterprise scale-ups, with expert setup and minimal downtime.</p>
+                        <a routerLink="/apple-deployment" class="learn-more">Know More »</a>
+                    </div>
+                </div>
+            </ng-template>
+
+            <ng-template carouselSlide>
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="assets/images/case/m4.png" alt="Purchase">
+                    </div>
+                    <div class="card-content">
+                        <h3>Apple Financing & Flexible Payment Plans</h3>
+                        <p>Empower your team with Apple tech through flexible leasing and financing.
+                            Enjoy predictable costs, easy upgrades, and stress-free scaling.</p>
+                        <a routerLink="/apple-financing" class="learn-more">Know More »</a>
+                    </div>
+                </div>
+            </ng-template>
+
+            <ng-template carouselSlide>
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="assets/images/case/m4.png" alt="Purchase">
+                    </div>
+                    <div class="card-content">
+                        <h3>Comprehensive Apple Maintenance & Support</h3>
+                        <p>End-to-end Apple support from certified engineers—onsite or remote.
+                            For updates, repairs, and more, we keep your Apple setup running smoothly.</p>
+                        <a routerLink="/apple-maintenance" class="learn-more">Know More »</a>
+                    </div>
+                </div>
+            </ng-template>
+
+            <ng-template carouselSlide>
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="assets/images/case/m4.png" alt="Purchase">
+                    </div>
+                    <div class="card-content">
+                        <h3>Custom Apple Training & Enablement</h3>
+                        <p>Boost productivity with tailored Apple training for users, creatives, and IT teams.
+                            Onsite or online, learn to create, collaborate, and troubleshoot like a pro.</p>
+                        <a routerLink="/apple-training" class="learn-more">Know More »</a>
+                    </div>
+                </div>
+            </ng-template>
+
+            <ng-template carouselSlide>
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="assets/images/case/m4.png" alt="Purchase">
+                    </div>
+                    <div class="card-content">
+                        <h3>Apple Ecosystem Consulting</h3>
+                        <p>Align Apple devices, apps, and workflows with your business goals.
+                            From planning to deployment, we deliver secure, scalable solutions that work.</p>
+                        <a routerLink="/apple-ecosystem" class="learn-more">Know More »</a>
+                    </div>
+                </div>
+            </ng-template>
+
+            <ng-template carouselSlide>
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="assets/images/case/m4.png" alt="Purchase">
+                    </div>
+                    <div class="card-content">
+                        <h3>Exclusive Apple Programs</h3>
+                        <p>Unlock exclusive Apple benefits for business and education through an authorised partner.
+                            Access tools, pricing, and support to grow and achieve more.</p>
+                        <a routerLink="/apple-program" class="learn-more">Know More »</a>
+                    </div>
+                </div>
+            </ng-template>
+        </owl-carousel-o>
+    </div>
+</section>
+
+<!-- <section class="home-company-area bg-color">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="company-content">
+                    <div class="company-tittle">
+                        <span>Our Company</span>
+                        <h2>Innovative It Helping Service All Over the World</h2>
+                        <p>It is a long established fact that a reader will be distracted by the rea dable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more or less normal distribution of letters, as opposed to using Content here,content here normal distribution looking at its.</p>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form variations passages.</p>
+                    </div>
+
+                    <a routerLink="/about" class="box-btn">Know More</a>
                 </div>
             </div>
-            <div class="row">
-                <div *ngFor="let stat of stats" class="col-md-3 col-sm-6 mb-4">
-                    <div class="stat-card" [@statAnimation]="statState">
-                        <i [class]="stat.icon"></i>
-                        <h3>{{stat.value}}</h3>
-                        <p>{{stat.label}}</p>
+
+            <div class="col-lg-6 col-md-12">
+                <div class="company-img">
+                    <img src="assets/images/company/company-img.jpg" alt="company" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!-- Pricing Start-->
+<section class="pricing-area pt-100 pb-70" id="superior-packages">
+    <div class="container">
+        <div class="section-title">
+            <span>What We Offer</span>
+            <h2>Superior Packages for Enterprise</h2>
+            <p>Superior Digital offers tiered Apple Enterprise Packages—Lite, Pro, and Ultra—designed to meet the evolving needs of growing businesses. From essential Apple device deployment for small teams to fully managed, scalable solutions with advanced security, app integration, and multi-location support, there's a perfect fit for every stage of your Apple journey.</p>
+        </div>
+
+        <div class="row mobile-pricing">
+            <div class="col-lg-4 col-sm-6">
+                <div class="single-pricing">
+                    <div class="pricing-top-heading">
+                        <h3>Superior lite</h3>
+                        <!-- <p>Build A Website</p> -->
+                    </div>
+                    <a class="box-btn" routerLink="/contact">Contact Sales</a>
+                    <!-- <a class="contact-sales-btn">Contact Sales</a> -->
+                    <!-- <span>$79 <sub>/M</sub></span> -->
+                    <ul>
+                        <p>Target Audience</p>
+                        <li><i class="bx bx-badge-check"></i> Small businesses, startups, or educational institutions new to Apple ecosystems</li>
+                    </ul>
+                    <ul>
+                        <p>Features</p>
+                        <li><i class="bx bx-badge-check"></i>  Pre-delivery device preparation via Apple Business Manager (ABM) for automated enrollment.</li>
+                        <li><i class="bx bx-badge-check"></i> Basic MDM setup (e.g., Jamf or Mosyle) for device configuration and app distribution.</li>
+                        <li><i class="bx bx-badge-check"></i> Core security settings (passcode policies, encryption).</li>
+                        <li><i class="bx bx-badge-check"></i> Virtual onboarding training on macOS, iOS, and iPadOS for IT admins and end-users.</li>
+                        <li><i class="bx bx-badge-check"></i> Access to Superior's financing options for cost-effective device procurement.</li>
+                        <li><i class="bx bx-badge-check"></i> 24/7 email and phone support for initial deployment.</li>
+                        <li><i class="bx bx-badge-check"></i>  Onsite device support in 25 locations across India.</li>
+                        <li><i class="bx bx-badge-check"></i> Include Training on Mac Os, iOS, Pad Os.</li>
+                        <!-- <li><i class="bx bx-badge-check"></i> Unlimited Domains</li> -->
+                    </ul>
+                    <ul>
+                        <p>Benefits</p>
+                        <li><i class="bx bx-badge-check"></i> Simplifies Apple device adoption with minimal IT overhead, ideal for small teams (10–50 devices) using iPads or MacBooks.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="single-pricing">
+                    <div class="pricing-top-heading">
+                        <h3>Superior Pro</h3>
+                        <!-- <p>Build A Website</p> -->
+                    </div>
+                    <a class="box-btn" routerLink="/contact">Contact Sales</a>
+                    <!-- <a class="contact-sales-btn">Contact Sales</a> -->
+                    <!-- <span>$79 <sub>/M</sub></span> -->
+                    <ul>
+                        <p>Target Audience</p>
+                        <li><i class="bx bx-badge-check"></i>Simplifies Apple device adoption with minimal IT overhead, ideal for small teams (10–50 devices) using iPads or MacBooks.</li>
+                    </ul>
+                    <ul>
+                        <p>Features</p>
+                        <li style="color: red; font-size: 16px;font-weight: bolder;">Includes all features of Superior Lite.</li>
+                        <li><i class="bx bx-badge-check"></i>Zero-touch deployment with advanced ABM and MDM configurations.</li>
+                        <li><i class="bx bx-badge-check"></i>Integration with enterprise apps (e.g., Microsoft 365, Google Workspace).</li>
+                        <li><i class="bx bx-badge-check"></i>Enhanced security (VPN, single sign-on, conditional access).</li>
+                        <li><i class="bx bx-badge-check"></i>AppleCare+ for Business and extended warranty options.</li>
+                        <li><i class="bx bx-badge-check"></i>In-person or virtual training on macOS, iOS, and iPadOS, plus biannual IT reviews</li>
+                        <li><i class="bx bx-badge-check"></i>Dedicated account manager.</li>
+                        <li><i class="bx bx-badge-check"></i>Asset tagging support.</li>
+                        <li><i class="bx bx-badge-check"></i>Logistics support, reverse pickup facility from user locations across India with transit insurance.</li>
+                        <!-- <li><i class="bx bx-badge-check"></i> Unlimited Domains</li> -->
+                    </ul>
+                    <ul>
+                        <p>Benefits</p>
+                        <li><i class="bx bx-badge-check"></i> Streamlines complex deployments for hybrid environments, supporting 100–500 devices with compliance, logistics, and asset management.</li>
+                    </ul>
+                    <strong class="popular">Popular</strong>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6 offset-sm-3 offset-lg-0">
+                <div class="single-pricing">
+                    <div class="pricing-top-heading">
+                        <h3>Superior Ultra</h3>
+                        <!-- <p>Build A Website</p> -->
+                    </div>
+                    <a class="box-btn" routerLink="/contact">Contact Sales</a>
+                    <!-- <a class="contact-sales-btn">Contact Sales</a> -->
+                    <!-- <span>$79 <sub>/M</sub></span> -->
+                    <ul>
+                        <p>Target Audience</p>
+                        <li><i class="bx bx-badge-check"></i> Large enterprises, government organizations, or healthcare systems with multi-site needs.</li>
+                    </ul>
+                    <ul>
+                        <p>Features</p>
+                        <li style="color: red;font-size: 16px;font-weight: bolder;">Includes all features of Superior Pro</li>
+                        <li><i class="bx bx-badge-check"></i> Fully customized ABM and MDM deployment with role-based profiles.</li>
+                        <li><i class="bx bx-badge-check"></i> Custom app integration or development via Superior's network.</li>
+                        <li><i class="bx bx-badge-check"></i> Custom app integration or development via Superior's network.</li>
+                        <li><i class="bx bx-badge-check"></i> On-site deployment support across multiple India locations.</li>
+                        <li><i class="bx bx-badge-check"></i> Comprehensive training on macOS, iOS, and iPadOS, plus ongoing workshops.</li>
+                        <li><i class="bx bx-badge-check"></i> Premium 24/7 support with SLA-backed response times and lifecycle management.</li>
+                        <li><i class="bx bx-badge-check"></i> Warehousing support.</li>
+                        <li><i class="bx bx-badge-check"></i> Apple Certified Technician diagnose and reporting facility on reverse pickup.</li>
+                        <li><i class="bx bx-badge-check"></i> Theft Insurance</li>
+                        <!-- <li><i class="bx bx-badge-check"></i> Unlimited Domains</li> -->
+                    </ul>
+                    <ul>
+                        <p>Benefits</p>
+                        <li><i class="bx bx-badge-check"></i> Delivers enterprise-grade scalability, security, and comprehensive logistics for 1,000+ devices across regions.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Pricing End -->
+
+<!-- <section class="choose-area ptb-100">
+    <div class="container">
+        <div class="section-title">
+            <span>Choose Aiva</span>
+            <h2>We Achieved People's Trust by Our Great Service</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse.</p>
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="choose-img">
+                    <img src="assets/images/choose-img.png" alt="choose" />
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="choose-content">
+                    <div class="faq-accordion">
+                        <div class="faq-item" *ngFor="let item of accordionItems; let i = index;">
+                            <div class="faq-header" (click)="toggleAccordionItem(item)">
+                                {{item.title}}
+                                <i class='bx' [ngClass]="{'bx-plus': !item.open, 'bx-x': item.open}"></i>
+                            </div>
+                            <div class="faq-content" [hidden]="!item.open">
+                                <p>{{item.content}}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section> -->
 
-    <section class="banner-area">
-        <div class="d-table">
-            <div class="d-table-cell">
-                <div class="container-fluid">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6">
-                            <div class="banner-content">
-                                <h1>Trusted Effective Service and Solutions</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, et sed do eiusmod tempor incididunt labore dolore magna aliqua. Quis ipsum suspendisse.</p>
-                                <div class="banner-btn">
-                                    <a routerLink="/contact" class="box-btn">Contact Us</a>
-                                    <a routerLink="/about" class="box-btn border-btn">Know More</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <div class="banner-img">
-                                <img src="assets/images/home-bg-1-img.png" alt="banner-img" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- <section class="home-process-area pt-100 pb-70">
+    <div class="container">
+        <div class="section-title">
+            <span>Working Process</span>
+            <h2>We are popular because of our way of working</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse.</p>
         </div>
 
-        <div class="home-shape">
-            <div class="shape1"><img src="assets/images/shape/1.png" alt="shape"></div>
-            <div class="shape2"><img src="assets/images/shape/2.png" alt="shape"></div>
-            <div class="shape3"><img src="assets/images/shape/3.png" alt="shape"></div>
-            <div class="shape4"><img src="assets/images/shape/4.png" alt="shape"></div>
-            <div class="shape5"><img src="assets/images/shape/5.png" alt="shape"></div>
-            <div class="shape6"><img src="assets/images/shape/6.png" alt="shape"></div>
-        </div>
-    </section>
-
-    <section class="home-service-area pt-100 pb-70">
-        <div class="container">
-            <div class="section-title">
-                <span>Smart Services</span>
-                <h2>Aiva Provide All Kind of Tech Solutions</h2>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse.</p>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single-service">
-                        <div class="service-img">
-                            <img src="assets/images/service/s1.png" alt="service" />
-                        </div>
-
-                        <div class="service-content">
-                            <h3>Visual Design</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque vel sit maxime assumenda. maiores, magnam</p>
-                            <a routerLink="/solutions-details" class="line-bnt">Read More</a>
-                        </div>
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-process">
+                    <div class="icon">
+                        <img src="assets/images/process/p1.png" alt="process" />
+                        <span><img src="assets/images/process/next.png" alt="shape" /></span>
                     </div>
-                </div>
 
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single-service">
-                        <div class="service-img">
-                            <img src="assets/images/service/s2.png" alt="service" />
-                        </div>
-
-                        <div class="service-content">
-                            <h3>Development</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque vel sit maxime assumenda. maiores, magnam</p>
-                            <a routerLink="/solutions-details" class="line-bnt">Read More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single-service">
-                        <div class="service-img">
-                            <img src="assets/images/service/s3.png" alt="service" />
-                        </div>
-
-                        <div class="service-content">
-                            <h3>QA Testing</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque vel sit maxime assumenda. maiores, magnam</p>
-                            <a routerLink="/solutions-details" class="line-bnt">Read More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single-service">
-                        <div class="service-img">
-                            <img src="assets/images/service/s4.png" alt="service" />
-                        </div>
-
-                        <div class="service-content">
-                            <h3>IT Management</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque vel sit maxime assumenda. maiores, magnam</p>
-                            <a routerLink="/solutions-details" class="line-bnt">Read More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single-service">
-                        <div class="service-img">
-                            <img src="assets/images/service/s5.png" alt="service" />
-                        </div>
-
-                        <div class="service-content">
-                            <h3> Cyber Security</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque vel sit maxime assumenda. maiores, magnam</p>
-                            <a routerLink="/solutions-details" class="line-bnt">Read More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single-service">
-                        <div class="service-img">
-                            <img src="assets/images/service/s6.png" alt="service" />
-                        </div>
-
-                        <div class="service-content">
-                            <h3> Wireless Connectivity</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque vel sit maxime assumenda. maiores, magnam</p>
-                            <a routerLink="/solutions-details" class="line-bnt">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="home-company-area bg-color">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-md-12">
-                    <div class="company-content">
-                        <div class="company-tittle">
-                            <span>Our Company</span>
-                            <h2>Innovative It Helping Service All Over the World</h2>
-                            <p>It is a long established fact that a reader will be distracted by the rea dable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more or less normal distribution of letters, as opposed to using Content here,content here normal distribution looking at its.</p>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form variations passages.</p>
-                        </div>
-
-                        <a routerLink="/about" class="box-btn">Know More</a>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-md-12">
-                    <div class="company-img">
-                        <img src="assets/images/company/company-img.jpg" alt="company" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="choose-area ptb-100">
-        <div class="container">
-            <div class="section-title">
-                <span>Choose Aiva</span>
-                <h2>We Achieved People's Trust by Our Great Service</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse.</p>
-            </div>
-
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="choose-img">
-                        <img src="assets/images/choose-img.png" alt="choose" />
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="choose-content">
-                        <div class="faq-accordion">
-                            <div class="faq-item" *ngFor="let item of accordionItems; let i = index;">
-                                <div class="faq-header" (click)="toggleAccordionItem(item)">
-                                    {{item.title}}
-                                    <i class='bx' [ngClass]="{'bx-plus': !item.open, 'bx-x': item.open}"></i>
-                                </div>
-                                <div class="faq-content" [hidden]="!item.open">
-                                    <p>{{item.content}}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="home-process-area pt-100 pb-70">
-        <div class="container">
-            <div class="section-title">
-                <span>Working Process</span>
-                <h2>We are popular because of our way of working</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse.</p>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-process">
-                        <div class="icon">
-                            <img src="assets/images/process/p1.png" alt="process" />
-                            <span><img src="assets/images/process/next.png" alt="shape" /></span>
-                        </div>
-
-                        <div class="content">
-                            <h3>Research Product</h3>
-                            <p>Lorem ipsum dolor sit amet, co nsectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-process">
-                        <div class="icon">
-                            <img src="assets/images/process/p2.png" alt="process" />
-                            <span class="pro-span"><img src="assets/images/process/next.png" alt="shape" /></span>
-                        </div>
-
-                        <div class="content">
-                            <h3>User Testing</h3>
-                            <p>Lorem ipsum dolor sit amet, co nsectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-process">
-                        <div class="icon">
-                            <img src="assets/images/process/p3.png" alt="process" />
-                            <span><img src="assets/images/process/next.png" alt="shape" /></span>
-                        </div>
-
-                        <div class="content">
-                            <h3>Development</h3>
-                            <p>Lorem ipsum dolor sit amet, co nsectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-process">
-                        <div class="icon">
-                            <img src="assets/images/process/p4.png" alt="process" />
-                        </div>
-
-                        <div class="content">
-                            <h3>Product Handover</h3>
-                            <p>Lorem ipsum dolor sit amet, co nsectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="home-case ptb-100">
-        <div class="container">
-            <div class="section-title">
-                <span>Case Studies</span>
-                <h2>Have a Look Our Work Showcase</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse.</p>
-            </div>
-            <div class="case">
-                <ul class="nav-tabset">
-                    <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab1'}">
-                        <span (click)="switchTab($event, 'tab1')">
-                            All
-                        </span>
-                    </li>
-                    <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab2'}">
-                        <span (click)="switchTab($event, 'tab2')">
-                            Design
-                        </span>
-                    </li>
-                    <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab3'}">
-                        <span (click)="switchTab($event, 'tab3')">
-                            Development
-                        </span>
-                    </li>
-                    <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab4'}">
-                        <span (click)="switchTab($event, 'tab4')">
-                            Cyber Security
-                        </span>
-                    </li>
-                </ul>
-                <div class="tabs-container">
-                    <div class="pane" id="tab1" *ngIf="currentTab === 'tab1'">
-                        <div class="row case-list">
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-case">
-                                    <div class="case-img">
-                                        <a routerLink="/case-studies-details"><img src="assets/images/case/c1.jpg" alt="case"/></a>
-                                    </div>
-                
-                                    <div class="content">
-                                        <a routerLink="/case-studies-details"><h3>Joe's Company Software Development Case</h3></a>
-                                        <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
-                                        <a routerLink="/case-studies-details" class="line-bnt">View Project Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-case">
-                                    <div class="case-img">
-                                        <a routerLink="/case-studies-details"><img src="assets/images/case/c2.jpg" alt="case"/></a>
-                                    </div>
-                
-                                    <div class="content">
-                                        <a routerLink="/case-studies-details"><h3>Ride Share App UX Studies & Development Case</h3></a>
-                                        <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
-                                        <a routerLink="/case-studies-details" class="line-bnt">View Project Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-case">
-                                    <div class="case-img">
-                                        <a routerLink="/case-studies-details"><img src="assets/images/case/c3.jpg" alt="case"/></a>
-                                    </div>
-                
-                                    <div class="content">
-                                        <a routerLink="/case-studies-details"><h3>Restaurant Management & Web Developing</h3></a>
-                                        <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
-                                        <a routerLink="/case-studies-details" class="line-bnt">View Project Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-case">
-                                    <div class="case-img">
-                                        <a routerLink="/case-studies-details"><img src="assets/images/case/c4.jpg" alt="case"/></a>
-                                    </div>
-                
-                                    <div class="content">
-                                        <a routerLink="/case-studies-details"><h3>IT Software Company Development Case</h3></a>
-                                        <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
-                                        <a routerLink="/case-studies-details" class="line-bnt">View Project Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-case">
-                                    <div class="case-img">
-                                        <a routerLink="/case-studies-details"><img src="assets/images/case/c5.jpg" alt="case"/></a>
-                                    </div>
-                
-                                    <div class="content">
-                                        <a routerLink="/case-studies-details"><h3>Parking Management & Web Developing</h3></a>
-                                        <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
-                                        <a routerLink="/case-studies-details" class="line-bnt">View Project Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-case">
-                                    <div class="case-img">
-                                        <a routerLink="/case-studies-details"><img src="assets/images/case/c6.jpg" alt="case"/></a>
-                                    </div>
-                
-                                    <div class="content">
-                                        <a routerLink="/case-studies-details"><h3>Temperature App UX Studies & Development Case</h3></a>
-                                        <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
-                                        <a routerLink="/case-studies-details" class="line-bnt">View Project Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pane" id="tab2" *ngIf="currentTab === 'tab2'">
-                        <div class="row case-list">
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-case">
-                                    <div class="case-img">
-                                        <a routerLink="/case-studies-details"><img src="assets/images/case/c4.jpg" alt="case"/></a>
-                                    </div>
-                
-                                    <div class="content">
-                                        <a routerLink="/case-studies-details"><h3>IT Software Company Development Case</h3></a>
-                                        <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
-                                        <a routerLink="/case-studies-details" class="line-bnt">View Project Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-case">
-                                    <div class="case-img">
-                                        <a routerLink="/case-studies-details"><img src="assets/images/case/c5.jpg" alt="case"/></a>
-                                    </div>
-                
-                                    <div class="content">
-                                        <a routerLink="/case-studies-details"><h3>Parking Management & Web Developing</h3></a>
-                                        <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
-                                        <a routerLink="/case-studies-details" class="line-bnt">View Project Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-case">
-                                    <div class="case-img">
-                                        <a routerLink="/case-studies-details"><img src="assets/images/case/c6.jpg" alt="case"/></a>
-                                    </div>
-                
-                                    <div class="content">
-                                        <a routerLink="/case-studies-details"><h3>Temperature App UX Studies & Development Case</h3></a>
-                                        <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
-                                        <a routerLink="/case-studies-details" class="line-bnt">View Project Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pane" id="tab3" *ngIf="currentTab === 'tab3'">
-                        <div class="row case-list">
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-case">
-                                    <div class="case-img">
-                                        <a routerLink="/case-studies-details"><img src="assets/images/case/c2.jpg" alt="case"/></a>
-                                    </div>
-                
-                                    <div class="content">
-                                        <a routerLink="/case-studies-details"><h3>Ride Share App UX Studies & Development Case</h3></a>
-                                        <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
-                                        <a routerLink="/case-studies-details" class="line-bnt">View Project Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-case">
-                                    <div class="case-img">
-                                        <a routerLink="/case-studies-details"><img src="assets/images/case/c3.jpg" alt="case"/></a>
-                                    </div>
-                
-                                    <div class="content">
-                                        <a routerLink="/case-studies-details"><h3>Restaurant Management & Web Developing</h3></a>
-                                        <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
-                                        <a routerLink="/case-studies-details" class="line-bnt">View Project Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-case">
-                                    <div class="case-img">
-                                        <a routerLink="/case-studies-details"><img src="assets/images/case/c4.jpg" alt="case"/></a>
-                                    </div>
-                
-                                    <div class="content">
-                                        <a routerLink="/case-studies-details"><h3>IT Software Company Development Case</h3></a>
-                                        <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
-                                        <a routerLink="/case-studies-details" class="line-bnt">View Project Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pane" id="tab4" *ngIf="currentTab === 'tab4'">
-                        <div class="row case-list">
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-case">
-                                    <div class="case-img">
-                                        <a routerLink="/case-studies-details"><img src="assets/images/case/c6.jpg" alt="case"/></a>
-                                    </div>
-                
-                                    <div class="content">
-                                        <a routerLink="/case-studies-details"><h3>Temperature App UX Studies & Development Case</h3></a>
-                                        <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
-                                        <a routerLink="/case-studies-details" class="line-bnt">View Project Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-case">
-                                    <div class="case-img">
-                                        <a routerLink="/case-studies-details"><img src="assets/images/case/c4.jpg" alt="case"/></a>
-                                    </div>
-                
-                                    <div class="content">
-                                        <a routerLink="/case-studies-details"><h3>IT Software Company Development Case</h3></a>
-                                        <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
-                                        <a routerLink="/case-studies-details" class="line-bnt">View Project Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-case">
-                                    <div class="case-img">
-                                        <a routerLink="/case-studies-details"><img src="assets/images/case/c5.jpg" alt="case"/></a>
-                                    </div>
-                
-                                    <div class="content">
-                                        <a routerLink="/case-studies-details"><h3>Parking Management & Web Developing</h3></a>
-                                        <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
-                                        <a routerLink="/case-studies-details" class="line-bnt">View Project Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="case-btn text-center">
-                <p>We Have More Amazing Cases. <a routerLink="/">View More</a></p>
-            </div>
-        </div>
-    </section>
-
-    <section class="feature-area bg-color ptb-100">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="contnet">
-                        <div class="feature-tittle">
-                            <span>Features</span>
-                            <h2>We Have Also Some Features That Provided by Aiva</h2>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt consectetur, beatae quod eaque reprehenderit non ab quibusdam doloribus voluptatibus! Voluptatum aspernatur quasi id dolore doloremque quo vero</p>
-                        </div>
-                        <ul>
-                            <li><i class="flaticon-correct"></i> Freelancing Traning Course</li>
-                            <li><i class="flaticon-correct"></i> Technological Consultation</li>
-                            <li><i class="flaticon-correct"></i> Monthly Paid Workspace</li>
-                            <li><i class="flaticon-correct"></i> IT Learning Institute</li>
-                            <li><i class="flaticon-correct"></i> Digital Marketing</li>
-                        </ul>
-                        <a routerLink="/contact" class="box-btn">Lets Talk!</a>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="feature-img">
-                        <img src="assets/images/feature-img.png" alt="feature" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="home-team-area ptb-100">
-        <div class="container">
-            <div class="section-title">
-                <span>Team Members</span>
-                <h2>People Who are Behind the Achievements</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse.</p>
-            </div>
-            <div class="home-team-slider">
-                <owl-carousel-o [options]="teamSlides">
-                    <ng-template carouselSlide>
-                        <div class="single-team">
-                            <div class="team-img">
-                                <img src="assets/images/team/t1.jpg" alt="team" />
-            
-                                <ul class="social">
-                                    <li><a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="bx bxl-facebook"></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="bx bxl-twitter"></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="bx bxs-envelope"></i></a></li>
-                                </ul>
-                            </div>
-            
-                            <div class="content text-center">
-                                <h3>John Smith</h3>
-                                <p>Full Stack Developer</p>
-                            </div>
-                        </div>
-                    </ng-template>
-                    <ng-template carouselSlide>
-                        <div class="single-team">
-                            <div class="team-img">
-                                <img src="assets/images/team/t2.jpg" alt="team" />
-            
-                                <ul class="social">
-                                    <li><a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="bx bxl-facebook"></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="bx bxl-twitter"></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="bx bxs-envelope"></i></a></li>
-                                </ul>
-                            </div>
-            
-                            <div class="content text-center">
-                                <h3>Evana Doe</h3>
-                                <p>Web Developer</p>
-                            </div>
-                        </div>
-                    </ng-template>
-                    <ng-template carouselSlide>
-                        <div class="single-team">
-                            <div class="team-img">
-                                <img src="assets/images/team/t3.jpg" alt="team" />
-            
-                                <ul class="social">
-                                    <li><a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="bx bxl-facebook"></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="bx bxl-twitter"></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="bx bxs-envelope"></i></a></li>
-                                </ul>
-                            </div>
-            
-                            <div class="content text-center">
-                                <h3>Bread Mc</h3>
-                                <p>IT Consulting</p>
-                            </div>
-                        </div>
-                    </ng-template>
-                    <ng-template carouselSlide>
-                        <div class="single-team">
-                            <div class="team-img">
-                                <img src="assets/images/team/t4.jpg" alt="team" />
-            
-                                <ul class="social">
-                                    <li><a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="bx bxl-facebook"></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="bx bxl-twitter"></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="bx bxs-envelope"></i></a></li>
-                                </ul>
-                            </div>
-            
-                            <div class="content text-center">
-                                <h3>Maria Fread</h3>
-                                <p>UI/UX Designer</p>
-                            </div>
-                        </div>
-                    </ng-template>
-                    <ng-template carouselSlide>
-                        <div class="single-team">
-                            <div class="team-img">
-                                <img src="assets/images/team/t1.jpg" alt="team" />
-            
-                                <ul class="social">
-                                    <li><a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="bx bxl-facebook"></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="bx bxl-twitter"></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="bx bxs-envelope"></i></a></li>
-                                </ul>
-                            </div>
-            
-                            <div class="content text-center">
-                                <h3>John Smith</h3>
-                                <p>Full Stack Developer</p>
-                            </div>
-                        </div>
-                    </ng-template>
-                    <ng-template carouselSlide>
-                        <div class="single-team">
-                            <div class="team-img">
-                                <img src="assets/images/team/t2.jpg" alt="team" />
-            
-                                <ul class="social">
-                                    <li><a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="bx bxl-facebook"></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="bx bxl-twitter"></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="bx bxs-envelope"></i></a></li>
-                                </ul>
-                            </div>
-            
-                            <div class="content text-center">
-                                <h3>Evana Doe</h3>
-                                <p>Web Developer</p>
-                            </div>
-                        </div>
-                    </ng-template>
-                    <ng-template carouselSlide>
-                        <div class="single-team">
-                            <div class="team-img">
-                                <img src="assets/images/team/t3.jpg" alt="team" />
-            
-                                <ul class="social">
-                                    <li><a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="bx bxl-facebook"></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="bx bxl-twitter"></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="bx bxs-envelope"></i></a></li>
-                                </ul>
-                            </div>
-            
-                            <div class="content text-center">
-                                <h3>Bread Mc</h3>
-                                <p>IT Consulting</p>
-                            </div>
-                        </div>
-                    </ng-template>
-                    <ng-template carouselSlide>
-                        <div class="single-team">
-                            <div class="team-img">
-                                <img src="assets/images/team/t4.jpg" alt="team" />
-            
-                                <ul class="social">
-                                    <li><a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="bx bxl-facebook"></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="bx bxl-twitter"></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="bx bxs-envelope"></i></a></li>
-                                </ul>
-                            </div>
-            
-                            <div class="content text-center">
-                                <h3>Maria Fread</h3>
-                                <p>UI/UX Designer</p>
-                            </div>
-                        </div>
-                    </ng-template>
-                </owl-carousel-o>
-            </div>
-        </div>
-    </section>
-
-    <section class="client-area ptb-100 bg-color">
-        <div class="container">
-            <div class="section-title">
-                <span>Testimonials</span>
-                <h2>What Our Client's Say</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A facilis vel consequatur tempora atque blanditiis exercitationem incidunt, alias corporis quam assumenda dicta.</p>
-            </div>
-            <div class="client-wrap">
-                <owl-carousel-o [options]="clientWrap">
-                    <ng-template carouselSlide>
-                        <div class="single-client">
-                            <img src="assets/images/client/1.jpg" alt="img">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem Ipsum is simply dummy text of the printing Quis suspendisse typesetting ipsum dolor sit amet,</p>
-                            <h3>Steven Jony</h3>
-                            <span>CEO of Company</span>
-                        </div>
-                    </ng-template>
-                    <ng-template carouselSlide>
-                        <div class="single-client">
-                            <img src="assets/images/client/2.jpg" alt="img">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem Ipsum is simply dummy text of the printing Quis suspendisse typesetting ipsum dolor sit amet,</p>
-                            <h3>Omit Jacson</h3>
-                            <span>Company Founder</span>
-                        </div>
-                    </ng-template>
-                </owl-carousel-o>
-            </div>
-        </div>
-    </section>
-
-    <section class="home-blog-area ptb-100">
-        <div class="container">
-            <div class="section-title">
-                <span>Blog Post</span>
-                <h2>Our Regular Blogs</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A facilis vel consequatur tempora atque blanditiis exercitationem incidunt, alias corporis quam assumenda dicta.</p>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog">
-                        <div class="blog-img">
-                            <a routerLink="/blog-details"><img src="assets/images/blog/1.jpg" alt="blog"></a>
-                        </div>
-
-                        <div class="content">
-                            <ul>
-                                <li>10 April 2024</li>
-                                <li><a routerLink="/blog">By Admin</a></li>
-                            </ul>
-                            <a routerLink="/blog-details"><h3>Joe's Company Software Development Case</h3></a>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas in fugit minima modi perspiciatis nam aspernatur porro</p>
-                            <a routerLink="/blog-details" class="line-bnt">Read More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog">
-                        <div class="blog-img">
-                            <a routerLink="/blog-details"><img src="assets/images/blog/5.jpg" alt="blog"></a>
-                        </div>
-
-                        <div class="content">
-                            <ul>
-                                <li>10 April 2024</li>
-                                <li><a routerLink="/blog">By Admin</a></li>
-                            </ul>
-                            <a routerLink="/blog-details"><h3>Temperature App UX Studies & Development Case</h3></a>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas in fugit minima modi perspiciatis nam aspernatur porro</p>
-                            <a routerLink="/blog-details" class="line-bnt">Read More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
-                    <div class="single-blog">
-                        <div class="blog-img">
-                            <a routerLink="/blog-details"><img src="assets/images/blog/3.jpg" alt="blog"></a>
-                        </div>
-
-                        <div class="content">
-                            <ul>
-                                <li>10 April 2024</li>
-                                <li><a routerLink="/blog">By Admin</a></li>
-                            </ul>
-                            <a routerLink="/blog-details"><h3>IT Software Company Development Case</h3></a>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas in fugit minima modi perspiciatis nam aspernatur porro</p>
-                            <a routerLink="/blog-details" class="line-bnt">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="blog-btn text-center">
-                <p>We Have More Usefull Blogs For You. <a routerLink="/blog">View More</a></p>
-            </div>
-        </div>
-    </section>
-
-    <section class="home-contact-area bg-color ptb-100">
-        <div class="container">
-            <div class="section-title">
-                <span>Contact Us</span>
-                <h2>Let Us Know About Your Project Idea!</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A facilis vel consequatur tempora atque blanditiis exercitationem incidunt, alias corporis quam assumenda dicta.</p>
-            </div>
-
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-md-6">
-                    <div class="contact-img">
-                        <img src="assets/images/contact-img.png" alt="contact">
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-md-6">
                     <div class="content">
-                        <form id="contactForm">
-                            <div class="row">
-                                <div class="col-lg-12 col-sm-12">
-                                    <div class="form-group">
-                                        <input type="text" name="name" id="name" class="form-control" required placeholder="Your Name" />
-                                    </div>
-                                </div>
+                        <h3>Research Product</h3>
+                        <p>Lorem ipsum dolor sit amet, co nsectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                </div>
+            </div>
 
-                                <div class="col-lg-12 col-sm-12">
-                                    <div class="form-group">
-                                        <input type="email" name="email" id="email" class="form-control" required placeholder="Your Email" />
-                                    </div>
-                                </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-process">
+                    <div class="icon">
+                        <img src="assets/images/process/p2.png" alt="process" />
+                        <span class="pro-span"><img src="assets/images/process/next.png" alt="shape" /></span>
+                    </div>
 
-                                <div class="col-lg-12 col-sm-12">
-                                    <div class="form-group">
-                                        <input type="text" name="phone_number" id="phone_number" required class="form-control" placeholder="Your Phone" />
-                                    </div>
-                                </div>
+                    <div class="content">
+                        <h3>User Testing</h3>
+                        <p>Lorem ipsum dolor sit amet, co nsectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                </div>
+            </div>
 
-                                <div class="col-lg-12 col-sm-12">
-                                    <div class="form-group">
-                                        <input type="text" name="msg_subject" id="msg_subject" class="form-control" required placeholder="Subject" />
-                                    </div>
-                                </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-process">
+                    <div class="icon">
+                        <img src="assets/images/process/p3.png" alt="process" />
+                        <span><img src="assets/images/process/next.png" alt="shape" /></span>
+                    </div>
 
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="form-group">
-                                        <textarea name="message" class="form-control" id="message" cols="30" rows="5" required placeholder="Your Message"></textarea>
-                                    </div>
-                                </div>
+                    <div class="content">
+                        <h3>Development</h3>
+                        <p>Lorem ipsum dolor sit amet, co nsectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                </div>
+            </div>
 
-                                <div class="col-lg-12 col-md-12">
-                                    <button type="submit" class="default-btn page-btn box-btn">Submit</button>
-                                </div>
-                            </div>
-                        </form>
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-process">
+                    <div class="icon">
+                        <img src="assets/images/process/p4.png" alt="process" />
+                    </div>
+
+                    <div class="content">
+                        <h3>Product Handover</h3>
+                        <p>Lorem ipsum dolor sit amet, co nsectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-</div>
+    </div>
+</section> -->
+
+<!-- <section class="home-case ptb-100">
+    <div class="container">
+        <div class="section-title">
+            <span>Case Studies</span>
+            <h2>Have a Look Our Work Showcase</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse.</p>
+        </div>
+        <div class="case">
+            <ul class="nav-tabset">
+                <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab1'}">
+                    <span (click)="switchTab($event, 'tab1')">
+                        All
+                    </span>
+                </li>
+                <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab2'}">
+                    <span (click)="switchTab($event, 'tab2')">
+                        Design
+                    </span>
+                </li>
+                <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab3'}">
+                    <span (click)="switchTab($event, 'tab3')">
+                        Development
+                    </span>
+                </li>
+                <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab4'}">
+                    <span (click)="switchTab($event, 'tab4')">
+                        Cyber Security
+                    </span>
+                </li>
+            </ul>
+            <div class="tabs-container">
+                <div class="pane" id="tab1" *ngIf="currentTab === 'tab1'">
+                    <div class="row case-list">
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-case">
+                                <div class="case-img">
+                                    <a routerLink="/case-studies-details"><img src="assets/images/case/c1.jpg" alt="case"/></a>
+                                </div>
+            
+                                <div class="content">
+                                    <a routerLink="/case-studies-details"><h3>Joe's Company Software Development Case</h3></a>
+                                    <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
+                                    <a routerLink="/case-studies-details" class="line-bnt">View Project Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-case">
+                                <div class="case-img">
+                                    <a routerLink="/case-studies-details"><img src="assets/images/case/c2.jpg" alt="case"/></a>
+                                </div>
+            
+                                <div class="content">
+                                    <a routerLink="/case-studies-details"><h3>Ride Share App UX Studies & Development Case</h3></a>
+                                    <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
+                                    <a routerLink="/case-studies-details" class="line-bnt">View Project Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-case">
+                                <div class="case-img">
+                                    <a routerLink="/case-studies-details"><img src="assets/images/case/c3.jpg" alt="case"/></a>
+                                </div>
+            
+                                <div class="content">
+                                    <a routerLink="/case-studies-details"><h3>Restaurant Management & Web Developing</h3></a>
+                                    <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
+                                    <a routerLink="/case-studies-details" class="line-bnt">View Project Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-case">
+                                <div class="case-img">
+                                    <a routerLink="/case-studies-details"><img src="assets/images/case/c4.jpg" alt="case"/></a>
+                                </div>
+            
+                                <div class="content">
+                                    <a routerLink="/case-studies-details"><h3>IT Software Company Development Case</h3></a>
+                                    <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
+                                    <a routerLink="/case-studies-details" class="line-bnt">View Project Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-case">
+                                <div class="case-img">
+                                    <a routerLink="/case-studies-details"><img src="assets/images/case/c5.jpg" alt="case"/></a>
+                                </div>
+            
+                                <div class="content">
+                                    <a routerLink="/case-studies-details"><h3>Parking Management & Web Developing</h3></a>
+                                    <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
+                                    <a routerLink="/case-studies-details" class="line-bnt">View Project Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-case">
+                                <div class="case-img">
+                                    <a routerLink="/case-studies-details"><img src="assets/images/case/c6.jpg" alt="case"/></a>
+                                </div>
+            
+                                <div class="content">
+                                    <a routerLink="/case-studies-details"><h3>Temperature App UX Studies & Development Case</h3></a>
+                                    <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
+                                    <a routerLink="/case-studies-details" class="line-bnt">View Project Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pane" id="tab2" *ngIf="currentTab === 'tab2'">
+                    <div class="row case-list">
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-case">
+                                <div class="case-img">
+                                    <a routerLink="/case-studies-details"><img src="assets/images/case/c4.jpg" alt="case"/></a>
+                                </div>
+            
+                                <div class="content">
+                                    <a routerLink="/case-studies-details"><h3>IT Software Company Development Case</h3></a>
+                                    <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
+                                    <a routerLink="/case-studies-details" class="line-bnt">View Project Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-case">
+                                <div class="case-img">
+                                    <a routerLink="/case-studies-details"><img src="assets/images/case/c5.jpg" alt="case"/></a>
+                                </div>
+            
+                                <div class="content">
+                                    <a routerLink="/case-studies-details"><h3>Parking Management & Web Developing</h3></a>
+                                    <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
+                                    <a routerLink="/case-studies-details" class="line-bnt">View Project Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-case">
+                                <div class="case-img">
+                                    <a routerLink="/case-studies-details"><img src="assets/images/case/c6.jpg" alt="case"/></a>
+                                </div>
+            
+                                <div class="content">
+                                    <a routerLink="/case-studies-details"><h3>Temperature App UX Studies & Development Case</h3></a>
+                                    <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
+                                    <a routerLink="/case-studies-details" class="line-bnt">View Project Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pane" id="tab3" *ngIf="currentTab === 'tab3'">
+                    <div class="row case-list">
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-case">
+                                <div class="case-img">
+                                    <a routerLink="/case-studies-details"><img src="assets/images/case/c2.jpg" alt="case"/></a>
+                                </div>
+            
+                                <div class="content">
+                                    <a routerLink="/case-studies-details"><h3>Ride Share App UX Studies & Development Case</h3></a>
+                                    <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
+                                    <a routerLink="/case-studies-details" class="line-bnt">View Project Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-case">
+                                <div class="case-img">
+                                    <a routerLink="/case-studies-details"><img src="assets/images/case/c3.jpg" alt="case"/></a>
+                                </div>
+            
+                                <div class="content">
+                                    <a routerLink="/case-studies-details"><h3>Restaurant Management & Web Developing</h3></a>
+                                    <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
+                                    <a routerLink="/case-studies-details" class="line-bnt">View Project Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-case">
+                                <div class="case-img">
+                                    <a routerLink="/case-studies-details"><img src="assets/images/case/c4.jpg" alt="case"/></a>
+                                </div>
+            
+                                <div class="content">
+                                    <a routerLink="/case-studies-details"><h3>IT Software Company Development Case</h3></a>
+                                    <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
+                                    <a routerLink="/case-studies-details" class="line-bnt">View Project Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pane" id="tab4" *ngIf="currentTab === 'tab4'">
+                    <div class="row case-list">
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-case">
+                                <div class="case-img">
+                                    <a routerLink="/case-studies-details"><img src="assets/images/case/c6.jpg" alt="case"/></a>
+                                </div>
+            
+                                <div class="content">
+                                    <a routerLink="/case-studies-details"><h3>Temperature App UX Studies & Development Case</h3></a>
+                                    <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
+                                    <a routerLink="/case-studies-details" class="line-bnt">View Project Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-case">
+                                <div class="case-img">
+                                    <a routerLink="/case-studies-details"><img src="assets/images/case/c4.jpg" alt="case"/></a>
+                                </div>
+            
+                                <div class="content">
+                                    <a routerLink="/case-studies-details"><h3>IT Software Company Development Case</h3></a>
+                                    <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
+                                    <a routerLink="/case-studies-details" class="line-bnt">View Project Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-case">
+                                <div class="case-img">
+                                    <a routerLink="/case-studies-details"><img src="assets/images/case/c5.jpg" alt="case"/></a>
+                                </div>
+            
+                                <div class="content">
+                                    <a routerLink="/case-studies-details"><h3>Parking Management & Web Developing</h3></a>
+                                    <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
+                                    <a routerLink="/case-studies-details" class="line-bnt">View Project Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="case-btn text-center">
+            <p>We Have More Amazing Cases. <a routerLink="/">View More</a></p>
+        </div>
+    </div>
+</section> -->
+
+<!-- <section class="feature-area bg-color ptb-100">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="contnet">
+                    <div class="feature-tittle">
+                        <span>Features</span>
+                        <h2>We Have Also Some Features That Provided by Aiva</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt consectetur, beatae quod eaque reprehenderit non ab quibusdam doloribus voluptatibus! Voluptatum aspernatur quasi id dolore doloremque quo vero</p>
+                    </div>
+                    <ul>
+                        <li><i class="flaticon-correct"></i> Freelancing Traning Course</li>
+                        <li><i class="flaticon-correct"></i> Technological Consultation</li>
+                        <li><i class="flaticon-correct"></i> Monthly Paid Workspace</li>
+                        <li><i class="flaticon-correct"></i> IT Learning Institute</li>
+                        <li><i class="flaticon-correct"></i> Digital Marketing</li>
+                    </ul>
+                    <a routerLink="/contact" class="box-btn">Lets Talk!</a>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="feature-img">
+                    <img src="assets/images/feature-img.png" alt="feature" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!-- <section class="home-team-area ptb-100">
+    <div class="container">
+        <div class="section-title">
+            <span>Team Members</span>
+            <h2>People Who are Behind the Achievements</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse.</p>
+        </div>
+        <div class="home-team-slider">
+            <owl-carousel-o [options]="teamSlides">
+                <ng-template carouselSlide>
+                    <div class="single-team">
+                        <div class="team-img">
+                            <img src="assets/images/team/t1.jpg" alt="team" />
+        
+                            <ul class="social">
+                                <li><a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxl-facebook"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxl-twitter"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxs-envelope"></i></a></li>
+                            </ul>
+                        </div>
+        
+                        <div class="content text-center">
+                            <h3>John Smith</h3>
+                            <p>Full Stack Developer</p>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="single-team">
+                        <div class="team-img">
+                            <img src="assets/images/team/t2.jpg" alt="team" />
+        
+                            <ul class="social">
+                                <li><a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxl-facebook"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxl-twitter"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxs-envelope"></i></a></li>
+                            </ul>
+                        </div>
+        
+                        <div class="content text-center">
+                            <h3>Evana Doe</h3>
+                            <p>Web Developer</p>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="single-team">
+                        <div class="team-img">
+                            <img src="assets/images/team/t3.jpg" alt="team" />
+        
+                            <ul class="social">
+                                <li><a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxl-facebook"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxl-twitter"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxs-envelope"></i></a></li>
+                            </ul>
+                        </div>
+        
+                        <div class="content text-center">
+                            <h3>Bread Mc</h3>
+                            <p>IT Consulting</p>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="single-team">
+                        <div class="team-img">
+                            <img src="assets/images/team/t4.jpg" alt="team" />
+        
+                            <ul class="social">
+                                <li><a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxl-facebook"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxl-twitter"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxs-envelope"></i></a></li>
+                            </ul>
+                        </div>
+        
+                        <div class="content text-center">
+                            <h3>Maria Fread</h3>
+                            <p>UI/UX Designer</p>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="single-team">
+                        <div class="team-img">
+                            <img src="assets/images/team/t1.jpg" alt="team" />
+        
+                            <ul class="social">
+                                <li><a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxl-facebook"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxl-twitter"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxs-envelope"></i></a></li>
+                            </ul>
+                        </div>
+        
+                        <div class="content text-center">
+                            <h3>John Smith</h3>
+                            <p>Full Stack Developer</p>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="single-team">
+                        <div class="team-img">
+                            <img src="assets/images/team/t2.jpg" alt="team" />
+        
+                            <ul class="social">
+                                <li><a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxl-facebook"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxl-twitter"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxs-envelope"></i></a></li>
+                            </ul>
+                        </div>
+        
+                        <div class="content text-center">
+                            <h3>Evana Doe</h3>
+                            <p>Web Developer</p>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="single-team">
+                        <div class="team-img">
+                            <img src="assets/images/team/t3.jpg" alt="team" />
+        
+                            <ul class="social">
+                                <li><a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxl-facebook"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxl-twitter"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxs-envelope"></i></a></li>
+                            </ul>
+                        </div>
+        
+                        <div class="content text-center">
+                            <h3>Bread Mc</h3>
+                            <p>IT Consulting</p>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="single-team">
+                        <div class="team-img">
+                            <img src="assets/images/team/t4.jpg" alt="team" />
+        
+                            <ul class="social">
+                                <li><a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxl-facebook"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxl-twitter"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxs-envelope"></i></a></li>
+                            </ul>
+                        </div>
+        
+                        <div class="content text-center">
+                            <h3>Maria Fread</h3>
+                            <p>UI/UX Designer</p>
+                        </div>
+                    </div>
+                </ng-template>
+            </owl-carousel-o>
+        </div>
+    </div>
+</section> -->
+
+<!-- <section class="client-area ptb-100 bg-color">
+    <div class="container">
+        <div class="section-title">
+            <span>Testimonials</span>
+            <h2>What Our Client's Say</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A facilis vel consequatur tempora atque blanditiis exercitationem incidunt, alias corporis quam assumenda dicta.</p>
+        </div>
+        <div class="client-wrap">
+            <owl-carousel-o [options]="clientWrap">
+                <ng-template carouselSlide>
+                    <div class="single-client">
+                        <img src="assets/images/client/1.jpg" alt="img">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem Ipsum is simply dummy text of the printing Quis suspendisse typesetting ipsum dolor sit amet,</p>
+                        <h3>Steven Jony</h3>
+                        <span>CEO of Company</span>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="single-client">
+                        <img src="assets/images/client/2.jpg" alt="img">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem Ipsum is simply dummy text of the printing Quis suspendisse typesetting ipsum dolor sit amet,</p>
+                        <h3>Omit Jacson</h3>
+                        <span>Company Founder</span>
+                    </div>
+                </ng-template>
+            </owl-carousel-o>
+        </div>
+    </div>
+</section> -->
+
+<!-- <section class="home-blog-area ptb-100">
+    <div class="container">
+        <div class="section-title">
+            <span>Blog Post</span>
+            <h2>Our Regular Blogs</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A facilis vel consequatur tempora atque blanditiis exercitationem incidunt, alias corporis quam assumenda dicta.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="single-blog">
+                    <div class="blog-img">
+                        <a routerLink="/blog-details"><img src="assets/images/blog/1.jpg" alt="blog"></a>
+                    </div>
+
+                    <div class="content">
+                        <ul>
+                            <li>10 April 2024</li>
+                            <li><a routerLink="/blog">By Admin</a></li>
+                        </ul>
+                        <a routerLink="/blog-details"><h3>Joe's Company Software Development Case</h3></a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas in fugit minima modi perspiciatis nam aspernatur porro</p>
+                        <a routerLink="/blog-details" class="line-bnt">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="single-blog">
+                    <div class="blog-img">
+                        <a routerLink="/blog-details"><img src="assets/images/blog/5.jpg" alt="blog"></a>
+                    </div>
+
+                    <div class="content">
+                        <ul>
+                            <li>10 April 2024</li>
+                            <li><a routerLink="/blog">By Admin</a></li>
+                        </ul>
+                        <a routerLink="/blog-details"><h3>Temperature App UX Studies & Development Case</h3></a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas in fugit minima modi perspiciatis nam aspernatur porro</p>
+                        <a routerLink="/blog-details" class="line-bnt">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
+                <div class="single-blog">
+                    <div class="blog-img">
+                        <a routerLink="/blog-details"><img src="assets/images/blog/3.jpg" alt="blog"></a>
+                    </div>
+
+                    <div class="content">
+                        <ul>
+                            <li>10 April 2024</li>
+                            <li><a routerLink="/blog">By Admin</a></li>
+                        </ul>
+                        <a routerLink="/blog-details"><h3>IT Software Company Development Case</h3></a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas in fugit minima modi perspiciatis nam aspernatur porro</p>
+                        <a routerLink="/blog-details" class="line-bnt">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="blog-btn text-center">
+            <p>We Have More Usefull Blogs For You. <a routerLink="/blog">View More</a></p>
+        </div>
+    </div>
+</section> -->
+
+<section class="home-contact-area bg-color ptb-100" id="contact-us">
+    <div class="container">
+        <div class="section-title">
+            <span>Contact Us</span>
+            <h2>Let Us Know About Your Project Idea!</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A facilis vel consequatur tempora atque blanditiis exercitationem incidunt, alias corporis quam assumenda dicta.</p>
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6">
+                <div class="contact-img">
+                    <img src="assets/images/contact-img.png" alt="contact">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="content">
+                    <form id="contactForm" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                        <div class="row">
+                            <div class="col-lg-12 col-sm-12">
+                                <div class="form-group">
+                                    <input type="text" formControlName="name" class="form-control" required placeholder="Your Name" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-sm-12">
+                                <div class="form-group">
+                                    <input type="email" formControlName="email" class="form-control" required placeholder="Your Email" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-sm-12">
+                                <div class="form-group">
+                                    <input type="text" formControlName="phone" class="form-control" required placeholder="Your Phone" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-sm-12" style="margin-bottom: 20px;">
+                                <div class="form-group">
+                                    <select formControlName="device" class="form-control">
+                                        <option value="" disabled selected>Select Device</option>
+                                        <option *ngFor="let device of devices" [value]="device">{{ device }}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-sm-12">
+                                <div class="form-group">
+                                    <textarea formControlName="message" class="form-control" rows="5" required placeholder="Your Message"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <button type="submit" class="box-btn">Send Message</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div *ngIf="message" class="alert" [ngClass]="{'alert-success': message.includes('successfully'), 'alert-danger': message.includes('Error')}">
+                            {{ message }}
+                        </div>
+                    </form>
+                </div>
+            </div>
+           <!--  <div class="col-lg-6 col-md-6">
+                <div class="content">
+                    <form id="contactForm">
+                        <div class="row">
+                            <div class="col-lg-12 col-sm-12">
+                                <div class="form-group">
+                                    <input type="text" name="name" id="name" class="form-control" required placeholder="Your Name" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-sm-12">
+                                <div class="form-group">
+                                    <input type="email" name="email" id="email" class="form-control" required placeholder="Your Email" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-sm-12">
+                                <div class="form-group">
+                                    <input type="text" name="phone_number" id="phone_number" required class="form-control" placeholder="Your Phone" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-sm-12">
+                                <div class="form-group">
+                                    <input type="text" name="msg_subject" id="msg_subject" class="form-control" required placeholder="Subject" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <textarea name="message" class="form-control" id="message" cols="30" rows="5" required placeholder="Your Message"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12">
+                                <button type="submit" class="default-btn page-btn box-btn">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</section>

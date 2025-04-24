@@ -13,10 +13,13 @@
                     height: 100%;
                     border-radius: 0px;
                     margin-left: -30px !important;"/>
+                    <!-- <a routerLink="/"><p style="color: #ce202f;">Superior Digital</p></a> -->
+                    <img src="assets/images/authorized.png" alt="Top Right Logo" style="width: 85%; height: auto; margin-left: 20px;" />
+
                 </div>
             </div>
 
-            <div class="col-lg-7 col-sm-6 text-end pr-0">
+            <div class="col-lg-9 col-sm-6 text-end pr-0">
                 <div class="header-content-right">
                     <ul class="header-contact">
                         <li><a href="tel:+91 80 2311 6047"><i class="bx bxs-phone-call"></i>+91 80 2311 6047</a></li>
@@ -24,11 +27,25 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-6 text-end pl-0" style="display: flex; justify-content: flex-end;">
+
+            <!-- <div class="col-lg-2 col-sm-6 text-end pl-0">
+                <div class="header-content-right">
+                    <ul class="header-social">
+                        <li><a href="https://www.facebook.com/superiorsystems.in/" target="_blank"><i class="bx bxl-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/superior_digital/" target="_blank"><i class="bx bxl-instagram"></i></a></li>
+                        <li><a href="https://x.com/superior_sd" target="_blank"> <i class="bx bxl-twitter"></i></a></li>
+                        <li><a href="https://www.linkedin.com/company/superior-digital-pvt-ltd/" target="_blank"> <i class="bx bxl-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div> -->
+
+            <!-- Removed by Diwakar -->
+            <!-- <div class="col-lg-3 col-sm-6 text-end pl-0" style="display: flex; justify-content: flex-end;">
                 <div class="logo-top-right" style="width: 100px; height: auto; margin-top: -3px;">
                     <img src="assets/images/authorized.png" alt="Top Right Logo" style="width: 100%; height: auto;" />
                 </div>
-            </div>
+            </div> -->
+            <!-- Removed by Diwakar -->
         </div>
     </div>
 </header>
@@ -60,10 +77,10 @@
             </a>
                 <a class="navbar-brand hide-on-mobile" routerLink="/">
                     <!-- <p style="color: #ce202f;">Superior Digital</p> -->
-                <div style="width: 119px; height: 35px; object-fit: contain; display: flex;
+                <!-- <div style="width: 119px; height: 35px; object-fit: contain; display: flex;
                 align-items: center; margin-left: -30px;">
-                    <!-- <img src="assets/images/Minimal-Business-Logo-Reveal-f-unscreen.gif" alt="logo"  /> -->
-                </div>
+                    <img src="assets/images/Minimal-Business-Logo-Reveal-f-unscreen.gif" alt="logo"  />
+                </div> -->
                 </a>
                 <button class="navbar-toggler" type="button" (click)="toggleClass()">
                     <span class="burger-menu">
@@ -76,31 +93,55 @@
                     <ul class="navbar-nav text-left">
                         <li class="nav-item">
                             <a routerLink="/" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Home</a>
+                        </li>
 
-                            <!-- <ul class="dropdown-menu">
-                                <li class="nav-item"><a routerLink="/" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Home One</a></li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" class="nav-link dropdown-toggle" (click)="toggleDropdown($event, $any($event.target).closest('.nav-item'))">About Us</a>
 
-                                <li class="nav-item"><a routerLink="/home-two" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Home Two</a></li>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a routerLink="/ourapproach" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Our Approach</a></li>
 
-                                <li class="nav-item"><a routerLink="/home-three" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Home Three</a></li>
-                            </ul> -->
+                                <li class="nav-item"><a routerLink="/ourvision" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Our Vision</a></li>
+
+                                <li class="nav-item"><a routerLink="/about" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Superior Story</a></li>
+                                
+                                <li class="nav-item"><a routerLink="/activity" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Our Events</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" class="nav-link dropdown-toggle" (click)="toggleDropdown($event, $any($event.target).closest('.nav-item'))">Apple</a>
+
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a routerLink="/apple-enterprise" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Why Apple for your enterprise?</a></li>
+
+                                <li class="nav-item"><a routerLink="/products" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Products</a></li>
+                                
+                                <!-- <li class="nav-item"><a routerLink="/apple-program" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Apple Programs</a></li> -->
+
+                                <li class="nav-item"><a routerLink="/drive-innovation" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Drive innovations with Apple</a></li>
+                                <!-- <li class="nav-item"><a routerLink="/" fragment="about-us" class="nav-link" (click)="closeMenu()">About Us</a></li> -->
+
+                                <li class="nav-item"><a routerLink="/" fragment="superior_digital" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Why Choose superior digital</a></li>
+
+                                <li class="nav-item"><a routerLink="/IT-strategy" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Resources for your IT strategy</a></li>
+
+                                <li class="nav-item"><a routerLink="/case-studies" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Success Stories</a></li>
+                            </ul>                        
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" class="nav-link dropdown-toggle" (click)="toggleDropdown($event, $any($event.target).closest('.nav-item'))">Apple Programs</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a routerLink="/apple-program" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Mac for Developers</a></li>
+
+                                <li class="nav-item"><a routerLink="/impetus" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()" style="text-transform: math-auto;">iMpetus</a></li>
+
+                                <li class="nav-item"><a routerLink="/emp-purchase-program" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Employee Purchase Program</a></li>
+                            </ul>
                         </li>
 
                         <!-- <li class="nav-item">
-                            <a href="javascript:void(0)" class="nav-link dropdown-toggle">About Us</a>
-
-                            <ul class="dropdown-menu">
-                                <li class="nav-item"><a routerLink="/our-approach" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Our Approach</a></li> -->
-
-                                <!-- <li class="nav-item"><a routerLink="/ourvision" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Our Vision</a></li> -->
-
-                                <!-- <li class="nav-item"><a routerLink="/superior-story" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Superior Story</a></li> -->
-                                
-                                <!-- <li class="nav-item"><a routerLink="/activity" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Our Events</a></li> -->
-                            <!-- </ul>
-                        </li> -->
-
-                     <!--    <li class="nav-item">
                             <a routerLink="/case-studies" class="nav-link dropdown-toggle" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Case Studies</a>
 
                             <ul class="dropdown-menu">
@@ -119,98 +160,42 @@
                             </ul>                        
                         </li> -->
 
-                        <!-- <li class="nav-item">
-                            <a href="javascript:void(0)" class="nav-link dropdown-toggle">Services</a>
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" class="nav-link dropdown-toggle" (click)="toggleDropdown($event, $any($event.target).closest('.nav-item'))">Enterprise Solutions</a>
 
                             <ul class="dropdown-menu">
-                                <li class="nav-item"><a routerLink="/software" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Software</a></li>
+                                <li class="nav-item"><a routerLink="/apple-deployment" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Seamless Apple Deployment & Integrations</a></li>
 
-                                <li class="nav-item"><a routerLink="/hardware" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Hardware</a></li>
+                                <li class="nav-item"><a routerLink="/apple-financing" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Apple Finance & Flexible Payment Plans</a></li>
 
-                                <li class="nav-item"><a routerLink="/deployment" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Deployment</a></li>
+                                <li class="nav-item"><a routerLink="/apple-maintenance" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Comprehensive Apple Maintenance & Support</a></li>
 
-                                <li class="nav-item"><a routerLink="/repair" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Repair</a></li>
+                                <li class="nav-item"><a routerLink="/apple-training" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Custom Apple Training & Enablement</a></li>
 
-                                <li class="nav-item"><a routerLink="/training" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Training</a></li>
+                                <li class="nav-item"><a routerLink="/apple-ecosystem" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Apple Ecosystem Consulting</a></li>
 
+                                <li class="nav-item"><a routerLink="/apple-upgrade" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Exclusive Apple Upgrade Programs</a></li>
+                                <!-- <li class="nav-item"><a routerLink="/" fragment="superior_digital" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Why Choose superior digital</a></li> -->
+
+                                <li class="nav-item"><a routerLink="/" fragment="superior-packages" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Superior packages for Enterprise</a></li>
+
+                                <li class="nav-item"><a routerLink="/our-services" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Services</a></li>
+
+                               <!--  <li class="nav-item">
+                                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Services</a>
+                                    <ul class="dropdown-menu" style="position: absolute; left: 0; top: 100%; min-width: 200px; background: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.1); z-index: 1000;">
+                                        <li class="nav-item">
+                                            <a href="javascript:void(0)" class="nav-link dropdown-toggle">Service1</a>
+                                            <ul class="dropdown-menu" style="position: absolute; left: 100%; top: 0; min-width: 200px; background: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.1); z-index: 1000;">
+                                                <li class="nav-item"><a routerLink="/service1" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Service1</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li> -->
                             </ul>
-                        </li> -->
+                        </li>
 
-                        <!-- <li class="nav-item"> --> 
-                            <li class="nav-item"><a routerLink="/" fragment="about-us" class="nav-link" (click)="closeMenu()">About Us</a></li>
-
-                            <li class="nav-item"><a routerLink="/" fragment="our-services"  class="nav-link" (click)="closeMenu()">Services</a></li>
-
-                            <li class="nav-item"><a routerLink="/" fragment="solutions" class="nav-link" (click)="closeMenu()">Solutions</a></li>
-                           <!--  <li class="nav-item">
-                                <a href="https://superiorsystems.in/apple" class="box-btn web-btn">Apple at Superior</a>&nbsp;
-                            </li> -->
-                            <li class="nav-item" style="padding-top: 10px;">
-                                <a href="https://superiorsystems.in/apple" class="box-btn" target="_blank" style="text-transform: none;">Apple at Superior</a>
-                            </li>
-                         
-                            <li class="nav-item">
-                                <a routerLink="/" fragment="contact-us" class="box-btn">Request Consultation</a>&nbsp;
-                            </li>
-                        
-                          <!--   <li class="nav-item"><a routerLink="/events" class="nav-link"  (click)="closeMenu()">Events</a></li>
-
-                            <li class="nav-item"><a routerLink="/projects" class="nav-link"  (click)="closeMenu()">Projects</a></li> -->
-                            
-                            <!-- <ul class="dropdown-menu">
-                                <li class="nav-item"><a routerLink="/it-consulting" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">IT Consulting </a></li>
-
-                                <li class="nav-item"><a routerLink="/audiovideo-solutions" class="nav-link" style="text-transform: none;" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Audio Video Solutions</a></li>
-
-                                <li class="nav-item"><a routerLink="/networking" class="nav-link" style="text-transform: none;" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Networking</a></li>
-
-                                <li class="nav-item"><a routerLink="/leasing" class="nav-link" style="text-transform: none;" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Leasing</a></li>
-
-                                <li class="nav-item"><a routerLink="/cloud-solutions" class="nav-link" style="text-transform: none;" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Cloud-Solutions</a></li>
-
-                            </ul> -->
-                        <!-- </li> -->
-
-                        
-
-                        <!-- <li class="nav-item">
-                            <a href="javascript:void(0)" class="nav-link dropdown-toggle">Events</a>
-
-                            <ul class="dropdown-menu">
-                                <li class="nav-item"><a routerLink="/blog" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Blog</a></li>
-
-                                <li class="nav-item"><a routerLink="/blog-details" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Blog Details</a></li>
-                            </ul>
-                        </li> -->
-
-                        <!-- <li class="nav-item">
-                            <a href="javascript:void(0)" class="nav-link dropdown-toggle">Pages</a>
-
-                            <ul class="dropdown-menu">
-                                <li class="nav-item"><a routerLink="/team" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Team</a></li>
-
-                                <li class="nav-item"><a routerLink="/pricing" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Pricing</a></li>
-
-                                <li class="nav-item"><a routerLink="/gallery" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Gallery</a></li>
-
-                                <li class="nav-item"><a routerLink="/testimonials" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Testimonials</a></li>
-
-                                <li class="nav-item"><a routerLink="/sign-up" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Sign Up</a></li>
-
-                                <li class="nav-item"><a routerLink="/sign-in" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Sign In</a></li>
-
-                                <li class="nav-item"><a routerLink="/error" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Error 404</a></li>
-
-                                <li class="nav-item"><a routerLink="/faq" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">FAQ</a></li>
-
-                                <li class="nav-item"><a routerLink="/terms-condition" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Terms & Conditions</a></li>
-
-                                <li class="nav-item"><a routerLink="/privacy-policy" cl ass="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Privacy Policy</a></li>
-                            </ul>
-                        </li> -->
-                        <!-- <li class="nav-item"><a routerLink="/events" class="nav-link" (click)="closeMenu()">Events</a></li>
-
-                        <li class="nav-item"><a routerLink="/projects" class="nav-link" (click)="closeMenu()">Projects</a></li> -->
+                        <li class="nav-item"><a routerLink="/apple-business" class="nav-link" (click)="closeMenu()">Apple Business Manager</a></li>
                     </ul>
                 </div>
                 <!-- <div class="nav-right">
@@ -224,10 +209,9 @@
                         </button>
                     </form>
                 </div> -->
-                
-                <div class="nav-btn" style="margin-top: -10px;">
-                    <a routerLink="/" fragment="contact-us" class="box-btn">Request Consultation</a>&nbsp;
-                    <!-- <a routerLink="/contact" class="box-btn border-btn">Contact Sales</a> -->
+                <div class="nav-btn">
+                    <a routerLink="/service" class="box-btn">Request Service</a>&nbsp;
+                    <a routerLink="/contact" class="box-btn border-btn">Contact Sales</a>
                 </div>
             </nav>
         </div>

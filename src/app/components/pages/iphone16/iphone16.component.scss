@@ -1,0 +1,1172 @@
+/* Hero Section */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.page-title-area {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(180deg, #050929 0%, #353f84 25%, #99a4d8 52%, #dfe6f8 75%, #f4f6fc 94%, #f4f6fc 100%);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0px;
+
+    &::after {
+        background: rgba(0, 0, 0, 0) !important;
+      }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-image {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Common Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+
+    h2 {
+        font-size: 48px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: #1d1d1f;
+    }
+
+    p {
+        font-size: 24px;
+        color: #86868b;
+        line-height: 1.4;
+    }
+}
+
+/* Design Section */
+.design-section {
+    padding: 100px 0;
+    background: #fff;
+
+    .design-showcase {
+        position: relative;
+        text-align: center;
+    }
+
+    .colors-image {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .color-options {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 30px;
+
+        span {
+            font-size: 18px;
+            color: #1d1d1f;
+            font-weight: 500;
+        }
+    }
+}
+
+/* Size Section */
+.size-section {
+    padding: 100px 0;
+    background: #f5f5f7;
+
+    .size-comparison {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        margin-bottom: 40px;
+    }
+
+    .size-option {
+        text-align: center;
+
+        h3 {
+            font-size: 28px;
+            color: #1d1d1f;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 24px;
+            color: #86868b;
+        }
+    }
+
+    .sizes-image {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+/* Camera Section */
+.camera-section {
+    padding: 100px 0;
+    background: #000;
+
+    .section-title {
+        h2, p {
+            color: #fff;
+        }
+    }
+
+    .camera-demo {
+        text-align: center;
+    }
+
+    .camera-image {
+        width: 100%;
+        max-width: 800px;
+    }
+}
+
+/* Camera Features */
+.camera-features {
+    padding: 100px 0;
+    background: #f5f5f7;
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .feature-card {
+        text-align: center;
+        padding: 40px;
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+
+        h3 {
+            font-size: 28px;
+            color: #1d1d1f;
+            margin: 20px 0 10px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #86868b;
+        }
+
+        .feature-image {
+            width: 100%;
+            max-width: 400px;
+        }
+    }
+}
+
+/* Battery Section */
+.battery-section {
+    padding: 100px 0;
+    background: #000;
+
+    .section-title {
+        h2 {
+            color: #fff;
+        }
+    }
+
+    .battery-info {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        text-align: center;
+    }
+
+    .battery-stat {
+        h3 {
+            font-size: 48px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 20px;
+            color: #86868b;
+        }
+    }
+}
+
+/* Chip Section */
+.chip-section {
+    padding: 100px 0;
+    background: #f5f5f7;
+
+    .chip-image {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+/* AI Section */
+.ai-section {
+    padding: 100px 0;
+    background: #000;
+
+    .section-title {
+        h2, p {
+            color: #fff;
+        }
+    }
+
+    .ai-features {
+        text-align: center;
+
+        .ai-image {
+            width: 100%;
+            max-width: 800px;
+        }
+    }
+}
+
+/* Action Button Section */
+.action-button-section {
+    padding: 100px 0;
+    background: #f5f5f7;
+
+    .action-features {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        max-width: 800px;
+        margin: 0 auto;
+
+        .feature {
+            text-align: center;
+            padding: 20px;
+            background: #fff;
+            border-radius: 15px;
+            font-size: 18px;
+            color: #1d1d1f;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+    }
+}
+
+/* Safety Section */
+.safety-section {
+    padding: 100px 0;
+    background: #000;
+
+    .section-title {
+        h2, p {
+            color: #fff;
+        }
+    }
+
+    .safety-image {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+/* Features Grid Section */
+.features-grid {
+    padding: 60px 0;
+    background: #fff;
+
+    .container {
+        max-width: 1000px;
+    }
+
+    .feature-card {
+        background: #fff;
+        border-radius: 30px;
+        padding: 30px;
+        height: 100%;
+        max-height: 500px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+        h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            
+            &.gradient-text {
+                background: linear-gradient(135deg, #ff1b6b 0%, #45caff 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        p {
+            font-size: 20px;
+            color: #1d1d1f;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .feature-image {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-top: 10px;
+
+            img {
+                width: 90%;
+                height: auto;
+                object-fit: contain;
+            }
+        }
+
+        &.chip-card {
+            .chip-content {
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                h2 {
+                    font-size: 36px;
+                    font-weight: 600;
+                    margin: 0;
+                    line-height: 1.1;
+
+                    .blue-text {
+                        color: #0066CC;
+                    }
+                }
+
+                h3 {
+                    font-size: 36px;
+                    font-weight: 600;
+                    color: #1d1d1f;
+                    margin: 0;
+                    line-height: 1.1;
+                }
+
+                .chip-image {
+                    margin-top: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex: 1;
+                    
+                    img {
+                        width: 100%;
+                        height: auto;
+                        object-fit: contain;
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+
+        &.intelligence-card {
+            .intelligence-content {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                height: 100%;
+
+                h2 {
+                    font-size: 28px;
+                    font-weight: 600;
+                    color: #1d1d1f;
+                    margin: 0;
+                    line-height: 1.1;
+
+                    .gradient-text {
+                        background: linear-gradient(90deg, #0066CC 0%, #FF1B6B 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                    }
+                }
+
+                h3 {
+                    font-size: 28px;
+                    font-weight: 600;
+                    color: #1d1d1f;
+                    margin: 0;
+                    line-height: 1.1;
+                }
+
+                .footnote {
+                    font-size: 12px;
+                    color: #86868b;
+                    margin: 5px 0 0 0;
+                }
+
+                .intelligence-demos {
+                    margin-top: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex: 1;
+                    
+                    img {
+                        width: 100%;
+                        height: auto;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+
+        &.action-button-card {
+            background: #ffffff;
+            
+            .action-content {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                height: 100%;
+
+                h2 {
+                    font-size: 28px;
+                    font-weight: 600;
+                    margin: 0;
+                    line-height: 1.1;
+
+                    .gradient-text {
+                        background: linear-gradient(135deg, #FF1B6B 0%, #45CAFF 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                    }
+                }
+
+                p {
+                    font-size: 28px;
+                    font-weight: 600;
+                    color: #1d1d1f;
+                    margin: 0;
+                    line-height: 1.1;
+                }
+
+                .action-image {
+                    margin-top: 20px;
+                    position: relative;
+                    flex: 1;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    img {
+                        width: 65%;
+                        height: auto;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+
+        &.crash-detection-card {
+            background: #ffffff;
+            
+            .crash-content {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                height: 100%;
+
+                h2 {
+                    font-size: 28px;
+                    font-weight: 600;
+                    color: #1d1d1f;
+                    margin: 0;
+                    line-height: 1.1;
+                }
+
+                p {
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: #86868b;
+                    margin: 0;
+                    line-height: 1.3;
+                }
+
+                .crash-image {
+                    margin-top: 20px;
+                    flex: 1;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    img {
+                        width: 65%;
+                        height: auto;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
+
+    .size-comparison {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        .size-options {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+            margin-bottom: 15px;
+
+            .size-option {
+                text-align: center;
+                flex: 1;
+
+                &.plus {
+                    margin-right: 10px;
+                }
+
+                &.regular {
+                    margin-left: 10px;
+                    margin-top: 60px;
+                }
+
+                h3 {
+                    font-size: 20px;
+                    color: #1d1d1f;
+                    margin-bottom: 2px;
+                }
+
+                .size-text {
+                    font-size: 32px;
+                    color: #0A8C79;
+                    font-weight: 600;
+                    margin: 0;
+                    line-height: 1;
+                }
+            }
+        }
+
+        .feature-image {
+            position: absolute;
+            top: 70px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+/* Camera Control Card */
+.camera-control-card {
+    position: relative;
+    overflow: hidden;
+    padding: 0 !important;
+    min-height: 600px;
+    background: #000;
+    border-radius: 30px;
+
+    .camera-content {
+        position: relative;
+        z-index: 2;
+        padding: 40px;
+
+        h2 {
+            font-size: 30px;
+            color: #1d1d1f;
+            margin-bottom: 10px;
+            
+            .highlight {
+                color: #0066CC;
+            }
+        }
+
+        p {
+            font-size: 14px;
+            color: #1d1d1f;
+            margin: 0;
+        }
+    }
+
+    .camera-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 10px 40px;
+        }
+    }
+}
+
+/* Ultrawide Card */
+.ultrawide-card {
+    position: relative;
+    overflow: hidden;
+    padding: 0 !important;
+    min-height: 400px;
+    background: #000;
+    border-radius: 30px;
+
+    .camera-content {
+        position: relative;
+        z-index: 2;
+        padding: 40px;
+
+        h2 {
+            font-size: 30px;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #ffffff;
+            margin: 0;
+        }
+    }
+
+    .camera-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+/* Styles Card */
+.styles-card {
+    position: relative;
+    overflow: hidden;
+    padding: 40px !important;
+    min-height: 400px;
+    background: #ffffff;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+
+    .styles-content {
+        text-align: center;
+        margin-bottom: 30px;
+
+        h2 {
+            font-size: 30px;
+            background: linear-gradient(135deg, #FF1B6B 0%, #45CAFF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #1d1d1f;
+            margin: 0;
+        }
+    }
+
+    .styles-image {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+}
+
+/* Battery Card */
+.battery-card {
+    position: relative;
+    overflow: hidden;
+    padding: 30px 20px !important;
+    min-height: 350px;
+    background: #ffffff;
+    border-radius: 30px;
+
+    .battery-content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+
+        h2 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #0A8C79;
+            margin-bottom: 0;
+        }
+
+        .battery-image {
+            width: 100%;
+            max-width: 500px;
+            margin: 5px 0 0 0;
+            
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+        }
+
+        .battery-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-top: -40px;
+            
+            p {
+                font-size: 18px;
+                color: #1d1d1f;
+                margin: 0;
+                line-height: 1.3;
+                
+                .highlight {
+                    color: #0A8C79;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+/* Chip Card */
+.chip-card {
+    background: #ffffff;
+    border-radius: 30px;
+    padding: 40px;
+    height: 100%;
+    overflow: hidden;
+
+    .chip-content {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        h2 {
+            font-size: 36px;
+            font-weight: 600;
+            margin: 0;
+
+            .blue-text {
+                color: #0066CC;
+            }
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        .chip-image {
+            margin-top: 30px;
+            
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+                transform: scale(1.2);
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+/* Intelligence Card */
+.intelligence-card {
+    background: #ffffff;
+    border-radius: 30px;
+    padding: 40px;
+    height: 100%;
+    overflow: hidden;
+
+    .intelligence-content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        h2 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin: 0;
+            line-height: 1.1;
+
+            .gradient-text {
+                background: linear-gradient(90deg, #0066CC 0%, #FF1B6B 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+        }
+
+        h3 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        .footnote {
+            font-size: 12px;
+            color: #86868b;
+            margin: 5px 0 0 0;
+        }
+
+        .intelligence-demos {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .section-title {
+        h2 {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    }
+
+    .camera-features .container {
+        grid-template-columns: 1fr;
+    }
+
+    .action-features {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .features-grid {
+        .feature-card {
+            margin-bottom: 30px;
+            h2 {
+                font-size: 32px;
+            }
+        }
+        .size-comparison {
+            .size-options {
+                padding: 0 15px;
+                .size-option {
+                    &.regular {
+                        margin-top: 25px;
+                    }
+                    .size-text {
+                        font-size: 28px;
+                    }
+                }
+            }
+            .feature-image {
+                top: 50px;
+            }
+        }
+        .feature-card {
+            &.chip-card, &.intelligence-card {
+                padding: 25px;
+
+                .chip-content, .intelligence-content {
+                    h2, h3 {
+                        font-size: 28px;
+                    }
+                }
+            }
+        }
+    }
+
+    .camera-control-card {
+        min-height: 500px;
+
+        .camera-content {
+            padding: 30px;
+
+            h2 {
+                font-size: 36px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .ultrawide-card, .styles-card {
+        min-height: 350px;
+        margin-bottom: 20px;
+
+        .camera-content, .styles-content {
+            padding: 30px;
+
+            h2 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .battery-card {
+        padding: 25px 15px !important;
+        min-height: 300px;
+
+        .battery-content {
+            gap: 10px;
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .battery-image {
+                max-width: 350px;
+            }
+
+            .battery-stats {
+                margin-top: -8px;
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .chip-card, .intelligence-card {
+        padding: 30px;
+
+        .chip-content, .intelligence-content {
+            h2, h3 {
+                font-size: 28px;
+            }
+        }
+    }
+
+    .feature-card {
+        &.action-button-card, &.crash-detection-card {
+            .action-image img, .crash-image img {
+                width: 55%;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        h2 {
+            font-size: 32px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    }
+
+    .battery-info {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .color-options {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .size-comparison {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .action-features {
+        grid-template-columns: 1fr !important;
+    }
+
+    .features-grid {
+        padding: 40px 0;
+        .feature-card {
+            padding: 20px;
+            h2 {
+                font-size: 28px;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+        .size-comparison {
+            .size-options {
+                padding: 0 10px;
+                .size-option {
+                    &.regular {
+                        margin-top: 20px;
+                    }
+                    h3 {
+                        font-size: 18px;
+                    }
+                    .size-text {
+                        font-size: 24px;
+                    }
+                }
+            }
+            .feature-image {
+                top: 45px;
+            }
+        }
+        .feature-card {
+            &.chip-card, &.intelligence-card {
+                padding: 20px;
+
+                .chip-content, .intelligence-content {
+                    h2, h3 {
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
+
+    .camera-control-card {
+        min-height: 400px;
+
+        .camera-content {
+            padding: 20px;
+
+            h2 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .ultrawide-card, .styles-card {
+        min-height: 300px;
+
+        .camera-content, .styles-content {
+            padding: 20px;
+
+            h2 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .battery-card {
+        padding: 20px 10px !important;
+        min-height: 280px;
+
+        .battery-content {
+            gap: 8px;
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .battery-image {
+                max-width: 300px;
+            }
+
+            .battery-stats {
+                margin-top: -5px;
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .chip-card, .intelligence-card {
+        padding: 20px;
+
+        .chip-content, .intelligence-content {
+            h2, h3 {
+                font-size: 24px;
+            }
+        }
+    }
+
+    .feature-card {
+        &.action-button-card, &.crash-detection-card {
+            .action-image img, .crash-image img {
+                width: 45%;
+            }
+        }
+    }
+}

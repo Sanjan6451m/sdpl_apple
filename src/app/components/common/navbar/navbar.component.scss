@@ -1,36 +1,46 @@
-.nav-link.active {
-    color: red; /* Change this to your desired highlight color */
-    font-weight: bold; /* Optional: make the text bold */
-  }
+/* Mobile-specific dropdown styles */
+@media only screen and (max-width: 991px) {
 
-  @media (max-width: 767px) {
-    .box-btn {
-        padding: 10px 10px !important;
+    .navbar-area .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li a{
+        color: #fff;
     }
-}
+  .navbar-nav {
+    .nav-item {
+      .dropdown-menu {
+        display: none !important; /* Override default display:block */
+        opacity: 1;
+        visibility: visible;
+        position: static;
+        width: 100%;
+        margin-top: 0;
+        padding: 0;
+        box-shadow: none;
+        background: transparent;
+        
+        &::before {
+          display: none; /* Remove dropdown arrow */
+        }
+      }
 
-@media (min-width: 768px) {
-  .box-btn {
-      padding: 10px 10px !important;
+      &.show {
+        > .dropdown-menu {
+          display: block !important;
+        }
+      }
+
+      /* Change plus icon to minus when expanded */
+      &.show > a.dropdown-toggle::after {
+        content: "-";
+      }
+    }
   }
 }
 
-.nav-item .box-btn {
-  display: none; /* Hidden by default */
-}
-
-/* Show in mobile view */
-@media (max-width: 768px) {
-  .nav-item .box-btn {
-    display: inline-block;
+/* Preserve hover behavior for desktop */
+@media only screen and (min-width: 992px) {
+  .nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    top: 50px;
   }
-  .navbar-area .main-nav .navbar .navbar-nav .nav-item {
-    padding-bottom: 0 !important;
-}
-
-}
-
-/* Exception for Apple @Superior button */
-.nav-item a[href*="superiorsystems.in/apple"] {
-  display: inline-block !important; /* Always show this button */
 }

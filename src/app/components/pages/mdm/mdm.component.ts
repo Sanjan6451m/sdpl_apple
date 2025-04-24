@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mdm',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [],
   templateUrl: './mdm.component.html',
   styleUrl: './mdm.component.scss'
 })

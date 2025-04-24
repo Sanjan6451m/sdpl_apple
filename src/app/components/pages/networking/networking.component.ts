@@ -20,4 +20,5 @@ export class NetworkingComponent implements OnInit {
   navigateToHome(): void {
     this.router.navigate(['/']);
   }
+
 }

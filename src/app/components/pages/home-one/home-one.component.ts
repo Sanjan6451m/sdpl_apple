@@ -1,123 +1,257 @@
-import { Component, HostListener, OnInit, ElementRef, Renderer2 } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import { HttpClient } from '@angular/common/http';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import emailjs from '@emailjs/browser';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
     selector: 'app-home-one',
+    standalone: true,
+    imports: [CommonModule, CarouselModule, RouterModule, ReactiveFormsModule],
     templateUrl: './home-one.component.html',
-    styleUrls: ['./home-one.component.scss'],
-    animations: [
-        trigger('circleAnimation', [
-            state('small', style({
-                transform: 'scale(1) translate(-50%, -50%)',
-                opacity: 0.8
-            })),
-            state('large', style({
-                transform: 'scale(2.5) translate(-50%, -50%)',
-                opacity: 1
-            })),
-            transition('small <=> large', animate('800ms cubic-bezier(0.4, 0, 0.2, 1)'))
-        ]),
-        trigger('statAnimation', [
-            state('hidden', style({
-                opacity: 0,
-                transform: 'translateY(20px)'
-            })),
-            state('visible', style({
-                opacity: 1,
-                transform: 'translateY(0)'
-            })),
-            transition('hidden => visible', animate('500ms ease-out'))
-        ])
-    ]
+    styleUrls: ['./home-one.component.scss']
 })
 export class HomeOneComponent implements OnInit {
-    circleState = 'small';
-    statState = 'hidden';
-    contentVisible = true; // Always keep content visible
-    
-    stats = [
-        { icon: 'bx bx-user', value: '1000+', label: 'Happy Clients' },
-        { icon: 'bx bx-check-circle', value: '500+', label: 'Projects Completed' },
-        { icon: 'bx bx-award', value: '50+', label: 'Awards Won' },
-        { icon: 'bx bx-support', value: '24/7', label: 'Support' }
-    ];
-    
-    private lastScrollTop = 0;
-    private scrollThreshold = 5; // Low threshold for responsive animation
-    private isWeb = window.innerWidth >= 768;
-    private heroHeight: number;
-
+    // currentTab: string = 'tab1';
+    contactForm: FormGroup;
+    message: string = '';
+    selectedDevice = ''; 
+    // currentTab = 'tab1';
+ /*    switchTab(event: MouseEvent, tab: string) {
+        event.preventDefault();
+        this.currentTab = tab;
+    }
+ */
+    devices = [
+        'MacBook Air',
+        'MacBook Pro',
+        'iMac',
+        'Mac Mini', 
+        'Mac Studio', 
+        'Mac Pro', 
+        'iPad', 
+        'iPhone', 
+        'Apple Watch', 
+        'Airpods', 
+        'Other Accessories', 
+    ]; 
+    customerCount = 0;
+    partnerCount = 0;
+    deviceCount = 0;
+    projectCount = 0;
+    animationStarted = false;
     constructor(
-        private el: ElementRef,
-        private renderer: Renderer2
-    ) { }
-
-    ngOnInit(): void {
-        // Calculate hero height
-        setTimeout(() => {
-            const heroSection = this.el.nativeElement.querySelector('.hero-section');
-            if (heroSection) {
-                this.heroHeight = heroSection.offsetHeight;
-            }
-            
-            // Initial animation for stats
-            this.statState = 'visible';
-            
-            // Initial animation for circles
-            this.circleState = 'small';
-        }, 100);
-
-        // Check if web or mobile
-        this.isWeb = window.innerWidth >= 768;
-        
-        // Always make content visible
-        this.contentVisible = true;
-    }
-    
-    ngOnDestroy(): void {
-        // No event listeners to clean up
+        private fb: FormBuilder, 
+        private http: HttpClient,
+        private route: ActivatedRoute,
+        private router: Router
+    ) { 
+        this.contactForm = this.fb.group({
+            name: ['', [Validators.required]],
+            email: ['', [Validators.required, Validators.email]],
+            message: ['', [Validators.required]],
+            phone: ['', [Validators.required]],
+            device: ['']
+        });
+        emailjs.init("PTmfxUAnOlAZlyhRB");
     }
 
-    @HostListener('window:scroll', ['$event'])
-    onScroll() {
-        if (!this.isWeb) return; // Skip animation for mobile
-
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const logoContainer = this.el.nativeElement.querySelector('.logo-container');
-        const circles = this.el.nativeElement.querySelectorAll('.circle');
-        
-        // If we've scrolled past threshold, expand the circles
-        if (scrollTop > this.scrollThreshold) {
-            if (this.circleState !== 'large') {
-                this.circleState = 'large';
-                this.renderer.addClass(logoContainer, 'scrolled');
-                
-                circles.forEach((circle: HTMLElement) => {
-                    this.renderer.addClass(circle, 'scrolled');
-                });
+    customOptions: OwlOptions = {
+        loop: true,
+        mouseDrag: true,
+        touchDrag: true,
+        pullDrag: true,
+        dots: true,
+        navSpeed: 700,
+        navText: ['', ''],
+        responsive: {
+            0: {
+                items: 1
+            },
+            400: {
+                items: 1
+            },
+            740: {
+                items: 1
+            },
+            940: {
+                items: 1
             }
-        } else if (scrollTop === 0) { // Reset only when back at the very top
-            this.circleState = 'small';
-            this.renderer.removeClass(logoContainer, 'scrolled');
-            
-            circles.forEach((circle: HTMLElement) => {
-                this.renderer.removeClass(circle, 'scrolled');
+        },
+        nav: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true
+    }
+
+    slides = [
+        {
+            id: 1,
+            title: 'Apple Devices for Enterprise',
+            description1: 'Empower your workforce with Apple devices, tailored for enterprise needs.',
+            description2: 'Get your team working smarter with Apple devices that just work.',
+            description3: ' Deploy Macs and iPads at scale with zero-touch setup and enterprise-grade support.',
+            img: 'assets/images/enterprise.png',
+            alt: 'Apple Devices for Enterprise',
+            pageLink: '/apple-enterprise'
+        },
+        {
+            id: 2,
+            title: 'MDM Solutions',
+            description1: 'Simplify management with industry-leading Mobile Device Management.',
+            description2: 'Take control of every device—without leaving your desk.',
+            description3: 'Secure, manage, and monitor Apple devices with advanced MDM integration.',
+            img: 'assets/images/mdm_banner1.png',
+            alt: 'MDM Solutions',
+            pageLink: '/mdm'
+        },
+        {
+            id: 3,
+            title: 'Audio Video Setup',
+            description1: 'Transform your spaces with professional AV solutions for clear communication.',
+            description2: 'Make every meeting look and sound amazing.',
+            description3: 'Smart AV integrations for seamless presentations and hybrid collaboration.',            
+            img: 'assets/images/avsetup_banner_new.png',
+            alt: 'Audio Video Setup',
+            pageLink: '/avsolution'
+        },
+        {
+            id: 4,
+            title: 'Networking Solutions',
+            description1: 'Build fast, reliable, and secure networks tailored for your organisation.',
+            description2: 'Say goodbye to weak Wi-Fi and tangled cables.',
+            description3: 'Enterprise-grade networking built for speed, stability, and scale.',            
+            img: 'assets/images/networking_banner.jpeg',
+            alt: 'Networking Solutions',
+            pageLink: '/networking'
+        },
+        {
+            id: 5,
+            title: 'Mobility',
+            description1: 'Enable secure and seamless mobile workforces with Apple mobility solutions.',
+            description2: 'Work from anywhere—securely and efficiently.',
+            description3: 'Drive productivity on the move with mobile-first Apple ecosystem strategies.',            
+            img: 'assets/images/mobility_banner_new.jpeg',
+            alt: 'Mobility',
+            pageLink: '/mobility'
+        },
+        {
+            id: 6,
+            title: 'Leasing Services',
+            description1: 'Flexible leasing plans to equip your teams without upfront investment.',
+            description2: 'Upgrade without the upfront cost—lease the latest tech today.',
+            description3: 'Scalable leasing models to stay future-ready and financially agile.',
+            img: 'assets/images/leasing_banner_new.jpeg',
+            alt: 'Leasing Services',
+            pageLink: '/leasing'
+        },
+        {
+            id: 7,
+            title: 'Financing Solutions',
+            description1: 'Finance your Apple ecosystem with custom plans that fit your budget.',
+            description2: 'Get the tech you need—pay the way that works for you.',
+            description3: 'Smart financing options for seamless IT expansion and upgrades.',
+            img: 'assets/images/financing_banner_new.jpeg',
+            alt: 'Financing Solutions',
+            pageLink: '/apple-financing'
+        }
+    ];
+
+    scrollToSection(fragment: string): void {
+        const element = document.getElementById(fragment);
+        if (element) {
+            const headerOffset = 100; // Adjust this value based on your header height
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
             });
         }
-        
-        this.lastScrollTop = scrollTop;
     }
 
-    @HostListener('window:resize', ['$event'])
-    onResize() {
-        this.isWeb = window.innerWidth >= 768;
+    ngOnInit(): void {
+        // Handle both initial navigation and subsequent fragment changes
+        this.router.events.pipe(
+            filter(event => event instanceof NavigationEnd)
+        ).subscribe(() => {
+            this.route.fragment.subscribe(fragment => {
+                if (fragment) {
+                    // Add a small delay to ensure the DOM is ready
+                    setTimeout(() => {
+                        this.scrollToSection(fragment);
+                    }, 100);
+                }
+            });
+        });
         
-        // Update hero height
-        const heroSection = this.el.nativeElement.querySelector('.hero-section');
-        if (heroSection) {
-            this.heroHeight = heroSection.offsetHeight;
+        // Add intersection observer for animation
+        this.setupIntersectionObserver();
+    }
+
+    setupIntersectionObserver() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !this.animationStarted) {
+                    this.animationStarted = true;
+                    this.startCountingAnimation();
+                }
+            });
+        });
+
+        const statsElement = document.querySelector('.stats-card');
+        if (statsElement) {
+            observer.observe(statsElement);
         }
+    }
+
+    startCountingAnimation() {
+        const duration = 3000; // 3 seconds
+        const steps = 100;
+        const interval = duration / steps;
+
+        // Customer count
+        const customerStep = 1000 / steps;
+        const customerInterval = setInterval(() => {
+            this.customerCount = Math.min(Math.ceil(this.customerCount + customerStep), 1000);
+            if (this.customerCount >= 1000) {
+                clearInterval(customerInterval);
+            }
+        }, interval);
+
+        // Partner count
+        const partnerStep = 60 / steps;
+        const partnerInterval = setInterval(() => {
+            this.partnerCount = Math.min(Math.ceil(this.partnerCount + partnerStep), 60);
+            if (this.partnerCount >= 60) {
+                clearInterval(partnerInterval);
+            }
+        }, interval);
+
+        // Device count
+        const deviceStep = 300000 / steps;
+        const deviceInterval = setInterval(() => {
+            this.deviceCount = Math.min(Math.ceil(this.deviceCount + deviceStep), 300000);
+            if (this.deviceCount >= 300000) {
+                clearInterval(deviceInterval);
+            }
+        }, interval);
+
+        // Project count
+        const projectStep = 700 / steps;
+        const projectInterval = setInterval(() => {
+            this.projectCount = Math.min(Math.ceil(this.projectCount + projectStep), 700);
+            if (this.projectCount >= 700) {
+                clearInterval(projectInterval);
+            }
+        }, interval);
     }
 
     teamSlides: OwlOptions = {
@@ -156,7 +290,7 @@ export class HomeOneComponent implements OnInit {
 		dots: false,
 		autoHeight: true,
 		autoplay: true,
-		smartSpeed: 800,
+		smartSpeed: 5000,
 		autoplayHoverPause: true,
 		center: false,
 		responsive:{
@@ -213,9 +347,73 @@ export class HomeOneComponent implements OnInit {
     }
     
     // Tabs
-    currentTab = 'tab1';
-    switchTab(event: MouseEvent, tab: string) {
-        event.preventDefault();
-        this.currentTab = tab;
+ 
+
+    
+
+  customOptions1: OwlOptions = {
+    loop: true,
+    margin: 30,
+    nav: true,
+    dots: true,
+    autoplay: true,
+    autoplayHoverPause: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      576: {
+        items: 2
+      },
+      768: {
+        items: 2
+      },
+      992: {
+        items: 3
+      }
     }
+  };
+
+  onSubmit() {
+    if (this.contactForm.valid) {
+        this.message = 'Sending message...';
+        
+        emailjs.send("service_kuiothp", "template_g8fkwgh", {
+            to_name: "SDPL",
+            from_name: this.contactForm.value.name,
+            email: this.contactForm.value.email,
+            phone: this.contactForm.value.phone,
+            device: this.contactForm.value.device,
+            message: this.contactForm.value.message,
+            reply_to: this.contactForm.value.email
+        })
+        .then((response) => {
+            this.message = 'Message sent successfully!';
+            this.contactForm.reset();
+            console.log('SUCCESS!', response.status, response.text);
+        }, (error) => {
+            this.message = 'Error sending message. Please try again later.';
+            console.error('FAILED...', error);
+        });
+    } else {
+        this.message = 'Please fill in all required fields correctly.';
+    }
+}
+
+// Tabs
+currentTab = 'tab1';
+switchTab(event: MouseEvent, tab: string) {
+    event.preventDefault();
+    this.currentTab = tab;
+}
+
+// Video Popup
+isOpen = false;
+openPopup(): void {
+    this.isOpen = true;
+}
+closePopup(): void {
+    this.isOpen = false;
+}
+
 }

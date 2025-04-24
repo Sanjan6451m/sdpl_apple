@@ -4,6 +4,28 @@
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     background-color: #f9f5f3;
     color: #000;
+    background-image: url('/assets/images/macmini/mini.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  .mac-mini-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(249, 245, 243, 0.7);
+    z-index: 1;
+  }
+  
+  .mac-mini-container > * {
+    position: relative;
+    z-index: 2;
   }
   
   .mac-text {
@@ -317,5 +339,63 @@
     border-radius: 999px;
     cursor: pointer;
     font-size: 1rem;
+  }
+  
+  .hero-section {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .page-title-area {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.12);
+    }
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+
+    .hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .gradient-text {
+        font-size: 32px;
+        font-weight: 700;
+        background: linear-gradient(128deg, #0090f7 6%, #ba62fc 36%, #f2416b 79%, #f55600 95%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        margin-bottom: 20px;
+    }
   }
   

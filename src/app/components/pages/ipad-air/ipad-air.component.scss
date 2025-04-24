@@ -401,32 +401,387 @@ section {
 @media (max-width: 768px) {
   .page-title-area {
     padding: 80px 0;
+    height: 80vh;
+    text-align: center;
+
+    .page-bg {
+      height: 80%;
+      object-fit: contain;
+      margin: 0 auto;
+    }
   }
 
   .hero-content {
-    h1 {
-      font-size: 32px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+
+    .hero-logo {
+      height: 40px;
+      margin: 0 auto 12px;
     }
 
-    h2 {
-      font-size: 28px;
+    h1 {
+      font-size: 36px;
+      margin-bottom: 12px;
     }
 
     p {
       font-size: 16px;
+      margin-bottom: 24px;
     }
   }
 
-  .feature-card {
-    h3 {
+  .performance-section {
+    padding: 60px 0;
+
+    .performance-content {
+      h3 {
+        font-size: 26px;
+        margin-bottom: 24px;
+        text-align: center;
+      }
+
+      .performance-stats {
+        margin-top: 30px;
+
+        .stat {
+          margin-bottom: 24px;
+
+          h4 {
+            font-size: 32px;
+            margin-bottom: 8px;
+          }
+
+          p {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  .battery-section {
+    .battery-content {
+      h3 {
+        font-size: 26px;
+      }
+
+      .battery-stats {
+        h4 {
+          font-size: 32px;
+        }
+
+        p {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  .display-section {
+    .display-content {
+      h3 {
+        font-size: 26px;
+      }
+    }
+
+    .feature-card {
+      .feature-content {
+        p {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  .accessories-section {
+    .feature-card {
+      .card-content {
+        h3 {
+          font-size: 24px;
+          padding: 20px;
+        }
+      }
+    }
+  }
+
+  .features-section, .accessories-section {
+    padding: 60px 0;
+
+    .feature-card {
+      padding: 30px;
+      margin-bottom: 24px;
+
+      h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
+
+      &.display-info-card {
+        padding: 40px;
+      }
+
+      .feature-image {
+        max-height: 150px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+
+    .col-lg-3 {
+      .feature-card {
+        height: auto;
+        margin-bottom: 24px !important;
+
+        &:first-child {
+          margin-bottom: 24px;
+        }
+
+        .feature-image {
+          max-height: 100px;
+        }
+      }
+    }
+
+    .size-options, .color-options {
+      margin-top: 24px;
+    }
+
+    .size-labels, .color-labels {
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 0 15px;
+
+      .size-label, .color-label {
+        h4 {
+          font-size: 20px;
+          margin-bottom: 4px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title-area {
+    padding: 60px 0;
+    height: 70vh;
+
+    .page-bg {
+      height: 70%;
+    }
+  }
+
+  .hero-content {
+    padding: 0 15px;
+
+    .hero-logo {
+      height: 32px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
       font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 14px;
+      margin-bottom: 20px;
     }
   }
 
-  .performance-section, .battery-section {
-    .stat {
+  .performance-section {
+    padding: 40px 0;
+
+    .performance-content {
+      h3 {
+        font-size: 22px;
+        margin-bottom: 20px;
+      }
+
+      .performance-stats {
+        margin-top: 24px;
+
+        .stat {
+          margin-bottom: 20px;
+
+          h4 {
+            font-size: 26px;
+            margin-bottom: 6px;
+          }
+
+          p {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+
+  .battery-section {
+    .battery-content {
+      h3 {
+        font-size: 22px;
+      }
+
+      .battery-stats {
+        h4 {
+          font-size: 26px;
+        }
+
+        p {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  .features-section, .accessories-section {
+    padding: 40px 0;
+
+    .feature-card {
+      padding: 20px;
+      margin-bottom: 20px;
+
+      h3 {
+        font-size: 20px;
+        margin-bottom: 12px;
+      }
+
+      &.display-info-card {
+        padding: 25px;
+      }
+
+      .feature-image {
+        max-height: 120px;
+      }
+
+      p {
+        font-size: 13px;
+        margin-bottom: 15px;
+      }
+    }
+
+    .size-labels, .color-labels {
+      gap: 15px;
+      padding: 0 10px;
+
+      .size-label, .color-label {
+        h4 {
+          font-size: 16px;
+          margin-bottom: 3px;
+        }
+
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .display-section {
+    .display-content {
+      h3 {
+        font-size: 22px;
+      }
+    }
+
+    .feature-card {
+      .feature-content {
+        p {
+          font-size: 13px;
+        }
+
+        .feature-icon {
+          width: 32px;
+          height: 32px;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+
+  .ipados-section {
+    .feature-card {
+      .ipados-content {
+        h3 {
+          font-size: 20px;
+        }
+
+        p {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  .ai-section {
+    .ai-card {
+      .ai-content {
+        padding: 30px;
+        
+        h3 {
+          font-size: 20px;
+        }
+
+        p {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  .accessories-section {
+    .feature-card {
+      .card-content {
+        h3 {
+          font-size: 20px;
+          padding: 15px;
+        }
+      }
+    }
+  }
+
+  .size-labels, .color-labels {
+    .size-label, .color-label {
       h4 {
-        font-size: 36px;
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .features-section, .accessories-section {
+    .feature-card {
+      padding: 20px;
+
+      &.display-info-card {
+        padding: 25px;
+      }
+
+      h3 {
+        font-size: 20px;
+        margin-bottom: 12px;
+      }
+
+      p {
+        font-size: 13px;
+        margin-bottom: 15px;
       }
     }
   }

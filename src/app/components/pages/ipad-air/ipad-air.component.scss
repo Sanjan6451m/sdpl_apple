@@ -1,0 +1,433 @@
+// Common styles for all sections
+section {
+  background-color: #1d1d1f;
+  color: #fff;
+  overflow: hidden;
+}
+
+.feature-card {
+  background-color: #000;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 100%;
+  margin-bottom: 30px;
+}
+
+// Hero Section
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.page-title-area {
+  position: relative;
+  padding: 120px 0;
+  background: linear-gradient(180deg, #addcee 10%, #d0e9f2 69%, #f3f6f6 95%);
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  &::after {
+    background: rgba(0, 0, 0, 0.1) !important;
+  }
+}
+
+.page-bg {
+  position: absolute;
+  top: 0;
+  width: auto;
+  height: 100%;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin: 0;
+  text-align: left;
+
+  .hero-logo {
+    height: 48px;
+    margin-bottom: 15px;
+    display: block;
+  }
+
+  h1 {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    color: #1d1d1f;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    line-height: 1.3;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #1d1d1f;
+    margin-bottom: 30px;
+  }
+}
+
+// Performance Section
+.performance-section {
+  padding: 80px 0;
+  background-color: #f5f5f7;
+
+  .performance-content {
+    h3 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #1d1d1f;
+    }
+
+    .performance-stats {
+      margin-top: 40px;
+
+      .stat {
+        margin-bottom: 30px;
+        text-align: center;
+
+        h4 {
+          font-size: 48px;
+          margin-bottom: 10px;
+          background: linear-gradient(115deg, #0090F7 30%, #BA62FC 45%, #F2416B 60%, #F55600 70%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        p {
+          color: #86868b;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+// Features & Accessories Sections
+.features-section, .accessories-section {
+  padding: 80px 0;
+  background-color: #fff;
+
+  .feature-card {
+    padding: 40px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #1d1d1f;
+    }
+
+    &.display-info-card {
+      padding: 60px;
+      
+      .display-image {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+
+      h2 {
+        margin: 0;
+      }
+    }
+
+    .feature-image {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      max-height: 180px;
+    }
+
+    h2 {
+      margin: 0;
+    }
+  }
+
+  .col-lg-3 {
+    .feature-card {
+      margin-bottom: 0;
+      height: calc(50% - 10px);
+
+      &:first-child {
+        margin-bottom: 20px;
+      }
+
+      .feature-image {
+        max-height: 120px;
+      }
+    }
+  }
+
+  .size-options, .color-options {
+    margin-top: 30px;
+  }
+
+  .size-labels, .color-labels {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+
+    .size-label, .color-label {
+      text-align: center;
+
+      h4 {
+        color: #1d1d1f;
+        font-size: 24px;
+        margin-bottom: 5px;
+      }
+
+      p {
+        color: #86868b;
+      }
+    }
+  }
+}
+
+// AI Section
+.ai-section {
+  padding: 80px 0;
+
+  .ai-card {
+    background-color: #000;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      padding: 1px;
+      background: linear-gradient(115deg, #0090F7 30%, #BA62FC 45%, #F2416B 60%, #F55600 70%);
+      border-radius: 20px;
+      -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .ai-content {
+      padding: 60px;
+    }
+  }
+}
+
+// iPadOS Section
+.ipados-section {
+  padding: 80px 0;
+  background-color: #f5f5f7;
+
+  .feature-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+
+    .ipados-content {
+      h3 {
+        font-size: 32px;
+        margin-bottom: 20px;
+        color: #1d1d1f;
+      }
+
+      p {
+        color: #86868b;
+        font-size: 18px;
+      }
+    }
+
+    .ipados-image {
+      margin-top: 30px;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+// Battery Section
+.battery-section {
+  padding: 80px 0;
+  background-color: #fff;
+
+  .battery-content {
+    text-align: center;
+
+    h3 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #1d1d1f;
+    }
+
+    .battery-stats {
+      h4 {
+        font-size: 48px;
+        margin-bottom: 20px;
+        background: linear-gradient(115deg, #0090F7 30%, #BA62FC 45%, #F2416B 60%, #F55600 70%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      p {
+        color: #86868b;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+// Display Section
+.display-section {
+  padding: 80px 0;
+  background-color: #f5f5f7;
+
+  .display-content {
+    margin-bottom: 40px;
+
+    h3 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #1d1d1f;
+    }
+  }
+
+  .feature-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+
+    .feature-content {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+      .feature-icon {
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      p {
+        color: #86868b;
+        font-size: 18px;
+        margin: 0;
+      }
+    }
+  }
+}
+
+// Accessories Section
+.accessories-section {
+  padding: 80px 0;
+  background-color: #fff;
+
+  .feature-card {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+
+    .card-content {
+      h3 {
+        color: #1d1d1f;
+        font-size: 28px;
+        padding: 30px;
+        margin: 0;
+      }
+
+      .feature-image {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+  }
+}
+
+// Responsive Styles
+@media (max-width: 991px) {
+  .page-title-area {
+    padding: 100px 0;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+    padding: 0 20px;
+
+    h1 {
+      font-size: 40px;
+    }
+
+    h2 {
+      font-size: 36px;
+    }
+  }
+
+  .performance-section, .battery-section {
+    .performance-content, .battery-content {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .page-title-area {
+    padding: 80px 0;
+  }
+
+  .hero-content {
+    h1 {
+      font-size: 32px;
+    }
+
+    h2 {
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  .feature-card {
+    h3 {
+      font-size: 24px;
+    }
+  }
+
+  .performance-section, .battery-section {
+    .stat {
+      h4 {
+        font-size: 36px;
+      }
+    }
+  }
+}

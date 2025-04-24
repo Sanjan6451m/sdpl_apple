@@ -1,0 +1,96 @@
+
+  <div class="page-title-area">
+      <img src="assets/images/mobility_banner_new.jpeg" alt="Page Background" class="page-bg">
+      <button class="back-arrow-btn" (click)="navigateToHome()">
+          <i class="fas fa-chevron-left fa-2x"></i>
+      </button>
+      <div class="container">
+          <div class="page-title-content">
+              <h2>Mobility</h2>
+          </div>
+      </div>
+  
+      <div class="page-shape">
+          <div class="shape1"><img src="assets/images/shape/1.png" alt="shape" /></div>
+          <div class="shape3"><img src="assets/images/shape/3.png" alt="shape" /></div>
+          <div class="shape4"><img src="assets/images/shape/4.png" alt="shape" /></div>
+          <div class="shape5"><img src="assets/images/shape/5.png" alt="shape" /></div>
+          <div class="shape6"><img src="assets/images/shape/6.png" alt="shape" /></div>
+      </div>
+  </div>
+  
+  <section class="services-details-area ptb-100">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12">
+                  <div class="section-title">
+                      <h2>Welcome to Our Enterprise Mobility Solutions</h2>
+                  </div>
+                  <p>In today's rapidly evolving business landscape, staying connected and agile is essential for
+                      success. We offer comprehensive mobility solutions architected to meet the unique needs of
+                      enterprises across industries. Our solutions empower your workforce to access critical business
+                      information anytime, anywhere, ensuring maximum productivity and efficiency.</p>
+              </div>
+          </div>
+      </div>
+          <div class="scrives-item-2 mt-5">
+              <div class="row align-items-center" style="margin: auto;">
+                      <h2 style="padding-left: 6%;">Key Features of Our Mobility Solutions</h2>
+                      <br>
+  
+                      <div class="grid-container-wrapper">
+                          <button class="nav-arrow left-arrow" (click)="scrollLeft()">&#10094;</button>
+                          
+                          <div class="grid-container" #gridContainer>
+                              <div class="marquee-wrapper">
+                                <div class="grid-item" *ngFor="let item of gridItems; let i = index"
+                                     [ngStyle]="{'background-image': 'url(' + item.image + ')'}"
+                                     (click)="goToSlidegrid(i)">
+                                  <div class="content">
+                                    <h3 style="color: #fff; font-size: 32px; text-align: center;">{{ item.title }}</h3>
+                                    <p style="color: #fff; text-align: justify; font-size: 16px;">{{ item.description }}</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          
+                          <button class="nav-arrow right-arrow" (click)="scrollRight()">&#10095;</button>
+                        </div>
+              </div>
+          </div>
+    
+      <div class="scrives-item-2 mt-5">
+          <div>
+              <h2 style="padding-left: 50px; text-align: center;">Mobility Solutions</h2>
+              <br>
+              <div class="contact-container">
+                  <div class="form-box">
+                      <div class="form-left">
+                          <br>
+                          <h2 style="text-align: center; color: white;">Benefits of Using Our Enterprise Mobility Solutions</h2>
+                          <br>
+                          <div class="cards-container" #cardsContainer>
+                              <div class="card" *ngFor="let card of cards; let i = index"
+                                  [class.active]="i === activeIndex">
+                                  <h1 style="font-size: 20px; font-weight: bold; text-align: center;">{{ card.title }}</h1>
+                                  <p>{{ card.description }}</p>
+                              </div>
+                          </div>
+                          <div class="dots">
+                              <span *ngFor="let card of cards; let i = index" [class.active]="i === activeIndex"
+                                  (click)="goToSlide(i)"></span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+  <div class="container mb-4">
+      <div class="d-flex justify-content-end">
+          <button class="btn back-btn" (click)="navigateToHome()">
+              <i class="fas fa-arrow-left me-2"></i> Back to Home
+          </button>
+      </div>
+  </div>

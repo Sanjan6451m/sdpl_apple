@@ -1,0 +1,568 @@
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.page-title-area {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0px;
+
+    &::after {
+        background: rgba(0, 0, 0, 0.12);
+    }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+
+    .hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .gradient-text {
+        font-size: 32px;
+        font-weight: 700;
+        background: linear-gradient(128deg, #0090f7 6%, #ba62fc 36%, #f2416b 79%, #f55600 95%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        margin-bottom: 20px;
+    }
+}
+
+// .features-section {
+//     padding: 60px 0;
+//     background: #fff;
+
+//     .feature-card {
+//         padding: 40px;
+//         background: #f5f5f7;
+//         border-radius: 20px;
+//         transition: transform 0.3s ease;
+//         margin-bottom: 30px;
+
+//         &:hover {
+//             transform: translateY(-5px);
+//         }
+
+//         h2 {
+//             font-size: 32px;
+//             font-weight: 600;
+//             margin-bottom: 16px;
+//             color: #1d1d1f;
+//         }
+
+//         p {
+//             font-size: 18px;
+//             color: #86868b;
+//             margin-bottom: 24px;
+//         }
+
+//         .feature-image {
+//             width: 100%;
+//             height: auto;
+//             border-radius: 12px;
+//         }
+//     }
+
+//     .display-info-card {
+//         position: relative;
+//         min-height: 600px;
+//         padding: 40px;
+//         overflow: hidden;
+//         background-color: #f1f0ff !important;
+
+//         .text-content {
+//             position: absolute;
+//             top: 40px;
+//             right: 40px;
+//             max-width: 500px;
+//             text-align: right;
+
+//             h1 {
+//                 font-size: 32px;
+//                 margin-bottom: 12px;
+//                 color: #615d90;
+//             }
+
+//             h2 {
+//                 font-size: 28px;
+//                 margin-bottom: 12px;
+//             }
+
+//             p {
+//                 font-size: 16px;
+//                 line-height: 1.4;
+//             }
+//         }
+
+//         .display-image {
+//             position: absolute;
+//             bottom: 0;
+//             left: 0;
+//             width: 60%;
+//             height: 70%;
+//             object-fit: contain;
+//         }
+//     }
+
+//     .colors-card {
+//         position: relative;
+//         min-height: 400px;
+//         padding: 40px;
+//         background-size: cover;
+//         background-position: center;
+//         background-repeat: no-repeat;
+//         display: flex;
+//         align-items: flex-start;
+//         justify-content: center;
+//         position: relative;
+//         border-radius: 30px;
+//         overflow: hidden;
+
+//         &::before {
+//             content: '';
+//             position: absolute;
+//             top: 0;
+//             left: 0;
+//             right: 0;
+//             bottom: 0;
+//             background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.1));
+//             z-index: 1;
+//         }
+
+//         .text-content {
+//             position: relative;
+//             z-index: 2;
+//             text-align: center;
+//             padding-top: 40px;
+
+//             h2 {
+//                 color: #ffffff;
+//                 font-size: 28px;
+//                 margin-bottom: 16px;
+//                 font-weight: 600;
+//                 text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+//             }
+
+//             p {
+//                 color: #ffffff;
+//                 font-size: 16px;
+//                 line-height: 1.4;
+//                 margin-bottom: 0;
+//                 text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+//                 letter-spacing: 0.02em;
+//             }
+//         }
+//     }
+
+//     .ai-card {
+//         position: relative;
+//         min-height: 400px;
+//         padding: 40px;
+//         background: linear-gradient(135deg, #f0f0f0 0%, #ffffff 100%);
+//         display: flex;
+//         align-items: flex-start;
+//         justify-content: center;
+//         position: relative;
+//         border-radius: 30px;
+//         overflow: hidden;
+
+//         .ai-content {
+//             position: relative;
+//             text-align: center;
+//             padding-top: 40px;
+
+//             .gradient-title {
+//                 font-size: 48px;
+//                 font-weight: 700;
+//                 color: #385fa2;
+//                 margin-bottom: 16px;
+//             }
+
+//             .ai-subtitle {
+//                 font-size: 56px;
+//                 font-weight: 600;
+//                 color: #1d1d1f;
+//                 margin-bottom: 24px;
+//                 line-height: 1.1;
+//             }
+
+//             .ai-description {
+//                 font-size: 20px;
+//                 color: #86868b;
+//                 margin: 0;
+//             }
+//         }
+//     }
+
+//     .performance-card {
+//         padding: 60px 40px;
+//         background-color: #ffffff;
+//         border-radius: 30px;
+//         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+
+//         .performance-grid {
+//             display: flex;
+//             align-items: center;
+//             gap: 60px;
+
+//             .m4-icon {
+//                 flex-shrink: 0;
+//                 width: 120px;
+//                 height: 120px;
+                
+//                 img {
+//                     width: 100%;
+//                     height: 100%;
+//                     object-fit: contain;
+//                 }
+//             }
+
+//             .performance-stats {
+//                 display: flex;
+//                 gap: 40px;
+//                 flex-grow: 1;
+
+//                 .stat-item {
+//                     flex: 1;
+
+//                     h3 {
+//                         font-size: 28px;
+//                         font-weight: 600;
+//                         color: #f56300;
+//                         margin-bottom: 12px;
+//                     }
+
+//                     p {
+//                         font-size: 16px;
+//                         line-height: 1.4;
+//                         color: #1d1d1f;
+//                         margin: 0;
+
+//                         sup {
+//                             font-size: 10px;
+//                             top: -0.5em;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+//     .lifestyle-card {
+//         position: relative;
+//         min-height: 500px;
+//         padding: 40px;
+//         background-size: cover;
+//         background-position: center;
+//         background-repeat: no-repeat;
+//         display: flex;
+//         align-items: center;
+//         justify-content: flex-end;
+//         position: relative;
+//         border-radius: 30px;
+//         overflow: hidden;
+
+//         &::before {
+//             content: '';
+//             position: absolute;
+//             top: 0;
+//             left: 0;
+//             right: 0;
+//             bottom: 0;
+//             background: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.4));
+//             z-index: 1;
+//         }
+
+//         .text-content {
+//             position: relative;
+//             z-index: 2;
+//             text-align: right;
+//             max-width: 500px;
+//             padding: 40px;
+
+//             h2 {
+//                 color: #ffffff;
+//                 font-size: 32px;
+//                 margin-bottom: 16px;
+//                 font-weight: 600;
+//                 text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+//             }
+
+//             p {
+//                 color: #ffffff;
+//                 font-size: 18px;
+//                 line-height: 1.4;
+//                 margin-bottom: 0;
+//                 text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+//                 letter-spacing: 0.02em;
+//             }
+//         }
+//     }
+
+//     .accessories-card {
+//         position: relative;
+//         padding: 60px 40px;
+//         background-color: #ffffff;
+//         border-radius: 30px;
+//         overflow: hidden;
+//         min-height: 500px;
+//         display: flex;
+//         flex-direction: column;
+
+//         .accessories-content {
+//             position: relative;
+//             z-index: 2;
+//             max-width: 800px;
+
+//             h2 {
+//                 font-size: 48px;
+//                 font-weight: 700;
+//                 color: #385fa2;
+//                 margin-bottom: 16px;
+//             }
+
+//             h3 {
+//                 font-size: 56px;
+//                 font-weight: 600;
+//                 color: #1d1d1f;
+//                 margin-bottom: 24px;
+//                 line-height: 1.1;
+//             }
+
+//             p {
+//                 font-size: 20px;
+//                 color: #86868b;
+//                 margin: 0;
+//             }
+//         }
+
+//         .accessories-image {
+//             position: absolute;
+//             bottom: 0;
+//             right: 0;
+//             width: 60%;
+//             height: auto;
+//             object-fit: contain;
+//         }
+//     }
+
+//     .connectivity-card {
+//         padding: 60px;
+//         background: #ffffff;
+
+//         .features-grid {
+//             display: grid;
+//             grid-template-columns: repeat(3, 1fr);
+//             gap: 40px;
+            
+//             .feature-item {
+//                 text-align: center;
+
+//                 img {
+//                     width: 64px;
+//                     height: 64px;
+//                     object-fit: contain;
+//                     margin-bottom: 20px;
+//                 }
+
+//                 h3 {
+//                     font-size: 24px;
+//                     color: #1d1d1f;
+//                     margin-bottom: 12px;
+//                     font-weight: 600;
+//                 }
+
+//                 p {
+//                     font-size: 16px;
+//                     color: #86868b;
+//                     line-height: 1.4;
+//                     margin: 0;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 40px 0;
+
+        .hero-text {
+            .hero-subtitle {
+                font-size: 36px;
+            }
+
+            .hero-description {
+                font-size: 20px;
+            }
+        }
+    }
+
+    // .features-section {
+    //     .feature-card {
+    //         padding: 30px;
+
+    //         h2 {
+    //             font-size: 28px;
+    //         }
+
+    //         p {
+    //             font-size: 16px;
+    //         }
+    //     }
+
+    //     .display-info-card {
+    //         padding: 40px 30px;
+
+    //         h2 {
+    //             font-size: 32px;
+    //         }
+    //     }
+
+    //     .colors-card {
+    //         min-height: 300px;
+    //         padding: 30px;
+
+    //         .text-content {
+    //             padding-top: 30px;
+
+    //             h2 {
+    //                 font-size: 24px;
+    //             }
+
+    //             p {
+    //                 font-size: 14px;
+    //             }
+    //         }
+    //     }
+
+    //     .ai-card {
+    //         min-height: 300px;
+    //         padding: 30px;
+
+    //         .ai-content {
+    //             padding-top: 30px;
+
+    //             .gradient-title {
+    //                 font-size: 24px;
+    //             }
+
+    //             .ai-subtitle {
+    //                 font-size: 20px;
+    //             }
+
+    //             .ai-description {
+    //                 font-size: 14px;
+    //             }
+    //         }
+    //     }
+
+    //     .performance-card {
+    //         padding: 40px 20px;
+
+    //         .performance-grid {
+    //             flex-direction: column;
+    //             gap: 30px;
+    //             text-align: center;
+
+    //             .m4-icon {
+    //                 width: 80px;
+    //                 height: 80px;
+    //             }
+
+    //             .performance-stats {
+    //                 flex-direction: column;
+    //                 gap: 24px;
+
+    //                 .stat-item {
+    //                     h3 {
+    //                         font-size: 24px;
+    //                     }
+
+    //                     p {
+    //                         font-size: 14px;
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+
+    //     .lifestyle-card {
+    //         min-height: 400px;
+    //         padding: 30px;
+    //         align-items: center;
+    //         justify-content: center;
+
+    //         .text-content {
+    //             text-align: center;
+    //             padding: 20px;
+
+    //             h2 {
+    //                 font-size: 28px;
+    //             }
+
+    //             p {
+    //                 font-size: 16px;
+    //             }
+    //         }
+
+    //         &::before {
+    //             background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.4));
+    //         }
+    //     }
+
+    //     .accessories-card {
+    //         padding: 40px 20px;
+    //         min-height: 400px;
+
+    //         .accessories-content {
+    //             h2 {
+    //                 font-size: 36px;
+    //             }
+
+    //             h3 {
+    //                 font-size: 48px;
+    //             }
+
+    //             p {
+    //                 font-size: 20px;
+    //             }
+    //         }
+
+    //         .accessories-image {
+    //             width: 90%;
+    //         }
+    //     }
+
+    //     .connectivity-card {
+    //         padding: 30px;
+            
+    //         .features-grid {
+    //             grid-template-columns: 1fr;
+    //             gap: 30px;
+    //         }
+    //     }
+    // }
+}

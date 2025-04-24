@@ -1,0 +1,42 @@
+// .home-case {
+//     .case {
+//         .case-list {
+//             .single-case {
+//                 margin-bottom: 30px;
+//                 transition: var(--transition);
+
+//                 .case-img {
+//                     img {
+//                         border-top-left-radius: 6px;
+//                         border-top-right-radius: 6px;
+//                     }
+//                 }
+
+//                 .content {
+//                     background: var(--whiteColor);
+//                     box-shadow: var(--boxShadow);
+//                     padding: 30px;
+//                     border-bottom-left-radius: 6px;
+//                     border-bottom-right-radius: 6px;
+
+//                     h3 {
+//                         margin-bottom: 10px;
+//                         transition: var(--transition);
+//                     }
+
+//                     p {
+//                         margin-bottom: 12px;
+//                     }
+//                 }
+
+//                 &:hover {
+//                     transform: translateY(-3px);
+
+//                     h3 {
+//                         color: var(--mainColor);
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }

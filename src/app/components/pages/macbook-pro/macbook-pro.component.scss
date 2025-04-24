@@ -519,6 +519,34 @@
       }
     }
   }
+
+  .features-section {
+    .feature-card {
+      .card-content {
+        .integration-display {
+          display: flex;
+          flex-direction: column;
+
+          .overlay-text {
+            position: static;
+            transform: none;
+            order: -1;
+            margin-bottom: 20px;
+            text-align: center;
+
+            h3 {
+              font-size: 28px !important;
+            }
+          }
+
+          .feature-image {
+            width: 80%;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 991px) {

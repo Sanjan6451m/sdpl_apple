@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { Component, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @Component({
@@ -12,6 +12,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
   styleUrl: './products.component.scss'
 })
 export class ProductsComponent implements OnInit {
+
   currentTab: string = 'tab1';
 
   customOptions: OwlOptions = {
@@ -176,7 +177,7 @@ export class ProductsComponent implements OnInit {
    
 ];
 
-constructor() { }
+ constructor(private router: Router) { }
 
 ngOnInit(): void {
 }
@@ -185,4 +186,8 @@ switchTab(event: Event, tab: string): void {
     event.preventDefault();
     this.currentTab = tab;
 }
+
+navigateToHome(): void {
+    this.router.navigate(['/']);
+  }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-case-studies',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CaseStudiesComponent implements OnInit {
 
-    constructor() { }
+    constructor(private router: Router) { }
 
     ngOnInit(): void {}
     
@@ -18,4 +19,7 @@ export class CaseStudiesComponent implements OnInit {
         this.currentTab = tab;
     }
 
+    navigateToHome(): void {
+        this.router.navigate(['/']);
+      }
 }

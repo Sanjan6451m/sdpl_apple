@@ -440,6 +440,11 @@
 }
 
 @media (max-width: 992px) {
+
+    .program-title{
+        margin-left: 0% !important;
+        margin-top: 0% !important;
+    }
     .features-container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -471,3 +476,26 @@
         }
     }
 }
+
+.back-btn {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    
+    &:hover {
+        background-color: #34495e;
+        transform: translateX(-5px);
+    }
+
+    i {
+        transition: transform 0.3s ease;
+    }
+
+    &:hover i {
+        transform: translateX(-5px);
+    }
+} 

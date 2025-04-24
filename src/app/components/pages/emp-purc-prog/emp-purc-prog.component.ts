@@ -44,4 +44,8 @@ export class EmpPurcProgComponent implements OnInit, AfterViewInit {
   navigateToContact(): void {
     this.router.navigate(['/contact']);
   }
+
+  navigateToHome(): void {
+    this.router.navigate(['/']);
+  }
 }

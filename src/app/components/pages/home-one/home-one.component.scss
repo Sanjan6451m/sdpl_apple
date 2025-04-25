@@ -515,12 +515,12 @@
     }
 
     .service-card {
-        height: 240px;
+        height: fit-content;
         max-width: 220px;
     }
 
     .card-image {
-        height: 110px;
+        height: 170px;
     }
 }
 

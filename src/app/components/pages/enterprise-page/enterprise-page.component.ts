@@ -18,6 +18,29 @@ export class EnterprisePageComponent {
   projectCount = 0;
   animationStarted = false;
   currentTab = 'tab1';
+  lifecycleStages = [
+    {
+      icon: 'assets/images/lifecycle/discover.png',
+      title: 'Discover',
+      description: 'Identify business needs and opportunities for digital transformation.'
+    },
+    {
+      icon: 'assets/images/lifecycle/design.png',
+      title: 'Design',
+      description: 'Architect tailored IT solutions for your enterprise goals.'
+    },
+    {
+      icon: 'assets/images/lifecycle/deploy.png',
+      title: 'Deploy',
+      description: 'Implement and integrate solutions with minimal disruption.'
+    },
+    {
+      icon: 'assets/images/lifecycle/support.png',
+      title: 'Support',
+      description: 'Ongoing support, optimization, and scaling as your business grows.'
+    }
+  ];
+
   switchTab(event: MouseEvent, tab: string) {
       event.preventDefault();
       this.currentTab = tab;
@@ -141,12 +164,18 @@ export class EnterprisePageComponent {
       description: "The adoption of digital tools, including the use of iPads for immersive presentations, resulted in improved operational efficiency."
     }
   ];
+  activeTab = 'partnerships';
 
+  
   constructor(
     private http: HttpClient,
     private route: ActivatedRoute,
     private router: Router
 ) { 
+}
+
+setActiveTab(tab: string) {
+  this.activeTab = tab;
 }
 
 scrollToSection(fragment: string): void {
@@ -238,5 +267,19 @@ setupIntersectionObserver() {
             clearInterval(projectInterval);
         }
     }, interval);
+}
+
+getStagePosition(index: number, total: number) {
+  const angle = (index / total) * 2 * Math.PI;
+  const radius = 220; // px, adjust as needed
+  const centerX = 250; // px, adjust as needed
+  const centerY = 250; // px, adjust as needed
+  return {
+    position: 'absolute',
+    left: `${centerX + radius * Math.cos(angle) - 80}px`, // 80 = half of card width
+    top: `${centerY + radius * Math.sin(angle) - 60}px`,  // 60 = half of card height
+    width: '160px',
+    textAlign: 'center'
+  };
 }
 }

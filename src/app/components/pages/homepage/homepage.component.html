@@ -1,0 +1,382 @@
+<section id="hero-banner">
+    <div class="container">
+        <h1>Welcome to Our Company</h1>
+        <p>Your success is our mission.</p>
+    </div>
+</section>
+
+<section id="about-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="about-intro">
+                    <h2>About Us</h2>
+                    <p class="section-description">We are a leading company in our industry, committed to providing
+                        top-notch services to our clients.</p>
+
+                    <div class="ceo-message">
+                        <h2>CEO's Message</h2>
+                        <div class="message-content">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen book. It has
+                                survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                                publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            </p>
+                            <div class="ceo-signature">
+                                <p>- XYZ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="about-content">
+                    <div class="about-item">
+                        <div class="icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Our Approach</h3>
+                        <p>We believe in a customer-centric approach, combining innovation with practical solutions to
+                            deliver exceptional results. Our methodology focuses on understanding your unique needs and
+                            crafting tailored strategies that drive success.</p>
+                    </div>
+
+                    <div class="about-item">
+                        <div class="icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Superior Story</h3>
+                        <p>With years of industry experience, we've built a reputation for excellence. Our journey is
+                            marked by continuous growth, innovation, and a commitment to delivering superior quality in
+                            everything we do.</p>
+                    </div>
+
+                    <div class="about-item">
+                        <div class="icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Our Vision</h3>
+                        <p>To be the global leader in our industry, setting new standards of excellence and innovation.
+                            We envision a future where our solutions transform businesses and create lasting value for
+                            our clients.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- <section id="our-vision">
+    <div class="info-area pt-100 pb-70 bg-color">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single-info">
+                        <div class="info-img">
+                            <img src="assets/images/info/i1.jpg" alt="info" />
+                        </div>
+    
+                        <div class="content">
+                            <h3><i class="flaticon-info"></i> About Us</h3>
+                            <div class="arrow">
+                                <a routerLink="/about"><i class="flaticon-next-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single-info">
+                        <div class="info-img">
+                            <img src="assets/images/info/i2.jpg" alt="info" />
+                        </div>
+    
+                        <div class="content">
+                            <h3><i class="flaticon-support"></i> Our Vision</h3>
+                            <div class="arrow">
+                                <a routerLink="/about"> <i class="flaticon-next-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-sm-6 offset-sm-3 offset-lg-0">
+                    <div class="single-info si-30">
+                        <div class="info-img">
+                            <img src="assets/images/info/i3.jpg" alt="info" />
+                        </div>
+    
+                        <div class="content">
+                            <h3><i class="flaticon-goal"></i>Our Goal</h3>
+                            <div class="arrow">
+                                <a routerLink="/about"><i class="flaticon-next-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+<section class="statistics-area pt-100 pb-100">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-4 col-md-12">
+                <div class="single-statistics">
+                    <h1 style="font-size: 140px; color: greenyellow;">{{displayedValues[0]}}</h1>
+                    <p>{{statistics[0].text}}</p>
+                    <!-- <p>{{statistics[0].subtext}}</p> -->
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-12">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4" *ngFor="let stat of statistics.slice(1); let i = index">
+                        <div class="single-statistics">
+                            <h3>{{displayedValues[i + 1]}}{{stat.prefix}}</h3>
+                            <p>{{stat.text}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="enterprise" class="enterprise-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="enterprise-content">
+                    <h2>Enterprise</h2>
+                    <p class="enterprise-text">
+                        We provide customised and end to end technology solutions for businesses. Having served over 1500+ customers and partnering up with the world's leading technology innovators, we have the unrivalled depth of expertise to help you win.
+                    </p>
+                    <div class="enterprise-actions">
+                        <a href="#" class="know-more-btn">Know More</a>
+                        <div class="enterprise-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="blog-section pt-100 pb-100">
+    <div class="container">
+        <div class="section-title text-center mb-5">
+            <h2>Latest Insights</h2>
+            <p>Stay updated with our latest news and developments</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="assets/images/blog/1.jpg" alt="Software Development">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>10 April 2024</span>
+                        </div>
+                        <h3>Software Development Excellence</h3>
+                        <p>Best practices in modern software development that drive business success.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="assets/images/blog/5.jpg" alt="UX Design">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>10 April 2024</span>
+                        </div>
+                        <h3>UX Design Trends 2024</h3>
+                        <p>Latest trends in user experience design shaping digital products.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="assets/images/blog/3.jpg" alt="Enterprise Solutions">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>10 April 2024</span>
+                        </div>
+                        <h3>Enterprise Solutions Guide</h3>
+                        <p>Guide to implementing enterprise-level software solutions effectively.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="#" class="view-all">View All Articles</a>
+        </div>
+    </div>
+</section>
+
+<section class="life-at-superior pt-100 pb-100">
+    <div class="container">
+        <div class="section-title">
+            <span>Life at Superior</span>
+            <h2>Experience a Culture of Innovation and Excellence</h2>
+            <p>At Superior, we foster an environment where creativity and collaboration thrive. Join us to be part of a
+                team that values growth, learning, and making a difference.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="single-life">
+                    <div class="life-img">
+                        <img src="assets/images/life/life1.jpg" alt="life at superior">
+                    </div>
+                    <div class="content">
+                        <h3>Innovative Workspaces</h3>
+                        <p>Our workspaces are designed to inspire creativity and collaboration, providing the perfect
+                            environment for innovation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="single-life">
+                    <div class="life-img">
+                        <img src="assets/images/life/life2.jpg" alt="life at superior">
+                    </div>
+                    <div class="content">
+                        <h3>Team Building Activities</h3>
+                        <p>We believe in the power of teamwork. Our regular team-building activities help strengthen
+                            bonds and foster a sense of community.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
+                <div class="single-life">
+                    <div class="life-img">
+                        <img src="assets/images/life/life3.jpg" alt="life at superior">
+                    </div>
+                    <div class="content">
+                        <h3>Continuous Learning</h3>
+                        <p>At Superior, learning never stops. We offer various programs and workshops to help our team
+                            members grow and excel in their careers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- <section class="vision-values-section pt-100 pb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="vision-content">
+                    <h2>Vision</h2>
+                    <p class="vision-text">
+                        We embody trust and delight across<br>
+                        all our Businesses. We are the most<br>
+                        admired company in the country.<br>
+                        We are the place to be.
+                    </p>
+                </div>
+                <div class="values-content mt-5">
+                    <h2>Our Values</h2>
+                    <ul class="values-list">
+                        <li><i class="fas fa-check"></i> Excellence</li>
+                        <li><i class="fas fa-check"></i> Empathy</li>
+                        <li><i class="fas fa-check"></i> Empowerment</li>
+                        <li><i class="fas fa-check"></i> Responsibility & Accountability</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="values-image">
+                    <img src="assets/images/values.jpg" alt="Our Values" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<section class="home-contact-area home-2-contact ptb-100">
+    <div class="container">
+        <div class="section-title">
+            <span>Contact Us</span>
+            <h2>Let Us Know About Your Project Idea!</h2>
+            <p>It is a long established fact that a reader will be distracted by the rea dable content of a page when
+                looking at its layout. The point of using Lorem Ipsum is that it has a more.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="content">
+                    <form id="contactForm">
+                        <div class="row">
+                            <div class="col-lg-12 col-sm-12">
+                                <div class="form-group">
+                                    <input type="text" name="name" id="name" class="form-control" required
+                                        placeholder="Your Name" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-sm-12">
+                                <div class="form-group">
+                                    <input type="email" name="email" id="email" class="form-control" required
+                                        placeholder="Your Email" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-sm-12">
+                                <div class="form-group">
+                                    <input type="text" name="phone_number" id="phone_number" required
+                                        class="form-control" placeholder="Your Phone" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-sm-12">
+                                <div class="form-group">
+                                    <input type="text" name="msg_subject" id="msg_subject" class="form-control" required
+                                        placeholder="Subject" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <textarea name="message" class="form-control" id="message" cols="30" rows="5"
+                                        required placeholder="Your Message"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12">
+                                <button type="submit" class="default-btn page-btn box-btn">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+                <div class="contact-img contact-img-2">
+                    <img src="assets/images/contact-img2.jpg" alt="contact" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

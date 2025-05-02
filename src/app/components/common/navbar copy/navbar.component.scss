@@ -1,0 +1,46 @@
+/* Mobile-specific dropdown styles */
+@media only screen and (max-width: 991px) {
+
+    .navbar-area .main-nav .navbar .navbar-nav .nav-item .dropdown-menu li a{
+        color: #fff;
+    }
+  .navbar-nav {
+    .nav-item {
+      .dropdown-menu {
+        display: none !important; /* Override default display:block */
+        opacity: 1;
+        visibility: visible;
+        position: static;
+        width: 100%;
+        margin-top: 0;
+        padding: 0;
+        box-shadow: none;
+        background: transparent;
+        
+        &::before {
+          display: none; /* Remove dropdown arrow */
+        }
+      }
+
+      &.show {
+        > .dropdown-menu {
+          display: block !important;
+        }
+      }
+
+      /* Change plus icon to minus when expanded */
+      &.show > a.dropdown-toggle::after {
+        content: "-";
+      }
+    }
+  }
+}
+
+/* Preserve hover behavior for desktop */
+@media only screen and (min-width: 992px) {
+  .nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    top: 50px;
+  }
+}

@@ -83,9 +83,11 @@ import { ImacComponent } from './components/pages/imac/imac.component';
 import { MacMiniComponent } from './components/pages/mac-mini/mac-mini.component';
 import { AppleWatchComponent } from './components/pages/apple-watch/apple-watch.component';
 import { AppleProgramscreenComponent } from './components/pages/apple-programscreen/apple-programscreen.component';
+import { HomepageComponent } from './components/pages/homepage/homepage.component';
 
 const routes: Routes = [
-    {path: '', component: HomeOneComponent},
+    {path: '', component: HomepageComponent},
+    {path: 'home-one', component: HomeOneComponent},
     {path: 'home-two', component: HomeTwoComponent},
     {path: 'home-three', component: HomeThreeComponent},
     {path: 'about', component: AboutComponent},

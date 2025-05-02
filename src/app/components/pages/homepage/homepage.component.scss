@@ -1,0 +1,693 @@
+// Base styles
+section {
+  padding: 4rem 0;
+  text-align: center;
+
+  h1, h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+
+  p {
+    color: #666;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+// Hero section specific styles
+#hero-banner {
+  position: relative;
+  background-color: #f8f9fa;
+  padding: 6rem 0;
+  background-image: url('/assets/images/choose-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  p {
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+}
+
+// About section specific styles
+#about-us {
+  background-color: #fff;
+  padding: 5rem 0;
+
+  .about-intro {
+    text-align: left;
+    margin-bottom: 3rem;
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    .section-description {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 2rem;
+    }
+
+    .ceo-message {
+      background-color: #000;
+      padding: 2.5rem;
+      border-radius: 10px;
+      margin-top: 2rem;
+
+      h2 {
+        color: #fff;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .message-content {
+        p {
+          color: #fff;
+          font-size: 1.1rem;
+          line-height: 1.6;
+          margin-bottom: 1.5rem;
+        }
+
+        .ceo-signature {
+          text-align: right;
+          
+          p {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin: 0;
+            color: #90EE90;  // Light green color
+          }
+        }
+      }
+    }
+  }
+
+  .about-content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+
+  .about-item {
+    padding: 2rem;
+    text-align: left;
+    transition: transform 0.3s ease;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .icon {
+      font-size: 2.5rem;
+      color: #007bff;
+      margin-bottom: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    p {
+      color: #666;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  }
+}
+
+// Vision section specific styles
+#our-vision {
+  background-color: #f8f9fa;
+}
+
+// Enterprise section specific styles
+.enterprise-section {
+  position: relative;
+  background-color: #000;
+  background-image: url('/assets/images/enterprise-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  color: #fff;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .enterprise-content {
+    h2 {
+      font-size: 3.5rem;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+
+    .enterprise-text {
+      font-size: 1.8rem;
+      line-height: 1.5;
+      color: #fff;
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+
+    .enterprise-actions {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-top: 3rem;
+
+      .know-more-btn {
+        display: inline-block;
+        padding: 1rem 2.5rem;
+        background-color: #ff4444;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1.1rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        border: 2px solid #ff4444;
+
+        &:hover {
+          background-color: transparent;
+          color: #ff4444;
+        }
+      }
+
+      .enterprise-arrow {
+        i {
+          color: #ff4444;
+          font-size: 2.5rem;
+          transform: translateX(0);
+          transition: transform 0.3s ease;
+          cursor: pointer;
+
+          &:hover {
+            transform: translateX(10px);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Blogs section specific styles
+#blogs {
+  background-color: #f8f9fa;
+}
+
+// Contact section specific styles
+#contact-us {
+  background-color: #fff;
+}
+
+// Statistics section specific styles
+.statistics-area {
+  position: relative;   
+/*   background-image: url('/assets/images/statistics-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
+  color: #fff;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 100%);
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .single-statistics {
+    text-align: center;
+    padding: 2rem;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    h2, h3 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    p {
+      color: #fff;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+// Vision and Values section styles
+.vision-values-section {
+  background-color: #000;
+  color: #fff;
+  padding: 80px 0;
+
+  .vision-content {
+    h2 {
+      color: #fff;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .vision-text {
+      color: #90EE90;  // Light green color
+      font-size: 2rem;
+      line-height: 1.4;
+      font-weight: 500;
+    }
+  }
+
+  .values-content {
+    h2 {
+      color: #fff;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .values-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        color: #fff;
+
+        i {
+          color: #ff4444;  // Red color for check icons
+          margin-right: 1rem;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  .values-image {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+// Blog section styles
+.blog-section {
+  background-color: #f8f9fa;
+  
+  .section-title {
+    h2 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+    
+    p {
+      color: #666;
+      font-size: 1.1rem;
+    }
+  }
+
+  .blog-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .blog-img {
+      flex: 0 0 120px;
+      position: relative;
+      overflow: hidden;
+      
+      img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+    }
+
+    .blog-content {
+      flex: 1;
+      padding: 1.25rem;
+      text-align: left;
+
+      .blog-meta {
+        margin-bottom: 0.5rem;
+        
+        span {
+          color: #666;
+          font-size: 0.85rem;
+        }
+      }
+
+      h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+        color: #333;
+        line-height: 1.4;
+      }
+
+      p {
+        color: #666;
+        margin-bottom: 1rem;
+        line-height: 1.5;
+        font-size: 0.9rem;
+      }
+
+      .read-more {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.9rem;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: darken(#007bff, 10%);
+        }
+      }
+    }
+  }
+
+  .view-all {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: transparent;
+    border: 2px solid #007bff;
+    color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #007bff;
+      color: #fff;
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 992px) {
+  section {
+    padding: 3rem 0;
+
+    h1, h2 {
+      font-size: 2.5rem;
+    }
+  }
+
+  #hero-banner {
+    padding: 4rem 0;
+
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  #about-us {
+    .about-intro {
+      margin-bottom: 2rem;
+    }
+
+    .about-content {
+      margin-top: 2rem;
+    }
+  }
+
+  .vision-values-section {
+    .vision-content {
+      margin-bottom: 3rem;
+
+      .vision-text {
+        font-size: 1.8rem;
+      }
+    }
+
+    .ceo-message {
+      margin-top: 3rem;
+    }
+  }
+
+  .enterprise-section {
+    padding: 80px 0;
+
+    .enterprise-content {
+      h2 {
+        font-size: 3rem;
+      }
+
+      .enterprise-text {
+        font-size: 1.5rem;
+      }
+
+      .enterprise-actions {
+        margin-top: 2rem;
+        
+        .know-more-btn {
+          padding: 0.9rem 2rem;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 2.5rem 0;
+
+    h1, h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+      padding: 0 1rem;
+    }
+  }
+
+  #hero-banner {
+    padding: 3rem 0;
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  #about-us {
+    padding: 3rem 0;
+
+    .about-intro {
+      .section-description {
+        font-size: 1rem;
+      }
+
+      .ceo-message {
+        padding: 2rem;
+
+        h2 {
+          font-size: 1.8rem;
+        }
+
+        .message-content p {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .about-item {
+      padding: 1.5rem;
+    }
+  }
+
+  .vision-values-section {
+    padding: 50px 0;
+
+    .vision-content {
+      .vision-text {
+        font-size: 1.5rem;
+      }
+    }
+
+    .values-content {
+      .values-list li {
+        font-size: 1.1rem;
+      }
+    }
+
+    .ceo-message {
+      padding: 2rem;
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      .message-content p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .blog-section {
+    .section-title {
+      h2 {
+        font-size: 2rem;
+      }
+    }
+
+    .blog-card {
+      flex-direction: column;
+
+      .blog-img {
+        flex: 0 0 auto;
+        width: 100%;
+        
+        img {
+          width: 100%;
+          height: 160px;
+        }
+      }
+
+      .blog-content {
+        padding: 1rem;
+        text-align: center;
+
+        h3 {
+          font-size: 1rem;
+        }
+
+        p {
+          font-size: 0.85rem;
+        }
+      }
+    }
+  }
+
+  .enterprise-section {
+    padding: 60px 0;
+
+    .enterprise-content {
+      h2 {
+        font-size: 2.5rem;
+      }
+
+      .enterprise-text {
+        font-size: 1.3rem;
+      }
+
+      .enterprise-actions {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: flex-start;
+
+        .enterprise-arrow i {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  section {
+    padding: 2rem 0;
+
+    h1, h2 {
+      font-size: 1.75rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+    }
+  }
+
+  #hero-banner {
+    padding: 2.5rem 0;
+
+    h1 {
+      font-size: 1.75rem;
+    }
+  }
+}

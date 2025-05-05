@@ -17,15 +17,36 @@ import { RouterModule } from '@angular/router';
     ]
 })
 export class NavbarComponent implements OnInit {
-
     location: any;
     navbarClass: any;
     isMobile: boolean = false;
 
     classApplied = false;
+    isSticky = false;
+    isSuperiorVisible = true;
+
     toggleClass() {
         this.classApplied = !this.classApplied;
     }
+    ngOnInit(): void {
+        throw new Error('Method not implemented.');
+    }
+    activeIndex: number | null = null;
+    subActiveIndex: number | null = null;
+    
+    toggleMenu(index: number) {
+      this.activeIndex = this.activeIndex === index ? null : index;
+      this.subActiveIndex = null; // Close submenus when switching main menu
+    }
+    
+    toggleSubMenu(index: number) {
+      this.subActiveIndex = this.subActiveIndex === index ? null : index;
+    }
+    
+ /*    closeMenu() {
+      this.activeIndex = null;
+      this.subActiveIndex = null;
+    } */
 
     constructor(
         private router: Router,
@@ -46,10 +67,7 @@ export class NavbarComponent implements OnInit {
         this.checkScreenSize();
     }
 
-    ngOnInit(): void {}
-
     // Navbar Sticky
-    isSticky: boolean = false;
     @HostListener('window:scroll', ['$event'])
     checkScroll() {
         const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
@@ -59,7 +77,15 @@ export class NavbarComponent implements OnInit {
             this.isSticky = false;
         }
     }
-
+    onWindowScroll() {
+        if (window.pageYOffset > 50) {
+          this.isSticky = true;
+          this.isSuperiorVisible = false;
+        } else {
+          this.isSticky = false;
+          this.isSuperiorVisible = true;
+        }
+      }
     // Check screen size for mobile view
     @HostListener('window:resize', ['$event'])
     checkScreenSize() {

@@ -691,3 +691,12 @@ section {
     }
   }
 }
+
+.life-img img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 0 auto;
+}

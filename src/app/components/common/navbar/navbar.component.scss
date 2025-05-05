@@ -239,3 +239,12 @@ header.navbar-header {
 .superior-navbar.invisible {
   display: none !important;
 }
+
+.contact-text a {
+  color: black;
+  transition: color 0.2s;
+}
+
+.contact-text a:hover {
+  color: #ff4444 !important;
+}

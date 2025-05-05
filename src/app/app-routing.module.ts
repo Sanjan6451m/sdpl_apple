@@ -86,6 +86,7 @@ import { AppleProgramscreenComponent } from './components/pages/apple-programscr
 import { HomepageComponent } from './components/pages/homepage/homepage.component';
 import { EnterprisePageComponent } from './components/pages/enterprise-page/enterprise-page.component';
 import { Iphone15Component } from './components/pages/iPhone/iphone15/iphone15.component';
+import { EnterpriseNewComponent } from './components/pages/enterprise-new/enterprise-new.component';
 
 const routes: Routes = [
     {path: '', component: HomepageComponent},
@@ -175,6 +176,7 @@ const routes: Routes = [
     {path: 'enterprise', component: EnterprisePageComponent},
     // Here add new pages component
     { path: 'iphone15', component: Iphone15Component },
+    { path: 'enterprise-new', component: EnterpriseNewComponent },
     {path: '**', component: ErrorComponent} // This line will remain down from the whole pages component list
 
 ];

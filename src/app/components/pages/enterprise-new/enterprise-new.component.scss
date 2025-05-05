@@ -334,9 +334,9 @@
     }
     .learn-more-btn {
       display: inline-block;
-      margin-top: 1.5rem;
-      padding: 0.8rem 2.2rem;
-      font-size: 1.3rem;
+      margin-top: 0rem;
+      padding: 0.2rem 1.2rem;
+      font-size: 14px;
       font-weight: 600;
       color: #e23c36;
       background: #fff;
@@ -584,4 +584,19 @@
     font-size: 1rem;
     padding: 0.7em 1.5em;
   }
+}
+
+.case-btn a {
+  color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.case-btn a:hover {
+  color: #ff4444;
+}
+
+.line-bnt{
+  cursor: pointer;
 }

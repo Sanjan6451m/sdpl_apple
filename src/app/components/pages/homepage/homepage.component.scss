@@ -20,10 +20,10 @@ section {
 #hero-banner {
   position: relative;
   background-color: #f8f9fa;
-  padding: 6rem 0;
-  background-image: url('/assets/images/choose-bg.png');
+  padding: 18rem 0;
+  background-image: url('/assets/images/main_bannerimg.jpeg');
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   color: #fff;
 
@@ -158,7 +158,7 @@ section {
 .enterprise-section {
   position: relative;
   background-color: #000;
-  background-image: url('/assets/images/enterprise-bg.jpg');
+  background-image: url('/assets/images/enterprise_image.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -205,35 +205,34 @@ section {
       margin-top: 3rem;
 
       .know-more-btn {
-        display: inline-block;
-        padding: 1rem 2.5rem;
-        background-color: #ff4444;
+        background: #ff4444;
         color: #fff;
-        text-decoration: none;
-        border-radius: 5px;
-        font-size: 1.1rem;
-        font-weight: 500;
-        transition: all 0.3s ease;
         border: 2px solid #ff4444;
+        border-radius: 5px;
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.3s;
+        box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+        display: inline-block;
+      }
 
-        &:hover {
-          background-color: transparent;
-          color: #ff4444;
-        }
+      .know-more-btn:hover {
+        background: transparent;
+        color: #ff4444;
+        transform: scale(1.07);
+        box-shadow: 0 6px 24px rgba(255,68,68,0.15);
       }
 
       .enterprise-arrow {
-        i {
-          color: #ff4444;
-          font-size: 2.5rem;
-          transform: translateX(0);
-          transition: transform 0.3s ease;
-          cursor: pointer;
+        display: inline-block;
+        margin-left: 1.2rem;
+        transition: transform 0.3s;
+      }
 
-          &:hover {
-            transform: translateX(10px);
-          }
-        }
+      .enterprise-actions:hover .enterprise-arrow {
+        transform: translateX(10px);
       }
     }
   }
@@ -437,7 +436,7 @@ section {
       }
 
       .read-more {
-        color: #007bff;
+        color: #ff4444;
         text-decoration: none;
         font-weight: 500;
         font-size: 0.9rem;
@@ -454,15 +453,15 @@ section {
     display: inline-block;
     padding: 0.8rem 2rem;
     background-color: transparent;
-    border: 2px solid #007bff;
-    color: #007bff;
+    border: 2px solid #ff4444;
+    color: #ff4444;
     text-decoration: none;
     border-radius: 5px;
     font-weight: 500;
     transition: all 0.3s ease;
 
     &:hover {
-      background-color: #007bff;
+      background-color: #ff4444;
       color: #fff;
     }
   }
@@ -700,3 +699,5 @@ section {
   display: block;
   margin: 0 auto;
 }
+
+

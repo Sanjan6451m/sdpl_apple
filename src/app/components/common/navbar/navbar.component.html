@@ -22,6 +22,9 @@
         </div>
         <!-- <div class="{{navbarClass}}"> -->
         <div class="main-navbar-container" style="display: inline-flex;" [class.sticky]="isSticky">
+            <img *ngIf="isSticky" src="assets/images/Minimal-Business-Logo-Reveal-f-unscreen.gif" alt="Logo" class="sticky-logo" style="height: 65px; align-self: center;" />
+            <img *ngIf="isSticky" src="assets/images/text.png" alt="Superior Digital Text" class="superior-text-logo"
+            style="border-radius: 0px;margin-left: -30px !important; height: 40px;align-self: center;">
             <nav class="main-navbar">
                 <ul class="nav-list">
                     <li class="nav-item"><a href="#">Home</a></li>
@@ -73,7 +76,7 @@
                     </li>
                     <li class="nav-item"><a href="/case-studies">Success Stories</a></li>
 
-                    <li class="nav-item"><a href="#">News & Events</a></li>
+                    <li class="nav-item"><a href="/activity">News & Events</a></li>
 
                     <!-- <li class="nav-item dropdown">
                         <a href="#">News & Events <span class="arrow">&#9662;</span></a>
@@ -87,10 +90,6 @@
 
                 </ul>
             </nav>
-
-           <!--  <div class="navbar-right">
-                <a href="/contact" class="navbar-btn">Contact Sales</a>
-            </div> -->
         </div>
         <!-- </div> -->
     </div>

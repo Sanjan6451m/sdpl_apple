@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './homepage.component.scss'
 })
 export class HomepageComponent implements OnInit {
+  
   statistics = [
     { value: 13, text: 'Years of Excellence' },
     { value: 1000, text: 'Enterprise Customers', prefix: '+' },
@@ -52,4 +53,5 @@ export class HomepageComponent implements OnInit {
 
     setTimeout(run, timer);
   }
+
 }

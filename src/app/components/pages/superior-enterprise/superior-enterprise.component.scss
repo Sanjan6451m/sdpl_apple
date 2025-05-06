@@ -265,17 +265,17 @@
 }
 
 .learn-more-link {
-  color: #ff4444;
-  font-weight: 600;
-  font-size: 1.1rem;
-  text-decoration: underline;
+  color: #fff;
+  font-weight: 200;
+  font-size: 1.4rem;
+  // text-decoration: underline;
   transition: color 0.2s, transform 0.2s;
   display: inline-block;
 }
 
 .learn-more-link:hover {
-  color: #222;
-  text-decoration: underline;
+  color: #50bc1a;
+  // text-decoration: underline;
   transform: translateY(-2px) scale(1.04);
 }
 

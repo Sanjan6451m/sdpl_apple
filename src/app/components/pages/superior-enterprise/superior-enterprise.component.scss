@@ -364,3 +364,17 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.12);
   // background: #fff;
 }
+
+.card-bottom-left-link {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  z-index: 3;
+}
+
+@media (max-width: 700px) {
+  .card-bottom-left-link {
+    left: 10px;
+    bottom: 10px;
+  }
+}

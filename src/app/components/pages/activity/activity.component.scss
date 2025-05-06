@@ -1,0 +1,70 @@
+.activity-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 4rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.activity-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.activity-col {
+  flex: 1 1 0;
+  min-width: 320px;
+}
+
+.text-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 2rem 2rem 0;
+}
+
+.text-col h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 1.2rem;
+}
+
+.text-col p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.7;
+}
+
+.image-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-col img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 900px) {
+  .activity-row {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .text-col, .image-col {
+    padding: 0;
+    min-width: 0;
+  }
+  .activity-section {
+    gap: 2rem;
+  }
+}

@@ -43,6 +43,24 @@ export class HomepageComponent implements OnInit {
     'Other Accessories', 
 ]; 
 
+newsEvents = [
+  {
+    title: 'Free MacBook Health Check at MNC',
+    date: new Date('2025-04-15'),
+    summary: 'Superior Digital conducted a free Apple MacBook diagnostic session at a leading corporation.',
+  },
+  {
+    title: 'Team Collaboration Workshop',
+    date: new Date('2025-04-20'),
+    summary: 'Sales and Pre-Sales teams aligned to enhance delivery and collaboration.',
+  },
+  {
+    title: 'Optimizing Apple Ecosystems',
+    date: new Date('2025-04-25'),
+    summary: 'Strategies shared to deliver seamless Apple device and MDM deployment.',
+  },
+];
+
   constructor(
     private fb: FormBuilder, 
     private http: HttpClient,

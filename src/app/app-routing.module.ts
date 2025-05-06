@@ -88,6 +88,7 @@ import { EnterprisePageComponent } from './components/pages/enterprise-page/ente
 import { Iphone15Component } from './components/pages/iPhone/iphone15/iphone15.component';
 import { EnterpriseNewComponent } from './components/pages/enterprise-new/enterprise-new.component';
 import { ThankyoupageComponent } from './components/pages/thankyoupage/thankyoupage.component';
+import { SuperiorEnterpriseComponent } from './components/pages/superior-enterprise/superior-enterprise.component';
 
 const routes: Routes = [
     {path: '', component: HomepageComponent},
@@ -179,6 +180,7 @@ const routes: Routes = [
     { path: 'iphone15', component: Iphone15Component },
     { path: 'enterprise-new', component: EnterpriseNewComponent },
     { path: 'thank-you', component: ThankyoupageComponent },
+    { path: 'superior-enterprise', component: SuperiorEnterpriseComponent },
     {path: '**', component: ErrorComponent} // This line will remain down from the whole pages component list
 
 ];

@@ -494,3 +494,35 @@
   font-weight: 300;
   color: #fff;
 }
+
+.support-card:hover {
+  transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .support-card {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+.support-card:hover {
+  transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .support-card {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}

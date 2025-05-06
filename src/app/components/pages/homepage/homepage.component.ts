@@ -1,10 +1,18 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, OnInit } from '@angular/core';
+
+import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import emailjs from '@emailjs/browser';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ActivatedRoute, Router, NavigationEnd, RouterModule } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-homepage',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule, ReactiveFormsModule],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss'
 })
@@ -18,8 +26,38 @@ export class HomepageComponent implements OnInit {
     // { value: 1000, text: 'Happy Customers', prefix: '+' },
     { value: 700, text: 'Projects', prefix: '+' }
   ];
-
+  contactForm: FormGroup;
+  message: string = '';
   displayedValues: number[] = [];
+  devices = [
+    'MacBook Air',
+    'MacBook Pro',
+    'iMac',
+    'Mac Mini', 
+    'Mac Studio', 
+    'Mac Pro', 
+    'iPad', 
+    'iPhone', 
+    'Apple Watch', 
+    'Airpods', 
+    'Other Accessories', 
+]; 
+
+  constructor(
+    private fb: FormBuilder, 
+    private http: HttpClient,
+    private route: ActivatedRoute,
+    private router: Router
+) { 
+    this.contactForm = this.fb.group({
+        name: ['', [Validators.required]],
+        email: ['', [Validators.required, Validators.email]],
+        message: ['', [Validators.required]],
+        phone: ['', [Validators.required]],
+        device: ['']
+    });
+    emailjs.init("PTmfxUAnOlAZlyhRB");
+}
 
   ngOnInit() {
     this.initializeCounters();
@@ -53,5 +91,32 @@ export class HomepageComponent implements OnInit {
 
     setTimeout(run, timer);
   }
+
+  onSubmit() {
+    if (this.contactForm.valid) {
+        this.message = 'Sending message...';
+        
+        emailjs.send("service_kuiothp", "template_g8fkwgh", {
+            to_name: "SDPL",
+            from_name: this.contactForm.value.name,
+            email: this.contactForm.value.email,
+            phone: this.contactForm.value.phone,
+            device: this.contactForm.value.device,
+            message: this.contactForm.value.message,
+            reply_to: this.contactForm.value.email
+        })
+        .then((response) => {
+            this.message = 'Message sent successfully!';
+            this.contactForm.reset();
+            console.log('SUCCESS!', response.status, response.text);
+            this.router.navigate(['/thank-you']);
+        }, (error) => {
+            this.message = 'Error sending message. Please try again later.';
+            console.error('FAILED...', error);
+        });
+    } else {
+        this.message = 'Please fill in all required fields correctly.';
+    }
+}
 
 }

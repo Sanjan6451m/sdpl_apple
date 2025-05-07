@@ -79,7 +79,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 2rem auto 3rem auto;
 }
 
@@ -113,7 +113,7 @@
     max-width: 1400px;
     margin: 0 auto;
     width: 100%;
-    gap: 3rem;
+    gap: 1rem;
   }
 
   .enterprise-heading {
@@ -123,11 +123,11 @@
     justify-content: flex-start;
     max-width: 400px;
     h2 {
-      font-size: 1.8rem;
+      font-size: 2.0rem;
       font-weight: 500;
       color: #25dc3c;
       margin-bottom: 0;
-      text-align: right;
+      // text-align: right;
       margin-top: 0.5rem;
     }
   }
@@ -229,6 +229,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem 0;
   margin-bottom: 1rem;
+  margin-top: 2rem;
 }
 
 @media (max-width: 900px) {
@@ -265,7 +266,7 @@
 }
 
 .learn-more-link {
-  color: #fff;
+  color: #50bc1a;
   font-weight: 200;
   font-size: 1.4rem;
   // text-decoration: underline;
@@ -274,7 +275,7 @@
 }
 
 .learn-more-link:hover {
-  color: #50bc1a;
+  color: #fff;
   // text-decoration: underline;
   transform: translateY(-2px) scale(1.04);
 }

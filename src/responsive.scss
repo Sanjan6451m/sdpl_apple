@@ -603,11 +603,19 @@
     }
 }
 
+.ptb-50 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
 /* Min width 768px to Max width 991px */
 @media (min-width: 768px) and (max-width: 991px) {
     .ptb-100 {
         padding-top: 50px;
         padding-bottom: 50px;
+    }
+    .ptb-50 {
+        padding-top: 25px;
+        padding-bottom: 25px;
     }
     .pt-100 {
         padding-top: 50px;

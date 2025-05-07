@@ -89,6 +89,7 @@ import { Iphone15Component } from './components/pages/iPhone/iphone15/iphone15.c
 import { EnterpriseNewComponent } from './components/pages/enterprise-new/enterprise-new.component';
 import { ThankyoupageComponent } from './components/pages/thankyoupage/thankyoupage.component';
 import { SuperiorEnterpriseComponent } from './components/pages/superior-enterprise/superior-enterprise.component';
+import { IPhone16newComponent } from './components/pages/iPhone/i-phone16new/i-phone16new.component';
 
 const routes: Routes = [
     {path: '', component: HomepageComponent},
@@ -181,8 +182,8 @@ const routes: Routes = [
     { path: 'enterprise-new', component: EnterpriseNewComponent },
     { path: 'thank-you', component: ThankyoupageComponent },
     { path: 'superior-enterprise', component: SuperiorEnterpriseComponent },
+    { path: 'iphone16new', component: IPhone16newComponent },
     {path: '**', component: ErrorComponent} // This line will remain down from the whole pages component list
-
 ];
 
 @NgModule({

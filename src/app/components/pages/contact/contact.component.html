@@ -1,12 +1,8 @@
-<div class="page-title-area">
+<!-- <div class="page-title-area">
     <img src="assets/images/contact.png" alt="Page Background" class="page-bg">
     <div class="container">
         <div class="page-title-content">
             <h2>Contact Us</h2>
-            <!-- <ul>
-                <li><a routerLink="/">Home </a></li>
-                <li class="active">Contact Us</li>
-            </ul> -->
         </div>
     </div>
 
@@ -17,9 +13,9 @@
         <div class="shape5"><img src="assets/images/shape/5.png" alt="shape" /></div>
         <div class="shape6"><img src="assets/images/shape/6.png" alt="shape" /></div>
     </div>
-</div>
+</div> -->
 
-<section class="contact-area pt-100 pb-70">
+<!-- <section class="contact-area pt-100 pb-70">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-sm-6">
@@ -62,7 +58,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <section class="home-contact-area home-2-contact ptb-100 bg-color">
     <div class="container">
@@ -114,34 +110,6 @@
                             <div *ngIf="message" class="alert" [ngClass]="{'alert-success': message.includes('successfully'), 'alert-danger': message.includes('Error')}">
                                 {{ message }}
                             </div>
-                           <!--  <div class="col-lg-12 col-sm-12">
-                                <div class="form-group">
-                                    <select formControlName="device" class="form-control">
-                                        <option value="" disabled selected>Select
-                                            Device</option>
-                                        <option *ngFor="let device of devices" [value]="device">{{ device }}</option>
-                                    </select>
-                                    <div>
-                                        Please select a device.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-12 col-md-12">
-                                <div class="form-group">
-                                    <textarea name="message" class="form-control" id="message" cols="30" rows="5" required placeholder="Your Message"></textarea>
-                                </div>
-                            </div> -->
-                            <!-- <div class="col-lg-12 col-md-12">
-                                <div class="form-group">
-                                    <textarea name="message" class="form-control" id="message" cols="30" rows="5" required placeholder="Your Message"
-                                    formControlName="message"></textarea>
-                                    <div>
-                                        Required for onsite Support.
-                                    </div>
-                                </div>
-                            </div> -->
-
                             <div class="col-lg-12 col-md-12">
                                 <button type="submit" class="default-btn page-btn box-btn">Submit</button>
                             </div>
@@ -150,11 +118,52 @@
                 </div>
             </div>
 
-            <div class="col-lg-6 col-md-6">
-                <div class="contact-img contact-img-2">
-                    <img src="assets/images/contact-img2.jpg" alt="contact" />
+            <div class="col-lg-6 col-md-6" style="margin: 0 auto;">
+                <div class="container">
+                    <div class="contact-area column">
+                        <div class="">
+                            <div class="single-contact" style="background-color: #45434341; display: flex; align-items: center; justify-content: center;">
+                                <div class="icon">
+                                    <i class='bx bx-envelope'></i>
+                                </div>
+                                <div class="contact-info">
+                                    <h3>Email</h3>
+                                    <p>sales&#64;superiorsystems.in</p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="">
+                            <div class="single-contact" style="background-color: #45434341; display: flex; align-items: center; justify-content: center;">
+                                <div class="icon">
+                                    <i class='bx bx-location-plus'></i>
+                                </div>
+            
+                                <div class="contact-info">
+                                    <h3>Address</h3>
+                                    <p>No. 111, Ground Floor, 6th Main, MC Layout, MRCR Extn., Vijayanagar, Bangalore – 560040</p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="">
+                            <div class="single-contact" style="background-color: #45434341; display: flex; align-items: center; justify-content: center;">
+                                <div class="icon">
+                                    <i class='bx bx-phone-call'></i>
+                                </div>
+            
+                                <div class="contact-info">
+                                    <h3>Phone</h3>
+                                    <p>+91 80 2311 6047</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+               <!--  <div class="contact-img contact-img-2">
+                    <img src="assets/images/contact-img2.jpg" alt="contact" />
+                </div> -->
+            </div> 
         </div>
     </div>
 </section>

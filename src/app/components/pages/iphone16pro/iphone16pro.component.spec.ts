@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Iphone16proComponent } from './iphone16pro.component';
+import { Iphone16pro1Component } from './iphone16pro.component';
 
 describe('Iphone16proComponent', () => {
-  let component: Iphone16proComponent;
-  let fixture: ComponentFixture<Iphone16proComponent>;
+  let component: Iphone16pro1Component;
+  let fixture: ComponentFixture<Iphone16pro1Component>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Iphone16proComponent]
+      imports: [Iphone16pro1Component]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(Iphone16proComponent);
+    fixture = TestBed.createComponent(Iphone16pro1Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

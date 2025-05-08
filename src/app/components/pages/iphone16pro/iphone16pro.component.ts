@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './iphone16pro.component.html',
   styleUrl: './iphone16pro.component.scss'
 })
-export class Iphone16proComponent {
+export class Iphone16pro1Component {
 
 }

@@ -90,6 +90,9 @@ import { EnterpriseNewComponent } from './components/pages/enterprise-new/enterp
 import { ThankyoupageComponent } from './components/pages/thankyoupage/thankyoupage.component';
 import { SuperiorEnterpriseComponent } from './components/pages/superior-enterprise/superior-enterprise.component';
 import { IPhone16newComponent } from './components/pages/iPhone/i-phone16new/i-phone16new.component';
+import { IPadProComponent } from './components/pages/iPad/i-pad-pro/i-pad-pro.component';
+import { IPadAirComponent } from './components/pages/iPad/i-pad-air/i-pad-air.component';
+import { IPhone16proComponent } from './components/pages/iPhone/i-phone16pro/i-phone16pro.component';
 
 const routes: Routes = [
     {path: '', component: HomepageComponent},
@@ -164,7 +167,6 @@ const routes: Routes = [
     {path: 'ipad-air', component: IpadAirComponent},
     {path: 'airpods-max', component: AirpodsMaxComponent},  
     {path: 'iphone-16e', component: Iphone16eComponent},
-    {path: 'iphone-16pro', component: Iphone16proComponent},
     {path: 'impetus', component: ImpetusComponent},
     {path: 'emp-purchase-program', component: EmpPurcProgComponent},
     {path: 'drive-innovation', component: DriveInnovationComponent},
@@ -183,6 +185,9 @@ const routes: Routes = [
     { path: 'thank-you', component: ThankyoupageComponent },
     { path: 'superior-enterprise', component: SuperiorEnterpriseComponent },
     { path: 'iphone16new', component: IPhone16newComponent },
+    { path: 'iPadPro', component: IPadProComponent },
+    { path: 'iPadAir', component: IPadAirComponent },
+    { path: 'iPhone16pro', component: IPhone16proComponent },
     {path: '**', component: ErrorComponent} // This line will remain down from the whole pages component list
 ];
 

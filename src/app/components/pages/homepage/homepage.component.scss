@@ -11,7 +11,7 @@ section {
   p {
     color: #666;
     line-height: 1.6;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
   }
 }
@@ -66,12 +66,14 @@ section {
     margin-bottom: 3rem;
 
     h2 {
+      text-align: center;
       font-size: 2.5rem;
       margin-bottom: 1.5rem;
       color: #333;
     }
 
     .section-description {
+      text-align: center;
       font-size: 1.1rem;
       color: #666;
       margin-bottom: 2rem;
@@ -113,7 +115,7 @@ section {
 
   .about-content {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
 
@@ -701,3 +703,8 @@ section {
 }
 
 
+.container1{
+  text-align: center;
+  max-width: 100%;
+  padding: 0 5%;
+}

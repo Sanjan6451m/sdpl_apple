@@ -600,3 +600,43 @@
 .line-bnt{
   cursor: pointer;
 }
+
+.solution-card{
+  background-color: rgb(171 178 184 / 23%);
+  box-shadow: 0 0 20px 3px rgb(16 15 15 / 20%);
+}
+
+.mobile-pricing {
+    display: flex;
+    flex-wrap: wrap;
+    
+    .col-lg-4 {
+        display: flex;
+        margin-bottom: 30px;
+    }
+
+    .single-pricing {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+        padding: 30px;
+        transition: all 0.3s ease;
+
+        .pricing-top-heading {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            flex: 1;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.single-pricing .pricing-top-heading h3 {
+  font-size: 23px !important;
+}

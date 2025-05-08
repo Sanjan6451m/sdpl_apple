@@ -1,3 +1,32 @@
+<style>
+.solution-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.solution-card .card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.solution-card .card-content p {
+    flex: 1;
+}
+
+.solution-card .card-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.solution-card .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+</style>
+
 <section id="hero-banner">
     <div class="container">
         <h1>Apple for Your Enterprise.</h1>
@@ -10,9 +39,11 @@
             <h2>Apple for Enterprise</h2>
         </div>
         <div class="enterprise-details">
-            <p>Experience enterprise solutions with Superior Digital. We specialise in delivering expert-driven technology, consulting, support services, and training that empower businesses to unlock their full creative and productive potential.</p>
+            <p>Experience enterprise solutions with Superior Digital. We specialise in delivering expert-driven
+                technology, consulting, support services, and training that empower businesses to unlock their full
+                creative and productive potential.</p>
             <div class="offerings-list">
-                <h3>Our offerings:</h3>
+                <h1>Services We Offer:</h1>
                 <ul>
                     <li>&nbsp;Apple Pre-Sales Expertise</li>
                     <li>&nbsp;Comprehensive Apple Maintenance & Support</li>
@@ -25,17 +56,144 @@
                     <li>&nbsp;Apple Ecosystem Consulting</li>
                     <li>&nbsp;Custom Apple Training & Enablement</li>
                     <li>&nbsp;Exclusive Apple Programs</li>
-                 
-                  
+
+
                 </ul>
             </div>
-            <a href="#" class="learn-more-btn">Learn More »</a>
+            <!-- <a href="#" class="learn-more-btn">Learn More »</a> -->
         </div>
     </div>
 </section>
 
-<section class="services-section">
-    <div class="services-intro">    
+<section class="service-solutions">
+    <div class="container">
+        <div class="section-title" style="max-width: 1200px;">
+            <!-- <h2>Our Services</h2> -->
+            <p>We add value to every aspect of your business by delivering reliable, end-to-end IT solutions designed
+                for long-term growth and efficiency. Our services include flexible financing options with tailored
+                payment plans, ensuring technology upgrades fit within your budget. We provide comprehensive Apple
+                maintenance and support, expert consulting, and hands-on training to empower your teams and maximize
+                your tech investment. With scalable solutions and proactive guidance, your enterprise stays agile,
+                productive, and ready to meet evolving challenges.</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="solution-card">
+                    <div class="card-image">
+                        <img src="assets/images/demopoc.png" alt="Consulting Services">
+                    </div>
+                    <div class="card-content">
+                        <h3>Apple Pre-Sales Expertise & Proof of Concept</h3>
+                        <p>Get expert guidance to choose the right Apple devices for your business and budget—no
+                            overspending. Experience Apple in action with live demos and tailored proof of concepts.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="solution-card">
+                    <div class="card-image">
+                        <img src="assets/images/apple_device_tradein.png" alt="Support Services">
+                    </div>
+                    <div class="card-content">
+                        <h3>Apple Device Trade-In Program</h3>
+                        <p>Easily upgrade with our Apple Trade-In program—get value for old devices toward new ones.
+                            Secure, eco-friendly, and seamless for single or fleet replacements.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="solution-card">
+                    <div class="card-image">
+                        <img src="assets/images/appleservice.png" alt="Training Solutions">
+                    </div>
+                    <div class="card-content">
+                        <h3>Apple Services with Expert Onsite Support</h3>
+                        <p>Get expert Apple support onsite or remotely—from setup to troubleshooting.
+                            Certified engineers ensure smooth performance, tailored to your team's needs.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="solution-card">
+                    <div class="card-image">
+                        <img src="assets/images/financeflexi.png" alt="Training Solutions">
+                    </div>
+                    <div class="card-content">
+                        <h3>Tailored Apple Purchase Programs with Financing & Flexible Payment Plans</h3>
+                        <p>Every business is unique—so are our Apple purchase plans, with flexible leasing, volume
+                            pricing, and financing suited to your needs. Empower your team with the latest Apple
+                            technology through predictable costs and easy, stress-free upgrades.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="solution-card">
+                    <div class="card-image">
+                        <img src="assets/images/delpoy_new.png" alt="Training Solutions">
+                    </div>
+                    <div class="card-content">
+                        <h3>Seamless Apple Deployment & Integration</h3>
+                        <p>Zero-touch Apple deployment with MDM and Apple Business Manager—fast, secure, and seamless.
+                            Ideal for startups to enterprise scale-ups, with expert setup and minimal downtime.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="solution-card">
+                    <div class="card-image">
+                        <img src="assets/images/compresup.png" alt="Training Solutions">
+                    </div>
+                    <div class="card-content">
+                        <h3>Comprehensive Apple Maintenance & Support</h3>
+                        <p>End-to-end Apple support from certified engineers—onsite or remote.
+                            For updates, repairs, and more, we keep your Apple setup running smoothly.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="solution-card">
+                    <div class="card-image">
+                        <img src="assets/images/appletraining.png" alt="Training Solutions">
+                    </div>
+                    <div class="card-content">
+                        <h3>Custom Apple Training & Enablement</h3>
+                        <p>Boost productivity with tailored Apple training for users, creatives, and IT teams.
+                            Onsite or online, learn to create, collaborate, and troubleshoot like a pro.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="solution-card">
+                    <div class="card-image">
+                        <img src="assets/images/ecosystem1.png" alt="Training Solutions">
+                    </div>
+                    <div class="card-content">
+                        <h3>Apple Ecosystem Consulting</h3>
+                        <p>Align Apple devices, apps, and workflows with your business goals.
+                            From planning to deployment, we deliver secure, scalable solutions that work.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="solution-card">
+                    <div class="card-image">
+                        <img src="assets/images/appleprog.png" alt="Training Solutions">
+                    </div>
+                    <div class="card-content">
+                        <h3>Exclusive Apple Programs</h3>
+                        <p>Unlock exclusive Apple benefits for business and education through an authorised partner.
+                            Access tools, pricing, and support to grow and achieve more.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- <section class="services-section">
+    <div class="services-intro">
         <div class="intro-content">
             <h2>Our Services</h2>
             <p>Adding value to every aspect of your business through reliable end-to-end IT solutions.</p>
@@ -51,7 +209,8 @@
                     </div>
                     <div class="card-content">
                         <h3>Apple Pre-Sales Expertise</h3>
-                        <p>We help you choose the right Apple devices with expert guidance tailored to your business needs and budget.
+                        <p>We help you choose the right Apple devices with expert guidance tailored to your business
+                            needs and budget.
                             Avoid overbuying and make smart, confident investments from the start.</p>
                         <a routerLink="/presales-support" class="learn-more">Know More »</a>
                     </div>
@@ -213,103 +372,172 @@
             </ng-template>
         </owl-carousel-o>
     </div>
-</section>
+</section> -->
 
 <section class="pricing-area pt-100 pb-70" id="superior-packages">
     <div class="container">
         <div class="section-title">
             <!-- <span style="font-size: 1.2rem; font-weight: 500;">What We Offer</span> -->
             <h2>Superior Solutions</h2>
-            <p>Superior Digital offers tiered Apple Enterprise Packages—Lite, Pro, and Ultra—designed to meet the evolving needs of growing businesses. From essential Apple device deployment for small teams to fully managed, scalable solutions with advanced security, app integration, and multi-location support, there's a perfect fit for every stage of your Apple journey.</p>
+            <p>Superior Digital offers tiered Apple Enterprise Packages—Lite, Pro, and Ultra—designed to meet the
+                evolving needs of growing businesses. From essential Apple device deployment for small teams to fully
+                managed, scalable solutions with advanced security, app integration, and multi-location support, there's
+                a perfect fit for every stage of your Apple journey.</p>
         </div>
 
         <div class="row mobile-pricing">
             <div class="col-lg-4 col-sm-6">
                 <div class="single-pricing">
                     <div class="pricing-top-heading">
-                        <h3>Superior lite</h3>
+                        <h3>Superior lite : Starter Solution</h3>
                         <!-- <p>Build A Website</p> -->
                     </div>
+                    <p><b style="color: red;">Who It's For</b> Small businesses or startups with limited budgets.</p>
                     <a class="box-btn" routerLink="/contact">Contact Sales</a>
                     <br>
-                    <ul>
-                        <p>Features</p>
-                        <li><i class="bx bx-badge-check"></i>  Pre-delivery device preparation via Apple Business Manager (ABM) for automated enrollment.</li>
-                        <li><i class="bx bx-badge-check"></i> Basic MDM setup (e.g., Jamf or Mosyle) for device configuration and app distribution.</li>
-                        <li><i class="bx bx-badge-check"></i> Core security settings (passcode policies, encryption).</li>
-                        <li><i class="bx bx-badge-check"></i> Virtual onboarding training on macOS, iOS, and iPadOS for IT admins and end-users.</li>
-                        <li><i class="bx bx-badge-check"></i> Access to Superior's financing options for cost-effective device procurement.</li>
-                        <li><i class="bx bx-badge-check"></i> 24/7 email and phone support for initial deployment.</li>
-                        <li><i class="bx bx-badge-check"></i>  Onsite device support in 25 locations across India.</li>
-                        <li><i class="bx bx-badge-check"></i> Include Training on Mac Os, iOS, Pad Os.</li>
-                        <!-- <li><i class="bx bx-badge-check"></i> Unlimited Domains</li> -->
-                    </ul>
                     <br>
                     <ul>
-                        <p>Benefits</p>
-                        <li><i class="bx bx-badge-check"></i> Simplifies Apple device adoption with minimal IT overhead, ideal for small teams (10–50 devices) using iPads or MacBooks.</li>
+                        <p style="text-align: left;">Services Included</p>
+                        <!-- <br> -->
+                        <li><i class="bx bx-badge-check"></i> IT Environment Analysis: Evaluate IT setup for optimization.</li>
+                        <li><i class="bx bx-badge-check"></i> CostSmart Advantage: Savings Through Bundled Accessories, Hardware and Software Services (Office 365).</li>
+                        <li><i class="bx bx-badge-check"></i> TechSkill Empowerment: Basic Training on Software Services to Empower Users.
+                        </li>
+                        <li><i class="bx bx-badge-check"></i> GrowthEdge Features: Scalable Deployment Services, Workstation Setup.</li>
+                        <li><i class="bx bx-badge-check"></i> CoreCare Support: Remote IT Support Via Email & Phone.</li>
+                      
                     </ul>
+                    <br>
+                    <p style="text-align: left;"><b style="color: red; ">Value Proposition</b> Cost-Effective with Enterprise-Grade features for StartUps, offering Savings and Scalability.</p>
+                  <br> <p style="text-align: left;"><b style="color: red; ">Add-Ons</b> Basic Logistic Support.</p>
+                    <br>
                 </div>
             </div>
 
             <div class="col-lg-4 col-sm-6">
                 <div class="single-pricing">
                     <div class="pricing-top-heading">
-                        <h3>Superior Pro</h3>
+                        <h3>Superior Pro : Growth Solution</h3>
                         <!-- <p>Build A Website</p> -->
+                    </div>
+                    <p><b style="color: red;">Who It's For</b> Mid-Sized Businesses & SMBs for Scaling Operations.</p>
+                    <a class="box-btn" routerLink="/contact">Contact Sales</a>
+                    <br>
+                    <br>
+                    <ul>
+                        <p style="text-align: left;">Services Included</p>
+                        <!-- <br> -->
+                        <li style="color: red; font-size: 16px;font-weight: bolder;">Includes all features of Superior Lite.</li>
+                        <li><i class="bx bx-badge-check"></i> SwiftMac Onboarding: 20-minute Mac deployment via Deployment Services, Tailored for Apple Eco-Systems.</li>
+                        <li><i class="bx bx-badge-check"></i> TechMaster Training: Advanced On Demand Training on Software Services, MacOS, iPad Os, iOS Basics for User Adoption.</li>
+                        <li><i class="bx bx-badge-check"></i> Demo Devices: Access to Demo Apple units for Internal Testing and Evaluation.</li>
+                        <li><i class="bx bx-badge-check"></i> ProAssist Services: End-to-End Logistics Support and Reverse Pickup Facility from User Locations Across India with Transit Insurance.</li>
+                        <li><i class="bx bx-badge-check"></i> Additional Services: Warehouse Management, Device Health Checkup & Reporting, Asset Tagging, Asset Management & Reporting, Evaluation and Reporting of Existing Network Facility, Health Check-up Camps.</li>
+                      
+                    </ul>
+                    <br>
+                    <p style="text-align: left;"><b style="color: red; ">Value Proposition</b> Developer and Collaboration-Focused solution with Apple-First Deployment, Demo Testing, and Nationwide Logistics—perfect for fast-growing businesses aiming for higher productivity and efficiency.</p>
+                  <br> <p style="text-align: left;"><b style="color: red; ">Add-Ons</b>Demo of Accessories and Devices to Facilitate Apple Eco-System. Remote Diagnose Support & Reporting.</p>
+                    <br>
+                </div>
+                <!-- <div class="single-pricing">
+                    <div class="pricing-top-heading">
+                        <h3>Superior Pro : Growth Solution</h3>
                     </div>
                     <a class="box-btn" routerLink="/contact">Contact Sales</a>
                     <br>
                     <ul>
                         <p>Features</p>
-                        <li style="color: red; font-size: 16px;font-weight: bolder;">Includes all features of Superior Lite.</li>
-                        <li><i class="bx bx-badge-check"></i>Zero-touch deployment with advanced ABM and MDM configurations.</li>
-                        <li><i class="bx bx-badge-check"></i>Integration with enterprise apps (e.g., Microsoft 365, Google Workspace).</li>
-                        <li><i class="bx bx-badge-check"></i>Enhanced security (VPN, single sign-on, conditional access).</li>
+                        <li style="color: red; font-size: 16px;font-weight: bolder;">Includes all features of Superior
+                            Lite.</li>
+                        <li><i class="bx bx-badge-check"></i>Zero-touch deployment with advanced ABM and MDM
+                            configurations.</li>
+                        <li><i class="bx bx-badge-check"></i>Integration with enterprise apps (e.g., Microsoft 365,
+                            Google Workspace).</li>
+                        <li><i class="bx bx-badge-check"></i>Enhanced security (VPN, single sign-on, conditional
+                            access).</li>
                         <li><i class="bx bx-badge-check"></i>AppleCare+ for Business and extended warranty options.</li>
-                        <li><i class="bx bx-badge-check"></i>In-person or virtual training on macOS, iOS, and iPadOS, plus biannual IT reviews</li>
+                        <li><i class="bx bx-badge-check"></i>In-person or virtual training on macOS, iOS, and iPadOS,
+                            plus biannual IT reviews</li>
                         <li><i class="bx bx-badge-check"></i>Dedicated account manager.</li>
                         <li><i class="bx bx-badge-check"></i>Asset tagging support.</li>
-                        <li><i class="bx bx-badge-check"></i>Logistics support, reverse pickup facility from user locations across India with transit insurance.</li>
-                        <!-- <li><i class="bx bx-badge-check"></i> Unlimited Domains</li> -->
+                        <li><i class="bx bx-badge-check"></i>Logistics support, reverse pickup facility from user
+                            locations across India with transit insurance.</li>
                     </ul>
                     <br>
                     <ul>
                         <p>Benefits</p>
-                        <li><i class="bx bx-badge-check"></i> Streamlines complex deployments for hybrid environments, supporting 100–500 devices with compliance, logistics, and asset management.</li>
+                        <li><i class="bx bx-badge-check"></i> Streamlines complex deployments for hybrid environments,
+                            supporting 100–500 devices with compliance, logistics, and asset management.</li>
                     </ul>
                     <strong class="popular">Popular</strong>
-                </div>
+                </div> -->
             </div>
 
             <div class="col-lg-4 col-sm-6 offset-sm-3 offset-lg-0">
                 <div class="single-pricing">
                     <div class="pricing-top-heading">
-                        <h3>Superior Ultra</h3>
+                        <h3>Superior Ultra : Enterprise Solution</h3>
                         <!-- <p>Build A Website</p> -->
+                    </div>
+                    <p><b style="color: red;">Who It's For</b> Large Enterprises for Complex Operations.</p>
+                    <a class="box-btn" routerLink="/contact">Contact Sales</a>
+                    <br>
+                    <br>
+                    <ul>
+                        <p style="text-align: left;">Services Included</p>
+                        <!-- <br> -->
+                        <li style="color: red; font-size: 16px;font-weight: bolder;">Includes all features of Superior Pro.</li>
+                        <li><i class="bx bx-badge-check"></i> MacFit Assessment: Comprehensive Mac deployment evaluation via IT Environment Analysis.</li>
+                        <li><i class="bx bx-badge-check"></i> ValueMax Analytics: TCO/TEI analysis for Apple ecosystems.</li>
+                        <li><i class="bx bx-badge-check"></i> SeamlessSync Deployment: Custom Deployment Services with Rapid Setup and Integration</li>
+                        <li><i class="bx bx-badge-check"></i> CycleWorks Management: End-to-End Device Management. IT Life Cycle Management, Buy Back Options.</li>
+                        <li><i class="bx bx-badge-check"></i> FlexPay Solutions: Flexible Financing Options for Hardware/Software to Enhance Affordability.</li>
+                        <li><i class="bx bx-badge-check"></i> Buy Portal: Discounted Apple Device Purchases for Employees.</li>
+                        <li><i class="bx bx-badge-check"></i> EliteTech Support: Onsite Device Support by Apple Certified Technician Across 25 Locations in India and Reporting Facility on Reverse Pickup</li>
+                        <li><i class="bx bx-badge-check"></i> SecureGuard Insurance: Theft Coverage During Transit/Storage.</li>
+                        <li><i class="bx bx-badge-check"></i> Additional Services: Training on Mac OS, iOS, and iPadOS (hands-on workshops).</li>
+                    </ul>
+                    <br>
+                    <p style="text-align: left;"><b style="color: red; ">Value Proposition</b> All-in-One Enterprise Solution with Apple Expertise, Nationwide
+                        Support, and Customized Financial and Insurance Services.</p>
+                  <br> <p style="text-align: left;"><b style="color: red; ">Add-Ons</b>On Demand Resident Engineer.</p>
+                    <br>
+                </div>
+                <!-- <div class="single-pricing">
+                    <div class="pricing-top-heading">
+                        <h3>Superior Ultra : Enterprise Solution</h3>
                     </div>
                     <a class="box-btn" routerLink="/contact">Contact Sales</a>
                     <br>
                     <ul>
                         <p>Features</p>
-                        <li style="color: red;font-size: 16px;font-weight: bolder;">Includes all features of Superior Pro</li>
-                        <li><i class="bx bx-badge-check"></i> Fully customized ABM and MDM deployment with role-based profiles.</li>
-                        <li><i class="bx bx-badge-check"></i> Custom app integration or development via Superior's network.</li>
-                        <li><i class="bx bx-badge-check"></i> Custom app integration or development via Superior's network.</li>
-                        <li><i class="bx bx-badge-check"></i> On-site deployment support across multiple India locations.</li>
-                        <li><i class="bx bx-badge-check"></i> Comprehensive training on macOS, iOS, and iPadOS, plus ongoing workshops.</li>
-                        <li><i class="bx bx-badge-check"></i> Premium 24/7 support with SLA-backed response times and lifecycle management.</li>
+                        <li style="color: red;font-size: 16px;font-weight: bolder;">Includes all features of Superior
+                            Pro</li>
+                        <li><i class="bx bx-badge-check"></i> Fully customized ABM and MDM deployment with role-based
+                            profiles.</li>
+                        <li><i class="bx bx-badge-check"></i> Custom app integration or development via Superior's
+                            network.</li>
+                        <li><i class="bx bx-badge-check"></i> Custom app integration or development via Superior's
+                            network.</li>
+                        <li><i class="bx bx-badge-check"></i> On-site deployment support across multiple India
+                            locations.</li>
+                        <li><i class="bx bx-badge-check"></i> Comprehensive training on macOS, iOS, and iPadOS, plus
+                            ongoing workshops.</li>
+                        <li><i class="bx bx-badge-check"></i> Premium 24/7 support with SLA-backed response times and
+                            lifecycle management.</li>
                         <li><i class="bx bx-badge-check"></i> Warehousing support.</li>
-                        <li><i class="bx bx-badge-check"></i> Apple Certified Technician diagnose and reporting facility on reverse pickup.</li>
+                        <li><i class="bx bx-badge-check"></i> Apple Certified Technician diagnose and reporting facility
+                            on reverse pickup.</li>
                         <li><i class="bx bx-badge-check"></i> Theft Insurance</li>
-                        <!-- <li><i class="bx bx-badge-check"></i> Unlimited Domains</li> -->
                     </ul>
                     <br>
                     <ul>
                         <p>Benefits</p>
-                        <li><i class="bx bx-badge-check"></i> Delivers enterprise-grade scalability, security, and comprehensive logistics for 1,000+ devices across regions.</li>
+                        <li><i class="bx bx-badge-check"></i> Delivers enterprise-grade scalability, security, and
+                            comprehensive logistics for 1,000+ devices across regions.</li>
                     </ul>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -319,38 +547,41 @@
     <div class="container">
         <div class="row">
             <section class="col-lg-12 col-md-12 mb-4" id="developer-powerhouse">
-                <div class="card bg-image" style="background-image: url('assets/images/emppurchaseprogram_banner.jpeg');">
-                    <div class="card-content" style="display: flex; flex-direction: row; align-items: center; justify-content: center; text-align: left; gap: 2rem;">
-                        <h3 style="margin-bottom: 0; min-width: 160px; font-size: 2.3rem; text-align: center;">Mac Developer's Powerhouse</h3>
+                <div class="card bg-image"
+                    style="background-image: url('assets/images/emppurchaseprogram_banner.jpeg');">
+                    <div class="card-content"
+                        style="display: flex; flex-direction: row; align-items: center; justify-content: center; text-align: left; gap: 2rem;">
+                        <h3 style="margin-bottom: 0; min-width: 160px; font-size: 2.3rem; text-align: center;">Mac
+                            Developer's Powerhouse</h3>
                         <div class="mac-dev-section">
                             <div class="container">
-                              <div class="mac-dev-grid">
-                                <div class="mac-dev-col">
-                                  <h3>Support for Assessment</h3>
-                                  <ul>
-                                    <li>Technical Assessment Assistance</li>
-                                    <li>Network and Compatibility Evaluation</li>
-                                  </ul>
+                                <div class="mac-dev-grid">
+                                    <div class="mac-dev-col">
+                                        <h3>Support for Assessment</h3>
+                                        <ul>
+                                            <li>Technical Assessment Assistance</li>
+                                            <li>Network and Compatibility Evaluation</li>
+                                        </ul>
+                                    </div>
+                                    <div class="mac-dev-col">
+                                        <h3>PC to Mac Migration </h3>
+                                        <ul>
+                                            <li>Assistance with Migrating from PC to Mac</li>
+                                            <li>Automated Deployment Solutions</li>
+                                        </ul>
+                                    </div>
+                                    <div class="mac-dev-col">
+                                        <h3>Customer Success</h3>
+                                        <ul>
+                                            <li> ⁠Tailored IT Training and End-User Empowerment</li>
+                                            <li>Dedicated On-Site or Remote Support Services</li>
+                                            <li>Technical Expertise and Developer Resource Assistance</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="mac-dev-col">
-                                  <h3>PC to Mac Migration </h3>
-                                  <ul>
-                                    <li>Assistance with Migrating from PC to Mac</li>
-                                    <li>Automated Deployment Solutions</li>
-                                  </ul>
-                                </div>
-                                <div class="mac-dev-col">
-                                  <h3>Customer Success</h3>
-                                  <ul>
-                                    <li> ⁠Tailored IT Training and End-User Empowerment</li>
-                                    <li>Dedicated On-Site or Remote Support Services</li>
-                                    <li>Technical Expertise and Developer Resource Assistance</li>
-                                  </ul>
-                                </div>
-                              </div>
-                              <div class="mac-dev-actions">
+                                <!--  <div class="mac-dev-actions">
                                 <a href="#" class="mac-dev-learn-btn">Learn more</a>
-                              </div>
+                              </div> -->
                             </div>
                         </div>
                     </div>
@@ -358,38 +589,40 @@
             </section>
             <div class="col-lg-12 col-md-12 mb-4" id="mac-startup-accelerator">
                 <div class="card bg-image" style="background-image: url('assets/images/demo2.jpeg');">
-                    <div class="card-content" style="display: flex; flex-direction: row; align-items: center; justify-content: center; text-align: left; gap: 2rem;">
-                        <h3 style="margin-bottom: 0; min-width: 160px; font-size: 2.3rem; text-align: center;">Mac Startup Accelerator</h3>
+                    <div class="card-content"
+                        style="display: flex; flex-direction: row; align-items: center; justify-content: center; text-align: left; gap: 2rem;">
+                        <h3 style="margin-bottom: 0; min-width: 160px; font-size: 2.3rem; text-align: center;">Mac
+                            Startup Accelerator</h3>
                         <div class="mac-dev-section">
                             <div class="container">
-                              <div class="mac-dev-grid">
-                                <div class="mac-dev-col">
-                                    <h3>Special Benefits for Startups</h3>
-                                    <ul>
-                                      <li>Offers for Switching to Mac</li>
-                                      <li>Flexible Financing Options</li>
-                                    </ul>
-                                  </div>
-                                <div class="mac-dev-col">
-                                  <h3>Personalised Training Access</h3>
-                                  <ul>
-                                    <li>Specialized IT Training Programs</li>
-                                    <li>End-User Empowerment Solutions</li>
-                                    <li>Network of Global Industry Experts</li>
-                                  </ul>
+                                <div class="mac-dev-grid">
+                                    <div class="mac-dev-col">
+                                        <h3>Special Benefits for Startups</h3>
+                                        <ul>
+                                            <li>Offers for Switching to Mac</li>
+                                            <li>Flexible Financing Options</li>
+                                        </ul>
+                                    </div>
+                                    <div class="mac-dev-col">
+                                        <h3>Personalised Training Access</h3>
+                                        <ul>
+                                            <li>Specialized IT Training Programs</li>
+                                            <li>End-User Empowerment Solutions</li>
+                                            <li>Network of Global Industry Experts</li>
+                                        </ul>
+                                    </div>
+                                    <div class="mac-dev-col">
+                                        <h3>Startup Essentials Packages</h3>
+                                        <ul>
+                                            <li>Onboarding Bundles for New Hires</li>
+                                            <li>Professional Headsets and Connectivity Accessories</li>
+                                            <li>Comprehensive AppleCare Coverage</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="mac-dev-col">
-                                  <h3>Startup Essentials Packages</h3>
-                                  <ul>
-                                    <li>Onboarding Bundles for New Hires</li>
-                                    <li>Professional Headsets and Connectivity Accessories</li>
-                                    <li>Comprehensive AppleCare Coverage</li>
-                                  </ul>
-                                </div>
-                              </div>
-                              <div class="mac-dev-actions">
+                                <!--  <div class="mac-dev-actions">
                                 <a href="#" class="mac-dev-learn-btn">Learn more</a>
-                              </div>
+                              </div> -->
                             </div>
                         </div>
                     </div>
@@ -397,26 +630,28 @@
             </div>
             <div class="col-lg-12 col-md-12 mb-4" id="getting-started-with-mac">
                 <div class="card bg-image" style="background-image: url('assets/images/compre_supp.jpeg');">
-                    <div class="card-content" style="display: flex; flex-direction: row; align-items: center; justify-content: center; text-align: left; gap: 2rem;">
-                        <h3 style="margin-bottom: 0; min-width: 160px; font-size: 2.3rem; text-align: center;">Getting Started with Mac</h3>
+                    <div class="card-content"
+                        style="display: flex; flex-direction: row; align-items: center; justify-content: center; text-align: left; gap: 2rem;">
+                        <h3 style="margin-bottom: 0; min-width: 160px; font-size: 2.3rem; text-align: center;">Getting
+                            Started with Mac</h3>
                         <div class="mac-dev-section">
                             <div class="container">
-                              <div class="mac-dev-grid">
-                                <div class="mac-dev-col">
-                                    <!-- <h3>Special Benefits for Startups</h3> -->
-                                    <ul>
-                                      <li>⁠Evaluation of Mac Suitability</li>
-                                      <li>Total Cost of Ownership (TCO) Evaluation</li>
-                                      <li>Concept Validation and Pilot Implementation</li>
-                                      <li>Technical Skill-Building and Enablement</li>
-                                      <li>Interactive Experience Centers</li>
-                                      <li>Transition and System Integration Support</li>
-                                    </ul>
-                                  </div>
-                              </div>
-                              <div class="mac-dev-actions">
+                                <div class="mac-dev-grid">
+                                    <div class="mac-dev-col">
+                                        <!-- <h3>Special Benefits for Startups</h3> -->
+                                        <ul>
+                                            <li>⁠Evaluation of Mac Suitability</li>
+                                            <li>Total Cost of Ownership (TCO) Evaluation</li>
+                                            <li>Concept Validation and Pilot Implementation</li>
+                                            <li>Technical Skill-Building and Enablement</li>
+                                            <li>Interactive Experience Centers</li>
+                                            <li>Transition and System Integration Support</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--  <div class="mac-dev-actions">
                                 <a href="#" class="mac-dev-learn-btn">Learn more</a>
-                              </div>
+                              </div> -->
                             </div>
                         </div>
                     </div>
@@ -908,14 +1143,9 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="case-btn text-center">
-            <p>Explore More Apple Products.
-                <a routerLink="/products"><u style="text-decoration: underline; cursor: pointer;">View More</u></a>
-            </p>
-        </div> -->
     </div>
-<br>
-<br>
+    <br>
+    <br>
     <div class="container" id="apple-manager">
         <div class="row">
             <div class="col-lg-6 col-md-6 mb-4">
@@ -936,17 +1166,15 @@
                 <div class="card text-white">
                     <div class="card-body" style="padding: 20px; background-color: #4f5158;border-radius: 10px;">
                         <div class="icon mb-3">
-                            <img src="assets/images/applecare.png" alt="AppleCare for Enterprise"
-                                style="width: 70px;">
+                            <img src="assets/images/applecare.png" alt="AppleCare for Enterprise" style="width: 70px;">
                         </div>
                         <h4 class="card-title">AppleCare for Enterprise</h4>
                         <p class="card-text">Help desk support, OS support, and enterprise support solutions. The best
                             support and care from the experts who know Apple products best.</p>
-                        <a href="#" class="text-danger">Learn More</a>
+                        <!-- <a href="#" class="text-danger">Learn More</a> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-

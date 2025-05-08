@@ -1,9 +1,9 @@
 <section class="hero-banner">
   <div class="hero-banner-overlay">
     <div class="hero-banner-content">
-      <h1 style="font-size: 4rem; color: #fff;">Technology for Modern Workplaces</h1>
+      <h1 style="font-size: 4rem; color: #fff;"><span style="font-size: 42px;">Technology for</span> <br><span style="font-size: 64px;">Modern Workplaces</span></h1>
       <p>Future-ready, agile, and adaptive technology solutions that scale with your success..</p>
-      <a href="assets/brochure.pdf" target="_blank" class="download-btn">Download Brochure</a>
+      <!-- <a href="assets/brochure.pdf" target="_blank" class="download-btn">Download Brochure</a> -->
     </div>
   </div>
 </section>
@@ -42,8 +42,8 @@
         business agility and efficiency by aligning IT with core operations. Backed by a team of 30+ experts, we ensure
         reliable support for all your IT needs—keeping you ahead of the curve.</p>
       <div class="enterprise-learn-more">
-        <a href="/enterprise" class="learn-more-link">Learn More<i class="fas fa-arrow-right"
-            style="margin-left: 10px;"></i></a>
+       <!--  <a href="/enterprise" class="learn-more-link">Learn More<i class="fas fa-arrow-right"
+            style="margin-left: 10px;"></i></a> -->
       </div>
     </div>
 
@@ -51,7 +51,7 @@
       <div class="enterprise-highlights">
         <div class="highlight-item">
           <img src="assets/icons/expertise_org.svg" alt="Experience Icon" class="highlight-icon">
-          <p>Over 13 Years Of Expertise & Serving 1000+ Enterprise Customers.</p>
+          <p>Over 13 Years Of Expertise & Serving 480+ Enterprise Customers.</p>
         </div>
         <div class="highlight-item">
           <img src="assets/icons/team.svg" alt="Team Icon" class="highlight-icon">
@@ -82,29 +82,31 @@
 
 <br>
 <section class="enterprise-solutions mt-100" (click)="navigateToAppleEnterprise()" style="cursor: pointer;">
-  <div class="container">
+  <div class="container2">
     <div class="row">
       <div class="col-lg-12 col-md-12 mb-4" id="getting-started-with-mac">
         <div class="card bg-image"
-          style="background-image: url('assets/images/apple_enterprisenew.png'); position: relative;">
+          style="position: relative;">
           <!-- Top-right images container -->
           <div class="card-top-right-images">
             <!-- <img src="assets/images/image1.png" alt="Image 1" class="top-right-img"> -->
             <img src="assets/images/authres.png" alt="Image 2" class="top-right-img">
           </div>
           <div class="card-content"
-            style="display: flex; flex-direction: row; align-items: center; justify-content: center; text-align: left; gap: 2rem;">
-            <h3
-              style="margin-bottom: 0; min-width: 160px; font-size: 4.3rem; font-weight: bold; text-align: center;padding: 164px;">
-              Apple for Enterprise</h3>
-            <div class="mac-dev-section">
-              <div class="container">
-              </div>
+            style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; text-align: left; padding: 2rem;">
+            <div class="image-section" style="flex: 1; max-width: 50%;">
+              <img src="assets/images/apple_enterprisenew.png" alt="Apple Enterprise" style="width: 100%; height: auto;">
+            </div>
+            <div class="content-section" style="flex: 1; padding-left: 2rem;">
+              <h3 style="margin-bottom: 1rem; font-size: 3rem; font-weight: bold;">Apple for Enterprise</h3>
+              <p style="font-size: 1.2rem; line-height: 1.6;">Superior Digital, an Apple Authorised Reseller, delivers expertly architected solutions that integrate Apple devices, MDM, and accessories to meet the unique needs of every industry. Our end-to-end approach—from consulting and deployment to training and ongoing service—ensures a seamless and future-ready IT experience. Customers benefit from increased efficiency, simplified management, and a reliable technology partner committed to their long-term success.</p>
+             <!--  <a href="/enterprise-new" class="learn-more-link">Learn more<i class="fas fa-arrow-right"
+                style="margin-left: 10px;"></i></a> -->
+                <a href="assets/brochure.pdf" target="_blank" class="download-btn">Learn More</a> 
             </div>
           </div>
           <div class="card-bottom-left-link">
-            <a href="/enterprise-new" class="learn-more-link">Learn more<i class="fas fa-arrow-right"
-                style="margin-left: 10px;"></i></a>
+           
           </div>
         </div>
       </div>
@@ -113,12 +115,182 @@
 </section>
 
 
-<section class="services-details-area ptb-100" id="apple-program-section"
+<section class="what-we-offer ptb-100" style="background-color: #f9f9f9; text-align: center;">
+  <div class="container">
+    
+    <div class="">
+      <h2 style="font-size: 18px; font-weight: bold; color: #e43a35;">What We Offer</h2>
+    <div class="" style="background-color: transparent; border-radius: 10px; padding: 20px 0 0 0;">
+      <h1 style="color: #000; text-align: center; font-size: 36px;">Our Technology Solutions for Enterprise</h1>
+      <p style="font-size: 18px; color: #000; max-width: 900px; margin: 0 auto;">At Superior Digital, we provide everything you need—all in one place. From strategy to execution, our end-to-end support ensures your success is fully backed at every stage. Whether you're facing routine operations or complex challenges, we're ready with reliable solutions tailored to your needs.</p>
+    </div>
+  </div>
+    <div class="ptb-50">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="offer-card"
+            style="background-color: #e43a35; border-radius: 10px; padding: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); display: flex; align-items: center; gap: 20px;">
+            <div class="content-section" style="flex: 1;">
+              <h3 style="font-size: 24px; font-weight: bold; color: #fff; margin-bottom: 15px;">Computing</h3>
+              <ul style="color: #fff; text-align: left; padding-left: 20px; list-style-type: disc;">
+                <ul style="list-style-type: disc; margin-left: 20px; color: #fff;">
+                  <li style="font-size: 20px;text-align: left;">Desktops</li>
+                  <li style="font-size: 20px;text-align: left;">Laptops</li>
+                  <li style="font-size: 20px;text-align: left;">Workstations</li>
+                  <li style="font-size: 20px;text-align: left;">Servers</li>
+                  <li style="font-size: 20px;text-align: left;">Storage</li>
+                  <li style="font-size: 20px;text-align: left;">Accessories</li>
+                </ul>
+              </ul>
+            </div>
+            <div class="image-section">
+              <img src="assets/images/computing.png" alt="Consulting"
+                style="width: 200px; height: 200px;border: 2px solid white;object-fit: cover;">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="offer-card"
+            style="background-color: #000; border-radius: 10px; padding: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); display: flex; align-items: center; gap: 20px;">
+            <div class="content-section" style="flex: 1;">
+              <h3 style="font-size: 24px; font-weight: bold; color: #fff; margin-bottom: 15px;">Networking</h3>
+              <ul style="color: #fff; text-align: left; padding-left: 20px; list-style-type: disc;">
+                <ul style="list-style-type: disc; margin-left: 20px; color: #fff;">
+                  <li style="font-size: 20px;text-align: left;">Site Readiness Check</li>
+                  <li style="font-size: 20px;text-align: left;">Cabling</li>
+                  <li style="font-size: 20px;text-align: left;">Routing</li>
+                  <li style="font-size: 20px;text-align: left;">Switching</li>
+                  <li style="font-size: 20px;text-align: left;">Testing</li>
+                  <li style="font-size: 20px;text-align: left;">Cabling Certification</li>
+                </ul>
+              </ul>
+            </div>
+            <div class="image-section">
+              <img src="assets/images/networking_new.png" alt="Consulting"
+                style="width: 200px; height: 200px; border: 2px solid white;object-fit: cover;">
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="offer-card"
+            style="background-color: #000; border-radius: 10px; padding: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); display: flex; align-items: center; gap: 20px;">
+            <div class="content-section" style="flex: 1;">
+              <h3 style="font-size: 24px; font-weight: bold; color: #fff; margin-bottom: 15px;">Mobility</h3>
+              <ul style="color: #fff; text-align: left; padding-left: 20px; list-style-type: disc;">
+                <ul style="list-style-type: disc; margin-left: 20px; color: #fff;">
+                  <li style="font-size: 20px;text-align: left;">iPhone</li>
+                  <li style="font-size: 20px;text-align: left;">iPad</li>
+                  <li style="font-size: 20px;text-align: left;">Android Devices</li>
+                  <li style="font-size: 20px;text-align: left;">Mobile Device Management</li>
+                  <li style="font-size: 20px;text-align: left;">Software Integration</li>
+                  <li style="font-size: 20px;text-align: left;">Accessories</li>
+                </ul>
+              </ul>
+            </div>
+            <div class="image-section">
+              <img src="assets/images/mobility_new1.png" alt="Consulting"
+                style="width: 200px; height: 200px; border: 2px solid white;object-fit: cover;">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="offer-card"
+            style="background-color: #e43a35; border-radius: 10px; padding: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); display: flex; align-items: center; gap: 20px;">
+            <div class="content-section" style="flex: 1;">
+              <h3 style="font-size: 24px; font-weight: bold; color: #fff; margin-bottom: 15px;">Software</h3>
+              <ul style="color: #fff; text-align: left; padding-left: 20px; list-style-type: disc;">
+                <ul style="list-style-type: disc; margin-left: 20px; color: #fff;">
+                  <li style="font-size: 20px;text-align: left;">Creative</li>
+                  <li style="font-size: 20px;text-align: left;">Engineering</li>
+                  <li style="font-size: 20px;text-align: left;">Productivity</li>
+                  <li style="font-size: 20px;text-align: left;">ERP</li>
+                  <li style="font-size: 20px;text-align: left;">Collaboration</li>
+                  <li style="font-size: 20px;text-align: left;">SaaS Applications</li>
+                </ul>
+              </ul>
+            </div>
+            <div class="image-section">
+              <img src="assets/images/software_new.png" alt="Consulting"
+                style="width: 200px; height: 200px;border: 2px solid white;object-fit: cover;">
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="offer-card"
+            style="background-color: #e43a35; border-radius: 10px; padding: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); display: flex; align-items: center; gap: 20px;">
+            <div class="content-section" style="flex: 1;">
+              <h3 style="font-size: 24px; font-weight: bold; color: #fff; margin-bottom: 15px;">Audio - Video</h3>
+              <ul style="color: #fff; text-align: left; padding-left: 20px; list-style-type: disc;">
+                <ul style="list-style-type: disc; margin-left: 20px; color: #fff;">
+                  <li style="font-size: 20px;text-align: left;">Boardroom Solutions</li>
+                  <li style="font-size: 20px;text-align: left;">Displays/Interactive Panels</li>
+                  <li style="font-size: 20px;text-align: left;">Room Schedulers & Controllers</li>
+                  <li style="font-size: 20px;text-align: left;">Unified Communication</li>
+                  <li style="font-size: 20px;text-align: left;">Digital Signage/Video Walls</li>
+                  <li style="font-size: 20px;text-align: left;">Audio Solutions</li>
+                </ul>
+              </ul>
+            </div>
+            <div class="image-section">
+              <img src="assets/images/audio-video.png" alt="Consulting"
+                style="width: 200px; height: 200px;border: 2px solid white;object-fit: cover;">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="offer-card"
+            style="background-color: #000; border-radius: 10px; padding: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); display: flex; align-items: center; gap: 20px;">
+            <div class="content-section" style="flex: 1;">
+              <h3 style="font-size: 24px; font-weight: bold; color: #fff; margin-bottom: 15px;">Managed Services</h3>
+              <ul style="color: #fff; text-align: left; padding-left: 20px; list-style-type: disc;">
+                <ul style="list-style-type: disc; margin-left: 20px; color: #fff;">
+                  <li style="font-size: 20px;text-align: left;">⁠Onsite Support on Demand</li>
+                  <li style="font-size: 20px;text-align: left;">Annual Maintenance Contract</li>
+                  <li style="font-size: 20px;text-align: left;">Dedicated Service Engineer</li>
+                  <li style="font-size: 20px;text-align: left;">Per Incident Support</li>
+                  <li style="font-size: 20px;text-align: left;">Breakdown Support</li>
+                  <li style="font-size: 20px;text-align: left;">IT Hardware Repair Services</li>
+                </ul>
+              </ul>
+            </div>
+            <div class="image-section">
+              <img src="assets/images/networking_new.png" alt="Consulting"
+                style="width: 200px; height: 200px; border: 2px solid white;object-fit: cover;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="col-lg-4 col-md-6 mb-4">
+            <div class="offer-card" style="background-color: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+              <img src="assets/icons/deployment.svg" alt="Deployment" style="width: 60px; height: 60px; margin-bottom: 20px;">
+              <h3 style="font-size: 24px; font-weight: bold; color: #333;">Deployment</h3>
+              <p style="font-size: 16px; color: #666;">Seamless integration of technology solutions tailored to your business needs.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="offer-card" style="background-color: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+              <img src="assets/icons/support.svg" alt="Support" style="width: 60px; height: 60px; margin-bottom: 20px;">
+              <h3 style="font-size: 24px; font-weight: bold; color: #333;">Support</h3>
+              <p style="font-size: 16px; color: #666;">Reliable support services to ensure your operations run smoothly.</p>
+            </div>
+          </div> -->
+    </div>
+  </div>
+</section>
+
+
+<!-- <section class="services-details-area ptb-100" id="apple-program-section"
   style="background-color: #f5f5f5;text-align: center;">
   <div class="container">
     <div class="cardsflip">
       <div class="flip-card-container" style="background-color: #e43a35; border-radius: 10px; padding: 40px;">
-        <!-- <h2>Our Offerings</h2> -->
         <h1 style="color: #fff; text-align: left; font-size: 44px;">We've got you covered</h1>
         <ul style="color: #fff; text-align: left;">
           <li class="flip-card-list-item">Everything You Need, All in One Place.</li>
@@ -127,22 +299,6 @@
           <li class="flip-card-list-item">Ready for Every Challenge.</li>
           <li class="flip-card-list-item">Covered from Strategy to Execution.</li>
         </ul>
-        <!--  <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="assets/images/maintenance.png" alt="Performance">
-                <h2 style="font-weight: 400;">Our Offerings</h2>
-              </div>
-              <div class="flip-card-back">
-                <h3>Performance</h3>
-                <ul class="feature-list">
-                  <li>Fast compile times and seamless multitasking</li>
-                  <li>Optimised for Xcode, Swift, and other dev tools</li>
-                  <li>Handles resource-intensive tasks with ease</li>
-                </ul>
-              </div>
-            </div>
-          </div> -->
       </div>
       <div class="card-with-background"
         style="position: relative; background-image: url('assets/images/computing.png'); background-size: cover; background-position: center; border-radius: 10px; padding: 40px; color: #fff; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); cursor: pointer; overflow: hidden;min-width: 400px;">
@@ -251,7 +407,6 @@
             <li style="font-size: 20px;text-align: left;">Boardroom Solutions</li>
             <li style="font-size: 20px;text-align: left;">Displays/Interactive Panels</li>
             <li style="font-size: 20px;text-align: left;">Room Schedulers & Controllers</li>
-            <!-- <li style="font-size: 20px;text-align: left;">Microphones<span style="font-size: 14px;">(Ceiling & Tabletop)</span></li> -->
             <li style="font-size: 20px;text-align: left;">Unified Communication</li>
             <li style="font-size: 20px;text-align: left;">Digital Signage/Video Walls</li>
             <li style="font-size: 20px;text-align: left;">Audio Solutions</li>
@@ -264,10 +419,9 @@
             More</a>
         </div>
       </div>
-
     </div>
   </div>
-</section>
+</section> -->
 
 <section class="service-support-section"
   style="padding: 60px 0; background-image: url('assets/images/service&support.avif'); background-size: cover; background-position: center; background-attachment: fixed; position: relative;">
@@ -362,7 +516,7 @@
     </div>
 
     <div class="support-cta" style="text-align: center; margin-top: 50px;">
-      <a href="#contact"
+      <a href="/contact"
         style="display: inline-block; background-color: #e43a35; color: white; padding: 15px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; transition: all 0.3s ease; border: 2px solid #e43a35;"
         onmouseover="this.style.backgroundColor='transparent'; this.style.color='#fff';"
         onmouseout="this.style.backgroundColor='#e43a35'; this.style.color='#fff';">
@@ -433,7 +587,7 @@
       style="background-image: url('assets/images/enterprisecomputing.png'); min-height: 600px; position: relative; border-radius: 20px 0 0 20px;">
       <div class="flex items-center h-full"
         style="position: absolute; right: 0; top: 0; bottom: 0; width: 50%; background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);">
-        <div class="text-white p-8" style="background-color: rgb(0 0 0 / 19%); padding: 7%;">
+        <div class="text-white p-8" style="background-color: rgb(0 0 0 / 40%); padding: 7%;">
           <h1 class="font-bold mb-4" style="font-size: 3rem; color: #fff;">Enterprise Computing Solutions</h1>
           <p class="text-lg mb-6" style="font-size: 20px;">At Superior Digital, we redefine enterprise computing for
             today's dynamic business landscape. From seamless device deployment and cross-platform integration to
@@ -474,7 +628,7 @@
       style="background-image: url('assets/images/aventerperise.png'); min-height: 600px; position: relative; border-radius: 20px 0 0 20px;">
       <div class="flex items-center h-full"
         style="position: absolute; right: 0; top: 0; bottom: 0; width: 50%; background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);">
-        <div class="text-white p-8" style="background-color: rgb(0 0 0 / 19%); padding: 1.5%;">
+        <div class="text-white p-8" style="background-color: rgb(0 0 0 / 40%); padding: 1.5%;">
           <h1 class="font-bold mb-4" style="font-size: 3rem; color: #fff;">AV Solutions for Enterprises</h1>
           <p class="text-lg mb-6" style="font-size: 20px;">At Superior Digital, we understand that effective
             communication drives business success—and it begins with a well-designed meeting space. Whether it's a

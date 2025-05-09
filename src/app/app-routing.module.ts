@@ -85,13 +85,13 @@ import { AppleWatchComponent } from './components/pages/apple-watch/apple-watch.
 import { AppleProgramscreenComponent } from './components/pages/apple-programscreen/apple-programscreen.component';
 import { HomepageComponent } from './components/pages/homepage/homepage.component';
 import { EnterprisePageComponent } from './components/pages/enterprise-page/enterprise-page.component';
-import { Iphone15Component } from './components/pages/iPhone/iphone15/iphone15.component';
+// import { Iphone15Component } from './components/pages/iPhone/iphone15/iphone15.component';
 import { EnterpriseNewComponent } from './components/pages/enterprise-new/enterprise-new.component';
 import { ThankyoupageComponent } from './components/pages/thankyoupage/thankyoupage.component';
 import { SuperiorEnterpriseComponent } from './components/pages/superior-enterprise/superior-enterprise.component';
-import { IPhone16newComponent } from './components/pages/iPhone/i-phone16new/i-phone16new.component';
-import { IPadProComponent } from './components/pages/iPad/i-pad-pro/i-pad-pro.component';
-import { IPadAirComponent } from './components/pages/iPad/i-pad-air/i-pad-air.component';
+// import { IPhone16newComponent } from './components/pages/iPhone/i-phone16new/i-phone16new.component';
+// import { IPadProComponent } from './components/pages/iPad/i-pad-pro/i-pad-pro.component';
+// import { IPadAirComponent } from './components/pages/iPad/i-pad-air/i-pad-air.component';
 // import { IPhone16proComponent } from './components/pages/iPhone/i-phone16pro/i-phone16pro.component';
 // import { Iphone16pro1Component } from './components/pages/iphone16pro/iphone16pro.component';
 import { ApplecareComponent } from './components/pages/applecare/applecare.component';
@@ -183,13 +183,13 @@ const routes: Routes = [
     {path: 'apple-programscreen', component: AppleProgramscreenComponent},
     {path: 'enterprise', component: EnterprisePageComponent},
     // Here add new pages component
-    { path: 'iphone15', component: Iphone15Component },
+    // { path: 'iphone15', component: Iphone15Component },
     { path: 'enterprise-new', component: EnterpriseNewComponent },
     { path: 'thank-you', component: ThankyoupageComponent },
     { path: 'superior-enterprise', component: SuperiorEnterpriseComponent },
-    { path: 'iphone16new', component: IPhone16newComponent },
-    { path: 'iPadPro', component: IPadProComponent },
-    { path: 'iPadAir', component: IPadAirComponent },
+    // { path: 'iphone16new', component: IPhone16newComponent },
+    // { path: 'iPadPro', component: IPadProComponent },
+    // { path: 'iPadAir', component: IPadAirComponent },
     // { path: 'iPhone16pro', component: IPhone16proComponent },
     { path: 'iphone-16pro', component: Iphone16pro1Component },
     { path: 'applecare', component: ApplecareComponent },

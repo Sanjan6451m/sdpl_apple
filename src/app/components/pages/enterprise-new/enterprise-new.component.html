@@ -25,6 +25,50 @@
     height: 100%;
     object-fit: cover;
 }
+
+/* .mac-dev-section .container {
+  width: 100%;
+  padding: 0;
+}
+
+.mac-dev-grid {
+  display: flex;
+  gap: 2rem;
+}
+
+.mac-dev-col {
+  flex: 1;
+  min-width: 220px;
+} */
+
+@media (max-width: 768px) {
+    .mac-dev-section{
+        padding: 0 !important;
+    }
+  .card-content {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    padding: 1rem 0.5rem !important;
+    text-align: center !important;
+  }
+  .mac-dev-section .container {
+    padding: 0;
+  }
+  .mac-dev-grid {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left !important;
+  }
+  .mac-dev-col {
+    min-width: 0;
+    width: 100%;
+  }
+  .card-content h3 {
+    font-size: 1.1rem !important;
+    min-width: unset !important;
+    text-align: left !important;
+  }
+}
 </style>
 
 <section id="hero-banner">
@@ -551,7 +595,7 @@
                     style="background-image: url('assets/images/emppurchaseprogram_banner.jpeg');">
                     <div class="card-content"
                         style="display: flex; flex-direction: row; align-items: center; justify-content: center; text-align: left; gap: 2rem;">
-                        <h3 style="margin-bottom: 0; min-width: 160px; font-size: 2.3rem; text-align: center;">Mac
+                        <h3 style="margin-bottom: 0; min-width: 160px; font-size: 2.5rem; text-align: center;">Mac
                             Developer's Powerhouse</h3>
                         <div class="mac-dev-section">
                             <div class="container">
@@ -591,7 +635,7 @@
                 <div class="card bg-image" style="background-image: url('assets/images/demo2.jpeg');">
                     <div class="card-content"
                         style="display: flex; flex-direction: row; align-items: center; justify-content: center; text-align: left; gap: 2rem;">
-                        <h3 style="margin-bottom: 0; min-width: 160px; font-size: 2.3rem; text-align: center;">Mac
+                        <h3 style="margin-bottom: 0; min-width: 160px; font-size: 2.5rem; text-align: center;">Mac
                             Startup Accelerator</h3>
                         <div class="mac-dev-section">
                             <div class="container">
@@ -632,7 +676,7 @@
                 <div class="card bg-image" style="background-image: url('assets/images/compre_supp.jpeg');">
                     <div class="card-content"
                         style="display: flex; flex-direction: row; align-items: center; justify-content: center; text-align: left; gap: 2rem;">
-                        <h3 style="margin-bottom: 0; min-width: 160px; font-size: 2.3rem; text-align: center;">Getting
+                        <h3 style="margin-bottom: 0; min-width: 160px; font-size: 2.5rem !important; text-align: center;">Getting
                             Started with Mac</h3>
                         <div class="mac-dev-section">
                             <div class="container">

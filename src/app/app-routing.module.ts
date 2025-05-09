@@ -95,6 +95,8 @@ import { IPadAirComponent } from './components/pages/iPad/i-pad-air/i-pad-air.co
 import { IPhone16proComponent } from './components/pages/iPhone/i-phone16pro/i-phone16pro.component';
 // import { Iphone16pro1Component } from './components/pages/iphone16pro/iphone16pro.component';
 import { ApplecareComponent } from './components/pages/applecare/applecare.component';
+import { Iphone16pro1Component } from './components/pages/iphone16pro/iphone16pro.component';
+
 const routes: Routes = [
     {path: '', component: HomepageComponent},
     {path: 'home-one', component: HomeOneComponent},
@@ -189,7 +191,7 @@ const routes: Routes = [
     { path: 'iPadPro', component: IPadProComponent },
     { path: 'iPadAir', component: IPadAirComponent },
     { path: 'iPhone16pro', component: IPhone16proComponent },
-    // { path: 'iphone-16pro', component: Iphone16pro1Component },
+    { path: 'iphone-16pro', component: Iphone16pro1Component },
     { path: 'applecare', component: ApplecareComponent },
     {path: '**', component: ErrorComponent} // This line will remain down from the whole pages component list
 ];

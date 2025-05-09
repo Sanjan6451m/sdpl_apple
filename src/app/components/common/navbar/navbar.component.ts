@@ -24,12 +24,14 @@ export class NavbarComponent implements OnInit {
     classApplied = false;
     isSticky = false;
     isSuperiorVisible = true;
+    isMobileMenuOpen = false;
+    lastScrollTop = 0;
 
     toggleClass() {
         this.classApplied = !this.classApplied;
     }
     ngOnInit(): void {
-        throw new Error('Method not implemented.');
+        // Initialize component
     }
     activeIndex: number | null = null;
     subActiveIndex: number | null = null;
@@ -54,14 +56,17 @@ export class NavbarComponent implements OnInit {
     ) {
         this.router.events
         .subscribe((event) => {
-            if ( event instanceof NavigationEnd ) {
+            if (event instanceof NavigationEnd) {
                 this.location = this.router.url;
-                if (this.location == '/home-three'){
+                if (this.location == '/home-three') {
                     this.navbarClass = 'navbar-area three';
                 } else {
                     this.navbarClass = 'navbar-area';
                 }
                 this.classApplied = false;
+                // Close mobile menu on navigation
+                this.isMobileMenuOpen = false;
+                document.body.style.overflow = '';
             }
         });
         this.checkScreenSize();
@@ -69,27 +74,35 @@ export class NavbarComponent implements OnInit {
 
     // Navbar Sticky
     @HostListener('window:scroll', ['$event'])
-    checkScroll() {
-        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-        if (scrollPosition >= 50) {
+    onScroll() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // Handle superior navbar visibility
+        if (scrollTop > 100) {
+            this.isSuperiorVisible = false;
+        } else {
+            this.isSuperiorVisible = true;
+        }
+
+        // Handle sticky navbar
+        if (scrollTop > 200) {
             this.isSticky = true;
         } else {
             this.isSticky = false;
         }
+
+        this.lastScrollTop = scrollTop;
     }
-    onWindowScroll() {
-        if (window.pageYOffset > 50) {
-          this.isSticky = true;
-          this.isSuperiorVisible = false;
-        } else {
-          this.isSticky = false;
-          this.isSuperiorVisible = true;
-        }
-      }
+
     // Check screen size for mobile view
     @HostListener('window:resize', ['$event'])
     checkScreenSize() {
-        this.isMobile = window.innerWidth <= 991;
+        this.isMobile = window.innerWidth <= 1024;
+        // Close mobile menu when switching to desktop view
+        if (!this.isMobile) {
+            this.isMobileMenuOpen = false;
+            document.body.style.overflow = '';
+        }
     }
 
     // Toggle dropdown on mobile
@@ -116,5 +129,41 @@ export class NavbarComponent implements OnInit {
         // Close all dropdowns when closing menu
         const allItems = document.querySelectorAll('.nav-item');
         allItems.forEach(item => item.classList.remove('show'));
+    }
+
+    toggleMobileMenu() {
+        this.isMobileMenuOpen = !this.isMobileMenuOpen;
+        document.body.style.overflow = this.isMobileMenuOpen ? 'hidden' : '';
+    }
+
+    toggleSubmenu(event: Event) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        const target = event.currentTarget as HTMLElement;
+        const parent = target.parentElement;
+        
+        if (parent) {
+            const submenu = parent.querySelector('.mobile-submenu');
+            if (submenu) {
+                parent.classList.toggle('active');
+                submenu.classList.toggle('active');
+            }
+        }
+    }
+
+    // Close mobile menu when clicking outside
+    @HostListener('document:click', ['$event'])
+    onDocumentClick(event: MouseEvent) {
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const hamburgerButton = document.querySelector('.hamburger-menu');
+        
+        if (this.isMobileMenuOpen && 
+            mobileMenu && 
+            hamburgerButton && 
+            !mobileMenu.contains(event.target as Node) && 
+            !hamburgerButton.contains(event.target as Node)) {
+            this.toggleMobileMenu();
+        }
     }
 }

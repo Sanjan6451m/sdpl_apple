@@ -7,7 +7,6 @@
                 <img src="assets/images/text.png" alt="Superior Digital Text" class="superior-text-logo"
                     style="border-radius: 0px;margin-left: -30px !important;">
                 <img src="assets/images/authorized.png" alt="Apple Logo" class="apple-logo">
-                <!-- <span class="reseller-text">Authorised Reseller</span> -->
             </div>
             <div class="superior-navbar-right">
                 <span class="contact-item">
@@ -20,11 +19,96 @@
                 </span>
             </div>
         </div>
-        <!-- <div class="{{navbarClass}}"> -->
-        <div class="main-navbar-container" style="display: inline-flex;" [class.sticky]="isSticky">
+        <div class="main-navbar-container" style="display: contents; max-width: fit-content;" [class.sticky]="isSticky">
             <img *ngIf="isSticky" src="assets/images/Minimal-Business-Logo-Reveal-f-unscreen.gif" alt="Logo" class="sticky-logo" style="height: 65px; align-self: center;" />
             <img *ngIf="isSticky" src="assets/images/text.png" alt="Superior Digital Text" class="superior-text-logo"
             style="border-radius: 0px;margin-left: -30px !important; height: 40px;align-self: center;">
+            
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger-menu" (click)="toggleMobileMenu()" [class.active]="isMobileMenuOpen">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Mobile Menu Overlay -->
+            <div class="mobile-menu-overlay" [class.active]="isMobileMenuOpen" (click)="toggleMobileMenu()"></div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" [class.active]="isMobileMenuOpen">
+                <!-- Mobile Superior Navbar -->
+                <div class="mobile-superior-navbar">
+                    <div class="mobile-superior-navbar-left">
+                        <img src="assets/images/Minimal-Business-Logo-Reveal-f-unscreen.gif" alt="Superior Digital Logo"
+                            class="superior-logo">
+                        <img src="assets/images/text.png" alt="Superior Digital Text" class="superior-text-logo"
+                            style="border-radius: 0px;margin-left: -30px !important;">
+                        <img src="assets/images/authorized.png" alt="Apple Logo" class="apple-logo">
+                    </div>
+                    <div class="mobile-superior-navbar-right">
+                        <span class="contact-item">
+                            <span class="icon phone"></span>
+                            <span class="contact-text"><a href="tel:+918023116047">+91 80 2311 6047</a></span>
+                        </span>
+                        <span class="contact-item">
+                            <span class="icon email"></span>
+                            <span class="contact-text"><a href="mailto:enquiry@superiorsystems.in">enquiry&#64;superiorsystems.in</a></span>
+                        </span>
+                    </div>
+                </div>
+
+                <nav class="mobile-nav">
+                    <ul class="mobile-nav-list">
+                        <li class="mobile-nav-item"><a href="#" (click)="toggleMobileMenu()">Home</a></li>
+                        <li class="mobile-nav-item">
+                            <a href="/superior-enterprise" (click)="toggleSubmenu($event)">Enterprise <span class="arrow">&#9662;</span></a>
+                            <ul class="mobile-submenu">
+                                <li><a href="/superior-enterprise#enterprise-computing-solutions" (click)="toggleMobileMenu()">Enterprise Computing Solutions</a></li>
+                                <li><a href="/superior-enterprise#seamless-network-defense" (click)="toggleMobileMenu()">Seamless Network Defense</a></li>
+                                <li><a href="/superior-enterprise#av-solutions-for-enterprises" (click)="toggleMobileMenu()">AV Solutions for Enterprises</a></li>
+                                <li><a href="/superior-enterprise#mobility-for-modern-enterprise" (click)="toggleMobileMenu()">Mobility for Modern Enterprises</a></li>
+                            </ul>
+                        </li>
+                        <li class="mobile-nav-item">
+                            <a href="/enterprise-new" (click)="toggleSubmenu($event)">Apple <span class="arrow">&#9662;</span></a>
+                            <ul class="mobile-submenu">
+                                <li><a href="/enterprise-new" (click)="toggleMobileMenu()">Why Apple for Your Enterprise</a></li>
+                                <li>
+                                    <a href="/enterprise-new#apple-products" (click)="toggleSubmenu($event)">Products <span class="arrow">&#9656;</span></a>
+                                    <ul class="mobile-submenu">
+                                        <li><a href="/enterprise-new#apple-products" (click)="toggleMobileMenu()">Mac</a></li>
+                                        <li><a href="/enterprise-new#apple-products" (click)="toggleMobileMenu()">iPhone</a></li>
+                                        <li><a href="/enterprise-new#apple-products" (click)="toggleMobileMenu()">iPad</a></li>
+                                        <li><a href="/enterprise-new#apple-products" (click)="toggleMobileMenu()">Apple Watch</a></li>
+                                        <li><a href="/enterprise-new#apple-manager" (click)="toggleMobileMenu()">Apple Business Manager</a></li>
+                                        <li><a href="/enterprise-new#apple-manager" (click)="toggleMobileMenu()">Apple Care for Enterprise</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="/enterprise-new#apple-initiatives" (click)="toggleSubmenu($event)">Apple Initiatives <span class="arrow">&#9656;</span></a>
+                                    <ul class="mobile-submenu">
+                                        <li><a href="/enterprise-new#developer-powerhouse" (click)="toggleMobileMenu()">Mac Developer's Powerhouse</a></li>
+                                        <li><a href="/enterprise-new#mac-startup-accelerator" (click)="toggleMobileMenu()">Mac Startup Accelerator</a></li>
+                                        <li><a href="/enterprise-new#getting-started-with-mac" (click)="toggleMobileMenu()">Getting Started with Mac</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="/enterprise-new#superior-packages" (click)="toggleSubmenu($event)">Superior Solutions <span class="arrow">&#9656;</span></a>
+                                    <ul class="mobile-submenu">
+                                        <li><a href="/enterprise-new#superior-packages" (click)="toggleMobileMenu()">Superior Lite</a></li>
+                                        <li><a href="/enterprise-new#superior-packages" (click)="toggleMobileMenu()">Superior Pro</a></li>
+                                        <li><a href="/enterprise-new#superior-packages" (click)="toggleMobileMenu()">Superior Ultra</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mobile-nav-item"><a href="/case-studies" (click)="toggleMobileMenu()">Success Stories</a></li>
+                        <li class="mobile-nav-item"><a href="/activity" (click)="toggleMobileMenu()">News & Events</a></li>
+                        <li class="mobile-nav-item"><a href="/contact" (click)="toggleMobileMenu()">Contact us</a></li>
+                    </ul>
+                </nav>
+            </div>
+
             <nav class="main-navbar">
                 <ul class="nav-list">
                     <li class="nav-item"><a href="#">Home</a></li>
@@ -58,7 +142,6 @@
                                     <li><a href="/enterprise-new#developer-powerhouse"> Mac Developer's Powerhouse </a></li>
                                     <li><a href="/enterprise-new#mac-startup-accelerator">Mac Startup Accelerator</a></li>
                                     <li><a href="/enterprise-new#getting-started-with-mac">Getting Started with Mac</a></li>
-                                    <!-- <li><a href="#">Apple Watch</a></li> -->
                                 </ul>
                             </li>
                             <li class="dropdown-submenu">
@@ -67,30 +150,15 @@
                                     <li><a href="/enterprise-new#superior-packages">Superior Lite</a></li>
                                     <li><a href="/enterprise-new#superior-packages">Superior Pro</a></li>
                                     <li><a href="/enterprise-new#superior-packages">Superior Ultra</a></li>
-                                    <!-- <li><a href="#">Apple Watch</a></li> -->
                                 </ul>
                             </li>
-                            <!-- <li><a href="#"> Apple Initiatives for Enterprises</a></li>
-                            <li><a href="#">under Superior Solutions</a></li> -->
                         </ul>
                     </li>
                     <li class="nav-item"><a href="/case-studies">Success Stories</a></li>
-
                     <li class="nav-item"><a href="/activity">News & Events</a></li>
-
-                    <!-- <li class="nav-item dropdown">
-                        <a href="#">News & Events <span class="arrow">&#9662;</span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">One</a></li>
-                            <li><a href="#">Two</a></li>
-                            <li><a href="#">Three</a></li>
-                        </ul>
-                    </li> -->
                     <li class="nav-item"><a href="/contact">Contact us</a></li>
-
                 </ul>
             </nav>
         </div>
-        <!-- </div> -->
     </div>
 </header>

@@ -4,7 +4,7 @@ header.navbar-header {
   justify-content: space-between;
   background: #fff;
   padding: 0 20px;
-  min-height: 80px;
+  min-height: 60px;
   box-shadow: 0 2px 16px rgba(44,62,80,0.07);
 
   .navbar-left {
@@ -135,7 +135,7 @@ header.navbar-header {
   }
   @media (max-width: 800px) {
     flex-direction: column;
-    padding: 0 0.5rem;
+    padding: 20px 0.5rem;
     .main-navbar .nav-list { gap: 1.2rem; }
     .navbar-title { font-size: 1.1rem; }
     .navbar-btn { font-size: 1rem; padding: 0.5rem 1.2rem; }
@@ -261,4 +261,276 @@ header.navbar-header {
   opacity: 0;
   pointer-events: none;
   transform: translateY(-10px);
+}
+
+// Mobile Menu Styles
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+  margin-left: auto;
+
+  span {
+    width: 100%;
+    height: 3px;
+    background-color: #232526;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+
+  &.active {
+    span {
+      &:first-child {
+        transform: translateY(9px) rotate(45deg);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:last-child {
+        transform: translateY(-9px) rotate(-45deg);
+      }
+    }
+  }
+}
+
+.mobile-menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+
+  &.active {
+    opacity: 1;
+    pointer-events: auto;
+    display: block;
+  }
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 400px;
+  height: 100vh;
+  background: #fff;
+  z-index: 999;
+  padding: 20px;
+  transition: right 0.3s ease;
+  overflow-y: auto;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+
+  &.active {
+    right: 0;
+    display: block;
+  }
+
+  .mobile-superior-navbar {
+    padding: 15px 0;
+    border-bottom: 2px solid #e0e6e8;
+    margin-bottom: 20px;
+
+    .mobile-superior-navbar-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+
+      .superior-logo {
+        height: 45px;
+      }
+      .superior-text-logo {
+        height: 30px;
+      }
+      .apple-logo {
+        height: 25px;
+      }
+    }
+
+    .mobile-superior-navbar-right {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 1rem;
+        color: #232526;
+
+        .icon {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          &.phone {
+            background-image: url('/assets/icon/phone.png');
+          }
+          &.email {
+            background-image: url('/assets/icon/email.png');
+          }
+        }
+
+        .contact-text {
+          a {
+            color: #232526;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+
+            &:hover {
+              color: #e23c36;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .mobile-nav {
+    margin-top: 20px;
+  }
+
+  .mobile-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .mobile-nav-item {
+      margin-bottom: 10px;
+
+      > a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0;
+        color: #232526;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: 600;
+        border-bottom: 1px solid #e0e6e8;
+
+        .arrow {
+          transition: transform 0.3s ease;
+          margin-left: 8px;
+        }
+      }
+
+      &.active > a .arrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .mobile-submenu {
+    display: none;
+    list-style: none;
+    padding-left: 20px;
+    margin: 0;
+    background: #f8f9fa;
+
+    &.active {
+      display: block;
+    }
+
+    li {
+      margin: 8px 0;
+
+      a {
+        color: #232526;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 500;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 0;
+
+        .arrow {
+          transition: transform 0.3s ease;
+          margin-left: 8px;
+        }
+      }
+
+      &.active > a .arrow {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
+// Responsive Styles
+@media (max-width: 1024px) {
+  .superior-navbar {
+    display: none !important;
+  }
+
+  .main-navbar {
+    display: none !important;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    position: relative;
+    z-index: 1001;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .main-navbar-container {
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-list {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .superior-navbar {
+    padding: 0.7rem 1rem;
+
+    .superior-navbar-left {
+      .superior-logo {
+        height: 45px;
+      }
+      .superior-text-logo {
+        height: 30px;
+      }
+      .apple-logo {
+        height: 25px;
+      }
+    }
+
+    .superior-navbar-right {
+      .contact-item {
+        font-size: 0.9rem;
+      }
+    }
+  }
 }

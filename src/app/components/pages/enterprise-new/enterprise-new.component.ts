@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { Router, RouterModule, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { filter } from 'rxjs';
@@ -12,6 +12,7 @@ import { filter } from 'rxjs';
   styleUrl: './enterprise-new.component.scss'
 })
 export class EnterpriseNewComponent {
+
   customOptions1 = {
     loop: true,
     margin: 24,

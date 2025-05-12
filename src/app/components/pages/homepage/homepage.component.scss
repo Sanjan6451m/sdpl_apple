@@ -3,7 +3,8 @@ section {
   padding: 4rem 0;
   text-align: center;
 
-  h1, h2 {
+  h1,
+  h2 {
     margin-bottom: 1.5rem;
     color: #333;
   }
@@ -16,12 +17,17 @@ section {
   }
 }
 
+.hero-text {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
 // Hero section specific styles
 #hero-banner {
   position: relative;
   background-color: #f8f9fa;
-  padding: 18rem 0;
-  background-image: url('/assets/images/main_bannerimg.jpeg');
+  padding: 14rem 0;
+  background-image: url('/assets/images/mainbannerimage.png');
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -44,7 +50,7 @@ section {
   }
 
   h1 {
-    font-size: 5rem;
+    font-size: 3.5rem;
     font-weight: 700;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -101,12 +107,12 @@ section {
 
         .ceo-signature {
           text-align: right;
-          
+
           p {
             font-size: 1.2rem;
             font-weight: 500;
             margin: 0;
-            color: #90EE90;  // Light green color
+            color: #90EE90; // Light green color
           }
         }
       }
@@ -216,7 +222,7 @@ section {
         font-weight: 600;
         text-decoration: none;
         transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.3s;
-        box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+        box-shadow: 0 2px 8px rgba(44, 62, 80, 0.07);
         display: inline-block;
       }
 
@@ -224,7 +230,7 @@ section {
         background: transparent;
         color: #ff4444;
         transform: scale(1.07);
-        box-shadow: 0 6px 24px rgba(255,68,68,0.15);
+        box-shadow: 0 6px 24px rgba(255, 68, 68, 0.15);
       }
 
       .enterprise-arrow {
@@ -252,12 +258,7 @@ section {
 
 // Statistics section specific styles
 .statistics-area {
-  position: relative;   
-/*   background-image: url('/assets/images/statistics-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; */
+  position: relative;
   color: #fff;
 
   &::before {
@@ -285,11 +286,12 @@ section {
       transform: translateY(-5px);
     }
 
-    h2, h3 {
+    h2,
+    h3 {
       font-size: 3rem;
       font-weight: 700;
       color: #fff;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     }
 
@@ -316,7 +318,7 @@ section {
     }
 
     .vision-text {
-      color: #90EE90;  // Light green color
+      color: #90EE90; // Light green color
       font-size: 2rem;
       line-height: 1.4;
       font-weight: 500;
@@ -343,7 +345,7 @@ section {
         color: #fff;
 
         i {
-          color: #ff4444;  // Red color for check icons
+          color: #ff4444; // Red color for check icons
           margin-right: 1rem;
           font-size: 1rem;
         }
@@ -367,14 +369,14 @@ section {
 // Blog section styles
 .blog-section {
   background-color: #f8f9fa;
-  
+
   .section-title {
     h2 {
       font-size: 2.5rem;
       color: #333;
       margin-bottom: 1rem;
     }
-    
+
     p {
       color: #666;
       font-size: 1.1rem;
@@ -400,7 +402,7 @@ section {
       flex: 0 0 120px;
       position: relative;
       overflow: hidden;
-      
+
       img {
         width: 100px;
         height: 100px;
@@ -416,7 +418,7 @@ section {
 
       .blog-meta {
         margin-bottom: 0.5rem;
-        
+
         span {
           color: #666;
           font-size: 0.85rem;
@@ -469,21 +471,69 @@ section {
   }
 }
 
+.statistics-text {
+  font-size: 120px !important;
+  color: #e23c36 !important;
+}
+
 // Responsive styles
+
+.about-ceo-image {
+  width: 100%;
+}
+
 @media (max-width: 992px) {
 
-  .about-us-container{
+  #about-us .about-intro .ceo-message{
+    margin-top: 0 !important;
+  }
+
+  .mobilegap {
+    gap: 1rem !important;
+  }
+
+  .about-ceo-image {
+    width: 80% !important;
+  }
+
+  .statistics-area .single-statistics p {
+    font-size: 0.9rem !important;
+  }
+
+  /*   .statistics-area .single-statistics h2, .statistics-area .single-statistics h3{
+    // font-size: 1.5rem !important;
+  } */
+
+  .statistics-area .single-statistics h2,
+  .statistics-area .single-statistics h3 {
+    font-size: 2.5rem !important;
+  }
+
+  .statistics-text {
+    font-size: 90px !important;
+    // color: #e23c36 !important;
+  }
+
+  .hero-text {
+    font-size: 1.0rem !important;
+    color: #fff;
+  }
+
+  .about-us-container {
     display: flow !important;
   }
+
   #about-us .about-content {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 2rem;
-}
+  }
+
   section {
     padding: 3rem 0;
 
-    h1, h2 {
+    h1,
+    h2 {
       font-size: 2.5rem;
     }
   }
@@ -534,7 +584,7 @@ section {
 
       .enterprise-actions {
         margin-top: 2rem;
-        
+
         .know-more-btn {
           padding: 0.9rem 2rem;
           font-size: 1rem;
@@ -548,13 +598,14 @@ section {
   section {
     padding: 2.5rem 0;
 
-    h1, h2 {
+    h1,
+    h2 {
       font-size: 2rem;
     }
 
     p {
       font-size: 1rem;
-      padding: 0 1rem;
+      padding: 0 0.1rem;
     }
   }
 
@@ -571,24 +622,25 @@ section {
 
     .about-intro {
       .section-description {
-        font-size: 1rem;
+        font-size: 0.9rem;
       }
 
       .ceo-message {
-        padding: 2rem;
+        padding: 1rem;
+        text-align: center;
 
         h2 {
           font-size: 1.8rem;
         }
 
         .message-content p {
-          font-size: 1rem;
+          font-size: 0.9rem;
         }
       }
     }
 
     .about-item {
-      padding: 1.5rem;
+      padding: 1.0rem;
     }
   }
 
@@ -633,7 +685,7 @@ section {
       .blog-img {
         flex: 0 0 auto;
         width: 100%;
-        
+
         img {
           width: 100%;
           height: 160px;
@@ -684,8 +736,10 @@ section {
   section {
     padding: 2rem 0;
 
-    h1, h2 {
-      font-size: 1.75rem;
+    h1,
+    h2 {
+      font-size: 1.75rem !important;
+      margin-bottom: 0 !important;
     }
 
     p {
@@ -698,6 +752,7 @@ section {
 
     h1 {
       font-size: 1.75rem;
+
     }
   }
 }
@@ -713,12 +768,13 @@ section {
 }
 
 
-.container1{
+.container1 {
   text-align: center;
   max-width: 100%;
   padding: 0 5%;
 }
-.about-us-container{
+
+.about-us-container {
   display: flex;
   justify-content: center;
   background-color: #000;

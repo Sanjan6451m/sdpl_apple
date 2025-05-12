@@ -19,10 +19,11 @@
                 </span>
             </div>
         </div>
-        <div class="main-navbar-container" style="display: contents; max-width: fit-content;" [class.sticky]="isSticky">
+        <div class="main-navbar-container" style="display: contents; max-width: fit-content;">
             <img *ngIf="isSticky" src="assets/images/Minimal-Business-Logo-Reveal-f-unscreen.gif" alt="Logo" class="sticky-logo" style="height: 65px; align-self: center;" />
-            <img *ngIf="isSticky" src="assets/images/text.png" alt="Superior Digital Text" class="superior-text-logo"
-            style="border-radius: 0px;margin-left: -30px !important; height: 40px;align-self: center;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+            <img src="assets/images/text.png" alt="Superior Digital Text" class="superior-text-logo onlymobile"
+            style="border-radius: 0px; height: 40px;">
             
             <!-- Hamburger Menu Button -->
             <button class="hamburger-menu" (click)="toggleMobileMenu()" [class.active]="isMobileMenuOpen">
@@ -30,7 +31,7 @@
                 <span></span>
                 <span></span>
             </button>
-
+        </div>
             <!-- Mobile Menu Overlay -->
             <div class="mobile-menu-overlay" [class.active]="isMobileMenuOpen" (click)="toggleMobileMenu()"></div>
 

@@ -43,11 +43,11 @@ header.navbar-header {
       .nav-item {
         position: relative;
         > a {
-          font-size: 1.3rem;
+          font-size: 1.0rem;
           font-weight: 600;
           color: #232526;
           text-decoration: none;
-          padding: 1.2rem 0.7rem;
+          padding: 0.7rem;
           border-radius: 8px;
           transition: color 0.2s, background 0.2s;
           display: flex;
@@ -151,7 +151,7 @@ header.navbar-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.7rem 2.5rem 0.7rem 2.5rem;
+  //padding: 0.7rem 2.5rem 0.7rem 2.5rem;
   border-bottom: 2px solid #e0e6e8;
 
   .superior-navbar-left {
@@ -203,6 +203,7 @@ header.navbar-header {
         }
       }
       .contact-text {
+        font-size: 16px;
         color: #232526;
         font-weight: 500;
       }
@@ -423,7 +424,7 @@ header.navbar-header {
         padding: 12px 0;
         color: #232526;
         text-decoration: none;
-        font-size: 1.2rem;
+        font-size: 1.0rem;
         font-weight: 600;
         border-bottom: 1px solid #e0e6e8;
 
@@ -476,8 +477,16 @@ header.navbar-header {
   }
 }
 
+.onlymobile{
+  display: none;
+}
+
 // Responsive Styles
 @media (max-width: 1024px) {
+
+  .onlymobile{
+    display: block !important;
+  }
   .superior-navbar {
     display: none !important;
   }

@@ -614,3 +614,79 @@ html, body {
   background: #222 url('/assets/images/enterprisecomputing.png') center center/contain no-repeat;
   min-height: 210px;
 }
+
+.partnerships-section {
+  background: #f7f7f7;
+  padding: 40px 0;
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .partnerships-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+  .partnerships-grid {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    @media (max-width: 900px) {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+  .partnerships-col {
+    flex: 1 1 0;
+    min-width: 250px;
+    .partnerships-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      .partner-main-logo {
+        height: 60px;
+      }
+      .apple-authorized {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        .apple-logo {
+          height: 30px;
+        }
+        span {
+          font-weight: 500;
+        }
+      }
+    }
+    .partnerships-category {
+      margin-bottom: 1.5rem;
+      h3 {
+        font-size: 1.1rem;
+        color: #888;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+      }
+      .partner-logos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: center;
+        img {
+          height: 32px;
+          background: #fff;
+          border-radius: 4px;
+          padding: 2px 6px;
+        }
+        .partner-text {
+          font-size: 1rem;
+          color: #333;
+          background: #eaeaea;
+          border-radius: 4px;
+          padding: 2px 8px;
+        }
+      }
+    }
+  }
+}

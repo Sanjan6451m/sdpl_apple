@@ -503,12 +503,15 @@ section {
   /*   .statistics-area .single-statistics h2, .statistics-area .single-statistics h3{
     // font-size: 1.5rem !important;
   } */
-
+  
   .statistics-area .single-statistics h2,
   .statistics-area .single-statistics h3 {
-    font-size: 2.5rem !important;
+    font-size: 2.0rem !important;
   }
 
+  .statistics-area .single-statistics h1{
+    font-size: 3.5rem !important;
+  }
   .statistics-text {
     font-size: 90px !important;
     // color: #e23c36 !important;

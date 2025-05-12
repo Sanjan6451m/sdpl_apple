@@ -881,3 +881,104 @@
       font-size: 22px !important;
   }
 }
+
+.solution-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.solution-card .card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.solution-card .card-content p {
+  flex: 1;
+}
+
+.solution-card .card-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.solution-card .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .mac-dev-section{
+      padding: 0 !important;
+  }
+.card-content {
+  flex-direction: column !important;
+  gap: 1rem !important;
+  padding: 1rem 0.5rem !important;
+  text-align: center !important;
+}
+.mac-dev-section .container {
+  padding: 0;
+}
+.mac-dev-grid {
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left !important;
+}
+.mac-dev-col {
+  min-width: 0;
+  width: 100%;
+}
+.card-content h3 {
+  font-size: 1.1rem !important;
+  min-width: unset !important;
+  text-align: left !important;
+}
+}
+
+.cta-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.cta-section .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.animated-tco-btn {
+  background: linear-gradient(90deg, #e43a35, #ff7e5f, #feb47b, #e43a35);
+  background-size: 300% 100%;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  padding: 16px 40px;
+  box-shadow: 0 4px 20px rgba(228, 58, 53, 0.15);
+  transition: background-position 0.5s, transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  outline: none;
+  animation: tco-gradient-move 3s linear infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-tco-btn:hover, .animated-tco-btn:focus {
+  background-position: 100% 0;
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 8px 32px rgba(228, 58, 53, 0.25);
+}
+
+@keyframes tco-gradient-move {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

@@ -1,5 +1,5 @@
 // Hero section specific styles
-#hero-banner {
+/* #hero-banner {
   position: relative;
   background-color: #f8f9fa;
   padding: 12rem 0;
@@ -38,8 +38,84 @@
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   }
 }
+ */
 
 
+ .hero-banner {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  background: url('/assets/images/enterprise.png') center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  margin-top: 80px;
+}
+
+.hero-banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  //justify-content: center;
+}
+
+.hero-banner-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  // text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.hero-banner-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-banner-content p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.hero-banner-content .hero-banner-content-span {
+  font-size: 42px;
+}
+
+.hero-banner-content .hero-banner-content-span1 {
+  font-size: 64px;
+}
+
+@media (max-width: 700px) {
+
+  .hero-banner-content .hero-banner-content-span {
+    font-size: 18px;
+  }
+
+  .hero-banner-content .hero-banner-content-span1 {
+    font-size: 28px;
+  }
+
+  .hero-banner {
+    min-height: 200px;
+    margin-top: 60px;
+  }
+
+  .hero-banner-content h1 {
+    font-size: 2rem !important;
+  }
+
+  .hero-banner-content p {
+    font-size: 0.7rem;
+  }
+}
 
 
 .services-section {

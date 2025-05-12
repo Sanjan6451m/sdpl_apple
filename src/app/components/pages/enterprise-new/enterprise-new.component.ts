@@ -23,7 +23,7 @@ export class EnterpriseNewComponent {
     }
   };
 
-  currentTab: string = 'tab1';
+  currentTab: string = 'tab3';
 
   constructor(private router: Router) {}
 

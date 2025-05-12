@@ -10,10 +10,13 @@ html, body {
   overflow-x: hidden;
 }
  */
+
+
+
 .hero-banner {
   position: relative;
   width: 100%;
-  min-height: 650px;
+  min-height: 500px;
   background: url('/assets/images/sup_enterprise_new.png') center center/cover no-repeat;
   display: flex;
   align-items: center;
@@ -190,8 +193,22 @@ html, body {
   font-size: 1.3rem;
 }
 
-@media (max-width: 900px) {
+.enterprise-intro-image {
+  width: 45%;
+  height: auto;
+}
 
+.enterprise-intro-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .enterprise-intro-image {
+    width: 350px;
+    height: auto;
+  }
   .download-btn {
     margin-top: 0.5rem !important;
     padding: 8px 18px !important;

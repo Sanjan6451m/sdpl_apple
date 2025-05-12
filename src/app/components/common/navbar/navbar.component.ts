@@ -2,6 +2,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { Location, LocationStrategy, PathLocationStrategy, CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
     selector: 'app-navbar',
@@ -17,7 +18,7 @@ import { RouterModule } from '@angular/router';
     ]
 })
 export class NavbarComponent implements OnInit {
-    location: any;
+    currentLocation: any;
     navbarClass: any;
     isMobile: boolean = false;
 
@@ -56,13 +57,13 @@ export class NavbarComponent implements OnInit {
 
     constructor(
         private router: Router,
-        location: Location
+        private location: Location
     ) {
         this.router.events
-        .subscribe((event) => {
-            if (event instanceof NavigationEnd) {
-                this.location = this.router.url;
-                if (this.location == '/home-three') {
+            .pipe(filter(event => event instanceof NavigationEnd))
+            .subscribe(() => {
+                this.currentLocation = this.location.path();
+                if (this.currentLocation == '/home-three') {
                     this.navbarClass = 'navbar-area three';
                 } else {
                     this.navbarClass = 'navbar-area';
@@ -71,9 +72,12 @@ export class NavbarComponent implements OnInit {
                 // Close mobile menu on navigation
                 this.isMobileMenuOpen = false;
                 document.body.style.overflow = '';
-            }
-        });
+            });
         this.checkScreenSize();
+    }
+
+    navigateToHome(): void {
+        this.router.navigate(['/']);
     }
 
     // Navbar Sticky

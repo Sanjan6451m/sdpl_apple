@@ -3,9 +3,9 @@
         <div class="superior-navbar" [class.invisible]="!isSuperiorVisible">
             <div class="superior-navbar-left">
                 <img src="assets/images/Minimal-Business-Logo-Reveal-f-unscreen.gif" alt="Superior Digital Logo"
-                    class="superior-logo">
+                    class="superior-logo cursor: pointer;" (click)="navigateToHome()">
                 <img src="assets/images/text.png" alt="Superior Digital Text" class="superior-text-logo"
-                    style="border-radius: 0px;margin-left: -30px !important;">
+                    style="border-radius: 0px;margin-left: -30px !important; cursor: pointer;" (click)="navigateToHome()">
                 <img src="assets/images/authorized.png" alt="Apple Logo" class="apple-logo">
             </div>
             <div class="superior-navbar-right">
@@ -25,7 +25,7 @@
             <!-- <img *ngIf="isSticky" src="assets/images/Minimal-Business-Logo-Reveal-f-unscreen.gif" alt="Logo" class="sticky-logo" style="height: 65px; align-self: center;" /> -->
             <div style="display: flex; align-items: center; justify-content: space-between; margin-right: 15px;">
                 <img src="assets/images/text.png" alt="Superior Digital Text" class="superior-text-logo onlymobile"
-                    style="border-radius: 0px; height: 35px;">
+                    style="border-radius: 0px; height: 35px;" (click)="navigateToHome()">
 
                 <!-- Hamburger Menu Button -->
                 <button class="hamburger-menu" (click)="toggleMobileMenu()" [class.active]="isMobileMenuOpen">
@@ -45,7 +45,7 @@
                         <img src="assets/images/Minimal-Business-Logo-Reveal-f-unscreen.gif" alt="Superior Digital Logo"
                             class="superior-logo">
                         <img src="assets/images/text.png" alt="Superior Digital Text" class="superior-text-logo"
-                            style="border-radius: 0px;margin-left: -30px !important;">
+                            style="border-radius: 0px;margin-left: -30px !important;" (click)="navigateToHome()">
                         <img src="assets/images/authorized.png" alt="Apple Logo" class="apple-logo">
                     </div>
                     <div class="mobile-superior-navbar-right">
@@ -90,20 +90,20 @@
                                     <ul class="mobile-submenu">
                                         <li><a href="/enterprise-new#apple-products-mac"
                                                 (click)="toggleMobileMenu()">Mac</a></li>
-                                        <li><a href="/enterprise-new#apple-products-mac"
+                                        <li><a href="/enterprise-new#apple-products-iphone"
                                                 (click)="toggleMobileMenu()">iPhone</a></li>
                                         <li><a href="/enterprise-new#apple-products-ipad"
                                                 (click)="toggleMobileMenu()">iPad</a></li>
-                                        <li><a href="/enterprise-new#apple-products-ipad" (click)="toggleMobileMenu()">Apple
+                                        <li><a href="/enterprise-new#apple-products-watch" (click)="toggleMobileMenu()">Apple
                                                 Watch</a></li>
-                                        <li><a href="/enterprise-new#apple-products-care" (click)="toggleMobileMenu()">Apple
+                                        <li><a href="/enterprise-new#apple-products-business" (click)="toggleMobileMenu()">Apple
                                                 Business Manager</a></li>
-                                        <li><a href="/enterprise-new#apple-products-care" (click)="toggleMobileMenu()">Apple
+                                        <li><a href="/enterprise-new#apple-products-applecare" (click)="toggleMobileMenu()">Apple
                                                 Care for Enterprise</a></li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="/enterprise-new#developer-powerhouse" (click)="toggleSubmenu($event)">Apple
+                                    <a href="/enterprise-new#enterprise-solutions" (click)="toggleSubmenu($event)">Apple
                                         Initiatives <span class="arrow">&#9656;</span></a>
                                     <ul class="mobile-submenu">
                                         <li><a href="/enterprise-new#developer-powerhouse"
@@ -118,11 +118,11 @@
                                     <a href="/enterprise-new#superior-packages" (click)="toggleSubmenu($event)">Superior
                                         Solutions <span class="arrow">&#9656;</span></a>
                                     <ul class="mobile-submenu">
-                                        <li><a href="/enterprise-new#superior-packages"
+                                        <li><a href="/enterprise-new#superior-lite"
                                                 (click)="toggleMobileMenu()">Superior Lite</a></li>
-                                        <li><a href="/enterprise-new#superior-packages"
+                                        <li><a href="/enterprise-new#superior-pro"
                                                 (click)="toggleMobileMenu()">Superior Pro</a></li>
-                                        <li><a href="/enterprise-new#superior-packages"
+                                        <li><a href="/enterprise-new#superior-ultra"
                                                 (click)="toggleMobileMenu()">Superior Ultra</a></li>
                                     </ul>
                                 </li>
@@ -166,7 +166,7 @@
                                     <li><a href="/enterprise-new#apple-products-ipad">iPad</a></li>
                                     <li><a href="/enterprise-new#apple-products-watch">Apple Watch</a></li>
                                     <li><a href="/enterprise-new#apple-products-business">Apple Business Manager</a></li>
-                                    <li><a href="/enterprise-new#apple-products-care">Apple Care for Enterprise</a></li>
+                                    <li><a href="/enterprise-new#apple-products-applecare">Apple Care for Enterprise</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown-submenu">

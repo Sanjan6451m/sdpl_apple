@@ -343,7 +343,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 30px 0 0 0;
+  padding: 30px 20px 10px 20px;
   background: #fff;
 
   .offerings-content {
@@ -381,7 +381,7 @@
     text-align: left;
 
     p {
-      font-size: 22px;
+      font-size: 18px;
       color: #555;
       font-weight: 100;
       margin-bottom: 2.2rem;
@@ -473,7 +473,7 @@
     }
 
     .enterprise-details p {
-      font-size: 1.1rem;
+      font-size: 18px;
     }
 
     .offerings-list ul {
@@ -760,4 +760,124 @@
 
 .single-pricing .pricing-top-heading h3 {
   font-size: 23px !important;
+}
+
+.products-section {
+  background: #181818;
+  padding: 48px 0 32px 0;
+  width: 100%;
+}
+.products-title {
+  color: #fff;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.02em;
+}
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem 2rem;
+}
+.product-card,
+.mac-bg-card,
+.ipad-bg-card,
+.iphone-bg-card,
+.apple-watch-bg-card {
+  width: 100%;
+  max-width: 320px;
+  min-height: 370px;
+  height: 370px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0 auto;
+}
+
+/* For Apple Manager section cards */
+#apple-manager .card {
+  width: 100%;
+  max-width: 100%;
+  max-height: 265px;
+  height: 265px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.product-image {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 1.5rem;
+  align-self: center;
+}
+.product-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+  color: #fff;
+}
+.product-card p {
+  font-size: 1.05rem;
+  color: #e0e0e0;
+  margin-bottom: 1.2rem;
+  flex: 1;
+}
+.product-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 1.2rem;
+}
+.product-links a {
+  color: #ff6f3c;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.product-links a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+@media (max-width: 900px) {
+  .products-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem 0;
+  }
+  .product-card,
+  .mac-bg-card,
+  .ipad-bg-card,
+  .iphone-bg-card,
+  .apple-watch-bg-card {
+    max-width: 100%;
+    min-width: 0;
+  }
+  #apple-manager .card {
+    max-width: 100%;
+    min-width: 0;
+  }
+  .products-title {
+    font-size: 2rem;
+  }
+}
+
+#apple-manager .row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem 1.5rem;
+}
+
+
+@media (max-width: 767px) {
+  .section-title h2 {
+      font-size: 22px !important;
+  }
 }

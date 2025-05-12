@@ -706,11 +706,11 @@
         </div>
         <div class="case">
             <ul class="nav-tabset">
-               <!--  <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab1'}">
+                <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab1'}">
                     <span (click)="switchTab($event, 'tab1')">
                         All
                     </span>
-                </li> -->
+                </li>
                 <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab3'}">
                     <span (click)="switchTab($event, 'tab3')">
                         Mac
@@ -736,8 +736,6 @@
             <div class="tabs-container">
                 <div class="pane" id="tab1" *ngIf="currentTab === 'tab1'">
                     <div class="row case-list" style="margin-left: 0 !important;">
-                        <!-- MacBooks -->
-                        <!-- MacBook Pro -->
                         <div class="col-lg-4 col-sm-6">
                             <div class="single-case">
                                 <div class="case-img">
@@ -754,7 +752,6 @@
                             </div>
                         </div>
 
-                        <!-- MacBook Air -->
                         <div class="col-lg-4 col-sm-6">
                             <div class="single-case">
                                 <div class="case-img">
@@ -771,8 +768,6 @@
                             </div>
                         </div>
 
-                        <!-- iPads -->
-                        <!-- iPad Pro -->
                         <div class="col-lg-4 col-sm-6">
                             <div class="single-case">
                                 <div class="case-img">
@@ -789,9 +784,6 @@
                             </div>
                         </div>
 
-                        <!-- iPhones -->
-
-                         <!-- iPhone 16 Pro -->
                         <div class="col-lg-4 col-sm-6">
                             <div class="single-case">
                                 <div class="case-img">
@@ -807,7 +799,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- iPhone 16 -->
+
                         <div class="col-lg-4 col-sm-6">
                             <div class="single-case">
                                 <div class="case-img">
@@ -825,10 +817,7 @@
                             </div>
                         </div>
 
-                       
-
-                        <!-- iPhone 16e -->
-                        <div class="col-lg-4 col-sm-6">
+                       <div class="col-lg-4 col-sm-6">
                             <div class="single-case">
                                 <div class="case-img">
                                     <a routerLink="/iphone-16e"><img src="assets/images/products/iphone16e.jpg"
@@ -844,7 +833,6 @@
                             </div>
                         </div>
 
-                        <!-- iPad Air -->
                         <div class="col-lg-4 col-sm-6">
                             <div class="single-case">
                                 <div class="case-img">
@@ -862,7 +850,6 @@
                             </div>
                         </div>
 
-                        <!-- iPad A16 -->
                         <div class="col-lg-4 col-sm-6">
                             <div class="single-case">
                                 <div class="case-img">
@@ -879,8 +866,6 @@
                             </div>
                         </div>
 
-                        <!-- Desktop Macs -->
-                        <!-- iMac -->
                         <div class="col-lg-4 col-sm-6">
                             <div class="single-case">
                                 <div class="case-img">
@@ -896,7 +881,6 @@
                             </div>
                         </div>
 
-                        <!-- Mac Mini -->
                         <div class="col-lg-4 col-sm-6">
                             <div class="single-case">
                                 <div class="case-img">
@@ -913,8 +897,6 @@
                             </div>
                         </div>
 
-                        <!-- Watch and AirPods -->
-                        <!-- Apple Watch -->
                         <div class="col-lg-4 col-sm-6">
                             <div class="single-case">
                                 <div class="case-img">
@@ -930,28 +912,11 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- AirPods
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single-case">
-                                <div class="case-img">
-                                    <a routerLink="/airpods-max"><img src="assets/images/products/airpods-max.jpg" alt="AirPods Max"/></a>
-                                </div>
-                                <div class="content">
-                                    <a routerLink="/airpods-max"><h3>AirPods Max</h3></a>
-                                    <p>High-fidelity audio. Magical experience. Premium sound quality.</p>
-                                    <a routerLink="/airpods-max" class="line-bnt">View Product Details</a>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
 
                 <div class="pane" id="tab2" *ngIf="currentTab === 'tab2'">
                     <div class="row case-list"  style="margin-left: 0 !important;">
-                        <!-- iPhone 16 -->
-
-                          <!-- iPhone 16 Pro -->
                           <div class="col-lg-4 col-sm-6">
                             <div class="single-case">
                                 <div class="case-img">
@@ -984,9 +949,6 @@
                             </div>
                         </div>
 
-                      
-
-                        <!-- iPhone 16e -->
                         <div class="col-lg-4 col-sm-6">
                             <div class="single-case">
                                 <div class="case-img">
@@ -1002,26 +964,11 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- iPhone 16e Geo
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single-case">
-                                <div class="case-img">
-                                    <a routerLink="/products/iphone-16e-geo"><img src="assets/images/products/iphone16egeo.jpg" alt="iPhone 16e Geo"/></a>
-                                </div>
-                                <div class="content">
-                                    <a routerLink="/products/iphone-16e-geo"><h3>iPhone 16e Geo</h3></a>
-                                    <p>Designed for your region. Localized features and support.</p>
-                                    <a routerLink="/products/iphone-16e-geo" class="line-bnt">View Product Details</a>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
 
                 <div class="pane" id="tab3" *ngIf="currentTab === 'tab3'">
                     <div class="row case-list"  style="margin-left: 0 !important;">
-                        <!-- MacBook Air -->
                         <div class="col-lg-4 col-sm-6">
                             <div class="single-case">
                                 <div class="case-img">
@@ -1038,7 +985,6 @@
                             </div>
                         </div>
 
-                        <!-- MacBook Pro -->
                         <div class="col-lg-4 col-sm-6">
                             <div class="single-case">
                                 <div class="case-img">
@@ -1055,7 +1001,6 @@
                             </div>
                         </div>
 
-                        <!-- iMac -->
                         <div class="col-lg-4 col-sm-6">
                             <div class="single-case">
                                 <div class="case-img">
@@ -1071,7 +1016,6 @@
                             </div>
                         </div>
 
-                        <!-- Mac Mini -->
                         <div class="col-lg-4 col-sm-6">
                             <div class="single-case">
                                 <div class="case-img">
@@ -1092,7 +1036,6 @@
 
                 <div class="pane" id="tab4" *ngIf="currentTab === 'tab4'">
                     <div class="row case-list" style="margin-left: 0 !important;">
-                        <!-- Apple Watch -->
                         <div class="col-lg-4 col-sm-6">
                             <div class="single-case">
                                 <div class="case-img">
@@ -1108,28 +1051,12 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- AirPods Max
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single-case">
-                                <div class="case-img">
-                                    <a routerLink="/airpods-max"><img src="assets/images/products/airpods-max.png" alt="AirPods Max"/></a>
-                                </div>
-                                <div class="content">
-                                    <a routerLink="/airpods-max"><h3>AirPods Max</h3></a>
-                                    <p>High-fidelity audio. Magical experience. Premium sound quality.</p>
-                                    <a routerLink="/airpods-max" class="line-bnt">View Product Details</a>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
 
                 <div class="pane" id="tab5" *ngIf="currentTab === 'tab5'">
                     <div class="row case-list" style="margin-left: 0 !important;">
 
-
-                        <!-- iPad Pro -->
                         <div class="col-lg-4 col-sm-6">
                             <div class="single-case">
                                 <div class="case-img">
@@ -1146,8 +1073,6 @@
                             </div>
                         </div>
 
-
-                        <!-- iPad Air -->
                         <div class="col-lg-4 col-sm-6">
                             <div class="single-case">
                                 <div class="case-img">
@@ -1165,7 +1090,6 @@
                             </div>
                         </div>
 
-                        <!-- iPad A16 -->
                         <div class="col-lg-4 col-sm-6">
                             <div class="single-case">
                                 <div class="case-img">

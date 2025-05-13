@@ -111,7 +111,7 @@
   }
 
   .tco-label {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #222;
     font-weight: 300;
     line-height: 1.2;
@@ -276,7 +276,7 @@
   background: #fff;
   border-radius: 18px;
   box-shadow: 0 4px 24px rgba(44, 62, 80, 0.10);
-  max-width: 900px;
+  max-width: 1200px;
   margin: 2rem auto;
   padding: 2rem 1.5rem 1.2rem 1.5rem;
   display: flex;
@@ -404,12 +404,58 @@
   }
 }
 
+.mat-list.mat-list-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 1.5rem;
+  list-style: decimal inside;
+  padding: 0;
+ 
+}
+
+.mat-list.mat-list-grid > li {
+  background: #f7f9fc;
+  border-radius: 12px;
+  padding: 1.1rem 1.3rem;
+  box-shadow: 0 2px 10px rgba(44, 62, 80, 0.06);
+  font-size: 16px;
+  line-height: 1.6;
+  border: 0.5px solid #e8e4e4;
+  margin: 0 0 0 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+  counter-increment: mat-list;
+  position: relative;
+}
+
+.mat-list.mat-list-grid > li::marker {
+  color: #e43a35;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+@media (max-width: 900px) {
+  .mat-list.mat-list-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+}
+
+@media (max-width: 600px) {
+  .mat-list.mat-list-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+}
 // section2
 
 
 // section3
 .mac-advantages-timeline {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 2.5rem auto;
   padding: 0 1rem;
 }
@@ -523,7 +569,7 @@
 // section4
 
 .cost-reduction-modern {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 2.5rem auto;
   padding: 0 1rem;
 }

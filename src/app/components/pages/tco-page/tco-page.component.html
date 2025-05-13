@@ -171,7 +171,7 @@
     </svg>
     Mac Operating System Advantages
   </h2>
-  <ul class="mat-list">
+  <ul class="mat-list mat-list-grid">
     <li>
       <span class="mat-icon">
         <svg width="22" height="22" fill="none" stroke="#e43a35" stroke-width="2" viewBox="0 0 24 24">
@@ -249,38 +249,40 @@
     </li>
   </ul>
 
-  <div class="security-benefits-card">
-    <div class="sb-icon">
-      <svg width="36" height="36" fill="none" stroke="#e43a35" stroke-width="2" viewBox="0 0 24 24">
-        <path d="M12 3l7 4v5c0 5-3.5 9-7 9s-7-4-7-9V7l7-4z" />
-        <path d="M9 14l2 2 4-4" />
-      </svg>
+  <div class="security-benefits-row">
+    <div class="security-benefits-card">
+      <div class="sb-icon">
+        <svg width="36" height="36" fill="none" stroke="#e43a35" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M12 3l7 4v5c0 5-3.5 9-7 9s-7-4-7-9V7l7-4z" />
+          <path d="M9 14l2 2 4-4" />
+        </svg>
+      </div>
+      <div>
+        <h3>Security Benefits</h3>
+        <p>
+          Macs reduce data breach risk by 50%, thanks to built-in features like FileVault encryption, XProtect
+          antimalware, and seamless MDM enrollment. The Forrester TEI study reported zero malware incidents in a 100% Mac
+          deployment over three years.
+          <a href="https://tei.forrester.com/go/apple/tei/?lang=en-us"
+            target="_blank" rel="noopener">Forrester TEI Study</a>
+        </p>
+      </div>
     </div>
-    <div>
-      <h3>Security Benefits</h3>
-      <p>
-        Macs reduce data breach risk by 50%, thanks to built-in features like FileVault encryption, XProtect
-        antimalware, and seamless MDM enrollment. The Forrester TEI study reported zero malware incidents in a 100% Mac
-        deployment over three years.
-        <a href="https://tei.forrester.com/go/apple/tei/?lang=en-us"
-          target="_blank" rel="noopener">Forrester TEI Study</a>
-      </p>
-    </div>
-  </div>
 
-  <div class="security-benefits-card">
-    <div class="sb-icon">
-      <svg width="36" height="36" fill="none" stroke="#e43a35" stroke-width="2" viewBox="0 0 24 24">
-        <path d="M12 3l7 4v5c0 5-3.5 9-7 9s-7-4-7-9V7l7-4z" />
-        <circle cx="12" cy="13" r="4" />
-        <path d="M12 11v2l1.5 1.5" />
-      </svg>
-    </div>
-    <div>
-      <h3>Extended Warranty</h3>
-      <p>
-        Macs come with a 1-year warranty, extendable to 3–5 years via Superior Digital’s services.
-      </p>
+    <div class="security-benefits-card">
+      <div class="sb-icon">
+        <svg width="36" height="36" fill="none" stroke="#e43a35" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M12 3l7 4v5c0 5-3.5 9-7 9s-7-4-7-9V7l7-4z" />
+          <circle cx="12" cy="13" r="4" />
+          <path d="M12 11v2l1.5 1.5" />
+        </svg>
+      </div>
+      <div>
+        <h3>Extended Warranty</h3>
+        <p>
+          Macs come with a 1-year warranty, extendable to 3–5 years via Superior Digital's services.
+        </p>
+      </div>
     </div>
   </div>
 </section>
@@ -295,12 +297,12 @@
           <path d="M16 3v4" />
           <path d="M8 3v4" />
         </svg>
-        <h2 style="font-size: 24px;">Cost Reduction Strategies</h2>
+        <h2 style="font-size: 22px;">Cost Reduction Strategies</h2>
       </div>
       <div class="crm-section">
         <h3>Buyback Program</h3>
         <p>
-          Superior Digital’s Buyback Program maximizes Mac residual value (25% after three years vs. 10% for PCs),
+          Superior Digital's Buyback Program maximizes Mac residual value (25% after three years vs. 10% for PCs),
           offsetting new purchase costs.
         </p>
       </div>
@@ -359,7 +361,7 @@
           <circle cx="12" cy="12" r="10" />
           <path d="M8 12l2 2 4-4" />
         </svg>
-        <h2 style="font-size: 24px;">Why Choose Mac with Superior Digital?</h2>
+        <h2 style="font-size: 22px;">Why Choose Mac with Superior Digital?</h2>
       </div>
       <ul>
         <li>
@@ -416,7 +418,71 @@
           <b>Environmental Impact:</b> M4 Macs reduce CO₂ emissions, supporting ESG goals.
         </li>
       </ul>
-      <a class="download-btn" href="/contact">Contact Superior Digital for a Custom TCO Calculation</a>
+      <a class="download-btn" href="/contact">
+        <span>Contact Superior Digital for a Custom TCO Calculation</span>
+        <span class="btn-arrow">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="vertical-align: middle;">
+            <path d="M5 12h14"></path>
+            <path d="M13 6l6 6-6 6"></path>
+          </svg>
+        </span>
+      </a>
     </div>
   </div>
 </section>
+
+<style>
+.security-benefits-row {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+  margin: 2.5rem 0;
+  flex-wrap: wrap;
+}
+
+.security-benefits-card {
+  flex: 1 1 340px;
+  min-width: 280px;
+  max-width: 565px;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .security-benefits-row {
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: stretch;
+  }
+  .security-benefits-card {
+    max-width: 100%;
+  }
+}
+
+.download-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-right: 2.7rem;
+}
+
+.btn-arrow {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .download-btn {
+    padding-right: 2.2rem;
+  }
+  .btn-arrow {
+    right: 0.7rem;
+  }
+}
+</style>

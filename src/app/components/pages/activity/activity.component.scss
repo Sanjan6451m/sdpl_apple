@@ -105,6 +105,7 @@
   width: 100%;
   overflow: hidden;
   min-height: 200px;
+  height: 640px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -116,6 +117,7 @@
   object-fit: cover;
   position: absolute;
   top: 0;
+  margin-top: 140px;
   left: 0;
   z-index: 1;
 }
@@ -141,11 +143,12 @@
   .page-title-area {
     padding-top: 70px;
     min-height: 100px;
-    padding-bottom: 0 !important
-
+    padding-bottom: 0 !important;
+    height: 200px;
   }
   .page-title-area .page-bg {
     height: 140px;
+    margin-top: 60px;
   }
   .page-title-content {
     padding: 20px 8px 8px 8px;

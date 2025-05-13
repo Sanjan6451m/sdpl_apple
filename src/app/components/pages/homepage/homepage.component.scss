@@ -598,6 +598,13 @@ section {
 }
 
 @media (max-width: 768px) {
+
+  .class1{
+    padding-left: 10px !important;
+  }
+  .class2{
+    padding-left: 10px !important;
+  }
   section {
     padding: 2.5rem 0;
 
@@ -725,7 +732,7 @@ section {
       .enterprise-actions {
         flex-direction: column;
         gap: 1.5rem;
-        align-items: flex-start;
+        // align-items: flex-start;
 
         .enterprise-arrow i {
           font-size: 2rem;
@@ -782,4 +789,64 @@ section {
   display: flex;
   justify-content: center;
   background-color: #000;
+}
+
+@media (max-width: 700px) {
+  .statistics-area .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .statistics-area .row.class1 {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center;
+    min-width: 300px;
+  }
+  .statistics-area .row.class2 {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center;
+  }
+  .statistics-area .single-statistics {
+    text-align: center;
+    margin: 0 auto 1.5rem auto;
+    width: 100%;
+    max-width: 300px;
+  }
+  .statistics-area .col-lg-3,
+  .statistics-area .col-lg-9,
+  .statistics-area .col-sm-6,
+  .statistics-area .col-md-3 {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .enterprise-section .container,
+  .enterprise-section .row,
+  .enterprise-section .col-lg-12 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .enterprise-section .enterprise-content {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .enterprise-section .enterprise-actions {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+  }
 }

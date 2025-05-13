@@ -1,0 +1,17 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="24" cy="26" rx="16" ry="12" fill="#F9A825"/>
+  <ellipse cx="24" cy="26" rx="14" ry="10" fill="#FFD54F"/>
+  <ellipse cx="36" cy="28" rx="3" ry="2" fill="#F9A825"/>
+  <ellipse cx="12" cy="28" rx="3" ry="2" fill="#F9A825"/>
+  <ellipse cx="24" cy="38" rx="3" ry="2" fill="#F9A825"/>
+  <ellipse cx="32" cy="20" rx="2" ry="1.5" fill="#F9A825"/>
+  <ellipse cx="16" cy="20" rx="2" ry="1.5" fill="#F9A825"/>
+  <ellipse cx="24" cy="26" rx="2" ry="1" fill="#FFFDE7"/>
+  <rect x="22" y="18" width="4" height="6" rx="2" fill="#6D4C41"/>
+  <ellipse cx="28" cy="24" rx="1" ry="1.5" fill="#6D4C41"/>
+  <ellipse cx="20" cy="24" rx="1" ry="1.5" fill="#6D4C41"/>
+  <ellipse cx="24" cy="22" rx="1.5" ry="1" fill="#6D4C41"/>
+  <ellipse cx="24" cy="30" rx="6" ry="3" fill="#FFFDE7" fill-opacity="0.5"/>
+  <ellipse cx="24" cy="26" rx="16" ry="12" stroke="#F57C00" stroke-width="2"/>
+  <ellipse cx="24" cy="26" rx="14" ry="10" stroke="#FBC02D" stroke-width="2"/>
+</svg>

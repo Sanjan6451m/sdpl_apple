@@ -1,4 +1,4 @@
-.highlight-box {
+/* .highlight-box {
     background-color: #f1f3f4;
     padding: 20px;
     border-radius: 8px;
@@ -34,5 +34,641 @@
   
   .cta-button:hover {
     background-color: #1557b0;
+  } */
+.tco-section-v2 {
+  background: linear-gradient(120deg, #f8fafc 0%, #e3e9f7 100%);
+  padding: 0 0 3rem 0;
+  min-height: 100vh;
+  margin-top: 140px;
+}
+
+.tco-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: #e43a35;
+  color: #fff;
+  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 0 0 32px 32px;
+  box-shadow: 0 8px 32px rgba(44, 62, 80, 0.10);
+  margin-bottom: 2.5rem;
+
+  .tco-hero-img {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 10%;
+    padding: 1rem;
+    box-shadow: 0 2px 12px rgba(44, 62, 80, 0.10);
   }
-  
+
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 0.7rem;
+    color: #fff;
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 0;
+    font-weight: 400;
+  }
+}
+
+.tco-main-content {
+  display: flex;
+  gap: 1.0rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem 0 1rem;
+}
+
+.tco-left {
+  flex: 0 0 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.tco-icon-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.07);
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.2rem 1.2rem;
+
+  .tco-big-number {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #e43a35;
+    line-height: 1;
+  }
+
+  .tco-label {
+    font-size: 1rem;
+    color: #222;
+    font-weight: 300;
+    line-height: 1.2;
+  }
+
+  img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+  }
+}
+
+.tco-right {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tco-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.07);
+  padding: 2rem 1.5rem;
+
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #e43a35;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.05rem;
+    color: #222;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+
+    a {
+      color: #e43a35;
+      text-decoration: underline;
+      font-weight: 600;
+      transition: color 0.2s;
+
+      &:hover {
+        color: #b2231c;
+      }
+    }
+  }
+}
+
+.tco-formula-card {
+  background: #f1f3f7;
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.07);
+
+  .tco-formula-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 0.7rem;
+  }
+
+  .tco-formula {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 0.7rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+
+    .tco-equals {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #e43a35;
+    }
+
+    .tco-highlight {
+      color: #e43a35;
+      font-weight: 700;
+      background: #fff0ee;
+      border-radius: 4px;
+      padding: 0 0.2em;
+    }
+  }
+
+  .tco-formula-desc {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 0;
+  }
+}
+
+.tco-highlight {
+  color: #e43a35;
+  font-weight: 700;
+  background: #fff0ee;
+  border-radius: 4px;
+  padding: 0 0.2em;
+}
+
+@media (max-width: 900px) {
+  .tco-main-content {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.5rem 0.5rem 0 0.5rem;
+  }
+
+  .tco-left {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .tco-header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem 0.5rem 1rem 0.5rem;
+    border-radius: 0 0 18px 18px;
+    text-align: center;
+
+    .tco-hero-img {
+      width: 70px;
+      height: 70px;
+    }
+
+    h1 {
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+    }
+  }
+
+  .tco-main-content {
+    padding: 0.5rem 0.2rem 0 0.2rem;
+  }
+
+  .tco-left {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .tco-card,
+  .tco-formula-card {
+    padding: 1rem 0.5rem;
+  }
+
+  .tco-section-v2 {
+    margin-top: 60px !important;
+  }
+}
+
+
+// section2
+.financial-benefits-modern {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.10);
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem 1.5rem 1.2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.fbm-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.fbm-bar {
+  width: 7px;
+  min-width: 7px;
+  height: 60px;
+  background: linear-gradient(180deg, #f7396647 0%, #e43a35 100%);
+  border-radius: 8px;
+  margin-top: 0.2rem;
+}
+
+.fbm-header h2 {
+  color: #fa0808d1;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.fbm-header p {
+  color: #4a5568;
+  font-size: 1.05rem;
+  margin-bottom: 0;
+}
+
+.fbm-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+
+.fbm-item {
+  display: flex;
+  align-items: center;
+  background: #f7faff;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 1px 6px rgba(44, 62, 80, 0.04);
+  transition: box-shadow 0.2s;
+}
+
+.fbm-item.fbm-total {
+  background: #eaf1ff;
+  border: 1px solid #fa0808d1;
+}
+
+.fbm-icon {
+  width: 40px;
+  height: 40px;
+  background: #e3e9f7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.1rem;
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.fbm-content {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.fbm-label {
+  font-size: 1.05rem;
+  color: #222;
+  font-weight: 500;
+}
+
+.fbm-value {
+  font-size: 1.1rem;
+  color: #3973f7;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.fbm-item.fbm-total .fbm-value,
+.fbm-item.fbm-total .fbm-label {
+  color: #e43a35;
+}
+
+.fbm-note {
+  color: #718096;
+  font-size: 0.98rem;
+  margin-top: 0.7rem;
+  text-align: left;
+}
+
+@media (max-width: 600px) {
+  .financial-benefits-modern {
+    padding: 1.2rem 0.5rem 0.7rem 0.5rem;
+    border-radius: 10px;
+  }
+
+  .fbm-header h2 {
+    font-size: 1.1rem;
+  }
+
+  .fbm-label,
+  .fbm-value {
+    font-size: 0.98rem;
+  }
+
+  .fbm-item {
+    padding: 0.7rem 0.5rem;
+  }
+}
+
+// section2
+
+
+// section3
+.mac-advantages-timeline {
+  max-width: 900px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+}
+
+.mat-title {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: #e43a35;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.mat-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mat-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+  background: #f7f9fc;
+  border-radius: 12px;
+  padding: 1.1rem 1.3rem;
+  box-shadow: 0 2px 10px rgba(44, 62, 80, 0.06);
+  font-size: 1.08rem;
+  line-height: 1.6;
+  transition: box-shadow 0.2s;
+}
+
+.mat-list li:hover {
+  box-shadow: 0 4px 18px rgba(44, 62, 80, 0.13);
+}
+
+.mat-icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.mat-list a {
+  color: #3566e8;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.security-benefits-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  background: linear-gradient(90deg, #e3eefd 0%, #f7f9fc 100%);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
+  padding: 1.7rem 2rem;
+  margin-top: 2.5rem;
+}
+
+.sb-icon {
+  flex-shrink: 0;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(44, 62, 80, 0.10);
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.security-benefits-card h3 {
+  color: #e43a35;
+  font-size: 24px;
+  margin: 0 0 0.5rem 0;
+}
+
+.security-benefits-card p {
+  color: #222;
+  font-size: 1.08rem;
+  margin: 0;
+  line-height: 1.7;
+}
+
+@media (max-width: 700px) {
+  .mac-advantages-timeline {
+    padding: 0 0.3rem;
+  }
+
+  .mat-title {
+    font-size: 1.2rem;
+  }
+
+  .mat-list li {
+    font-size: 0.98rem;
+    padding: 0.9rem 0.7rem;
+  }
+
+  .security-benefits-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.1rem 0.7rem;
+  }
+}
+
+// section3
+
+
+// section4
+
+.cost-reduction-modern {
+  max-width: 1100px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+}
+
+.crm-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.crm-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.09);
+  padding: 2rem 2.2rem;
+  flex: 1 1 380px;
+  min-width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.crm-header {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: #3566e8;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+
+.crm-header.alt {
+  color: #2b50a1;
+}
+
+.crm-section h3 {
+  color: #e43a35;
+  font-size: 1.1rem;
+  margin: 0.5rem 0 0.2rem 0;
+}
+
+.crm-section ul,
+.crm-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.crm-card li {
+  display: initial;
+  align-items: flex-start;
+  gap: 0.7rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.crm-icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+  padding-right: 5px;
+}
+
+.crm-card a {
+  // color: #e43a35;
+  // text-decoration: underline;
+  font-weight: 500;
+  margin-left: 0.3rem;
+}
+
+.crm-cta-btn {
+  display: block;
+  margin: 1.5rem 0 0 0;
+  background: linear-gradient(90deg, #3566e8, #e43a35);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  padding: 14px 32px;
+  box-shadow: 0 4px 20px rgba(44, 62, 80, 0.10);
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  width: max-content;
+  min-width: 220px;
+  align-self: flex-start;
+}
+
+.crm-cta-btn:hover,
+.crm-cta-btn:focus {
+  background: linear-gradient(90deg, #e43a35, #3566e8);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(44, 62, 80, 0.18);
+}
+
+@media (max-width: 900px) {
+  .crm-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .crm-card {
+    max-width: 100%;
+    min-width: 0;
+    padding: 1.2rem 1rem;
+  }
+
+  .crm-header {
+    font-size: 1.1rem;
+  }
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.9rem 2.2rem;
+  background: #ff4444;
+  color: #fff;
+  float: inline-end;
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.07);
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+.download-btn:hover {
+  background: #fff;
+  color: #ff4444;
+  box-shadow: 0 6px 24px rgba(255, 68, 68, 0.15);
+  transform: translateY(-2px) scale(1.04);
+  border: 2px solid #ff4444;
+}
+// section4

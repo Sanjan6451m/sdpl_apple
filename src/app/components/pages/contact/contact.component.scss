@@ -6,3 +6,18 @@
 .single-contact {
     min-height: 170px;
 }
+
+.row {
+    margin-left: 0 !important;
+}
+
+.page-title-area {
+    padding-top: 300px;
+    padding-bottom: 150px;
+}
+@media (max-width: 767px) {
+    .page-title-area {
+        padding-top: 150px !important;
+        padding-bottom: 100px !important;
+    }
+}

@@ -350,18 +350,18 @@ header.navbar-header {
   }
 
   .mobile-superior-navbar {
-    padding: 15px 0;
-    border-bottom: 2px solid #e0e6e8;
-    margin-bottom: 20px;
+    padding: 1px 0;
+    // border-bottom: 1px solid #e0e6e8;
+    margin-bottom: 0px;
 
     .mobile-superior-navbar-left {
       display: flex;
       align-items: center;
       gap: 10px;
-      margin-bottom: 15px;
+      // margin-bottom: 15px;
 
       .superior-logo {
-        height: 45px;
+        height: 65px;
       }
       .superior-text-logo {
         height: 30px;
@@ -414,7 +414,7 @@ header.navbar-header {
   }
 
   .mobile-nav {
-    margin-top: 20px;
+    margin-top: 5px;
   }
 
   .mobile-nav-list {
@@ -465,7 +465,7 @@ header.navbar-header {
       a {
         color: #232526;
         text-decoration: none;
-        font-size: 1.1rem;
+        font-size: 16px;
         font-weight: 500;
         display: flex;
         justify-content: space-between;
@@ -491,6 +491,24 @@ header.navbar-header {
 
 // Responsive Styles
 @media (max-width: 1024px) {
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .mobile-superior-navbar-right {
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; // or center
+    gap: 0.7rem;
+    background: white;
+  }
   .main-navbar-container {
     padding: 0 15px;
     width: 100%;
@@ -525,7 +543,10 @@ header.navbar-header {
   }
 
   .mobile-menu {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+    // overflow: hidden;
   }
 
   .nav-list {
@@ -539,7 +560,7 @@ header.navbar-header {
 
     .superior-navbar-left {
       .superior-logo {
-        height: 45px;
+        height: 65px;
       }
       .superior-text-logo {
         height: 30px;

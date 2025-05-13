@@ -147,6 +147,7 @@ html, body {
     width: 350px;
     height: auto;
   }
+
   .download-btn {
     margin-top: 0.5rem !important;
     padding: 8px 18px !important;
@@ -619,76 +620,120 @@ html, body {
 .partnerships-section {
   background: #f7f7f7;
   padding: 40px 0;
+
   .container {
     max-width: 1200px;
     margin: 0 auto;
   }
+
   .partnerships-title {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 2rem;
     text-align: left;
   }
+
   .partnerships-grid {
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
+
     @media (max-width: 900px) {
       flex-direction: column;
       gap: 1.5rem;
     }
   }
+
   .partnerships-col {
     flex: 1 1 0;
     min-width: 250px;
+
     .partnerships-header {
       display: flex;
       align-items: center;
       gap: 1rem;
       margin-bottom: 2rem;
+
       .partner-main-logo {
         height: 60px;
       }
+
       .apple-authorized {
         display: flex;
         align-items: center;
         gap: 0.5rem;
+
         .apple-logo {
           height: 40px;
         }
+
         span {
           font-weight: 500;
         }
       }
     }
+
     .partnerships-category {
       margin-bottom: 1.5rem;
+
       h3 {
         font-size: 1.1rem;
         color: #888;
         margin-bottom: 0.5rem;
         font-weight: 600;
       }
+
       .partner-logos {
         display: flex;
         flex-wrap: wrap;
         gap: 1rem;
+        justify-content: flex-start;
         align-items: center;
-        img {
-          height: 32px;
-          background: #fff;
-          border-radius: 4px;
-          padding: 2px 6px;
-        }
-        .partner-text {
-          font-size: 1rem;
-          color: #333;
-          background: #eaeaea;
-          border-radius: 4px;
-          padding: 2px 8px;
-        }
+        margin-bottom: 1.2rem;
+      }
+
+      .partner-logos img {
+        width: 70px;
+        height: 70px;
+        object-fit: contain;
+        border-radius: 14px;
+        background: linear-gradient(135deg, #e3eefd 0%, #beb7b74a 100%);
+        padding: 10px;
+        box-shadow: 0 2px 10px rgba(44,62,80,0.08);
+        transition: transform 0.2s, box-shadow 0.2s;
+        display: block;
+        border: 1px solid #8080801f;
+      }
+
+      .partner-logos img:hover {
+        transform: translateY(-4px) scale(1.05);
+        box-shadow: 0 8px 24px rgba(44,62,80,0.18);
       }
     }
+  }
+}
+
+@media (max-width: 900px) {
+  .partner-logos {
+    gap: 0.7rem;
+    justify-content: center;
+  }
+  .partner-logos img {
+    width: 56px;
+    height: 56px;
+    padding: 7px;
+  }
+}
+
+@media (max-width: 600px) {
+  .partner-logos {
+    gap: 0.5rem;
+    justify-content: center;
+  }
+  .partner-logos img {
+    width: 44px;
+    height: 44px;
+    padding: 4px;
   }
 }
 
@@ -703,7 +748,10 @@ html, body {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
-  .content-section h3, .content-section p, .content-section a {
+
+  .content-section h3,
+  .content-section p,
+  .content-section a {
     text-align: center;
     width: 100%;
   }

@@ -98,6 +98,7 @@ import { ApplecareComponent } from './components/pages/applecare/applecare.compo
 import { Iphone16pro1Component } from './components/pages/iphone16pro/iphone16pro.component';
 import { TcoPageComponent } from './components/pages/tco-page/tco-page.component';
 import { MacdoesComponent } from './components/pages/macdoes/macdoes.component';
+import { MacDeveloperComponent } from './components/pages/mac-developer/mac-developer.component';
 
 const routes: Routes = [
     {path: '', component: HomepageComponent},
@@ -197,6 +198,7 @@ const routes: Routes = [
     { path: 'applecare', component: ApplecareComponent },
     { path: 'tco', component: TcoPageComponent },
     { path: 'macdoes', component: MacdoesComponent },
+    { path: 'mac-developer', component: MacDeveloperComponent },
     {path: '**', component: ErrorComponent} // This line will remain down from the whole pages component list
 ];
 

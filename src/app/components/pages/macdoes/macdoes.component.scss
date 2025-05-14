@@ -89,8 +89,8 @@
 
         .feature-reverse {
             flex: 1 1 1200px;
-            max-width: 1200px;
-            background: #fff;
+            // max-width: 1200px;
+            // background: #fff;
             border-radius: 16px;
             box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
             padding: 2rem 1.5rem;
@@ -282,15 +282,14 @@
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  margin: 2rem 0;
-  width: 1200px;
- /*  background-image: url('assets/images/macdoes/background.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; */
+  margin: 0 0;
   padding: 3rem;
   border-radius: 16px;
   position: relative;
+  background: #fff;
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
 
   &::before {
     content: '';
@@ -304,19 +303,18 @@
     z-index: 1;
   }
 
-  .feature-content {
+  .feature-content,
+  .feature-image {
     flex: 1;
-    text-align: left;
     position: relative;
     z-index: 2;
+    text-align: left;
   }
 
   .feature-image {
-    flex: 1;
-    text-align: right;
-    margin-left: auto !important;
-    position: relative;
-    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 
     img {
       max-width: 60%;
@@ -335,6 +333,22 @@
     max-width: 220px;
     font-size: 1rem;
     padding: 1rem 1rem;
+  }
+  .feature-reverse {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1.5rem;
+    gap: 1.5rem;
+
+    .feature-content,
+    .feature-image {
+      text-align: center;
+    }
+
+    .feature-image img {
+      max-width: 80%;
+      margin: 0 auto;
+    }
   }
 }
 

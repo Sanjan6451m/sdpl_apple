@@ -827,6 +827,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  border: 1px solid #e23d36;
 }
 
 .product-image {
@@ -1121,4 +1122,126 @@
     font-size: 1rem;
     padding: 0.1em 0.3em;
   }
+}
+
+.card-text{
+  color: #000;
+}
+
+.enterprise-solutions {
+    padding: 2rem 0;
+}
+
+.container2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-top-right-images {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
+.top-right-img {
+    max-width: 150px;
+    height: auto;
+}
+
+.appleenterprise-card {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    gap: 3rem;
+    background: #fff;
+}
+
+.content-section {
+    flex: 1;
+    max-width: 100%;
+    padding: 1rem;
+    text-align: left;
+}
+
+.content-section h3 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    text-align: left;
+}
+
+.content-section p {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    line-height: 1.6;
+    text-align: left;
+}
+
+.image-section {
+    flex: 1;
+    max-width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tco-image {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    object-fit: contain;
+}
+
+@media (max-width: 992px) {
+    .appleenterprise-card {
+        gap: 2rem;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .appleenterprise-card {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    .content-section {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .content-section h3,
+    .content-section p {
+        text-align: center;
+    }
+
+    .image-section {
+        max-width: 100%;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .appleenterprise-card {
+        padding: 0.8rem;
+    }
+
+    .content-section h3 {
+        font-size: 1.8rem;
+    }
+
+    .content-section p {
+        font-size: 0.9rem;
+    }
 }

@@ -97,6 +97,7 @@ import { SuperiorEnterpriseComponent } from './components/pages/superior-enterpr
 import { ApplecareComponent } from './components/pages/applecare/applecare.component';
 import { Iphone16pro1Component } from './components/pages/iphone16pro/iphone16pro.component';
 import { TcoPageComponent } from './components/pages/tco-page/tco-page.component';
+import { MacdoesComponent } from './components/pages/macdoes/macdoes.component';
 
 const routes: Routes = [
     {path: '', component: HomepageComponent},
@@ -195,6 +196,7 @@ const routes: Routes = [
     { path: 'iphone-16pro', component: Iphone16pro1Component },
     { path: 'applecare', component: ApplecareComponent },
     { path: 'tco', component: TcoPageComponent },
+    { path: 'macdoes', component: MacdoesComponent },
     {path: '**', component: ErrorComponent} // This line will remain down from the whole pages component list
 ];
 

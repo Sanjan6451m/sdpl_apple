@@ -41,7 +41,7 @@
  */
 
 
- .hero-banner {
+.hero-banner {
   position: relative;
   width: 100%;
   min-height: 500px;
@@ -102,7 +102,9 @@
     text-align: center;
     width: 100%;
   }
-  .hero-banner-content h1, .hero-banner-content span {
+
+  .hero-banner-content h1,
+  .hero-banner-content span {
     text-align: center;
     width: 100%;
   }
@@ -324,6 +326,7 @@
   position: relative;
   max-width: 900px;
 }
+
 /* Responsive Styles */
 /* Large Tablets */
 @media (max-width: 1200px) {
@@ -609,6 +612,7 @@
     border-bottom-right-radius: 10px;
     align-items: center;
     text-align: center;
+    margin-top: 0;
   }
 }
 
@@ -700,6 +704,7 @@
   .card.bg-image .card-content h3 {
     margin-bottom: 0rem !important;
   }
+
   .mac-dev-title {
     font-size: 2rem;
   }
@@ -779,6 +784,7 @@
   padding: 48px 0 32px 0;
   width: 100%;
 }
+
 .products-title {
   color: #fff;
   text-align: center;
@@ -787,12 +793,14 @@
   margin-bottom: 2.5rem;
   letter-spacing: 0.02em;
 }
+
 .products-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2.5rem 2rem;
 }
+
 .product-card,
 .mac-bg-card,
 .ipad-bg-card,
@@ -828,23 +836,27 @@
   margin-bottom: 1.5rem;
   align-self: center;
 }
+
 .product-card h3 {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 0.7rem;
   color: #fff;
 }
+
 .product-card p {
   font-size: 1.05rem;
   color: #e0e0e0;
   margin-bottom: 1.2rem;
   flex: 1;
 }
+
 .product-links {
   display: flex;
   flex-wrap: wrap;
   gap: 0.7rem 1.2rem;
 }
+
 .product-links a {
   color: #ff6f3c;
   font-size: 1rem;
@@ -852,16 +864,19 @@
   font-weight: 500;
   transition: color 0.2s;
 }
+
 .product-links a:hover {
   color: #fff;
   text-decoration: underline;
 }
+
 @media (max-width: 900px) {
   .products-grid {
     flex-direction: column;
     align-items: center;
     gap: 2rem 0;
   }
+
   .product-card,
   .mac-bg-card,
   .ipad-bg-card,
@@ -870,10 +885,12 @@
     max-width: 100%;
     min-width: 0;
   }
+
   #apple-manager .card {
     max-width: 100%;
     min-width: 0;
   }
+
   .products-title {
     font-size: 2rem;
   }
@@ -890,7 +907,7 @@
 
 @media (max-width: 767px) {
   .section-title h2 {
-      font-size: 22px !important;
+    font-size: 22px !important;
   }
 }
 
@@ -922,32 +939,37 @@
 }
 
 @media (max-width: 768px) {
-  .mac-dev-section{
-      padding: 0 !important;
+  .mac-dev-section {
+    padding: 0 !important;
   }
-.card-content {
-  flex-direction: column !important;
-  gap: 1rem !important;
-  padding: 1rem 0.5rem !important;
-  text-align: center !important;
-}
-.mac-dev-section .container {
-  padding: 0;
-}
-.mac-dev-grid {
-  flex-direction: column;
-  gap: 0.5rem;
-  text-align: left !important;
-}
-.mac-dev-col {
-  min-width: 0;
-  width: 100%;
-}
-.card-content h3 {
-  font-size: 1.1rem !important;
-  min-width: unset !important;
-  text-align: left !important;
-}
+
+  .card-content {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    padding: 1rem 0.5rem !important;
+    text-align: center !important;
+  }
+
+  .mac-dev-section .container {
+    padding: 0;
+  }
+
+  .mac-dev-grid {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left !important;
+  }
+
+  .mac-dev-col {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .card-content h3 {
+    font-size: 1.1rem !important;
+    min-width: unset !important;
+    text-align: left !important;
+  }
 }
 
 .cta-section {
@@ -983,19 +1005,28 @@
   overflow: hidden;
 }
 
-.animated-tco-btn:hover, .animated-tco-btn:focus {
+.animated-tco-btn:hover,
+.animated-tco-btn:focus {
   background-position: 100% 0;
   transform: translateY(-3px) scale(1.04);
   box-shadow: 0 8px 32px rgba(228, 58, 53, 0.25);
 }
 
 @keyframes tco-gradient-move {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-.cta-section-mac{
+.cta-section-mac {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1008,4 +1039,86 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+
+.mac-iphone-content {
+  text-align: left;
+  padding: 1.5rem 2rem;
+}
+
+.mac-iphone-content h2 {
+  font-size: 3rem;
+  color: #000;
+  text-align: center;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.better-together-bg {
+  // background-color: #00ff00;
+  padding: 0.2em 0.5em;
+  border-radius: 8px;
+  display: inline-block;
+  font-style: italic;
+}
+
+.mac-iphone-content p {
+  font-size: 1.1rem;
+  color: #000;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+
+  .mac-iphone-image1 {
+    max-width: 80% !important;
+    height: auto;
+    margin-left: -20% !important;
+  }
+
+  .animated-tco-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .mac-iphone-content {
+    padding: 1rem 1rem;
+  }
+
+  .mac-iphone-content h2 {
+    font-size: 2.1rem;
+  }
+
+  .mac-iphone-content p {
+    font-size: 1rem;
+  }
+}
+
+.mac-iphone-image1 {
+  max-width: 100%;
+  height: auto;
+  margin-left: -22% !important;
+}
+
+@media (max-width: 600px) {
+  .mac-iphone-content {
+    padding: 0.7rem 0.3rem;
+  }
+
+  .mac-iphone-content h2 {
+    font-size: 1.3rem !important;
+    margin-top: -35px !important;
+  }
+
+  .mac-iphone-content p {
+    font-size: 0.80rem !important;
+  }
+
+  .better-together-bg {
+    font-size: 1rem;
+    padding: 0.1em 0.3em;
+  }
 }

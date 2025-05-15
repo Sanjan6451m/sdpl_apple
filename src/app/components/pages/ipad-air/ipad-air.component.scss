@@ -17,6 +17,7 @@ section {
 .hero-section {
   position: relative;
   overflow: hidden;
+  margin-top: 140px;
 }
 
 .page-title-area {
@@ -111,7 +112,8 @@ section {
 }
 
 // Features & Accessories Sections
-.features-section, .accessories-section {
+.features-section,
+.accessories-section {
   padding: 80px 0;
   background-color: #fff;
 
@@ -119,7 +121,7 @@ section {
     padding: 40px;
     background: #fff;
     border-radius: 18px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
@@ -132,7 +134,7 @@ section {
 
     &.display-info-card {
       padding: 60px;
-      
+
       .display-image {
         width: 100%;
         height: auto;
@@ -171,16 +173,19 @@ section {
     }
   }
 
-  .size-options, .color-options {
+  .size-options,
+  .color-options {
     margin-top: 30px;
   }
 
-  .size-labels, .color-labels {
+  .size-labels,
+  .color-labels {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
 
-    .size-label, .color-label {
+    .size-label,
+    .color-label {
       text-align: center;
 
       h4 {
@@ -205,7 +210,7 @@ section {
     border-radius: 20px;
     overflow: hidden;
     position: relative;
-    
+
     &::before {
       content: '';
       position: absolute;
@@ -213,7 +218,7 @@ section {
       padding: 1px;
       background: linear-gradient(115deg, #0090F7 30%, #BA62FC 45%, #F2416B 60%, #F55600 70%);
       border-radius: 20px;
-      -webkit-mask: 
+      -webkit-mask:
         linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
       -webkit-mask-composite: xor;
@@ -236,7 +241,7 @@ section {
     background: #fff;
     border-radius: 18px;
     padding: 40px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 
     .ipados-content {
       h3 {
@@ -314,7 +319,7 @@ section {
     background: #fff;
     border-radius: 18px;
     padding: 30px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 
     .feature-content {
       display: flex;
@@ -351,7 +356,7 @@ section {
     background: #fff;
     border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 
     .card-content {
       h3 {
@@ -370,8 +375,125 @@ section {
   }
 }
 
+.display-title {
+  background: linear-gradient(180deg, #004c94 10%, #1663ac 45%, #297bc4 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.display-title1 {
+  color: white;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.1;
+  padding: 40px;
+}
+
+.display-title2 {
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.1;
+  padding: 20px;
+}
+
+.display-title3 {
+  background: linear-gradient(115deg, #0090F7 30%, #BA62FC 45%, #F2416B 60%, #F55600 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.display-title4 {
+  background: linear-gradient(180deg, #004c94 10%, #1663ac 45%, #297bc4 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 28px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.display-title5 {
+  color: #0066CC;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.display-title6 {
+  color: #0066CC;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.display-title7 {
+  color: #1d1d1f;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.display-title8 {
+  color: #1d1d1f;
+  font-size: 48px;
+  font-weight: 600;
+}
 // Responsive Styles
 @media (max-width: 991px) {
+
+  .display-title7 {
+    font-size: 22px;
+  }
+
+  .display-title8 {
+    font-size: 36px;
+  }
+
+  .display-title6 {
+    font-size: 22px;
+  }
+
+  .display-title5 {
+    font-size: 24px;
+  }
+
+  .display-title4 {
+    font-size: 24px;
+  }
+
+  .display-title3 {
+    font-size: 24px;
+  }
+
+  .display-title2 {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .display-title1 {
+    font-size: 24px;
+    padding: 20px;
+  }
+
+  .display-title {
+    font-size: 24px;
+  }
+
+  .hero-section {
+    margin-top: 60px !important;
+  }
+
+  .row {
+    margin-left: 0 !important;
+  }
+
   .page-title-area {
     padding: 100px 0;
   }
@@ -390,8 +512,11 @@ section {
     }
   }
 
-  .performance-section, .battery-section {
-    .performance-content, .battery-content {
+  .performance-section,
+  .battery-section {
+
+    .performance-content,
+    .battery-content {
       text-align: center;
       margin-bottom: 40px;
     }
@@ -506,7 +631,8 @@ section {
     }
   }
 
-  .features-section, .accessories-section {
+  .features-section,
+  .accessories-section {
     padding: 60px 0;
 
     .feature-card {
@@ -546,16 +672,19 @@ section {
       }
     }
 
-    .size-options, .color-options {
+    .size-options,
+    .color-options {
       margin-top: 24px;
     }
 
-    .size-labels, .color-labels {
+    .size-labels,
+    .color-labels {
       flex-wrap: wrap;
       gap: 20px;
       padding: 0 15px;
 
-      .size-label, .color-label {
+      .size-label,
+      .color-label {
         h4 {
           font-size: 20px;
           margin-bottom: 4px;
@@ -648,7 +777,8 @@ section {
     }
   }
 
-  .features-section, .accessories-section {
+  .features-section,
+  .accessories-section {
     padding: 40px 0;
 
     .feature-card {
@@ -674,11 +804,13 @@ section {
       }
     }
 
-    .size-labels, .color-labels {
+    .size-labels,
+    .color-labels {
       gap: 15px;
       padding: 0 10px;
 
-      .size-label, .color-label {
+      .size-label,
+      .color-label {
         h4 {
           font-size: 16px;
           margin-bottom: 3px;
@@ -731,7 +863,7 @@ section {
     .ai-card {
       .ai-content {
         padding: 30px;
-        
+
         h3 {
           font-size: 20px;
         }
@@ -754,8 +886,11 @@ section {
     }
   }
 
-  .size-labels, .color-labels {
-    .size-label, .color-label {
+  .size-labels,
+  .color-labels {
+
+    .size-label,
+    .color-label {
       h4 {
         font-size: 16px;
       }
@@ -766,7 +901,8 @@ section {
     }
   }
 
-  .features-section, .accessories-section {
+  .features-section,
+  .accessories-section {
     .feature-card {
       padding: 20px;
 

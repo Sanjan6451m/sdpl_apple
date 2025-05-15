@@ -1,6 +1,7 @@
 .hero-section {
     position: relative;
     overflow: hidden;
+    margin-top: 140px;
 }
 
 .page-title-area {
@@ -427,7 +428,7 @@
         background-color: #ffffff;
         border-radius: 30px;
         overflow: hidden;
-        min-height: 500px;
+        // min-height: 500px;
         display: flex;
         flex-direction: column;
 
@@ -506,6 +507,14 @@
 }
 
 @media (max-width: 768px) {
+
+    .row {
+        margin-left: 0 !important;
+      }
+
+    .hero-section{
+        margin-top: 60px;
+    }
     .page-title-area {
         height: 80vh;
     }
@@ -517,7 +526,7 @@
 
         .gradient-text {
             font-size: 28px;
-            margin-bottom: 15px;
+            margin-bottom: -140% !important;
             padding: 0 15px;
         }
     }
@@ -661,8 +670,8 @@
         justify-content: center;
 
         .text-content {
-            text-align: center;
-            padding: 20px;
+          text-align: center !important;
+          padding: 0 !important;
 
             h2 {
                 font-size: 28px;
@@ -727,7 +736,8 @@
         }
 
         .accessories-image {
-            width: 90%;
+            width: 90% !important;
+            margin-right: 20px !important;
         }
     }
 }

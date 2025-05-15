@@ -1,9 +1,13 @@
+.hero-section{
+  margin-top: 140px;
+}
+
 .macbook-pro-hero {
   background-color: #000;
   color: #fff;
   padding: 80px 0;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 140px;
 
   h1 {
     font-size: 48px;
@@ -551,6 +555,10 @@
 }
 
 @media (max-width: 991px) {
+
+  .hero-section{
+    margin-top: 60px;
+  }
   .performance-section {
     .performance-card {
       padding: 30px;

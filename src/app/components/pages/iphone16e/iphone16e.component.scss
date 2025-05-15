@@ -5,6 +5,7 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
+    margin-top: 140px;
 }
 
 .page-title-area {
@@ -545,6 +546,12 @@
 
 /* Responsive Styles */
 @media (max-width: 991px) {
+    .hero-section{
+        margin-top: 60px !important;
+    }
+    .row {
+        margin-left: 0 !important;
+      }
     .hero-content {
         .hero-layout {
             .hero-text {
@@ -831,6 +838,127 @@
     @media (min-width: 992px) {
         flex: 0 0 65%;
         max-width: 65%;
+    }
+}
+
+.feature-card {
+    &.emergency-card {
+        background: #000;
+        border-radius: 30px;
+        padding: 40px;
+        min-height: 400px;
+        overflow: hidden;
+
+        .content-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            gap: 40px;
+
+            .text-content {
+                flex: 1;
+                padding-left: 20px;
+
+                h2 {
+                    font-size: 48px;
+                    color: #ffffff;
+                    margin-bottom: 20px;
+                    font-weight: 600;
+                    line-height: 1.1;
+                }
+
+                p {
+                    font-size: 18px;
+                    color: #86868b;
+                    margin: 0;
+                    font-weight: 400;
+                    line-height: 1.4;
+                    max-width: 500px;
+                }
+            }
+
+            .image-content {
+                flex: 1;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                
+                img {
+                    width: 80%;
+                    height: auto;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .feature-card {
+        &.emergency-card {
+            .content-wrapper {
+                gap: 30px;
+                
+                .text-content {
+                    padding-left: 0;
+                    
+                    h2 {
+                        font-size: 36px;
+                        margin-bottom: 15px;
+                    }
+                    
+                    p {
+                        font-size: 16px;
+                    }
+                }
+                
+                .image-content img {
+                    width: 90%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .feature-card {
+        &.emergency-card {
+            padding: 30px 20px;
+            min-height: auto;
+            
+            .content-wrapper {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+                
+                .text-content {
+                    padding: 0;
+                    min-width: 100% !important;
+                    
+                    h2 {
+                        font-size: 32px;
+                        margin-bottom: 15px;
+                    }
+                    
+                    p {
+                        font-size: 16px;
+                        max-width: 100%;
+                    }
+                }
+                
+                .image-content {
+                    justify-content: center;
+                    width: 100%;
+                    
+                    img {
+                        width: 100%;
+                        max-width: 400px;
+                    }
+                }
+            }
+        }
     }
 }
 

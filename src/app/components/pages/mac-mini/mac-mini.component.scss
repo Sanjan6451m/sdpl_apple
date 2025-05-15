@@ -347,6 +347,7 @@
   .hero-section {
     position: relative;
     overflow: hidden;
+    margin-top: 140px;
   }
   
   .page-title-area {
@@ -403,6 +404,9 @@
   }
   
   @media (max-width: 768px) {
+    .hero-section{
+      margin-top: 60px !important;
+    }
     .page-title-area {
       height: 80vh;
       

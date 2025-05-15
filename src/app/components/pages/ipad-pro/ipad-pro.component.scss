@@ -2,6 +2,7 @@
 .hero-section {
     position: relative;
     overflow: hidden;
+    margin-top: 140px;
 }
 
 .page-title-area {
@@ -314,7 +315,7 @@
                 text-align: center;
                 left: 0;
                 right: 0;
-                padding: 0 40px;
+                padding: 0 20px;
             }
 
             .card-background {
@@ -606,8 +607,27 @@
     }
 }
 
+.row {
+    margin-left: 0 !important;
+  }
+
+.display-title1 {
+font-size: 32px;
+}
+.display-title2 {
+    font-size: 24px;
+}
 /* Responsive Styles */
 @media (max-width: 991px) {
+    .display-title1 {
+        font-size: 24px !important;
+    }
+    .display-title2 {
+        font-size: 20px !important;
+    }
+    .hero-section {
+        margin-top: 60px;
+    }
     .features-grid {
         .feature-card {
             h2 {

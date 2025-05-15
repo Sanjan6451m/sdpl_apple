@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-macdoes',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './macdoes.component.html',
   styleUrl: './macdoes.component.scss'
 })

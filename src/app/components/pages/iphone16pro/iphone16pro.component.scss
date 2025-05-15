@@ -2,6 +2,7 @@
 .hero-section {
     position: relative;
     overflow: hidden;
+    margin-top: 140px;
 }
 
 .page-title-area {
@@ -740,8 +741,15 @@
     }
 }
 
+.row {
+    margin-left: 0 !important;
+}
+
 /* Responsive Styles */
 @media (max-width: 991px) {
+    .hero-section{
+        margin-top: 60px !important;
+    }
     .features-grid {
         .feature-card {
             h2 {
@@ -755,6 +763,29 @@
             &.action-button-card, &.crash-card {
                 .action-image img, .crash-image img {
                     width: 55%;
+                }
+            }
+
+            &.crash-card {
+                .card-content {
+                    gap: 20px;
+                    
+                    .text-content {
+                        padding-left: 0;
+                        
+                        h2 {
+                            font-size: 24px;
+                        }
+                        
+                        h3 {
+                            font-size: 18px;
+                        }
+                    }
+                    
+                    .crash-image img {
+                        width: 45%;
+                        margin-right: 20px;
+                    }
                 }
             }
         }
@@ -776,6 +807,41 @@
                 .action-image img, .crash-image img {
                     width: 100% !important;
                     margin-right: 0px !important;
+                }
+            }
+
+            &.crash-card {
+                padding: 30px 20px;
+                min-height: auto;
+                
+                .card-content {
+                    flex-direction: column;
+                    text-align: center;
+                    gap: 30px;
+                    
+                    .text-content {
+                        padding: 0;
+                        
+                        h2 {
+                            font-size: 24px;
+                            margin-bottom: 10px;
+                        }
+                        
+                        h3 {
+                            font-size: 18px;
+                            max-width: 100%;
+                        }
+                    }
+                    
+                    .crash-image {
+                        justify-content: center;
+                        width: 100%;
+                        
+                        img {
+                            width: 80%;
+                            margin: 0;
+                        }
+                    }
                 }
             }
         }

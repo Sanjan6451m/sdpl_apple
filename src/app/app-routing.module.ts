@@ -99,6 +99,12 @@ import { Iphone16pro1Component } from './components/pages/iphone16pro/iphone16pr
 import { TcoPageComponent } from './components/pages/tco-page/tco-page.component';
 import { MacdoesComponent } from './components/pages/macdoes/macdoes.component';
 import { MacDeveloperComponent } from './components/pages/mac-developer/mac-developer.component';
+import { MBA15inComponent } from './components/pages/Mac/mba15in/mba15in.component';
+import { MBP1416inComponent } from './components/pages/Mac/mbp1416in/mbp1416in.component';
+
+// Products Pages
+
+// Products Pages
 
 const routes: Routes = [
     {path: '', component: HomepageComponent},
@@ -199,6 +205,12 @@ const routes: Routes = [
     { path: 'tco', component: TcoPageComponent },
     { path: 'macdoes', component: MacdoesComponent },
     { path: 'mac-developer', component: MacDeveloperComponent },
+
+    // Products Pages
+    { path: 'MBA15', component: MBA15inComponent },
+    { path: 'MBP1416', component: MBP1416inComponent },
+
+    // Products Pages
     {path: '**', component: ErrorComponent} // This line will remain down from the whole pages component list
 ];
 

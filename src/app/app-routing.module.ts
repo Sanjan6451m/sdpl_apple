@@ -101,6 +101,9 @@ import { MacdoesComponent } from './components/pages/macdoes/macdoes.component';
 import { MacDeveloperComponent } from './components/pages/mac-developer/mac-developer.component';
 import { MBA15inComponent } from './components/pages/Mac/mba15in/mba15in.component';
 import { MBP1416inComponent } from './components/pages/Mac/mbp1416in/mbp1416in.component';
+import { Ipad10gComponent } from './components/pages/iPad/ipad10g/ipad10g.component';
+import { IPadAirNewComponent } from './components/pages/iPad/i-pad-air-new/i-pad-air-new.component';
+import { IPadProNewComponent } from './components/pages/iPad/i-pad-pro-new/i-pad-pro-new.component';
 
 // Products Pages
 
@@ -209,8 +212,12 @@ const routes: Routes = [
     // Products Pages
     { path: 'MBA15', component: MBA15inComponent },
     { path: 'MBP1416', component: MBP1416inComponent },
-
+    
+    { path: 'iPad10', component: Ipad10gComponent },
+    { path: 'iPadAir', component: IPadAirNewComponent },
+    { path: 'iPadPro', component: IPadProNewComponent },
     // Products Pages
+
     {path: '**', component: ErrorComponent} // This line will remain down from the whole pages component list
 ];
 

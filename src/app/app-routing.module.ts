@@ -106,6 +106,7 @@ import { IPadAirNewComponent } from './components/pages/iPad/i-pad-air-new/i-pad
 import { IPadProNewComponent } from './components/pages/iPad/i-pad-pro-new/i-pad-pro-new.component';
 import { IPhone16PromaxComponent } from './components/pages/iPhone/i-phone16-promax/i-phone16-promax.component';
 import { IPhone16eNewComponent } from './components/pages/iPhone/i-phone16e-new/i-phone16e-new.component';
+import { MacstudioComponent } from './components/pages/Mac/macstudio/macstudio.component';
 
 // Products Pages
 
@@ -214,6 +215,7 @@ const routes: Routes = [
     // Products Pages
     { path: 'MBA15', component: MBA15inComponent },
     { path: 'MBP1416', component: MBP1416inComponent },
+    { path: 'macstudio', component: MacstudioComponent },
 
     { path: 'iPad10', component: Ipad10gComponent },
     { path: 'iPadAir', component: IPadAirNewComponent },

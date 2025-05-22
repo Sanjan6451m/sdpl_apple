@@ -1,366 +1,369 @@
-.mac-hero {
+.mac-does-section {
+    margin-top: 140px;
+    background-color: #f5f5f7;
+}
+
+.mac-does-container {
+    background-color: #fff;
+    padding-bottom: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 2rem 1rem 0 1rem;
-    background: #fff;
-    text-align: center;
-    margin-top: 120px;
-
-    .apple-logo {
-        width: 20px;
-        margin-bottom: 1rem;
-    }
-
-    h1 {
-        font-size: 2.2rem;
-        font-weight: 700;
-        margin-bottom: 1.5rem;
-        line-height: 1.1;
-        color: #111;
-        margin-top: 1.5rem;
-
-        .highlight {
-            background: #00ff41;
-            color: #111;
-            padding: 0 0.2em;
-            font-style: italic;
-        }
-    }
-
-    .macbook-img {
-        width: 320px;
-        max-width: 90vw;
-        // margin: 1.5rem 0 1rem 0;
-        border-radius: 12px;
-        background-color: transparent;
-        // box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-    }
-
-    .mac-does {
-        font-size: 1.2rem;
-        color: #222;
-        margin-bottom: 2rem;
-
-        .highlight {
-            background: #00ff41;
-            color: #111;
-            padding: 0 0.2em;
-            font-style: italic;
-        }
-    }
 }
 
-.mac-features {
+.macdoes-container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2rem;
     justify-content: center;
-    align-items: stretch;
-    padding: 2rem 1rem;
-    background: #fafafa;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
 
-    .feature {
-        flex: 1 1 900px;
-        max-width: 1200px;
-        background: #fff;
-        border-radius: 16px;
-        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-        padding: 2rem 1.5rem;
-        display: flex;
-        flex-direction: column !important;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
-     /*    gap: 1rem; */
-        margin-bottom: 0;
-        
-     
-        // Remove any row-based layout for desktop
-        @media (min-width: 900px) {
-            flex-direction: column !important;
-            align-items: center;
-            text-align: center;
-            justify-content: center;
-           /*  gap: 1rem; */
-        }
+.macdoes-container-battery {
+    // text-align: end;
+    width: 100%;
+    // max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+}
 
-        .feature-reverse {
-            flex: 1 1 1200px;
-            // max-width: 1200px;
-            // background: #fff;
-            border-radius: 16px;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-            padding: 2rem 1.5rem;
-            display: flex;
-            flex-direction: column !important;
-            align-items: center;
-            text-align: center;
-            justify-content: center;
-         /*    gap: 1rem; */
-            margin-bottom: 0;
-            
-         
-            // Remove any row-based layout for desktop
-            @media (min-width: 900px) {
-                flex-direction: row !important;
-                align-items: center;
-                text-align: center;
-                justify-content: center;
-               /*  gap: 1rem; */
-            }
-            
-        }
-     
-        h2 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
+.macdoes-multitask {
+    display: flex;
+    gap: 20px;
+    padding: 40px 0;
+    background-color: #fff;
+    max-width: 1200px;
+    border-radius: 40px;
+    margin: 40px auto;
+}
 
-            .highlight {
-                background: #00ff41;
-                color: #111;
-                padding: 0 0.2em;
-                font-style: italic;
-            }
-        }
+.macdoes-battery {
+    display: flex;
+    gap: 20px;
+    padding: 40px 0;
+    background-color: #fff;
+    max-width: 1200px;
+    border-radius: 40px;
+    margin: 40px auto;
+}
 
-        img {
-            width: 220px;
-            max-width: 80vw;
-            margin: 0.5rem 0;
-        }
+.image-column {
+    flex: 1;
+    min-width: 0; // Prevents flex items from overflowing
+}
 
-        p {
-            color: #444;
-            font-size: 1rem;
-        }
+.md1 {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.md4 {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.md2 {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.md3 {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.md7 {
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.md8 {
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px; 
+}
+.md5 {
+    padding-left: 20px;
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.md6 {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.know-more-btn {
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: white;
+        color: #f90707;
+        border: 1px solid #f90707;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 }
 
-// For .feature-text wrapper
-.feature-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-   /*  gap: 0.7rem; */
+@media screen and (max-width: 768px) {
+    .mac-does-section {
+        margin-top: 60px;
+    }
+
+    .macdoes-container {
+        padding: 10px;
+    }
+
+    .md1 {
+        width: 80%;
+    }
+
+    .md2 {
+        width: 100%;
+    }
+
+    .md3 {
+        width: 100%;
+    }
+
+    .md7 {
+        width: 100%;
+    }
+
+    .md8 {
+        width: 100%;
+    }
+    .md4 {
+        width: 80%;
+    }
+    .md5 {
+        width: 100%;
+        padding-right: 20px;
+    }
+    .md6 {
+        width: 80%;
+    }
+
+    .know-more-btn {
+        padding: 6px 16px;
+        font-size: 12px;
+    }
+
+    .macdoes-multitask {
+        display: grid !important;
+        gap: 20px;
+        max-width: 90%;
+        border-radius: 20px;
+    }
+
+    .macdoes-battery {
+        max-width: 90%;
+        border-radius: 20px;
+    }
+
+    .macdoes-container-battery {
+        justify-content: flex-end;
+    }
+
+    .md6-container {
+        text-align: end;
+    }
 }
 
-.resources-list {
+.md6-container {
+    text-align: end;
+}
+
+.resources-section {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+    border-radius: 40px;
+    max-width: 1200px;
+    margin: 40px auto;
+
+    h2 {
+        font-size: 32px;
+        color: #1d1d1f;
+        margin-bottom: 40px;
+    }
+}
+
+.resources-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    justify-items: stretch;
-    align-items: stretch;
-    margin-top: 2rem;
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 40px auto;
 }
 
 .resource-item {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    padding: 1.2rem 1.5rem;
-    min-width: 200px;
-    max-width: 260px;
-    flex: 1 1 220px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    font-size: 1.1rem;
-    font-weight: 500;
-    transition: box-shadow 0.2s;
-}
-
-.resource-item:hover {
-    box-shadow: 0 4px 16px rgba(25, 118, 210, 0.15);
-}
-
-.resource-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    color: #1976d2;
-    flex-shrink: 0;
-}
-
-.mac-resources {
-    background: #fff;
-    padding: 2rem 1rem 1rem 1rem;
     text-align: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
 
-    h2 {
-        font-size: 1.4rem;
-        font-weight: 700;
-        margin-bottom: 1.5rem;
+    &:hover {
+        transform: translateY(-5px);
     }
 
-    .resources-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1.2rem;
-        justify-content: center;
+    img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 15px;
+    }
 
-        .resource-item {
-            background: #f5f5f7;
-            border-radius: 10px;
-            padding: 1rem 1.5rem;
-            font-size: 1rem;
-            color: #222;
-            min-width: 350px;
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+    h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+        color: #1d1d1f;
+    }
+
+    a {
+        color: #0066cc;
+        text-decoration: none;
+        font-size: 14px;
+        
+        &:hover {
+            text-decoration: underline;
         }
     }
 }
 
-.mac-get-started {
-    background: #fafafa;
-    padding: 2rem 1rem 3rem 1rem;
+@media screen and (max-width: 1024px) {
+    .resources-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 30px 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .resources-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 20px 10px;
+    }
+
+    .resource-item {
+        padding: 15px;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+        h3 {
+            font-size: 14px;
+        }
+
+        a {
+            font-size: 12px;
+        }
+    }
+}
+
+.get-started {
     text-align: center;
+    // padding: 60px 20px;
+    max-width: 800px;
+    margin: 0 auto;
 
     h2 {
-        font-size: 1.3rem;
-        font-weight: 700;
-        margin-bottom: 0.7rem;
+        font-size: 32px;
+        color: #1d1d1f;
+        margin-bottom: 20px;
     }
 
     p {
-        color: #444;
-        margin-bottom: 1.2rem;
+        font-size: 18px;
+        color: #86868b;
+        margin-bottom: 30px;
     }
+}
 
-    .get-in-touch {
-        background: #111;
-        color: #fff;
-        border: none;
-        border-radius: 8px;
-        padding: 0.8rem 2rem;
-        font-size: 1rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background 0.2s;
+.get-in-touch-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 
-        &:hover {
-            background: #fff;
-            color: #111;
-            border: 1px solid #111;
+    &:hover {
+        // background-color: #0055b3;
+        transform: translateY(-2px);
+        background-color: #fff;
+        border: 1px solid #f50707;
+        color: #f50707;
+        border-radius: 25px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .resources-section {
+        padding: 40px 0;
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 30px;
         }
     }
-}
 
-// Remove the old .mac-features responsive overrides for flex-direction
-@media (max-width: 699px) {
+    .get-started {
+        padding: 40px 20px;
 
-    .mac-hero {
-        margin-top: 80px !important;
-    }
+        h2 {
+            font-size: 24px;
+        }
 
-    .mac-features {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 1.2rem;
+        p {
+            font-size: 16px;
+        }
 
-        .feature {
-            flex: 1 1 90vw;
-            max-width: 95vw;
+        .get-in-touch-btn {
+            padding: 10px 20px;
+            font-size: 14px;
         }
     }
-}
-
-.img-right {
-  display: block;
-  margin-left: auto !important;
-  margin-right: 0;
-}
-
-.feature-reverse {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  margin: 0 0;
-  padding: 3rem;
-  border-radius: 16px;
-  position: relative;
-  background: #fff;
-  width: 100%;
-  max-width: 1200px;
-  box-sizing: border-box;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 16px;
-    z-index: 1;
-  }
-
-  .feature-content,
-  .feature-image {
-    flex: 1;
-    position: relative;
-    z-index: 2;
-    text-align: left;
-  }
-
-  .feature-image {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
-    img {
-      max-width: 60%;
-      height: auto;
-    }
-  }
-}
-
-@media (max-width: 900px) {
-  .resources-list {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-  .resource-item {
-    min-width: 160px;
-    max-width: 220px;
-    font-size: 1rem;
-    padding: 1rem 1rem;
-  }
-  .feature-reverse {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 1.5rem;
-    gap: 1.5rem;
-
-    .feature-content,
-    .feature-image {
-      text-align: center;
-    }
-
-    .feature-image img {
-      max-width: 80%;
-      margin: 0 auto;
-    }
-  }
-}
-
-@media (max-width: 600px) {
-  .resources-list {
-    grid-template-columns: 1fr;
-    gap: 0.7rem;
-  }
-  .resource-item {
-    max-width: 100%;
-    min-width: 0;
-    width: 100%;
-    justify-content: flex-start;
-  }
 }

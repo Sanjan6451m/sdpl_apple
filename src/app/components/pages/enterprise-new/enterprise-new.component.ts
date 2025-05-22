@@ -3,6 +3,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { Router, RouterModule, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { filter } from 'rxjs';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-enterprise-new',
@@ -26,8 +27,13 @@ export class EnterpriseNewComponent {
   };
 
   currentTab: string = 'tab3';
+  mbAirUrl: SafeResourceUrl;
 
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  constructor(private router: Router, private route: ActivatedRoute, private sanitizer: DomSanitizer) {
+    this.mbAirUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
+      'assets/embedded/MBA/mba_air.html'
+    );
+  }
 
   switchTab(event: Event, tab: string): void {
     event.preventDefault();

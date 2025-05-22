@@ -225,6 +225,10 @@ const routes: Routes = [
     { path: 'iPhone16Promax', component: IPhone16PromaxComponent },
     // Products Pages
 
+    // Embedded Pages
+    { path: 'embedded/MBA/mba_air', component: MBA15inComponent },
+    // Embedded Pages
+
     {path: '**', component: ErrorComponent} // This line will remain down from the whole pages component list
 ];
 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-macstudio',
@@ -9,4 +10,11 @@ import { Component } from '@angular/core';
 })
 export class MacstudioComponent {
 
+  mbstudioUrl: SafeResourceUrl;
+
+  constructor(private sanitizer: DomSanitizer) {
+    this.mbstudioUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
+      'assets/embedded/MBS/mbs.html'
+    );
+  }
 }

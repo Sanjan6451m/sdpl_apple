@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-i-pad-pro-new',
@@ -9,4 +10,11 @@ import { Component } from '@angular/core';
 })
 export class IPadProNewComponent {
 
+  iPadProUrl: SafeResourceUrl;
+
+  constructor(private sanitizer: DomSanitizer) {
+    this.iPadProUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
+      'assets/embedded/iPadPro/index.html'
+    );
+  }
 }

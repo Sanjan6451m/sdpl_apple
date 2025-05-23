@@ -67,10 +67,10 @@ import { AVSolutionsComponent } from './components/pages/avsolutions/avsolutions
 import { MobilityComponent } from './components/pages/mobility/mobility.component';
 import { LeasingComponent } from './components/pages/leasing/leasing.component';
 import { MacbookProComponent } from './components/pages/macbook-pro/macbook-pro.component';
-import { Iphone16Component } from './components/pages/iphone16/iphone16.component';
+import { Iphone16Component } from './components/pages/iPhone/iphone16/iphone16.component';
 import { IpadAirComponent } from './components/pages/ipad-air/ipad-air.component';
 import { AirpodsMaxComponent } from './components/pages/airpods-max/airpods-max.component';
-import { Iphone16eComponent } from './components/pages/iphone16e/iphone16e.component';
+import { Iphone16eComponent } from './components/pages/iPhone/iphone16e/iphone16e.component';
 // import { Iphone16proComponent } from './components/pages/iphone16pro/iphone16pro.component';
 import { ImpetusComponent } from './components/pages/impetus/impetus.component';
 import { EmpPurcProgComponent } from './components/pages/emp-purc-prog/emp-purc-prog.component';
@@ -95,7 +95,7 @@ import { SuperiorEnterpriseComponent } from './components/pages/superior-enterpr
 // import { IPhone16proComponent } from './components/pages/iPhone/i-phone16pro/i-phone16pro.component';
 // import { Iphone16pro1Component } from './components/pages/iphone16pro/iphone16pro.component';
 import { ApplecareComponent } from './components/pages/applecare/applecare.component';
-import { Iphone16pro1Component } from './components/pages/iphone16pro/iphone16pro.component';
+import { Iphone16pro1Component } from './components/pages/iPhone/iphone16pro/iphone16pro.component';
 import { TcoPageComponent } from './components/pages/tco-page/tco-page.component';
 import { MacdoesComponent } from './components/pages/macdoes/macdoes.component';
 import { MacDeveloperComponent } from './components/pages/mac-developer/mac-developer.component';
@@ -107,6 +107,8 @@ import { IPadProNewComponent } from './components/pages/iPad/i-pad-pro-new/i-pad
 import { IPhone16PromaxComponent } from './components/pages/iPhone/i-phone16-promax/i-phone16-promax.component';
 import { IPhone16eNewComponent } from './components/pages/iPhone/i-phone16e-new/i-phone16e-new.component';
 import { MacstudioComponent } from './components/pages/Mac/macstudio/macstudio.component';
+import { Iphone15Component } from './components/pages/iPhone/iphone15/iphone15.component';
+import { Iphone15proComponent } from './components/pages/iPhone/iphone15pro/iphone15pro.component';
 
 // Products Pages
 
@@ -221,6 +223,9 @@ const routes: Routes = [
     { path: 'iPadAir', component: IPadAirNewComponent },
     { path: 'iPadPro', component: IPadProNewComponent },
 
+    { path: 'iPhone15', component: Iphone15Component },
+    { path: 'iPhone15Pro', component: Iphone15proComponent },
+    { path: 'iPhone16', component: Iphone16Component },
     { path: 'iPhone16e', component: IPhone16eNewComponent },
     { path: 'iPhone16Promax', component: IPhone16PromaxComponent },
     // Products Pages

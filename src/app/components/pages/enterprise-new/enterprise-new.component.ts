@@ -26,24 +26,24 @@ export class EnterpriseNewComponent {
     navSpeed: 700,
     navText: ['', ''],
     responsive: {
-        0: {
-            items: 1
-        },
-        400: {
-            items: 1
-        },
-        740: {
-            items: 1
-        },
-        940: {
-            items: 1
-        }
+      0: {
+        items: 1
+      },
+      400: {
+        items: 1
+      },
+      740: {
+        items: 1
+      },
+      940: {
+        items: 1
+      }
     },
     nav: true,
     autoplay: true,
     autoplayTimeout: 5000,
     autoplayHoverPause: true
-}
+  }
 
   gridCarouselOptions = {
     loop: true,

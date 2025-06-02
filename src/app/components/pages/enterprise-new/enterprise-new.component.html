@@ -182,7 +182,7 @@
                 productive, and ready to meet evolving challenges.</p>
         </div>
     </div>
-    <div class="services-carousel-section bg-color">         
+    <div class="services-carousel-section bg-color">
         <owl-carousel-o #gridCarousel [options]="gridCarouselOptions" class="grid-carousel">
             <ng-template carouselSlide *ngFor="let item of gridItems">
                 <div class="grid-item">
@@ -482,7 +482,8 @@
                     style="background-image: url('assets/images/emppurchaseprogram_banner.jpeg');">
                     <div class="card-content"
                         style="display: flex; flex-direction: row; align-items: center; justify-content: center; text-align: left; gap: 2rem;">
-                        <h3 style="margin-bottom: 0; min-width: 160px; font-size: 2.5rem; text-align: center;">Mac Developer's Powerhouse</h3>
+                        <h3 style="margin-bottom: 0; min-width: 160px; font-size: 2.5rem; text-align: center;">Mac
+                            Developer's Powerhouse</h3>
                         <div class="mac-dev-section">
                             <div class="container">
                                 <div class="mac-dev-grid">
@@ -509,10 +510,10 @@
                                         </ul>
                                     </div>
                                 </div>
-                              <!--    <div class="mac-dev-actions">
+                                <!--    <div class="mac-dev-actions">
                                 <a href="#" class="mac-dev-learn-btn">Learn more</a>
                               </div> -->
-                              <!-- <div class="cta-section-mac">
+                                <!-- <div class="cta-section-mac">
                                 <a href="/mac-developer" class="cta-button animated-tco-btn">Learn More</a>
                             </div> -->
                             </div>
@@ -605,469 +606,6 @@
                 cutting-edge
                 technology and innovative features.</p>
         </div>
-        <!-- <div class="products-grid">
-            <div class="product-card mac-bg-card">
-                <h3>Mac</h3>
-                <p>Mac is supercharged by Apple silicon, so you can build complex spreadsheets, create stunning
-                    presentations, and multitask across all your projects — all day. Mac does that.</p>
-                <div class="product-links">
-                    <ul style="list-style-type: disc; padding: 0; margin: 0;">
-                        <li><a href="/macbook-air" style="color: rgb(226 61 54);">Macbook Air</a></li>
-                        <li><a href="/macbook-pro" style="color: rgb(226 61 54);">Macbook Pro 14" & 16"</a></li>
-                        <li><a href="/imac" style="color: rgb(226 61 54);">iMac</a></li>
-                        <li><a href="/mac-mini" style="color: rgb(226 61 54);">Mac Mini</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="product-card ipad-bg-card">
-                <h3>iPad</h3>
-                <p>Get power that outpaces most PC laptops in a design that goes everywhere. Scan merchandise, visualise
-                    models in 3D, and breeze through work when you multitask with Split View.</p>
-                <div class="product-links">
-                    <ul style="list-style-type: disc; padding: 0; margin: 0;">
-                        <li><a href="/ipad-air" style="color: rgb(226 61 54);">iPad Air</a></li>
-                        <li><a href="/ipad" style="color: rgb(226 61 54);">iPad</a></li>
-                        <li><a href="/ipad-pro" style="color: rgb(226 61 54);">iPad Pro</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="product-card iphone-bg-card">
-                <h3>iPhone</h3>
-                <p>Do incredible things on the go. Visualise 3D projects using augmented reality. Collaborate with your team
-                    on Keynote presentations. And stay connected with FaceTime, Messages, and Mail.</p>
-                <div class="product-links">
-                    <ul style="list-style-type: disc; padding: 0; margin: 0;">
-                        <li><a href="/iphone-16pro" style="color: rgb(226 61 54);">iPhone 16 Pro</a></li>
-                        <li><a href="/iphone-16" style="color: rgb(226 61 54);">iPhone 16</a></li>
-                        <li><a href="/iphone-16e" style="color: rgb(226 61 54);">iPhone 16e</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="product-card apple-watch-bg-card">
-                <h3>Apple Watch</h3>
-                <p>Stay connected at a glance. Handle notifications as they pop up with a single tap, track messages, and
-                    get the most out of apps for work and wellness.</p>
-                <div class="product-links">
-                    <ul style="list-style-type: disc; padding: 0; margin: 0;">
-                        <li><a href="/apple-watch" style="color: rgb(226 61 54);">Apple Watch</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-   -->
-        <!--   <div class="container">
-        <div class="section-title">
-            <span>Apple Products</span>
-            <h2>Discover Our Latest Apple Devices</h2>
-            <p>Explore our range of Apple products designed to enhance your digital experience with cutting-edge
-                technology and innovative features.</p>
-        </div>
-        <div class="case">
-            <ul class="nav-tabset">
-                <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab1'}">
-                    <span (click)="switchTab($event, 'tab1')">
-                        All
-                    </span>
-                </li>
-                <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab3'}">
-                    <span (click)="switchTab($event, 'tab3')">
-                        Mac
-                    </span>
-                </li>
-                <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab5'}">
-                    <span (click)="switchTab($event, 'tab5')">
-                        iPad
-                    </span>
-                </li>
-                <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab2'}">
-                    <span (click)="switchTab($event, 'tab2')">
-                        iPhone
-                    </span>
-                </li>
-                <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab4'}">
-                    <span (click)="switchTab($event, 'tab4')">
-                        Apple Watch
-                    </span>
-                </li>
-
-            </ul>
-            <div class="tabs-container">
-                <div class="pane" id="tab1" *ngIf="currentTab === 'tab1'">
-                    <div class="row case-list" style="margin-left: 0 !important;">
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single-case">
-                                <div class="case-img">
-                                    <a routerLink="/macbook-pro"><img src="assets/images/products/macbook-pro.png"
-                                            alt="MacBook Pro" /></a>
-                                </div>
-                                <div class="content">
-                                    <a routerLink="/macbook-pro">
-                                        <h3>MacBook Pro 14" & 16"</h3>
-                                    </a>
-                                    <p>Supercharged by M4 chip. Professional performance for creative work.</p>
-                                    <a routerLink="/macbook-pro" class="line-bnt">View Product Details</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single-case">
-                                <div class="case-img">
-                                    <a routerLink="/macbook-air"><img src="assets/images/products/macbook-air.jpg"
-                                            alt="MacBook Air" /></a>
-                                </div>
-                                <div class="content">
-                                    <a routerLink="/macbook-air">
-                                        <h3>MacBook Air</h3>
-                                    </a>
-                                    <p>Light. Fast. Powerful. The perfect balance of performance and portability.</p>
-                                    <a routerLink="/macbook-air" class="line-bnt">View Product Details</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single-case">
-                                <div class="case-img">
-                                    <a routerLink="/ipad-pro"><img src="assets/images/products/ipad-pro.png"
-                                            alt="iPad Pro" /></a>
-                                </div>
-                                <div class="content">
-                                    <a routerLink="/ipad-pro">
-                                        <h3>iPad Pro</h3>
-                                    </a>
-                                    <p>Supercharged by M2 chip. The ultimate iPad experience.</p>
-                                    <a routerLink="/ipad-pro" class="line-bnt">View Product Details</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single-case">
-                                <div class="case-img">
-                                    <a routerLink="/iphone-16pro"><img src="assets/images/products/iphone16-pro.jpg"
-                                            alt="iPhone 16 Pro" /></a>
-                                </div>
-                                <div class="content">
-                                    <a routerLink="/iphone-16pro">
-                                        <h3>iPhone 16 Pro</h3>
-                                    </a>
-                                    <p>Pro. Beyond. The most advanced iPhone ever created.</p>
-                                    <a routerLink="/iphone-16pro" class="line-bnt">View Product Details</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single-case">
-                                <div class="case-img">
-                                    <a routerLink="/iphone-16"><img src="assets/images/products/iphone16.jpg"
-                                            alt="iPhone 16" /></a>
-                                </div>
-                                <div class="content">
-                                    <a routerLink="/iphone-16">
-                                        <h3>iPhone 16</h3>
-                                    </a>
-                                    <p>Experience the future with iPhone 16. Revolutionary design and powerful
-                                        performance.</p>
-                                    <a routerLink="/iphone-16" class="line-bnt">View Product Details</a>
-                                </div>
-                            </div>
-                        </div>
-
-                       <div class="col-lg-4 col-sm-6">
-                            <div class="single-case">
-                                <div class="case-img">
-                                    <a routerLink="/iphone-16e"><img src="assets/images/products/iphone16e.jpg"
-                                            alt="iPhone 16e" /></a>
-                                </div>
-                                <div class="content">
-                                    <a routerLink="/iphone-16e">
-                                        <h3>iPhone 16e</h3>
-                                    </a>
-                                    <p>Affordable innovation. Premium features at an accessible price.</p>
-                                    <a routerLink="/iphone-16e" class="line-bnt">View Product Details</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single-case">
-                                <div class="case-img">
-                                    <a routerLink="/ipad-air"><img src="assets/images/products/ipad-air.jpg"
-                                            alt="iPad Air" /></a>
-                                </div>
-                                <div class="content">
-                                    <a routerLink="/ipad-air">
-                                        <h3>iPad Air</h3>
-                                    </a>
-                                    <p>Powerful. Colorful. Wonderful. The perfect balance of performance and
-                                        portability.</p>
-                                    <a routerLink="/ipad-air" class="line-bnt">View Product Details</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single-case">
-                                <div class="case-img">
-                                    <a routerLink="/ipad-a16"><img src="assets/images/products/ipad-a16.png"
-                                            alt="iPad" /></a>
-                                </div>
-                                <div class="content">
-                                    <a routerLink="/ipad-a16">
-                                        <h3>iPad</h3>
-                                    </a>
-                                    <p>Powered by A16 Bionic. The all-purpose iPad for everyone.</p>
-                                    <a routerLink="/ipad-a16" class="line-bnt">View Product Details</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single-case">
-                                <div class="case-img">
-                                    <a routerLink="/imac"><img src="assets/images/products/imac2.png" alt="iMac" /></a>
-                                </div>
-                                <div class="content">
-                                    <a routerLink="/imac">
-                                        <h3>iMac</h3>
-                                    </a>
-                                    <p>Immersive 24-inch 4.5K Retina display. Powered by M3 chip.</p>
-                                    <a routerLink="/imac" class="line-bnt">View Product Details</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single-case">
-                                <div class="case-img">
-                                    <a routerLink="/mac-mini"><img src="assets/images/products/mac-mini.jpg"
-                                            alt="Mac Mini" /></a>
-                                </div>
-                                <div class="content">
-                                    <a routerLink="/mac-mini">
-                                        <h3>Mac Mini</h3>
-                                    </a>
-                                    <p>More powerful than ever with M2 Pro. Small but mighty.</p>
-                                    <a routerLink="/mac-mini" class="line-bnt">View Product Details</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single-case">
-                                <div class="case-img">
-                                    <a routerLink="/apple-watch"><img src="assets/images/products/watch.png"
-                                            alt="Apple Watch" /></a>
-                                </div>
-                                <div class="content">
-                                    <a routerLink="/apple-watch">
-                                        <h3>Apple Watch</h3>
-                                    </a>
-                                    <p>A healthy leap ahead. Stay connected and monitor your health.</p>
-                                    <a routerLink="/apple-watch" class="line-bnt">View Product Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pane" id="tab2" *ngIf="currentTab === 'tab2'">
-                    <div class="row case-list"  style="margin-left: 0 !important;">
-                          <div class="col-lg-4 col-sm-6">
-                            <div class="single-case">
-                                <div class="case-img">
-                                    <a routerLink="/iphone-16pro"><img src="assets/images/products/iphone16-pro.jpg"
-                                            alt="iPhone 16 Pro" /></a>
-                                </div>
-                                <div class="content">
-                                    <a routerLink="/iphone-16pro">
-                                        <h3>iPhone 16 Pro</h3>
-                                    </a>
-                                    <p>Pro. Beyond. The most advanced iPhone ever created.</p>
-                                    <a routerLink="/iphone-16pro" class="line-bnt">View Product Details</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single-case">
-                                <div class="case-img">
-                                    <a routerLink="/iphone-16"><img src="assets/images/products/iphone16.jpg"
-                                            alt="iPhone 16" /></a>
-                                </div>
-                                <div class="content">
-                                    <a routerLink="/iphone-16">
-                                        <h3>iPhone 16</h3>
-                                    </a>
-                                    <p>Experience the future with iPhone 16. Revolutionary design and powerful
-                                        performance.</p>
-                                    <a routerLink="/iphone-16" class="line-bnt">View Product Details</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single-case">
-                                <div class="case-img">
-                                    <a routerLink="/iphone-16e"><img src="assets/images/products/iphone16e.jpg"
-                                            alt="iPhone 16e" /></a>
-                                </div>
-                                <div class="content">
-                                    <a routerLink="/iphone-16e">
-                                        <h3>iPhone 16e</h3>
-                                    </a>
-                                    <p>Affordable innovation. Premium features at an accessible price.</p>
-                                    <a routerLink="/iphone-16e" class="line-bnt">View Product Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pane" id="tab3" *ngIf="currentTab === 'tab3'">
-                    <div class="row case-list"  style="margin-left: 0 !important;">
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single-case">
-                                <div class="case-img">
-                                    <a routerLink="/macbook-air"><img src="assets/images/products/macbook-air.jpg"
-                                            alt="MacBook Air" /></a>
-                                </div>
-                                <div class="content">
-                                    <a routerLink="/macbook-air">
-                                        <h3>MacBook Air</h3>
-                                    </a>
-                                    <p>Light. Fast. Powerful. The perfect balance of performance and portability.</p>
-                                    <a routerLink="/macbook-air" class="line-bnt">View Product Details</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single-case">
-                                <div class="case-img">
-                                    <a routerLink="/macbook-pro"><img src="assets/images/products/macbook-pro.png"
-                                            alt="MacBook Pro" /></a>
-                                </div>
-                                <div class="content">
-                                    <a routerLink="/macbook-pro">
-                                        <h3>MacBook Pro 14" & 16"</h3>
-                                    </a>
-                                    <p>Supercharged by M4 chip. Professional performance for creative work.</p>
-                                    <a routerLink="/macbook-pro" class="line-bnt">View Product Details</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single-case">
-                                <div class="case-img">
-                                    <a routerLink="/imac"><img src="assets/images/products/imac2.png" alt="iMac" /></a>
-                                </div>
-                                <div class="content">
-                                    <a routerLink="/imac">
-                                        <h3>iMac</h3>
-                                    </a>
-                                    <p>Immersive 24-inch 4.5K Retina display. Powered by M3 chip.</p>
-                                    <a routerLink="/imac" class="line-bnt">View Product Details</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single-case">
-                                <div class="case-img">
-                                    <a routerLink="/mac-mini"><img src="assets/images/products/mac-mini.jpg"
-                                            alt="Mac Mini" /></a>
-                                </div>
-                                <div class="content">
-                                    <a routerLink="/mac-mini">
-                                        <h3>Mac Mini</h3>
-                                    </a>
-                                    <p>More powerful than ever with M2 Pro. Small but mighty.</p>
-                                    <a routerLink="/mac-mini" class="line-bnt">View Product Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pane" id="tab4" *ngIf="currentTab === 'tab4'">
-                    <div class="row case-list" style="margin-left: 0 !important;">
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single-case">
-                                <div class="case-img">
-                                    <a routerLink="/apple-watch"><img src="assets/images/products/watch.png"
-                                            alt="Apple Watch" /></a>
-                                </div>
-                                <div class="content">
-                                    <a routerLink="/apple-watch">
-                                        <h3>Apple Watch</h3>
-                                    </a>
-                                    <p>A healthy leap ahead. Stay connected and monitor your health.</p>
-                                    <a routerLink="/apple-watch" class="line-bnt">View Product Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pane" id="tab5" *ngIf="currentTab === 'tab5'">
-                    <div class="row case-list" style="margin-left: 0 !important;">
-
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single-case">
-                                <div class="case-img">
-                                    <a routerLink="/ipad-pro"><img src="assets/images/products/ipad-pro.png"
-                                            alt="iPad Pro" /></a>
-                                </div>
-                                <div class="content">
-                                    <a routerLink="/ipad-pro">
-                                        <h3>iPad Pro</h3>
-                                    </a>
-                                    <p>Supercharged by M2 chip. The ultimate iPad experience.</p>
-                                    <a routerLink="/ipad-pro" class="line-bnt">View Product Details</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single-case">
-                                <div class="case-img">
-                                    <a routerLink="/ipad-air"><img src="assets/images/products/ipad-air.jpg"
-                                            alt="iPad Air" /></a>
-                                </div>
-                                <div class="content">
-                                    <a routerLink="/ipad-air">
-                                        <h3>iPad Air</h3>
-                                    </a>
-                                    <p>Powerful. Colorful. Wonderful. The perfect balance of performance and
-                                        portability.</p>
-                                    <a routerLink="/ipad-air" class="line-bnt">View Product Details</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="single-case">
-                                <div class="case-img">
-                                    <a routerLink="/ipad-a16"><img src="assets/images/products/ipad-a16.png"
-                                            alt="iPad" /></a>
-                                </div>
-                                <div class="content">
-                                    <a routerLink="/ipad-a16">
-                                        <h3>iPad</h3>
-                                    </a>
-                                    <p>Powered by A16 Bionic. The all-purpose iPad for everyone.</p>
-                                    <a routerLink="/ipad-a16" class="line-bnt">View Product Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
 
         <section>
             <div class="container" id="apple-manager">
@@ -1085,10 +623,14 @@
                                     <h4 class="card-title" style="margin-bottom: 0; color: #000;">Mac</h4>
                                 </div>
                                 <div class="product-links">
-                                    <ul style="list-style-type: none; margin: 0 20px; padding: 0; display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
-                                        <li style="border-right: 1px solid rgb(226 61 54); padding-right: 20px;"><a href="/macstudio" style="color: rgb(226 61 54);">Mac Studio</a></li>
-                                        <li style="border-right: 1px solid rgb(226 61 54); padding-right: 20px;"><a href="/MBA15" style="color: rgb(226 61 54);">Macbook Air</a></li>
-                                        <li><a href="/MBP1416" style="color: rgb(226 61 54);">Macbook Pro 14" & 16"</a></li>
+                                    <ul
+                                        style="list-style-type: none; margin: 0 20px; padding: 0; display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
+                                        <li style="border-right: 1px solid rgb(226 61 54); padding-right: 20px;"><a
+                                                href="/macstudio" style="color: rgb(226 61 54);">Mac Studio</a></li>
+                                        <li style="border-right: 1px solid rgb(226 61 54); padding-right: 20px;"><a
+                                                href="/MBA15" style="color: rgb(226 61 54);">Macbook Air</a></li>
+                                        <li><a href="/MBP1416" style="color: rgb(226 61 54);">Macbook Pro 14" & 16"</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -1107,14 +649,21 @@
                                     <h4 class="card-title" style="margin-bottom: 0;color: #000;">iPhone</h4>
                                 </div>
                                 <div class="product-links">
-                                    <ul style="list-style-type: none; margin: 0 20px; padding: 0; display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
-                                        <li style="border-right: 1px solid rgb(226 61 54); padding-right: 20px;"><a href="/iPhone15" style="color: rgb(226 61 54);">iPhone 15</a></li>
-                                        <li style="border-right: 1px solid rgb(226 61 54); padding-right: 20px;"><a href="/iPhone15Pro" style="color: rgb(226 61 54);">iPhone 15 Pro</a></li>
-                                        <li style="border-right: 1px solid rgb(226 61 54); padding-right: 20px;"><a href="/iPhone16" style="color: rgb(226 61 54);">iPhone 16</a></li>
-                                        <li style="border-right: 1px solid rgb(226 61 54); padding-right: 20px;"><a href="/iphone-16pro" style="color: rgb(226 61 54);">iPhone 16 Pro</a></li>
+                                    <ul
+                                        style="list-style-type: none; margin: 0 20px; padding: 0; display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
+                                        <li style="border-right: 1px solid rgb(226 61 54); padding-right: 20px;"><a
+                                                href="/iPhone15" style="color: rgb(226 61 54);">iPhone 15</a></li>
+                                        <li style="border-right: 1px solid rgb(226 61 54); padding-right: 20px;"><a
+                                                href="/iPhone15Pro" style="color: rgb(226 61 54);">iPhone 15 Pro</a>
+                                        </li>
+                                        <li style="border-right: 1px solid rgb(226 61 54); padding-right: 20px;"><a
+                                                href="/iPhone16" style="color: rgb(226 61 54);">iPhone 16</a></li>
+                                        <li style="border-right: 1px solid rgb(226 61 54); padding-right: 20px;"><a
+                                                href="/iphone-16pro" style="color: rgb(226 61 54);">iPhone 16 Pro</a>
+                                        </li>
                                         <li><a href="/iphone-16e" style="color: rgb(226 61 54);">iPhone 16e</a></li>
                                     </ul>
-                                  <!--   <div style="text-align: center; margin-top: 20px;">
+                                    <!--   <div style="text-align: center; margin-top: 20px;">
                                         <a href="/contact" class="button button-custom button-base" style="--focus-color: rgba(0, 113, 227, 100%); padding: 10px 20px; text-decoration: none; color: #fff; background-color: rgb(226 61 54); border-radius: 5px;">Contact Us</a>
                                     </div> -->
                                 </div>
@@ -1144,12 +693,16 @@
                                     <h4 class="card-title" style="margin-bottom: 0;color: #000;">iPad</h4>
                                 </div>
                                 <div class="product-links">
-                                    <ul style="list-style-type: none; margin: 0 20px; padding: 0; display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
-                                        <li style="border-right: 1px solid rgb(226 61 54); padding-right: 20px;"><a href="/iPadPro" style="color: rgb(226 61 54);">iPad Pro</a></li>
-                                        <li style="border-right: 1px solid rgb(226 61 54); padding-right: 20px;"><a href="/iPadAir" style="color: rgb(226 61 54);">iPad Air</a></li>
-                                        <li><a href="/iPad10" style="color: rgb(226 61 54);">iPad 10th Generation</a></li>
+                                    <ul
+                                        style="list-style-type: none; margin: 0 20px; padding: 0; display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
+                                        <li style="border-right: 1px solid rgb(226 61 54); padding-right: 20px;"><a
+                                                href="/iPadPro" style="color: rgb(226 61 54);">iPad Pro</a></li>
+                                        <li style="border-right: 1px solid rgb(226 61 54); padding-right: 20px;"><a
+                                                href="/iPadAir" style="color: rgb(226 61 54);">iPad Air</a></li>
+                                        <li><a href="/iPad10" style="color: rgb(226 61 54);">iPad 10th Generation</a>
+                                        </li>
                                     </ul>
-                                   <!--  <div style="text-align: center; margin-top: 20px;">
+                                    <!--  <div style="text-align: center; margin-top: 20px;">
                                         <a href="/contact" class="button button-custom button-base" style="--focus-color: rgba(0, 113, 227, 100%); padding: 10px 20px; text-decoration: none; color: #fff; background-color: rgb(226 61 54); border-radius: 5px;">Contact Us</a>
                                     </div> -->
                                 </div>
@@ -1173,7 +726,8 @@
                                     <h4 class="card-title" style="margin-bottom: 0;color: #000;">Apple Watch</h4>
                                 </div>
                                 <div class="product-links">
-                                    <ul style="list-style-type: none; margin: 0 20px; padding: 0; display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
+                                    <ul
+                                        style="list-style-type: none; margin: 0 20px; padding: 0; display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
                                         <!-- <li><a href="/apple-watch" style="color: rgb(226 61 54);">Apple Watch</a></li> -->
                                     </ul>
                                 </div>
@@ -1186,6 +740,7 @@
                 </div>
             </div>
         </section>
+
         <section>
             <div class="container" id="apple-manager">
                 <div class="row" style="margin-left: 0 !important;">
@@ -1239,23 +794,140 @@
 <!-- Products Section (Apple style, dark, responsive) -->
 
 <!-- End Products Section -->
-<section class="">
-    <div class="container">
-    </div>
-</section>
 
-<section class="enterprise-solutions mt-100 cta-section">
-    <div class="container2">
-        <div class="row" style="margin-left: 0px !important">
-            <div class="col-lg-12 col-md-12 mb-4" id="getting-started-with-mac">
-                <div class="card bg-image"
-                style="background-image: url('assets/images/tco_img.png');position: relative;">
-                    <div class="card-content appleenterprise-card">
-                        <div class="content-section">
-                            <h3 style="margin-bottom: 1rem; font-size: 2.5rem; font-weight: bold;">Total Cost of
-                                Ownership (TCO)</h3>
-                            <p style="font-size: 18px; line-height: 1.6;">Apple Macintosh may have a higher initial investment compared to Windows PCs, but they offer a significantly lower Total Cost of Ownership (TCO) over time thanks to fewer support issues, longer hardware longevity, and higher resale value. Enterprises benefit from reduced IT overhead, improved employee satisfaction, and enhanced security, with macOS updates and Apple's suite of productivity and creativity apps—like Preview, Pages, Numbers, Keynote and  iMovie—provided at no additional cost. Adopting Macs helps organisations streamline operations, empower teams, and gain long-term value from their technology investments.</p>
-                            <a href="/tco" class="cta-button animated-tco-btn" style="float: inline-end;">Know Your TCO</a>
+
+<section class="hero-overlay-section">
+    <div class="overlay-content">
+        <div class="container">
+            <div class="section-title">
+                <!-- <span style="font-size: 1.2rem; font-weight: 500;">What We Offer</span> -->
+                <h2 class="section-title" style="color: #fff;">Apple Products</h2>
+                <p class="section-description" style="margin-bottom: 0;">Discover Our Latest Apple Devices</p>
+                <p class="section-description">Explore our range of Apple products designed to enhance your digital experience with
+                    cutting-edge technology and innovative features.</p>
+            </div>
+          <!--   <div class="row">
+                <div class="col-12 text-center">
+                    <span>Apple Products</span>
+                    <h2 style="color: #fff;">Discover Our Latest Apple Devices</h2>
+                    <p class="section-description">Explore our range of Apple products designed to enhance your digital experience with
+                        cutting-edge technology and innovative features.</p>
+                </div>
+            </div> -->
+            <div class="row cards-container">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-card" style="background: url('/assets/images/mac1.jpg') center center/cover no-repeat; position: relative;">
+                        <!-- background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 100%); -->
+                        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>
+                        <div class="card-icon" style="position: relative; z-index: 2;">
+                            <h3 style="color: #fff;">Mac</h3>
+                        </div>
+                        <div class="product-links" style="position: relative; z-index: 2;">
+                            <ul
+                                style="list-style-type: none; margin: 0 20px; padding: 0; gap: 10px; align-items: center;">
+                                <li><a
+                                        href="/macstudio" style="color: #fff; text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">Mac Studio</a></li>
+                                <li><a
+                                        href="/MBA15" style="color: #fff; text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">Macbook Air</a></li>
+                                <li><a 
+                                        href="/MBP1416" style="color: #fff; text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem 0;">Macbook Pro 14" & 16"</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-card" style="background: url('/assets/images/iphone1.jpg') center center/cover no-repeat; position: relative;">
+                        <!-- background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 100%); -->
+                        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background:linear-gradient(135deg, rgb(39 38 38 / 90%) 0%, rgba(0, 0, 0, 0.7) 100%); border-radius: 13px;"></div>
+                        <div class="card-icon" style="position: relative; z-index: 2;">
+                            <h3 style="color: #fff;">iPhone</h3>
+                        </div>
+                        <div class="product-links" style="position: relative; z-index: 2;">
+                            <ul style="list-style-type: none; margin: 0 20px; padding: 0; gap: 10px; align-items: center;">
+                                <li><a href="/iPhone15" style="color: #fff; text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">iPhone 15</a></li>
+                                <li><a href="/iPhone15Pro" style="color: #fff; text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">iPhone 15 Pro</a></li>
+                                <li><a href="/iPhone16" style="color: #fff; text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">iPhone 16</a></li>
+                                <li><a href="/iphone-16pro" style="color: #fff; text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">iPhone 16 Pro</a></li>
+                                <li><a href="/iphone-16e" style="color: #fff; text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem 0;">iPhone 16e</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-card" style="background: url('/assets/images/ipad1.jpg') center center/cover no-repeat; position: relative;">
+                        <!-- background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 100%); -->
+                        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>
+                        <div class="card-icon" style="position: relative; z-index: 2;">
+                            <h3 style="color: #fff;">iPad</h3>
+                        </div>
+                        <div class="product-links" style="position: relative; z-index: 2;">
+                            <ul style="list-style-type: none; margin: 0 20px; padding: 0; gap: 10px; align-items: center;">
+                                <li><a style="color: #fff; text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);"
+                                        href="/iPadPro">iPad Pro</a></li>
+                                <li><a style="color: #fff; text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);"
+                                        href="/iPadAir">iPad Air</a></li>
+                                <li><a style="color: #fff; text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem 0;"
+                                        href="/iPad10">iPad 10th Generation</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-card"
+                        style="background: url('/assets/images/watch1.jpg') center center/cover no-repeat; position: relative;">
+                        <!-- background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 100%); -->
+                        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>
+                        <div class="card-icon" style="position: relative; width: 100%;">
+                            <h3 style="color: #fff;">Apple Watch</h3>
+                        </div>
+                        <div class="product-links" style="position: relative; z-index: 2;">
+                            <ul style="list-style-type: none; margin: 0 20px; padding: 0; gap: 10px; align-items: center;">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card text-white">
+                        <div class="card-body"
+                            style="padding: 20px; background-color: #64666d6b;border-radius: 5px;">
+                            <div class="icon-title-row"
+                                style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                                <div class="icon">
+                                    <img src="assets/images/applebusiness.svg" alt="Apple Business Manager"
+                                        style="width: 100px;">
+                                </div>
+                                <h4 class="card-title" style="margin-bottom: 0;color: #000;">Apple Business Manager
+                                </h4>
+                            </div>
+                            <p class="card-text">Streamline device deployment and app distribution and establish
+                                managed
+                                Apple IDs for all staff members in a single location.</p>
+                            <a href="/apple-business" class="text-danger">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card text-white">
+                        <div class="card-body"
+                            style="padding: 20px; background-color: #64666d6b;border-radius: 5px;">
+                            <div class="icon-title-row"
+                                style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                                <div class="icon">
+                                    <img src="assets/images/applecare.png" alt="AppleCare for Enterprise"
+                                        style="width: 90px;">
+                                </div>
+                                <h4 class="card-title" style="margin-bottom: 0;color: #000;">AppleCare for
+                                    Enterprise</h4>
+                            </div>
+                            <p class="card-text">Help desk support, OS support, and enterprise support solutions.
+                                The
+                                best
+                                support and care from the experts who know Apple products best.</p>
+                            <a href="/applecare" class="text-danger">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -1264,3 +936,31 @@
     </div>
 </section>
 
+<section class="enterprise-solutions mt-100 cta-section">
+    <div class="container2">
+        <div class="row" style="margin-left: 0px !important">
+            <div class="col-lg-12 col-md-12 mb-4" id="getting-started-with-mac">
+                <div class="card bg-image"
+                    style="background-image: url('assets/images/tco_img.png');position: relative;">
+                    <div class="card-content appleenterprise-card">
+                        <div class="content-section">
+                            <h3 style="margin-bottom: 1rem; font-size: 2.5rem; font-weight: bold;">Total Cost of
+                                Ownership (TCO)</h3>
+                            <p style="font-size: 18px; line-height: 1.6;">Apple Macintosh may have a higher initial
+                                investment compared to Windows PCs, but they offer a significantly lower Total Cost of
+                                Ownership (TCO) over time thanks to fewer support issues, longer hardware longevity, and
+                                higher resale value. Enterprises benefit from reduced IT overhead, improved employee
+                                satisfaction, and enhanced security, with macOS updates and Apple's suite of
+                                productivity and creativity apps—like Preview, Pages, Numbers, Keynote and
+                                iMovie—provided at no additional cost. Adopting Macs helps organisations streamline
+                                operations, empower teams, and gain long-term value from their technology investments.
+                            </p>
+                            <a href="/tco" class="cta-button animated-tco-btn" style="float: inline-end;">Know Your
+                                TCO</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

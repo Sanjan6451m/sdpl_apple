@@ -47,7 +47,7 @@ export class EnterpriseNewComponent {
 
   gridCarouselOptions = {
     loop: true,
-    margin: 20,
+    margin: 15,
     nav: true,
     dots: true,
     navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
@@ -58,7 +58,7 @@ export class EnterpriseNewComponent {
       '992': { items: 4 }
     },
     autoplay: true,
-    autoplayTimeout: 3000,
+    autoplayTimeout: 30000,
     autoplayHoverPause: true
   };
 

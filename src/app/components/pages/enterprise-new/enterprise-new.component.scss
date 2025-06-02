@@ -139,6 +139,10 @@
   border-radius: 10px;
   position: relative;
 
+  @media (max-width: 768px) {
+    display: none; // Hide on mobile devices
+  }
+
   .ribbon {
     position: absolute;
     top: 24px;
@@ -1524,6 +1528,111 @@
     .section-title {
         h2 {
             font-size: 2rem;
+        }
+    }
+}
+
+.service-solutions {
+    display: none; // Hide by default on desktop
+    
+    @media (max-width: 768px) {
+        display: block; // Show on mobile/tablet devices
+        padding: 2rem 1rem;
+        
+        .container {
+            padding: 0;
+        }
+        
+        .section-title {
+            margin-bottom: 2rem;
+            
+            p {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+        }
+        
+        .solution-card {
+            margin-bottom: 1.5rem;
+            
+            .card-image {
+                height: 180px;
+                
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            
+            .card-content {
+                padding: 1rem;
+                
+                h3 {
+                    font-size: 1.1rem;
+                    margin-bottom: 0.5rem;
+                }
+                
+                p {
+                    font-size: 0.9rem;
+                    line-height: 1.4;
+                }
+            }
+        }
+    }
+}
+
+#apple-products-mac {
+    .card {
+        position: relative;
+        overflow: hidden;
+        background: url('/assets/images/mac-bg.jpg') center center/cover no-repeat;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(100, 102, 109, 0.8); // Semi-transparent overlay
+            backdrop-filter: blur(2px);
+        }
+        
+        .card-body {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .icon-title-row {
+            .icon {
+                img {
+                    filter: brightness(0) invert(1); // Make icon white
+                }
+            }
+            
+            .card-title {
+                color: #fff !important;
+                font-size: 1.8rem;
+                font-weight: 600;
+            }
+        }
+        
+        .product-links {
+            ul {
+                li {
+                    border-color: rgba(255, 255, 255, 0.3) !important;
+                    
+                    a {
+                        color: #fff !important;
+                        transition: all 0.3s ease;
+                        
+                        &:hover {
+                            color: #e23c36 !important;
+                        }
+                    }
+                }
+            }
         }
     }
 }

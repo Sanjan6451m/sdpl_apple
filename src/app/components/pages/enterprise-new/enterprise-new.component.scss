@@ -486,8 +486,15 @@
     }
   }
 
+  .tco-title{
+    font-size: 2.5rem;
+  }
+
   @media (max-width: 900px) {
 
+    .tco-title{
+      font-size: 1.5rem !important;
+    }
     .card-content {
       padding: 0 10px 10px 10px !important;
     }
@@ -570,6 +577,7 @@
   }
 }
 
+
 .card.bg-image {
   display: flex;
   flex-direction: column;
@@ -613,7 +621,7 @@
 }
 
 .card.bg-image .card-content h3 {
-  font-size: 18px;
+  font-size: 18px !important;
   font-weight: 700;
   margin-bottom: 0.7rem;
 }
@@ -627,7 +635,9 @@
   .card.bg-image {
     min-height: 180px;
     border-radius: 10px;
+    height: 540px !important;
   }
+
 
   .card.bg-image .card-content {
     padding: 1.2rem 0.7rem 1rem 0.7rem;
@@ -1266,11 +1276,11 @@
   }
 
   .content-section h3 {
-    font-size: 1.8rem;
+    font-size: 1.3rem !important
   }
 
   .content-section p {
-    font-size: 0.9rem;
+    font-size: 0.8rem !important;
   }
 }
 
@@ -1825,3 +1835,49 @@
         }
     }
 }
+
+// Responsive styles for TCO section
+.responsive-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  
+  @media screen and (max-width: 768px) {
+    font-size: 1.5rem !important;
+    margin-bottom: 1rem;
+  }
+  
+  @media screen and (max-width: 480px) {
+    font-size: 1.25rem !important;
+    margin-bottom: 0.75rem;
+  }
+}
+
+.tco-description{
+  font-size: 18px !important;
+  line-height: 1.6;
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px !important;
+    line-height: 1.5;
+  }
+  
+  @media screen and (max-width: 480px) {
+    font-size: 14px !important;
+    line-height: 1.4;
+  }
+}
+.responsive-text {
+  font-size: 18px;
+  line-height: 1.6;
+  
+  @media screen and (max-width: 768px) {
+    font-size: 16px !important;
+    line-height: 1.5;
+  }
+  
+  @media screen and (max-width: 480px) {
+    font-size: 14px !important;
+    line-height: 1.4;
+  }
+}
+

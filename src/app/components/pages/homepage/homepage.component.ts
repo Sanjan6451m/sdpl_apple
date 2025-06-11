@@ -19,10 +19,10 @@ import { filter } from 'rxjs/operators';
 export class HomepageComponent implements OnInit {
   
   statistics = [
-    { value: 13, text: 'Years of Excellence' },
+    { value: 10, text: 'Years of Excellence' },
     { value: 480, text: 'Enterprise Customers', prefix: '+' },
-    { value: 60, text: 'Partners', prefix: '+' },
-    { value: 300000, text: 'Devices Deployed', prefix: '+' },
+    { value: 40, text: 'Partners', prefix: '+' },
+    { value: 30000, text: 'Devices Deployed', prefix: '+' },
     // { value: 1000, text: 'Happy Customers', prefix: '+' },
     { value: 700, text: 'Projects', prefix: '+' }
   ];

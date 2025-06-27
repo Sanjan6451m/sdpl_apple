@@ -22,9 +22,9 @@ export class HomepageComponent implements OnInit {
     { value: 10, text: 'Years of Excellence' },
     { value: 480, text: 'Enterprise Customers', prefix: '+' },
     { value: 40, text: 'Partners', prefix: '+' },
-    { value: 30000, text: 'Devices Deployed', prefix: '+' },
+    { value: 100000, text: 'Devices Deployed', prefix: '+' },
     // { value: 1000, text: 'Happy Customers', prefix: '+' },
-    { value: 700, text: 'Projects', prefix: '+' }
+    { value: 1000, text: 'Projects', prefix: '+' }
   ];
   contactForm: FormGroup;
   message: string = '';

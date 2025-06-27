@@ -70,17 +70,26 @@
 </div>
 <section class="home-contact-area home-2-contact ptb-100 bg-color">
     <div class="container">
-       <!--  <div class="section-title">
+        <!--  <div class="section-title">
             <h2>Contact Us</h2>
         </div> -->
-
+        <div style="text-align: center;">
+            <h2>Reward Program - Fill Contact Form - Get a Free POC</h2>
+            <br>
+            <h6 style="color: black; font-weight: 400;">Interested in deploying Mac at your workplace? Share your
+                details with us and
+                receive a free Mac POC unit for internal evaluation.
+            </h6>
+        </div>
+        <br>
         <div class="row">
             <div class="col-lg-6 col-md-6" style="margin: 0 auto;">
                 <div class="container">
                     <div class="contact-area column">
                         <div class="">
-                            <div class="single-contact" style="background-color: #45434341; display: flex; align-items: center; justify-content: center;">
-                                
+                            <div class="single-contact"
+                                style="background-color: #45434341; display: flex; align-items: center; justify-content: center;">
+
                                 <div class="contact-info">
                                     <h3>Email</h3>
                                     <p>sales&#64;superiorsystems.in</p>
@@ -90,21 +99,24 @@
                                 </div>
                             </div>
                         </div>
-            
+
                         <div class="">
-                            <div class="single-contact" style="background-color: #45434341; display: flex; align-items: center; justify-content: center;">
+                            <div class="single-contact"
+                                style="background-color: #45434341; display: flex; align-items: center; justify-content: center;">
                                 <div class="contact-info">
                                     <h3>Address</h3>
-                                    <p>No. 111, Ground Floor, 6th Main, MC Layout, MRCR Extn., Vijayanagar, Bangalore – 560040</p>
+                                    <p>No. 111, Ground Floor, 6th Main, MC Layout, MRCR Extn., Vijayanagar, Bangalore –
+                                        560040</p>
                                 </div>
                                 <div class="icon">
                                     <i class='bx bx-location-plus'></i>
                                 </div>
                             </div>
                         </div>
-            
+
                         <div class="">
-                            <div class="single-contact" style="background-color: #45434341; display: flex; align-items: center; justify-content: center;">
+                            <div class="single-contact"
+                                style="background-color: #45434341; display: flex; align-items: center; justify-content: center;">
                                 <div class="contact-info">
                                     <h3>Phone</h3>
                                     <p>+91 80 2311 6047</p>
@@ -116,7 +128,7 @@
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
 
             <div class="col-lg-6 col-md-6">
                 <div class="content">
@@ -147,8 +159,8 @@
                                     <select formControlName="device" class="form-control" required>
                                         <option value="" disabled>Select Device</option>
                                         <option *ngFor="let device of devices" [value]="device">{{ device }}</option>
-                                      </select>
-                                   <!--  <select formControlName="device" class="form-control">
+                                    </select>
+                                    <!--  <select formControlName="device" class="form-control">
                                         <option value="" disabled selected>Select Device</option>
                                         <option *ngFor="let device of devices" [value]="device">{{ device }}</option>
                                     </select> -->
@@ -157,21 +169,102 @@
                             <br>
                             <div class="col-lg-12">
                                 <div class="form-group">
-                                    <textarea formControlName="message" class="form-control" rows="5" required placeholder="Your Message"></textarea>
+                                    <textarea formControlName="message" class="form-control" rows="5" required
+                                        placeholder="Your Message"></textarea>
                                 </div>
                             </div>
-                            <div *ngIf="message" class="alert" [ngClass]="{'alert-success': message.includes('successfully'), 'alert-danger': message.includes('Error')}">
+                            <div *ngIf="message" class="alert"
+                                [ngClass]="{'alert-success': message.includes('successfully'), 'alert-danger': message.includes('Error')}">
                                 {{ message }}
                             </div>
                             <div class="col-lg-12 col-md-12">
-                                <button type="submit" class="default-btn page-btn box-btn">Submit</button>
+                                <button type="submit" class="default-btn page-btn box-btn">Submit & Get POC</button>
                             </div>
                         </div>
                     </form>
                 </div>
+                <br>
+                <div class="contact-link attractive-terms">
+                    <div class="terms-card">
+                        <!-- <i class="fas fa-file-contract"></i> -->
+                        <a rel="noopener noreferrer" style="color: blue;">Terms & Conditions – Free POC Offer</a>
+                        &nbsp;&nbsp;
+                        <a rel="noopener noreferrer" style="color: blue;">Terms & Conditions – Free POC Unit Offer</a>
+
+                    </div>
+                    <div class="terms-card">
+                        <!-- <i class="fas fa-gift"></i> -->
+                    </div>
+                </div>
             </div>
 
-            
+            <br>
+            <br>
+            <div class="poc-terms-section mt-50 mb-10">
+                <div class="card shadow border-0">
+                    <!-- <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0"><i class="fas fa-info-circle me-2"></i>Free Mac POC Offer – Key Terms</h5>
+                </div> -->
+                    <div class="card-body">
+                        <ul class="poc-terms-list">
+                            <li class="mb-2">
+                                <!--  <i class="fas fa-user-tie text-primary me-2"></i>
+                            <strong>Eligibility:</strong> -->
+                                Open to IT decision-makers, business owners, and procurement teams exploring Mac
+                                deployment for their organization.
+                            </li>
+                            <li class="mb-2">
+                                <!-- <i class="fas fa-laptop text-success me-2"></i>
+                            <strong>Device:</strong>  -->
+                                One Mac unit will be provided on a temporary basis for internal evaluation.
+                            </li>
+                            <li class="mb-2">
+                                <!-- <i class="fas fa-calendar-alt text-info me-2"></i>
+                            <strong>POC Period:</strong>  -->
+                                7–14 working days, extendable upon request.
+                            </li>
+                            <li class="mb-2">
+                                <!-- <i class="fas fa-search text-warning me-2"></i>
+                            <strong>Vetting:</strong>  -->
+                                All submissions will be vetted for eligibility and intent. Only genuine business use
+                                cases will be considered.
+                            </li>
+                            <li class="mb-2">
+                                <!--  <i class="fas fa-undo text-secondary me-2"></i>
+                            <strong>Return Policy:</strong>  -->
+                                Device must be returned in original condition at the end of the POC period.
+                            </li>
+                            <li class="mb-2">
+                                <!--  <i class="fas fa-ban text-danger me-2"></i>
+                            <strong>Commercial Terms:</strong>  -->
+                                POC is not a commercial sale or lease. No charges apply.
+                            </li>
+                            <li class="mb-2">
+                                <!-- <i class="fas fa-building text-primary me-2"></i>
+                            <strong>Limit:</strong> -->
+                                One POC per company/organization.
+                            </li>
+                            <li class="mb-2">
+                                <!-- <i class="fas fa-map-marker-alt text-info me-2"></i>
+                            <strong>Availability:</strong>  -->
+                                Subject to availability and location feasibility.
+                            </li>
+                            <li class="mb-2">
+                                <!--  <i class="fas fa-bullhorn text-warning me-2"></i>
+                            <strong>Right to Modify:</strong>  -->
+                                Superior Digital reserves the right to modify or withdraw this offer at any time without
+                                prior notice.
+                            </li>
+                            <li class="mb-2">
+                                <!--  <i class="fas fa-user-slash text-danger me-2"></i>
+                            <strong>Exclusions:</strong>  -->
+                                Offer not valid for personal use or students. Decisions made by Superior Digital will be
+                                final.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>

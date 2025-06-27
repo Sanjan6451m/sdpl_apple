@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { OwlOptions, CarouselComponent } from 'ngx-owl-carousel-o';
 
@@ -14,7 +14,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
   templateUrl: './enterprise-new.component.html',
   styleUrl: './enterprise-new.component.scss'
 })
-export class EnterpriseNewComponent {
+export class EnterpriseNewComponent implements OnInit, OnDestroy{
   @ViewChild('gridCarousel') gridCarousel: CarouselComponent;
 
   customOptions: OwlOptions = {
@@ -75,7 +75,7 @@ export class EnterpriseNewComponent {
     },
     {
       image: 'assets/images/appleservice.png',
-      title: 'Apple Services with Expert Onsite Supportt',
+      title: 'Apple Services with Expert Onsite Support',
       description: 'Get expert Apple support onsite or remotely—from setup to troubleshooting. Certified engineers ensure smooth performance, tailored to your team`s needs.'
     },
     {
@@ -125,6 +125,24 @@ export class EnterpriseNewComponent {
   currentTab: string = 'tab3';
   mbAirUrl: SafeResourceUrl;
 
+  bannerImages = [
+    {
+      src: 'assets/images/enterprise.png',
+      text: 'Buy Mac – Refresh after 3 years',
+      subtext: 'Enjoy hassle‑free upgrades with our 3‑year refresh guarantee.',
+      btnText: 'Start Your Upgrade'
+    },
+    {
+      src: 'assets/images/enterprise.png',
+      text: 'Experience Mac Firsthand – Get a POC Today',
+      subtext: 'Request a free POC unit and evaluate Mac performance in your environment.',
+      btnText: 'Request Your Free POC'
+    }
+  ];
+  currentIndex = 0;
+  private intervalId: any;
+
+
   constructor(private router: Router, private route: ActivatedRoute, private sanitizer: DomSanitizer) {
     this.mbAirUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
       'assets/embedded/MBA/mba_air.html'
@@ -155,6 +173,7 @@ export class EnterpriseNewComponent {
   }
 
   ngOnInit(): void {
+    this.startAutoLoop();
     // Handle both initial navigation and subsequent fragment changes
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
@@ -181,5 +200,47 @@ export class EnterpriseNewComponent {
 
   prevSlide() {
     this.gridCarousel.prev();
+  }
+
+
+  ngOnDestroy() {
+    this.clearAutoLoop();
+  }
+
+  startAutoLoop() {
+    this.clearAutoLoop();
+    this.intervalId = setInterval(() => {
+      this.showNext();
+    }, 5000);
+  }
+
+  clearAutoLoop() {
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+      this.intervalId = null;
+    }
+  }
+
+  showPrev() {
+    this.currentIndex = (this.currentIndex - 1 + this.bannerImages.length) % this.bannerImages.length;
+    this.startAutoLoop();
+  }
+
+  showNext() {
+    this.currentIndex = (this.currentIndex + 1) % this.bannerImages.length;
+    this.startAutoLoop();
+  }
+
+  goToImage(idx: number) {
+    this.currentIndex = idx;
+    this.startAutoLoop();
+  }
+
+  get imageCount() {
+    return this.bannerImages.length;
+  }
+
+  goToContact() {
+    this.router.navigate(['/contact']);
   }
 }

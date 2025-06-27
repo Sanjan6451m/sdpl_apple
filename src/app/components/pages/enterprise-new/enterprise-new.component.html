@@ -1,4 +1,4 @@
-<section class="hero-banner">
+<!-- <section class="hero-banner">
     <div class="hero-banner-overlay">
         <div class="hero-banner-content">
             <h2 style="color: #fff;"><span class="hero-banner-content-span1">Empower Your Business with Certified Apple Solutions</span></h2>
@@ -10,7 +10,23 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
+<section class="hero-section">
+    <div class="hero-banner-container">
+      <button class="hero-arrow left-arrow" aria-label="Previous" (click)="showPrev()">&#8592;</button>
+      <img [src]="bannerImages[currentIndex].src" alt="Banner" class="hero-banner-img" />
+      <div class="hero-banner-text">{{ bannerImages[currentIndex].text }}</div>
+      <div class="hero-banner-subtext">{{ bannerImages[currentIndex].subtext }}</div>
+      <button class="hero-banner-cta" (click)="goToContact()">{{ bannerImages[currentIndex].btnText }}</button>
+      <button class="hero-arrow right-arrow" aria-label="Next" (click)="showNext()">&#8594;</button>
+      <div class="hero-banner-dots">
+        <span *ngFor="let img of bannerImages; let i = index" 
+              class="dot" 
+              [class.active]="i === currentIndex" 
+              (click)="goToImage(i)"></span>
+      </div>
+    </div>
+  </section>
 <!-- <section id="hero-banner">
     <div class="">
         <h1>Apple for Your Enterprise.</h1>

@@ -34,9 +34,13 @@
                 "node_modules/boxicons/css/boxicons.min.css",
                 "src/assets/css/flaticon.css",
                 "src/styles.scss",
-                "src/responsive.scss"
+                "src/responsive.scss",
+                "node_modules/owl.carousel/dist/assets/owl.carousel.css",
+                "node_modules/owl.carousel/dist/assets/owl.theme.default.css"
             ],
             "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/owl.carousel/dist/owl.carousel.min.js"
             ],
             "vendorChunk": true,
             "extractLicenses": false,

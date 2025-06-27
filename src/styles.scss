@@ -6247,3 +6247,6 @@ Banner Area Three Style
 .header-area .header-content-right .header-contact::before{
     background: transparent !important;
 }
+
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';

@@ -1,16 +1,7 @@
-<section class="hero-section">
-  <div class="hero-banner-container">
-    <button class="hero-arrow left-arrow" aria-label="Previous" (click)="showPrev()">&#8592;</button>
-    <img [src]="bannerImages[currentIndex].src" alt="Banner" class="hero-banner-img" />
-    <div class="hero-banner-text">{{ bannerImages[currentIndex].text }}</div>
-    <div class="hero-banner-subtext">{{ bannerImages[currentIndex].subtext }}</div>
-    <button class="hero-banner-cta" (click)="goToContact()">{{ bannerImages[currentIndex].btnText }}</button>
-    <button class="hero-arrow right-arrow" aria-label="Next" (click)="showNext()">&#8594;</button>
-    <div class="hero-banner-dots">
-      <span *ngFor="let img of bannerImages; let i = index" 
-            class="dot" 
-            [class.active]="i === currentIndex" 
-            (click)="goToImage(i)"></span>
-    </div>
+<div class="background-wrapper">
+  <img src="assets/images/EPPImages/logo.png" alt="Logo" class="corner-logo">
+  <div class="login-card">
+   
   </div>
-</section>
+</div>
+  

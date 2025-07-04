@@ -18,7 +18,7 @@
   height: 100%;
   background: url('/assets/images/EPPImages/Login_resized.png') no-repeat left center;
   background-size: cover;
-  // filter: blur(6px) brightness(0.95);
+  filter: blur(6px) brightness(0.95);
   z-index: 1;
 }
 
@@ -26,8 +26,8 @@
   position: relative;
   z-index: 2;
   margin-right: 24vw;
-  width: 430px;
-  height: 550px;
+  width: 650px;
+  height: 410px;
   max-width: 90vw;
   padding: 40px 0px 32px 0px;
   border-radius: 28px;
@@ -68,4 +68,68 @@
   z-index: 10;
 }
 
+.notify-form {
+  display: flex;
+  width: 100%;
+  max-width: 420px;
+  margin: -15px auto 0 auto;
+  justify-content: center;
+}
+
+.notify-input {
+  flex: 1;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 10px;
+  font-size: 12px;
+  background: #fff;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  width: 350px;
+  height: 40px;
+}
+
+.notify-btn {
+  padding: 0 14px;
+  height: 40px;
+  background: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s;
+  margin-left: -2px;
+}
+
+.notify-btn:hover {
+  background: #d32f2f;
+}
+
+.notify-icon {
+  font-size: 1.2em;
+  margin-left: 8px;
+  display: inline-block;
+}
+
+.notify-info {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  width: calc(100% - 48px);
+  background: rgba(76, 175, 80, 0.15);
+  color: #388e3c;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(56,142,60,0.08);
+  pointer-events: none;
+}
   

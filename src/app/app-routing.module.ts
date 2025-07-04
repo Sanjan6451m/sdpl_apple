@@ -110,6 +110,7 @@ import { MacstudioComponent } from './components/pages/Mac/macstudio/macstudio.c
 import { Iphone15Component } from './components/pages/iPhone/iphone15/iphone15.component';
 import { Iphone15proComponent } from './components/pages/iPhone/iphone15pro/iphone15pro.component';
 import { DevpowerhouseComponent } from './components/pages/devpowerhouse/devpowerhouse.component';
+import { LoginpageComponent } from './components/pages/loginpage/loginpage.component';
 
 // Products Pages
 
@@ -200,6 +201,7 @@ const routes: Routes = [
     {path: 'apple-watch', component: AppleWatchComponent},
     {path: 'apple-programscreen', component: AppleProgramscreenComponent},
     {path: 'enterprise', component: EnterprisePageComponent},
+    {path: 'login', component: LoginpageComponent},
     // Here add new pages component
     // { path: 'iphone15', component: Iphone15Component },
     { path: 'enterprise-new', component: EnterpriseNewComponent },

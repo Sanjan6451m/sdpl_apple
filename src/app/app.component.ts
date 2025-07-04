@@ -18,6 +18,7 @@ declare let $: any;
 export class AppComponent {
     location: any;
     routerSubscription: any;
+    showHeaderFooter: boolean = true;
 
     constructor(
         private router: Router
@@ -35,6 +36,8 @@ export class AppComponent {
             if (!(event instanceof NavigationEnd)) {
                 return;
             }
+            // Hide header and footer for login page
+            this.showHeaderFooter = this.location !== '/login';
             window.scrollTo(0, 0);
         });
     }

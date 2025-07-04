@@ -1,0 +1,15 @@
+<div class="background-wrapper">
+  <img src="assets/images/EPPImages/logo.png" alt="Logo" class="corner-logo">
+  <div class="login-card">
+    <div *ngIf="showInfo" class="notify-info">{{ infoMessage }}</div>
+    <img src="assets/images/EPPImages/isolation_mode.png" alt="Launching Soon - Stay Tuned" style="width:100%; max-width:450px; display:block; margin: 10px;">
+    <form class="notify-form" (submit)="onNotify($event)">
+      <input type="email" class="notify-input" placeholder="Enter official email" required />
+      &nbsp;&nbsp; &nbsp;
+      <button type="submit" class="notify-btn">
+        Notify Me <span class="notify-icon">&#9654;</span>
+      </button>
+    </form>
+  </div>
+</div>
+  

@@ -1,0 +1,46 @@
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="circleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="rectGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:0.7" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="400" fill="url(#bgGradient)"/>
+  
+  <!-- Abstract shapes -->
+  <circle cx="150" cy="100" r="60" fill="url(#circleGradient)" opacity="0.6"/>
+  <circle cx="450" cy="80" r="40" fill="url(#circleGradient)" opacity="0.4"/>
+  <circle cx="500" cy="300" r="50" fill="url(#circleGradient)" opacity="0.5"/>
+  
+  <!-- Rectangular shapes -->
+  <rect x="100" y="250" width="120" height="80" rx="20" fill="url(#rectGradient)" opacity="0.6"/>
+  <rect x="350" y="200" width="100" height="60" rx="15" fill="url(#rectGradient)" opacity="0.4"/>
+  
+  <!-- Decorative lines -->
+  <line x1="50" y1="150" x2="200" y2="150" stroke="white" stroke-width="3" opacity="0.3"/>
+  <line x1="400" y1="250" x2="550" y2="250" stroke="white" stroke-width="2" opacity="0.2"/>
+  <line x1="80" y1="320" x2="180" y2="320" stroke="white" stroke-width="2" opacity="0.3"/>
+  
+  <!-- Central icon representation -->
+  <g transform="translate(300, 200)">
+    <!-- Shield/security icon -->
+    <path d="M-30,-20 L30,-20 L30,20 L0,40 L-30,20 Z" fill="white" opacity="0.9"/>
+    <path d="M-15,-10 L15,-10 L15,10 L0,25 L-15,10 Z" fill="none" stroke="#667eea" stroke-width="2"/>
+    <circle cx="0" cy="0" r="8" fill="#667eea"/>
+  </g>
+  
+  <!-- Text elements -->
+  <text x="300" y="350" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold" opacity="0.8">
+    Secure Login Portal
+  </text>
+</svg> 

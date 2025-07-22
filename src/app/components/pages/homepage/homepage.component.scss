@@ -26,13 +26,13 @@ section {
 #hero-banner {
   position: relative;
   background-color: #f8f9fa;
-  padding: 14rem 0;
-  background-image: url('/assets/images/mainbannerimage.png');
+  padding: 22rem 0;
+  background-image: url('/assets/images/mainbannerimage_new.png');
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
   color: #fff;
-  margin-top: 60px;
+  margin-top: 100px;
 
   &::before {
     content: '';
@@ -168,11 +168,11 @@ section {
 .enterprise-section {
   position: relative;
   background-color: #000;
-  background-image: url('/assets/images/enterprise_newimag.png');
+  background-image: url('/assets/images/enterprise_image_new1.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 100px 0;
+  padding: 60px 0;
   color: #fff;
   overflow: hidden;
 

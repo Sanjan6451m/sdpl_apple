@@ -127,19 +127,19 @@ export class EnterpriseNewComponent implements OnInit, OnDestroy{
 
   bannerImages = [
     {
-      src: 'assets/images/enterprise.png',
+      src: 'assets/images/appleent_new.png',
       text: 'Empower Your Business with Certified Apple Solutions',
       subtext: 'As an Apple Authorised Reseller, Superior Digital delivers tailored business deployment, lifecycle management, and post-sales support-helping over 480 businesses maximize their Apple investments.',
       btnText: 'Talk to an Apple Expert'
     },
     {
-      src: 'assets/images/enterprise.png',
+      src: 'assets/images/appleent_new.png',
       text: 'Buy Mac – Refresh after 3 years',
       subtext: 'Enjoy hassle‑free upgrades with our 3‑year refresh guarantee.',
       btnText: 'Start Your Upgrade'
     },
     {
-      src: 'assets/images/enterprise.png',
+      src: 'assets/images/appleent_new.png',
       text: 'Experience Mac Firsthand – Get a POC Today',
       subtext: 'Request a free POC unit and evaluate Mac performance in your environment.',
       btnText: 'Request Your Free POC'

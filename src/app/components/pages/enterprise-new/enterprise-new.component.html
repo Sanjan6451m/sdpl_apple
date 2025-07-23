@@ -13,20 +13,18 @@
 </section> -->
 <section class="hero-section">
     <div class="hero-banner-container">
-      <button class="hero-arrow left-arrow" aria-label="Previous" (click)="showPrev()">&#8592;</button>
-      <img [src]="bannerImages[currentIndex].src" alt="Banner" class="hero-banner-img" />
-      <div class="hero-banner-text">{{ bannerImages[currentIndex].text }}</div>
-      <div class="hero-banner-subtext">{{ bannerImages[currentIndex].subtext }}</div>
-      <button class="hero-banner-cta" (click)="goToContact()">{{ bannerImages[currentIndex].btnText }}</button>
-      <button class="hero-arrow right-arrow" aria-label="Next" (click)="showNext()">&#8594;</button>
-      <div class="hero-banner-dots">
-        <span *ngFor="let img of bannerImages; let i = index" 
-              class="dot" 
-              [class.active]="i === currentIndex" 
-              (click)="goToImage(i)"></span>
-      </div>
+        <button class="hero-arrow left-arrow" aria-label="Previous" (click)="showPrev()">&#8592;</button>
+        <img [src]="bannerImages[currentIndex].src" alt="Banner" class="hero-banner-img" />
+        <div class="hero-banner-text">{{ bannerImages[currentIndex].text }}</div>
+        <div class="hero-banner-subtext">{{ bannerImages[currentIndex].subtext }}</div>
+        <button class="hero-banner-cta" (click)="goToContact()">{{ bannerImages[currentIndex].btnText }}</button>
+        <button class="hero-arrow right-arrow" aria-label="Next" (click)="showNext()">&#8594;</button>
+        <div class="hero-banner-dots">
+            <span *ngFor="let img of bannerImages; let i = index" class="dot" [class.active]="i === currentIndex"
+                (click)="goToImage(i)"></span>
+        </div>
     </div>
-  </section>
+</section>
 <!-- <section id="hero-banner">
     <div class="">
         <h1>Apple for Your Enterprise.</h1>
@@ -40,7 +38,8 @@
             <h1 style="font-size: 32px;">Apple for Business</h1>
         </div>
         <div class="enterprise-details">
-            <p class="text-left" style="font-size: 18px; font-weight: 500; line-height: 1.5;">Experience enterprise solutions with Superior Digital. We specialise in delivering expert-driven
+            <p class="text-left" style="font-size: 18px; font-weight: 500; line-height: 1.5;">Experience enterprise
+                solutions with Superior Digital. We specialise in delivering expert-driven
                 technology, consulting, support services, and training that empower businesses to unlock their full
                 creative and productive potential.</p>
             <!-- <div class="offerings-list">
@@ -64,6 +63,358 @@
         </div>
     </div>
 </section>
+
+<section class="card-section" id="enterprise-solutions">
+    <div class="container">
+        <div class="row" style="margin-left: 0 !important;">
+            <div class="col-lg-12 col-md-12 mb-4" id="getting-started-with-mac">
+                <div class="card bg-image">
+                    <div class="card-content"
+                        style="display: flex; flex-direction: row; align-items: center; justify-content: center; text-align: left; gap: 10rem; background-color: #fff !important; padding: 0 !important">
+                        <div class="mac-iphone-image">
+                            <img src="assets/images/mac-iphone-together.png" alt="Mac and iPhone Better Together"
+                                class="mac-iphone-image1">
+                        </div>
+                        <div class="mac-dev-section">
+                            <div class="mac-iphone-content">
+                                <h2>
+                                    Mac + iPhone <br>
+                                    <span class="better-together-bg"><i style="background-color: #00ff00;">BETTER
+                                            <br>TOGETHER</i></span>
+                                </h2>
+
+                                <p style="color: #000;">Copy and paste, sync edits and continue <br>conversations
+                                    between Mac and iPhone.</p>
+                            </div>
+                            <div class="cta-section-mac">
+                                <a href="/macdoes" class="cta-button animated-tco-btn">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+    </div>
+</section>
+
+<section class="hero-overlay-section" id="apple-products-mac">
+    <div class="overlay-content">
+        <div class="container">
+            <div class="section-title">
+                <!-- <span style="font-size: 1.2rem; font-weight: 500;">What We Offer</span> -->
+                <h2 class="section-title" style="color: #fff;">Apple Products</h2>
+                <p class="section-description" style="margin-bottom: 0;">Discover Our Latest Apple Devices.</p>
+                <p class="section-description">Explore our range of Apple products designed to enhance your digital
+                    experience with
+                    cutting-edge technology and innovative features.</p>
+            </div>
+            <!--   <div class="row">
+                <div class="col-12 text-center">
+                    <span>Apple Products</span>
+                    <h2 style="color: #fff;">Discover Our Latest Apple Devices</h2>
+                    <p class="section-description">Explore our range of Apple products designed to enhance your digital experience with
+                        cutting-edge technology and innovative features.</p>
+                </div>
+            </div> -->
+            <div class="row cards-container">
+                <div class="col-lg-4 col-md-6 mb-4" id="apple-products-mac">
+                    <div class="feature-card"
+                        style="background: url('/assets/images/mac1.jpg') center center/cover no-repeat; position: relative;">
+                        <!-- background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 100%); -->
+                        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>
+                        <div class="card-icon" style="position: relative; z-index: 2;">
+                            <h3 style="color: #fff;">Mac</h3>
+                        </div>
+                        <div class="product-links" style="position: relative; z-index: 2;">
+                            <ul
+                                style="list-style-type: none; margin: 0 20px; padding: 0; gap: 10px; align-items: center;">
+                                <li><a href="/macstudio"
+                                        style="color: #fff; text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">Mac
+                                        Studio</a></li>
+                                <li><a href="/MBA15"
+                                        style="color: #fff; text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">Macbook
+                                        Air</a></li>
+                                <li><a href="/MBP1416"
+                                        style="color: #fff; text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem 0;">Macbook
+                                        Pro 14" & 16"</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" id="apple-products-iphone">
+                    <div class="feature-card"
+                        style="background: url('/assets/images/iphone1.jpg') center center/cover no-repeat; position: relative;">
+                        <!-- background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 100%); -->
+                        <div
+                            style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background:linear-gradient(135deg, rgb(39 38 38 / 90%) 0%, rgba(0, 0, 0, 0.7) 100%); border-radius: 15px;">
+                        </div>
+                        <div class="card-icon" style="position: relative; z-index: 2;">
+                            <h3 style="color: #fff;">iPhone</h3>
+                        </div>
+                        <div class="product-links" style="position: relative; z-index: 2;">
+                            <ul
+                                style="list-style-type: none; margin: 0 20px; padding: 0; gap: 10px; align-items: center;">
+                                <li><a href="/iphone-16pro"
+                                        style="color: #fff; text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">iPhone
+                                        16 Pro</a></li>
+                                <li><a href="/iPhone16"
+                                        style="color: #fff; text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">iPhone
+                                        16</a></li>
+                                <li><a href="/iphone-16e"
+                                        style="color: #fff; text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">iPhone
+                                        16e</a></li>
+                                <li><a href="/iPhone15Pro"
+                                        style="color: #fff; text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">iPhone
+                                        15 Pro</a></li>
+                                <li><a href="/iPhone15"
+                                        style="color: #fff; text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem 0; ">iPhone
+                                        15</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" id="apple-products-ipad">
+                    <div class="feature-card"
+                        style="background: url('/assets/images/ipad1.jpg') center center/cover no-repeat; position: relative;">
+                        <!-- background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 100%); -->
+                        <div
+                            style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;  background:linear-gradient(135deg, rgb(39 38 38 / 90%) 0%, rgba(0, 0, 0, 0.7) 100%); border-radius: 15px;">
+                        </div>
+                        <div class="card-icon" style="position: relative; z-index: 2;">
+                            <h3 style="color: #fff;">iPad</h3>
+                        </div>
+                        <div class="product-links" style="position: relative; z-index: 2;">
+                            <ul
+                                style="list-style-type: none; margin: 0 20px; padding: 0; gap: 10px; align-items: center;">
+                                <li><a style="color: #fff; text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);"
+                                        href="/iPadPro">iPad Pro</a></li>
+                                <li><a style="color: #fff; text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);"
+                                        href="/iPadAir">iPad Air</a></li>
+                                <li><a style="color: #fff; text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem 0;"
+                                        href="/iPad10">iPad 10th Generation</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" id="apple-products-watch">
+                    <div class="feature-card"
+                        style="background: url('/assets/images/watch1.jpg') center center/cover no-repeat; position: relative;">
+                        <!-- background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 100%); -->
+                        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>
+                        <div class="card-icon" style="position: relative; width: 100%;">
+                            <h3 style="color: #fff;">Apple Watch</h3>
+                        </div>
+                        <div class="product-links" style="position: relative; z-index: 2;">
+                            <ul
+                                style="list-style-type: none; margin: 0 20px; padding: 0; gap: 10px; align-items: center;">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" id="apple-products-business">
+                    <div class="card text-white">
+                        <div class="card-body" style="padding: 20px; background-color: #64666d6b;border-radius: 5px;">
+                            <div class="icon-title-row"
+                                style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                                <div class="icon">
+                                    <img src="assets/images/applebusiness.svg" alt="Apple Business Manager"
+                                        style="width: 100px;">
+                                </div>
+                                <h4 class="card-title" style="margin-bottom: 0;color: #000;">Apple Business Manager
+                                </h4>
+                            </div>
+                            <p class="card-text">Streamline device deployment and app distribution and establish
+                                managed
+                                Apple IDs for all staff members in a single location.</p>
+                            <a href="/apple-business" class="text-danger">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" id="apple-products-applecare">
+                    <div class="card text-white">
+                        <div class="card-body" style="padding: 20px; background-color: #64666d6b;border-radius: 5px;">
+                            <div class="icon-title-row"
+                                style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                                <div class="icon">
+                                    <img src="assets/images/applecare.png" alt="AppleCare for Enterprise"
+                                        style="width: 90px;">
+                                </div>
+                                <h4 class="card-title" style="margin-bottom: 0;color: #000;">AppleCare for
+                                    Enterprise</h4>
+                            </div>
+                            <p class="card-text">Help desk support, OS support, and enterprise support solutions.
+                                The
+                                best
+                                support and care from the experts who know Apple products best.</p>
+                            <a href="/applecare" class="text-danger">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="card-section" id="enterprise-solutions">
+    <div class="container">
+        <div class="row" style="margin-left: 0 !important;">
+            <div class="col-lg-12 col-md-12 mb-4" id="getting-started-with-mac">
+                <div class="card bg-image" style="background-image: url('assets/images/getting_started_with_Mac.png');">
+                    <div class="card-content"
+                        style="display: flex; flex-direction: row; align-items: center; justify-content: center; text-align: left; gap: 2rem;">
+                        <h3
+                            style="margin-bottom: 0; min-width: 160px; font-size: 2.2rem !important; text-align: center;">
+                            Getting Started with Mac</h3>
+                        <div class="mac-dev-section">
+                            <div class="container">
+                                <div class="mac-dev-grid">
+                                    <div class="mac-dev-col">
+                                        <!-- <h3>Special Benefits for Startups</h3> -->
+                                        <ul>
+                                            <li>⁠Evaluation of Mac Suitability</li>
+                                            <li>Total Cost of Ownership (TCO) Evaluation</li>
+                                            <li>Concept Validation and Pilot Implementation</li>
+                                            <li>Technical Skill-Building and Enablement</li>
+                                            <li>Interactive Experience Centers</li>
+                                            <li>Transition and System Integration Support</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--  <div class="mac-dev-actions">
+                    <a href="#" class="mac-dev-learn-btn">Learn more</a>
+                  </div> -->
+                  <br>
+                  <div class="cta-section-mac-ph">
+                    <a href="/contact" class="cta-button animated-tco-btn">Get Started</a>
+                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="card-section" id="enterprise-solutions">
+    <div class="container">
+        <div class="row" style="margin-left: 0 !important;">
+            <div class="col-lg-12 col-md-12 mb-4" id="mac-startup-accelerator">
+                <div class="card bg-image" style="background-image: url('assets/images/mac_accelerator_startup.png');">
+                    <div class="card-content"
+                        style="display: flex; flex-direction: row; align-items: center; justify-content: center; text-align: left; gap: 2rem;">
+                        <!--  <h3 style="margin-bottom: 0; min-width: 160px; font-size: 2.5rem; text-align: center;">Mac
+                Startup Accelerator</h3> -->
+                        <h3
+                            style="margin-bottom: 0; min-width: 160px; font-size: 2.2rem !important; text-align: center;">
+                            Mac Startup Accelerator</h3>
+                        <div class="mac-dev-section">
+                            <div class="container">
+                                <div class="mac-dev-grid">
+                                    <div class="mac-dev-col">
+                                        <h3>Special Benefits for Startups</h3>
+                                        <ul>
+                                            <li>Offers for Switching to Mac</li>
+                                            <li>Flexible Financing Options</li>
+                                        </ul>
+                                    </div>
+                                    <div class="mac-dev-col">
+                                        <h3>Personalised Training Access</h3>
+                                        <ul>
+                                            <li>Specialized IT Training Programs</li>
+                                            <li>End-User Empowerment Solutions</li>
+                                            <li>Network of Global Industry Experts</li>
+                                        </ul>
+                                    </div>
+                                    <div class="mac-dev-col">
+                                        <h3>Startup Essentials Packages</h3>
+                                        <ul>
+                                            <li>Onboarding Bundles for New Hires</li>
+                                            <li>Professional Headsets and Connectivity Accessories</li>
+                                            <li>Comprehensive AppleCare Coverage</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="cta-section-mac-ph">
+                                    <a href="/contact" class="cta-button animated-tco-btn">Get Started</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="card-section" id="enterprise-solutions">
+    <div class="container">
+        <div class="row" style="margin-left: 0 !important;">
+            <section class="col-lg-12 col-md-12 mb-4" id="developer-powerhouse">
+                <div class="card bg-image" style="background-image: url('assets/images/macdevph.png');">
+                    <div class="card-content"
+                        style="display: flex; flex-direction: row; align-items: center; justify-content: center; text-align: left; gap: 2rem;">
+                        <!--  <h3 style="margin-bottom: 0; min-width: 160px; font-size: 2.5rem; text-align: center;">Mac
+                Developer's Powerhouse</h3> -->
+                        <h3
+                            style="margin-bottom: 0; min-width: 160px; font-size: 2.2rem !important; text-align: center;">
+                            Mac Developer's Powerhouse</h3>
+                        <div class="mac-dev-section">
+                            <div class="container">
+                                <div class="mac-dev-grid">
+                                    <div class="mac-dev-col">
+                                        <h3>Support for Assessment</h3>
+                                        <ul>
+                                            <li>Technical Assessment Assistance</li>
+                                            <li>Network and Compatibility Evaluation</li>
+                                        </ul>
+                                    </div>
+                                    <div class="mac-dev-col">
+                                        <h3>PC to Mac Migration </h3>
+                                        <ul>
+                                            <li>Assistance with Migrating from PC to Mac</li>
+                                            <li>Automated Deployment Solutions</li>
+                                        </ul>
+                                    </div>
+                                    <div class="mac-dev-col">
+                                        <h3>Customer Success</h3>
+                                        <ul>
+                                            <li> ⁠Tailored IT Training and End-User Empowerment</li>
+                                            <li>Dedicated On-Site or Remote Support Services</li>
+                                            <li>Technical Expertise and Developer Resource Assistance</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--    <div class="mac-dev-actions">
+                    <a href="#" class="mac-dev-learn-btn">Learn more</a>
+                  </div> -->
+                                <div class="cta-section-mac-ph">
+                                    <a href="/devpowerhouse" class="cta-button animated-tco-btn">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+
+
 
 <section class="service-solutions">
     <div class="container">
@@ -469,159 +820,7 @@
     </div>
 </section> -->
 
-<section class="card-section" id="enterprise-solutions">
-    <div class="container">
-        <div class="row" style="margin-left: 0 !important;">
-            <div class="col-lg-12 col-md-12 mb-4" id="getting-started-with-mac">
-                <div class="card bg-image">
-                    <div class="card-content"
-                        style="display: flex; flex-direction: row; align-items: center; justify-content: center; text-align: left; gap: 10rem; background-color: #fff !important; padding: 0 !important">
-                        <div class="mac-iphone-image">
-                            <img src="assets/images/mac-iphone-together.png" alt="Mac and iPhone Better Together"
-                                class="mac-iphone-image1">
-                        </div>
-                        <div class="mac-dev-section">
-                            <div class="mac-iphone-content">
-                                <h2>
-                                    Mac + iPhone <br>
-                                    <span class="better-together-bg"><i style="background-color: #00ff00;">BETTER
-                                            <br>TOGETHER</i></span>
-                                </h2>
 
-                                <p style="color: #000;">Copy and paste, sync edits and continue <br>conversations
-                                    between Mac and iPhone.</p>
-                            </div>
-                            <div class="cta-section-mac">
-                                <a href="/macdoes" class="cta-button animated-tco-btn">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <section class="col-lg-12 col-md-12 mb-4" id="developer-powerhouse">
-                <div class="card bg-image"
-                    style="background-image: url('assets/images/macdevph.png');">
-                    <div class="card-content"
-                        style="display: flex; flex-direction: row; align-items: center; justify-content: center; text-align: left; gap: 2rem;">
-                       <!--  <h3 style="margin-bottom: 0; min-width: 160px; font-size: 2.5rem; text-align: center;">Mac
-                            Developer's Powerhouse</h3> -->
-                            <h3
-                            style="margin-bottom: 0; min-width: 160px; font-size: 2.2rem !important; text-align: center;">
-                            Mac Developer's Powerhouse</h3>
-                        <div class="mac-dev-section">
-                            <div class="container">
-                                <div class="mac-dev-grid">
-                                    <div class="mac-dev-col">
-                                        <h3>Support for Assessment</h3>
-                                        <ul>
-                                            <li>Technical Assessment Assistance</li>
-                                            <li>Network and Compatibility Evaluation</li>
-                                        </ul>
-                                    </div>
-                                    <div class="mac-dev-col">
-                                        <h3>PC to Mac Migration </h3>
-                                        <ul>
-                                            <li>Assistance with Migrating from PC to Mac</li>
-                                            <li>Automated Deployment Solutions</li>
-                                        </ul>
-                                    </div>
-                                    <div class="mac-dev-col">
-                                        <h3>Customer Success</h3>
-                                        <ul>
-                                            <li> ⁠Tailored IT Training and End-User Empowerment</li>
-                                            <li>Dedicated On-Site or Remote Support Services</li>
-                                            <li>Technical Expertise and Developer Resource Assistance</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--    <div class="mac-dev-actions">
-                                <a href="#" class="mac-dev-learn-btn">Learn more</a>
-                              </div> -->
-                                <div class="cta-section-mac-ph">
-                                <a href="/devpowerhouse" class="cta-button animated-tco-btn">Learn More</a>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <div class="col-lg-12 col-md-12 mb-4" id="mac-startup-accelerator">
-                <div class="card bg-image" style="background-image: url('assets/images/mac_accelerator_startup.png');">
-                    <div class="card-content"
-                        style="display: flex; flex-direction: row; align-items: center; justify-content: center; text-align: left; gap: 2rem;">
-                       <!--  <h3 style="margin-bottom: 0; min-width: 160px; font-size: 2.5rem; text-align: center;">Mac
-                            Startup Accelerator</h3> -->
-                            <h3
-                            style="margin-bottom: 0; min-width: 160px; font-size: 2.2rem !important; text-align: center;">
-                            Mac Startup Accelerator</h3>
-                        <div class="mac-dev-section">
-                            <div class="container">
-                                <div class="mac-dev-grid">
-                                    <div class="mac-dev-col">
-                                        <h3>Special Benefits for Startups</h3>
-                                        <ul>
-                                            <li>Offers for Switching to Mac</li>
-                                            <li>Flexible Financing Options</li>
-                                        </ul>
-                                    </div>
-                                    <div class="mac-dev-col">
-                                        <h3>Personalised Training Access</h3>
-                                        <ul>
-                                            <li>Specialized IT Training Programs</li>
-                                            <li>End-User Empowerment Solutions</li>
-                                            <li>Network of Global Industry Experts</li>
-                                        </ul>
-                                    </div>
-                                    <div class="mac-dev-col">
-                                        <h3>Startup Essentials Packages</h3>
-                                        <ul>
-                                            <li>Onboarding Bundles for New Hires</li>
-                                            <li>Professional Headsets and Connectivity Accessories</li>
-                                            <li>Comprehensive AppleCare Coverage</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--  <div class="mac-dev-actions">
-                                <a href="#" class="mac-dev-learn-btn">Learn more</a>
-                              </div> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-12 mb-4" id="getting-started-with-mac">
-                <div class="card bg-image" style="background-image: url('assets/images/getting_started_with_Mac.png');">
-                    <div class="card-content"
-                        style="display: flex; flex-direction: row; align-items: center; justify-content: center; text-align: left; gap: 2rem;">
-                        <h3
-                            style="margin-bottom: 0; min-width: 160px; font-size: 2.2rem !important; text-align: center;">
-                            Getting Started with Mac</h3>
-                        <div class="mac-dev-section">
-                            <div class="container">
-                                <div class="mac-dev-grid">
-                                    <div class="mac-dev-col">
-                                        <!-- <h3>Special Benefits for Startups</h3> -->
-                                        <ul>
-                                            <li>⁠Evaluation of Mac Suitability</li>
-                                            <li>Total Cost of Ownership (TCO) Evaluation</li>
-                                            <li>Concept Validation and Pilot Implementation</li>
-                                            <li>Technical Skill-Building and Enablement</li>
-                                            <li>Interactive Experience Centers</li>
-                                            <li>Transition and System Integration Support</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--  <div class="mac-dev-actions">
-                                <a href="#" class="mac-dev-learn-btn">Learn more</a>
-                              </div> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- <div class="home-case" id="apple-products">
     <div class="products-section">
@@ -806,145 +1005,7 @@
 <!-- End Products Section -->
 
 
-<section class="hero-overlay-section" id="apple-products-mac">
-    <div class="overlay-content">
-        <div class="container">
-            <div class="section-title">
-                <!-- <span style="font-size: 1.2rem; font-weight: 500;">What We Offer</span> -->
-                <h2 class="section-title" style="color: #fff;">Apple Products</h2>
-                <p class="section-description" style="margin-bottom: 0;">Discover Our Latest Apple Devices.</p>
-                <p class="section-description">Explore our range of Apple products designed to enhance your digital experience with
-                    cutting-edge technology and innovative features.</p>
-            </div>
-          <!--   <div class="row">
-                <div class="col-12 text-center">
-                    <span>Apple Products</span>
-                    <h2 style="color: #fff;">Discover Our Latest Apple Devices</h2>
-                    <p class="section-description">Explore our range of Apple products designed to enhance your digital experience with
-                        cutting-edge technology and innovative features.</p>
-                </div>
-            </div> -->
-            <div class="row cards-container" >
-                <div class="col-lg-4 col-md-6 mb-4" id="apple-products-mac">
-                    <div class="feature-card" style="background: url('/assets/images/mac1.jpg') center center/cover no-repeat; position: relative;">
-                        <!-- background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 100%); -->
-                        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>
-                        <div class="card-icon" style="position: relative; z-index: 2;">
-                            <h3 style="color: #fff;">Mac</h3>
-                        </div>
-                        <div class="product-links" style="position: relative; z-index: 2;">
-                            <ul
-                                style="list-style-type: none; margin: 0 20px; padding: 0; gap: 10px; align-items: center;">
-                                <li><a
-                                        href="/macstudio" style="color: #fff; text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">Mac Studio</a></li>
-                                <li><a
-                                        href="/MBA15" style="color: #fff; text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">Macbook Air</a></li>
-                                <li><a 
-                                        href="/MBP1416" style="color: #fff; text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem 0;">Macbook Pro 14" & 16"</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4" id="apple-products-iphone">
-                    <div class="feature-card" style="background: url('/assets/images/iphone1.jpg') center center/cover no-repeat; position: relative;">
-                        <!-- background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 100%); -->
-                        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background:linear-gradient(135deg, rgb(39 38 38 / 90%) 0%, rgba(0, 0, 0, 0.7) 100%); border-radius: 15px;"></div>
-                        <div class="card-icon" style="position: relative; z-index: 2;">
-                            <h3 style="color: #fff;">iPhone</h3>
-                        </div>
-                        <div class="product-links" style="position: relative; z-index: 2;">
-                            <ul style="list-style-type: none; margin: 0 20px; padding: 0; gap: 10px; align-items: center;">
-                                <li><a href="/iphone-16pro" style="color: #fff; text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">iPhone 16 Pro</a></li>
-                                <li><a href="/iPhone16" style="color: #fff; text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">iPhone 16</a></li>
-                                <li><a href="/iphone-16e" style="color: #fff; text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">iPhone 16e</a></li>
-                                <li><a href="/iPhone15Pro" style="color: #fff; text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">iPhone 15 Pro</a></li>
-                                <li><a href="/iPhone15" style="color: #fff; text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem 0; ">iPhone 15</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4" id="apple-products-ipad">
-                    <div class="feature-card" style="background: url('/assets/images/ipad1.jpg') center center/cover no-repeat; position: relative;">
-                        <!-- background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 100%); -->
-                        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;  background:linear-gradient(135deg, rgb(39 38 38 / 90%) 0%, rgba(0, 0, 0, 0.7) 100%); border-radius: 15px;"></div>
-                        <div class="card-icon" style="position: relative; z-index: 2;">
-                            <h3 style="color: #fff;">iPad</h3>
-                        </div>
-                        <div class="product-links" style="position: relative; z-index: 2;">
-                            <ul style="list-style-type: none; margin: 0 20px; padding: 0; gap: 10px; align-items: center;">
-                                <li><a style="color: #fff; text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);"
-                                        href="/iPadPro">iPad Pro</a></li>
-                                <li><a style="color: #fff; text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);"
-                                        href="/iPadAir">iPad Air</a></li>
-                                <li><a style="color: #fff; text-decoration: none; transition: all 0.3s ease; display: block; padding: 0.5rem 0;"
-                                        href="/iPad10">iPad 10th Generation</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4" id="apple-products-watch">
-                    <div class="feature-card"
-                        style="background: url('/assets/images/watch1.jpg') center center/cover no-repeat; position: relative;">
-                        <!-- background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 100%); -->
-                        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>
-                        <div class="card-icon" style="position: relative; width: 100%;">
-                            <h3 style="color: #fff;">Apple Watch</h3>
-                        </div>
-                        <div class="product-links" style="position: relative; z-index: 2;">
-                            <ul style="list-style-type: none; margin: 0 20px; padding: 0; gap: 10px; align-items: center;">
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4" id="apple-products-business">
-                    <div class="card text-white">
-                        <div class="card-body"
-                            style="padding: 20px; background-color: #64666d6b;border-radius: 5px;">
-                            <div class="icon-title-row"
-                                style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                                <div class="icon">
-                                    <img src="assets/images/applebusiness.svg" alt="Apple Business Manager"
-                                        style="width: 100px;">
-                                </div>
-                                <h4 class="card-title" style="margin-bottom: 0;color: #000;">Apple Business Manager
-                                </h4>
-                            </div>
-                            <p class="card-text">Streamline device deployment and app distribution and establish
-                                managed
-                                Apple IDs for all staff members in a single location.</p>
-                            <a href="/apple-business" class="text-danger">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4" id="apple-products-applecare">
-                    <div class="card text-white">
-                        <div class="card-body"
-                            style="padding: 20px; background-color: #64666d6b;border-radius: 5px;">
-                            <div class="icon-title-row"
-                                style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                                <div class="icon">
-                                    <img src="assets/images/applecare.png" alt="AppleCare for Enterprise"
-                                        style="width: 90px;">
-                                </div>
-                                <h4 class="card-title" style="margin-bottom: 0;color: #000;">AppleCare for
-                                    Enterprise</h4>
-                            </div>
-                            <p class="card-text">Help desk support, OS support, and enterprise support solutions.
-                                The
-                                best
-                                support and care from the experts who know Apple products best.</p>
-                            <a href="/applecare" class="text-danger">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
 
 <section class="enterprise-solutions mt-100 cta-section">
     <div class="container2">
@@ -954,7 +1015,8 @@
                     style="background-image: url('assets/images/tco_img_new.png');position: relative;">
                     <div class="card-content appleenterprise-card">
                         <div class="content-section">
-                            <h2 style="margin-bottom: 1rem; font-weight: bold; color: #fff;" class="tco-title responsive-title">Total Cost of
+                            <h2 style="margin-bottom: 1rem; font-weight: bold; color: #fff;"
+                                class="tco-title responsive-title">Total Cost of
                                 Ownership (TCO)</h2>
                             <p class="tco-description">Apple Macintosh may have a higher initial
                                 investment compared to Windows PCs, but they offer a significantly lower Total Cost of

@@ -79,9 +79,9 @@ export class EnterpriseNewComponent implements OnInit, OnDestroy{
       description: 'Get expert Apple support onsite or remotely—from setup to troubleshooting. Certified engineers ensure smooth performance, tailored to your team`s needs.'
     },
     {
-      image: 'assets/icons/purchase_prog_ser.png',
+      image: 'assets/icons/apple_pp.png',
       title: 'Tailored Apple Purchase Programs with Financing & Flexible Payment Plans',
-      description: 'Every business is unique—so are our Apple purchase plans, with flexible leasing, volume pricing, and financing suited to your needs. Empower your team with the latest Apple technology through predictable costs and easy, stress-free upgrades..'
+      description: 'Every business is unique—so are our Apple plans, with flexible leasing, volume pricing, and financing. Equip your team with the latest Apple tech through predictable costs and hassle-free upgrades.'
     },
     {
       image: 'assets/icons/seamlessdeploy_serv.png',
@@ -99,14 +99,14 @@ export class EnterpriseNewComponent implements OnInit, OnDestroy{
       description: 'Boost productivity with tailored Apple training for users, creatives, and IT teams. Onsite or online, learn to create, collaborate, and troubleshoot like a pro.'
     },
     {
-      image: 'assets/icons/ecosystem_serv.png',
-      title: 'Apple Ecosystem Consulting',
-      description: 'Align Apple devices, apps, and workflows with your business goals. From planning to deployment, we deliver secure, scalable solutions that work.'
-    },
-    {
       image: 'assets/icons/apple_program_serv.png',
       title: 'Exclusive Apple Programs',
       description: 'Unlock exclusive Apple benefits for business and education through an authorised partner. Access tools, pricing, and support to grow and achieve more.'
+    },
+    {
+      image: 'assets/icons/ecosystem_serv.png',
+      title: 'Apple Ecosystem Consulting',
+      description: 'Align Apple devices, apps, and workflows with your business goals. From planning to deployment, we deliver secure, scalable solutions that work.'
     }
   ];
 

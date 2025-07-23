@@ -64,47 +64,47 @@ export class EnterpriseNewComponent implements OnInit, OnDestroy{
 
   gridItems = [
     {
-      image: 'assets/images/demopoc.png',
+      image: 'assets/icons/presales_ser.png',
       title: 'Apple Pre-Sales Expertise & Proof of Concept',
       description: 'Get expert guidance to choose the right Apple devices for your business and budget—no overspending. Experience Apple in action with live demos and tailored proof of concepts.'
     },
     {
-      image: 'assets/images/apple_device_tradein.png',
+      image: 'assets/icons/tradein_serv.png',
       title: 'Apple Device Trade-In Program',
       description: 'Easily upgrade with our Apple Trade-In program—get value for old devices toward new ones. Secure, eco-friendly, and seamless for single or fleet replacements.'
     },
     {
-      image: 'assets/images/appleservice.png',
+      image: 'assets/icons/expert_onsite_ser.png',
       title: 'Apple Services with Expert Onsite Support',
       description: 'Get expert Apple support onsite or remotely—from setup to troubleshooting. Certified engineers ensure smooth performance, tailored to your team`s needs.'
     },
     {
-      image: 'assets/images/financeflexi.png',
+      image: 'assets/icons/purchase_prog_ser.png',
       title: 'Tailored Apple Purchase Programs with Financing & Flexible Payment Plans',
       description: 'Every business is unique—so are our Apple purchase plans, with flexible leasing, volume pricing, and financing suited to your needs. Empower your team with the latest Apple technology through predictable costs and easy, stress-free upgrades..'
     },
     {
-      image: 'assets/images/delpoy_new.png',
+      image: 'assets/icons/seamlessdeploy_serv.png',
       title: 'Seamless Apple Deployment & Integration',
       description: 'Zero-touch Apple deployment with MDM and Apple Business Manager—fast, secure, and seamless. Ideal for startups to enterprise scale-ups, with expert setup and minimal downtime.'
     },
     {
-      image: 'assets/images/compresup.png',
+      image: 'assets/icons/support_serv.png',
       title: 'Comprehensive Apple Maintenance & Support',
       description: 'End-to-end Apple support from certified engineers—onsite or remote. For updates, repairs, and more, we keep your Apple setup running smoothly.'
     },
     {
-      image: 'assets/images/appletraining.png',
+      image: 'assets/icons/training_serv.png',
       title: 'Custom Apple Training & Enablement',
       description: 'Boost productivity with tailored Apple training for users, creatives, and IT teams. Onsite or online, learn to create, collaborate, and troubleshoot like a pro.'
     },
     {
-      image: 'assets/images/ecosystem1.png',
+      image: 'assets/icons/ecosystem_serv.png',
       title: 'Apple Ecosystem Consulting',
       description: 'Align Apple devices, apps, and workflows with your business goals. From planning to deployment, we deliver secure, scalable solutions that work.'
     },
     {
-      image: 'assets/images/appleprog.png',
+      image: 'assets/icons/apple_program_serv.png',
       title: 'Exclusive Apple Programs',
       description: 'Unlock exclusive Apple benefits for business and education through an authorised partner. Access tools, pricing, and support to grow and achieve more.'
     }

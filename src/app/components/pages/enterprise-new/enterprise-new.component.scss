@@ -2435,3 +2435,19 @@
     }
   }
 }
+
+.single-pricing span {
+  font-size: 30px;
+  font-family: var(--headingFontFamily);
+  color: var(--headingColor);
+  font-weight: 500;
+  display: block;
+  line-height: 1;
+  margin: 0 auto 20px;
+  background-color: var(--whiteColor);
+  box-shadow: var(--boxShadow);
+  width: fit-content;
+  height: 29px;
+  line-height: 32px;
+  border-radius: 50%;
+}

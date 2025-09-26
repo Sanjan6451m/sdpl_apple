@@ -60,6 +60,7 @@ export class ContactComponent implements OnInit {
         .then((response) => {
           this.message = 'Message sent successfully!';
           this.contactForm.reset();
+          window.location.href = '/thank-you';
         })
         .catch((error) => {
           this.message = 'Error sending message. Try again later.';

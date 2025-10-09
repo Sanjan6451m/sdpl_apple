@@ -20,7 +20,7 @@ export class HomepageComponent implements OnInit {
   
   statistics = [
     { value: 10, text: 'Years of Excellence' },
-    { value: 480, text: 'Enterprise Customers', prefix: '+' },
+    { value: 500, text: 'Enterprise Customers', prefix: '+' },
     { value: 40, text: 'Partners', prefix: '+' },
     { value: 100000, text: 'Devices Deployed', prefix: '+' },
     // { value: 1000, text: 'Happy Customers', prefix: '+' },

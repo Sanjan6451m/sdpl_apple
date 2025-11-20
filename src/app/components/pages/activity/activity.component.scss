@@ -63,6 +63,24 @@
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
 }
 
+.multi-image-row {
+  gap: 2.5rem;
+}
+
+.multi-image-row.web-only .activity-col {
+  flex: 1 1 calc(33.333% - 1.5rem);
+  min-width: 0;
+}
+
+.multi-image-row.web-only .image-col img {
+  max-width: none;
+}
+
+.multi-image-row.mobile-only .activity-col {
+  width: 100%;
+  min-width: 0;
+}
+
 /* @media (max-width: 768px) {
   .activity-row {
     flex-direction: column;

@@ -112,6 +112,13 @@ img {
     max-width: 100%;
     height: auto;
     border-radius: 15px;
+    loading: lazy;
+}
+
+/* Optimize font loading */
+@font-face {
+    font-family: 'Open Sans';
+    font-display: swap;
 }
 
 ul {

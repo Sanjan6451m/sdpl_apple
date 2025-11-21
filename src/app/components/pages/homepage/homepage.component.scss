@@ -26,8 +26,11 @@ section {
 #hero-banner {
   position: relative;
   background-color: #f8f9fa;
-  padding: 14rem 0;
-  background-image: url('/assets/images/homepage_banner_2.jpg');
+  padding: 0;
+  min-height: 550px;
+  display: flex;
+  align-items: flex-end;
+  background-image: url('/assets/images/homepage_banner_4.png');
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -48,6 +51,8 @@ section {
   .container {
     position: relative;
     z-index: 2;
+    width: 100%;
+    padding: 2rem 0;
   }
 
   h1 {
@@ -556,7 +561,12 @@ section {
   }
 
   #hero-banner {
-    padding: 4rem 0;
+    min-height: 400px;
+    padding: 0;
+
+    .container {
+      padding: 1.5rem 0;
+    }
 
     h1 {
       font-size: 2.5rem;
@@ -634,7 +644,12 @@ section {
   }
 
   #hero-banner {
-    padding: 3rem 0;
+    min-height: 350px;
+    padding: 0;
+
+    .container {
+      padding: 1.5rem 0;
+    }
 
     h1 {
       font-size: 2rem;
@@ -772,8 +787,13 @@ section {
   }
 
   #hero-banner {
-    padding: 2.5rem 0;
+    min-height: 300px;
+    padding: 0;
     margin-top: 60px;
+
+    .container {
+      padding: 1rem 0;
+    }
 
     h1 {
       font-size: 1.75rem;
@@ -1120,5 +1140,20 @@ section {
       font-size: 0.8rem;
       width: 110px;
     }
+  }
+}
+
+
+@media (max-width: 992px) {
+  .hero-text {
+      font-size: 0.8rem !important;
+      color: #fff;
+  }
+}
+
+@media (max-width: 576px) {
+  section h1, section h2 {
+      font-size: 1.25rem !important;
+      margin-bottom: 0 !important;
   }
 }

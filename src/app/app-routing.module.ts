@@ -101,13 +101,21 @@ import { MacdoesComponent } from './components/pages/macdoes/macdoes.component';
 import { MacDeveloperComponent } from './components/pages/mac-developer/mac-developer.component';
 import { MBA15inComponent } from './components/pages/Mac/mba15in/mba15in.component';
 import { MBP1416inComponent } from './components/pages/Mac/mbp1416in/mbp1416in.component';
+import { MbpM5Component } from './components/pages/Mac/mbp-m5/mbp-m5.component';
+
 import { Ipad10gComponent } from './components/pages/iPad/ipad10g/ipad10g.component';
 import { IPadAirNewComponent } from './components/pages/iPad/i-pad-air-new/i-pad-air-new.component';
 import { IPadProNewComponent } from './components/pages/iPad/i-pad-pro-new/i-pad-pro-new.component';
+import { IPadProM5Component } from './components/pages/iPad/i-pad-pro-m5/i-pad-pro-m5.component';
+
 import { IPhone16PromaxComponent } from './components/pages/iPhone/i-phone16-promax/i-phone16-promax.component';
 import { IPhone16eNewComponent } from './components/pages/iPhone/i-phone16e-new/i-phone16e-new.component';
 import { MacstudioComponent } from './components/pages/Mac/macstudio/macstudio.component';
 import { Iphone15Component } from './components/pages/iPhone/iphone15/iphone15.component';
+import { IPhoneAirComponent } from './components/pages/iPhone/i-phone-air/i-phone-air.component';
+import { Iphone17Component } from './components/pages/iPhone/iphone17/iphone17.component';
+
+
 import { Iphone15proComponent } from './components/pages/iPhone/iphone15pro/iphone15pro.component';
 import { DevpowerhouseComponent } from './components/pages/devpowerhouse/devpowerhouse.component';
 import { LoginpageComponent } from './components/pages/loginpage/loginpage.component';
@@ -220,13 +228,17 @@ const routes: Routes = [
     // Products Pages
     { path: 'MBA15', component: MBA15inComponent },
     { path: 'MBP1416', component: MBP1416inComponent },
+    { path: 'MBPM5', component: MbpM5Component },
     { path: 'macstudio', component: MacstudioComponent },
 
     { path: 'iPad10', component: Ipad10gComponent },
     { path: 'iPadAir', component: IPadAirNewComponent },
     { path: 'iPadPro', component: IPadProNewComponent },
+    { path: 'iPadProM5', component: IPadProM5Component},
 
     { path: 'iPhone15', component: Iphone15Component },
+    { path: 'iPhoneAir', component: IPhoneAirComponent},
+    { path: 'iPhone17', component: Iphone17Component },
     { path: 'iPhone15Pro', component: Iphone15proComponent },
     { path: 'iPhone16', component: Iphone16Component },
     { path: 'iPhone16e', component: IPhone16eNewComponent },

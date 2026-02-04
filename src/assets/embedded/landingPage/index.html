@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Enterprise Hardware Solutions</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#ffb703;
+  --dark:#0f0f0f;
+  --gray:#666;
+  --light:#f6f7fb;
+}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:'Inter',sans-serif;
+}
+body{
+  background:#fff;
+  color:#111;
+  line-height:1.6;
+}
+img{max-width:100%;display:block;}
+a{text-decoration:none;color:inherit}
+
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+/* HERO */
+.hero{
+    background-image:url('./images/landingPage/12.png');
+  /* background:linear-gradient(135deg,#0f0f0f,#2b2b2b); */
+  color:#fff;
+  padding:120px 0;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+.hero h1{
+  font-size:42px;
+  margin-bottom:15px;
+}
+.hero p{color:#ddd;margin-bottom:25px;}
+.hero-badge{
+  background-image:url('assets/images/landingPage/12.png');
+  padding:20px;
+  border-radius:12px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+/* PARTNER STRIP */
+.partner-strip{
+  background:#1b1b1b;
+  color:#fff;
+  padding:30px 0;
+}
+.partner-strip .box{
+  background:#2a2a2a;
+  padding:25px;
+  border-radius:14px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+/* LOGOS */
+.logos{
+  padding:60px 0;
+  background:#fafafa;
+}
+.logos-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  gap:25px;
+  align-items:center;
+}
+.logo-box{
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+  text-align:center;
+  box-shadow:0 2px 6px rgba(0,0,0,.06);
+}
+
+/* STATS */
+.stats{
+  padding:60px 0;
+}
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:25px;
+  text-align:center;
+}
+.stat h2{font-size:34px;color:var(--primary)}
+
+/* SERVICES */
+.services{
+  background:var(--light);
+  padding:70px 0;
+}
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+.card{
+  background:#fff;
+  padding:25px;
+  border-radius:16px;
+  box-shadow:0 4px 12px rgba(0,0,0,.06);
+}
+
+/* SOLUTION TYPES */
+.solutions{
+  padding:70px 0;
+}
+.sol-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+/* INDUSTRIES */
+.industries{
+  background:linear-gradient(135deg,#fff6d6,#ffe7a1);
+  padding:70px 0;
+}
+.ind-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:25px;
+}
+
+/* HOW WE WORK */
+.process{
+  padding:70px 0;
+  background:#fafafa;
+}
+.process-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:25px;
+  text-align:center;
+}
+.step span{
+  display:inline-block;
+  width:40px;height:40px;
+  background:var(--primary);
+  color:#000;
+  border-radius:50%;
+  line-height:40px;
+  margin-bottom:10px;
+  font-weight:600;
+}
+
+/* CONTACT */
+.contact{
+  padding:80px 0;
+}
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
+form input,form textarea{
+  width:100%;
+  padding:12px;
+  margin-bottom:15px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+form button{
+  background:var(--primary);
+  border:none;
+  padding:12px 25px;
+  border-radius:8px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+  background:#0f0f0f;
+  color:#fff;
+  padding:30px 0;
+  text-align:center;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero-grid,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+  .hero h1{font-size:32px;}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>Enterprise Hardware Solutions</h1>
+      <p>Powered by Apple. Reliable enterprise solutions across India.</p>
+      <div class="hero-badge">
+        <div>
+          <strong>Apple Solutions for Business Use</strong>
+          <p>Apple Business Partner supporting organisations across India.</p>
+        </div>
+        <div> Business Partner</div>
+      </div>
+    </div>
+    <div>
+      <img src="./assets/images/landingPage/12.png" alt="Devices">
+    </div>
+  </div>
+</section>
+
+<!-- LOGOS -->
+<section class="logos">
+  <div class="container">
+    <h3>Trusted by Leading Organisations</h3>
+    <div class="logos-grid">
+      <div class="logo-box">Twilio</div>
+      <div class="logo-box">Philips</div>
+      <div class="logo-box">NetApp</div>
+      <div class="logo-box">AstraZeneca</div>
+      <div class="logo-box">More...</div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="container stats-grid">
+    <div class="stat"><h2>10</h2><p>Years Excellence</p></div>
+    <div class="stat"><h2>500+</h2><p>Customers</p></div>
+    <div class="stat"><h2>40+</h2><p>Partners</p></div>
+    <div class="stat"><h2>100K+</h2><p>Devices</p></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+  <div class="container">
+    <h3>Apple Solutions We Support</h3>
+    <div class="service-grid">
+      <div class="card">Mac, iPad, iPhone & Accessories</div>
+      <div class="card">Procurement & Deployment</div>
+      <div class="card">Standard Configuration</div>
+      <div class="card">Post Deployment Support</div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTIONS -->
+<section class="solutions">
+  <div class="container">
+    <h3>Solutions Designed for Business</h3>
+    <div class="sol-grid">
+      <div class="card">Enterprise & Corporate Teams</div>
+      <div class="card">Startups</div>
+      <div class="card">IT & Procurement Teams</div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="industries">
+  <div class="container">
+    <h3>Industries We Work With</h3>
+    <div class="ind-grid">
+      <div class="card">IT & Software</div>
+      <div class="card">Healthcare</div>
+      <div class="card">Finance</div>
+      <div class="card">Manufacturing</div>
+      <div class="card">Design & Media</div>
+      <div class="card">Education</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="container">
+    <h3>How We Work</h3>
+    <div class="process-grid">
+      <div class="step"><span>1</span><p>Understand Requirement</p></div>
+      <div class="step"><span>2</span><p>Recommend Solutions</p></div>
+      <div class="step"><span>3</span><p>Deploy & Setup</p></div>
+      <div class="step"><span>4</span><p>Ongoing Support</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+  <div class="container contact-grid">
+    <div>
+      <h3>Contact Us</h3>
+      <p>+91 802311 6047</p>
+      <p>enquiry@superiorsystems.in</p>
+      <p>Bangalore, India</p>
+    </div>
+    <form>
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="text" placeholder="Phone">
+      <textarea placeholder="Message"></textarea>
+      <button>Request Call Back</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>© Superior Digital Private Limited</p>
+</footer>
+
+</body>
+</html>

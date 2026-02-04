@@ -119,6 +119,7 @@ import { Iphone17Component } from './components/pages/iPhone/iphone17/iphone17.c
 import { Iphone15proComponent } from './components/pages/iPhone/iphone15pro/iphone15pro.component';
 import { DevpowerhouseComponent } from './components/pages/devpowerhouse/devpowerhouse.component';
 import { LoginpageComponent } from './components/pages/loginpage/loginpage.component';
+import { LandingPageComponent } from './components/pages/landing-page/landing-page.component';
 
 // Products Pages
 
@@ -244,6 +245,7 @@ const routes: Routes = [
     { path: 'iPhone16e', component: IPhone16eNewComponent },
     { path: 'iPhone16Promax', component: IPhone16PromaxComponent },
     { path: 'devpowerhouse', component: DevpowerhouseComponent },
+    { path: 'landing-page', component: LandingPageComponent },
     // Products Pages
 
     // Embedded Pages

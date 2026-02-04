@@ -1,0 +1,370 @@
+<section class="hero-section">
+    <div class="hero-banner-container">
+        <button class="hero-arrow left-arrow" aria-label="Previous" (click)="showPrev()">&#8592;</button>
+        <img [src]="bannerImages[currentIndex].src" alt="Banner" class="hero-banner-img" />
+        <div class="hero-banner-text">{{ bannerImages[currentIndex].text }}</div>
+        <div class="hero-banner-subtext">{{ bannerImages[currentIndex].subtext }}</div>
+        <div class="hero-banner-subtext1">{{ bannerImages[currentIndex].subtext1 }}</div>
+        <!-- <button class="hero-banner-cta" (click)="goToContact()">{{ bannerImages[currentIndex].btnText }}</button> -->
+        <button class="hero-arrow right-arrow" aria-label="Next" (click)="showNext()">&#8594;</button>
+        <div class="hero-banner-dots">
+            <span *ngFor="let img of bannerImages; let i = index" class="dot" [class.active]="i === currentIndex"
+                (click)="goToImage(i)"></span>
+        </div>
+    </div>
+</section>
+<br>
+<section class="business-banner">
+    <div class="business-card">
+
+        <!-- Left Content -->
+        <div class="business-left">
+            <h2>Apple Solutions for<br>Business Use</h2>
+
+            <p>
+                Superior Digital is an Apple Business Partner supporting organisations across India
+                with Apple solutions for professional and enterprise environments. We help businesses
+                plan, deploy, and support Apple devices as part of their overall IT setup.
+                We focus on long-term reliability rather than one-time transactions.
+            </p>
+
+            <a href="#" class="learn-btn">Learn More →</a>
+        </div>
+
+        <!-- Right Content -->
+        <div class="business-right">
+            <img src="assets/images/landingPage/buss_partner.png" alt="buiness Partner" />
+        </div>
+
+    </div>
+</section>
+<br>
+<section class="trusted-section trusted-card">
+    <!-- <div class="trusted-card"> -->
+    <h2>Trusted by Leading Organisations Across India</h2>
+
+    <p class="trusted-subtitle">
+        Superior Digital has been delivering IT and Apple solutions for over a decade, working
+        with organisations across technology, healthcare, finance, manufacturing, and
+        professional services. These should be individual boxes
+    </p>
+
+    <div class="trusted-box">
+        <div class="logo-grid">
+
+            <div class="logo-card">
+                <img src="assets/images/landingPage/frame1.png" alt="Twilio">
+            </div>
+
+            <div class="logo-card">
+                <img src="assets/images/landingPage/frame1.png" alt="Vonage">
+            </div>
+
+            <div class="logo-card">
+                <img src="assets/images/landingPage/frame1.png" alt="Netskope">
+            </div>
+
+            <div class="logo-card">
+                <img src="assets/images/landingPage/frame1.png" alt="Loreal">
+            </div>
+
+            <div class="logo-card">
+                <img src="assets/images/landingPage/frame1.png" alt="Philips">
+            </div>
+
+            <div class="logo-card">
+                <img src="assets/images/landingPage/frame1.png" alt="AstraZeneca">
+            </div>
+
+            <div class="logo-card">
+                <img src="assets/images/landingPage/frame1.png" alt="Netskope">
+            </div>
+
+            <div class="logo-card">
+                <img src="assets/images/landingPage/frame1.png" alt="Netskope">
+            </div>
+
+            <div class="logo-card">
+                <img src="assets/images/landingPage/frame1.png" alt="Netskope">
+            </div>
+
+        </div>
+    </div>
+    <!-- </div> -->
+</section>
+<br>
+<section class="stats-highlight trusted-card">
+
+    <h2>Think Digital. Choose Superior.</h2>
+
+    <p class="stats-subtitle">
+        "With 480+ clients and partnerships with global tech leaders, Superior Digital delivers
+        tailored, future-ready solutions powered by deep expertise."
+    </p>
+
+    <div class="stats-row">
+
+        <div class="stat-item">
+            <h3>10</h3>
+            <p>Years of Excellence</p>
+        </div>
+
+        <div class="stat-item">
+            <h3>500+</h3>
+            <p>Enterprise Customers</p>
+        </div>
+
+        <div class="stat-item">
+            <h3>40+</h3>
+            <p>Technology Partners</p>
+        </div>
+
+        <div class="stat-item">
+            <h3>100K+</h3>
+            <p>Devices Deployed</p>
+        </div>
+
+        <div class="stat-item">
+            <h3>16 <span>States</span></h3>
+            <p>Pan-India Coverage</p>
+        </div>
+
+    </div>
+
+    <a href="#" class="cta-btn">
+        Book Your Free Mac Consultation →
+    </a>
+
+</section>
+<br>
+<section class="apple-support trusted-card">
+
+    <h2>Apple Solutions We Support</h2>
+    <p class="support-subtitle">
+        We work with businesses to manage Apple devices from procurement to deployment to device refresh
+    </p>
+
+    <div class="support-grid">
+
+        <div class="support-card">
+            <img src="assets/images/landingPage/icon1.svg" alt="">
+            <p>Mac, iPad, iPhone, and Apple accessories</p>
+        </div>
+
+        <div class="support-card">
+            <img src="assets/images/landingPage/icon1.svg" alt="">
+            <p>Business procurement and deployment support</p>
+        </div>
+
+        <div class="support-card">
+            <img src="assets/images/landingPage/icon1.svg" alt="">
+            <p>Standard device configuration for employees</p>
+        </div>
+
+        <div class="support-card">
+            <img src="assets/images/landingPage/icon1.svg" alt="">
+            <p>Post-deployment support and coordination</p>
+        </div>
+
+        <div class="support-card">
+            <img src="assets/images/landingPage/icon1.svg" alt="">
+            <p>Device lifecycle and refresh planning</p>
+        </div>
+
+    </div>
+
+</section>
+<br>
+<section class="business-solutions trusted-card">
+
+    <h2>Solutions Designed for Different Business Needs</h2>
+    <p class="solutions-subtitle">
+        Tailored Apple deployment and management solutions aligned to how different teams operate.
+    </p>
+
+    <div class="solutions-grid">
+
+        <!-- Card 1 -->
+        <div class="solution-card">
+            <img src="assets/images/landingPage/bs1.png" alt="">
+            <h3>Enterprises and Corporate Teams</h3>
+            <p>
+                Planned Apple rollouts across departments and locations with clear ownership and coordination.
+            </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="solution-card">
+            <img src="assets/images/landingPage/bs2.png" alt="">
+            <h3>Growing Businesses and Startups</h3>
+            <p>
+                Structured Apple setup for teams with consistent configurations and predictable delivery.
+            </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="solution-card">
+            <img src="assets/images/landingPage/bs3.png" alt="">
+            <h3>IT and Procurement Teams</h3>
+            <p>
+                Clear recommendations, simplified coordination, and a single point of contact throughout the engagement.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+<br>
+<section class="industries-section trusted-card">
+
+    <h2>Industries We Work With</h2>
+
+    <div class="industries-grid">
+
+        <div class="industry-card">
+            <p>IT and Software Companies</p>
+            <img src="assets/images/landingPage/Business Building.png" alt="" width="40" />
+        </div>
+
+        <div class="industry-card">
+            <p>Healthcare and Pharma</p>
+            <img src="assets/images/landingPage/Doctors Bag.png" alt="" width="40" />
+        </div>
+
+        <div class="industry-card">
+            <p>Financial Services</p>
+            <img src="assets/images/landingPage/Money Bag Rupee.png" alt="" width="40" />
+        </div>
+
+        <div class="industry-card">
+            <p>Manufacturing and Automotive</p>
+            <img src="assets/images/landingPage/Carpool.png" alt="" width="40" />
+        </div>
+
+        <div class="industry-card">
+            <p>Design, Media, and Creative Teams</p>
+            <img src="assets/images/landingPage/Windows 10 Personalization.png" alt="" width="40" />
+        </div>
+
+        <div class="industry-card">
+            <p>Education and Institutions</p>
+            <img src="assets/images/landingPage/Graduation Cap.png" alt="" width="40" />
+        </div>
+
+    </div>
+
+</section>
+<br>
+<section class="why-choose trusted-card">
+
+    <h2>Why Organisations Choose Superior Digital</h2>
+
+    <div class="why-box">
+
+        <div class="why-item">
+            Apple Business Partner with enterprise focus
+        </div>
+
+        <div class="why-item">
+            Strong understanding of business IT environments
+        </div>
+
+        <div class="why-item">
+            Clear processes from planning to support
+        </div>
+
+        <div class="why-item">
+            Clear processes from planning to support
+        </div>
+
+    </div>
+
+</section>
+<br>
+<section class="how-work trusted-card">
+
+    <h2>How We Work</h2>
+
+    <div class="work-grid">
+
+        <div class="work-card">
+            <!-- <div class="step">1</div> -->
+            <img src="assets/images/landingPage/1.svg" alt="one" />
+            <p>Understand your requirement</p>
+        </div>
+
+        <div class="work-card">
+            <img src="assets/images/landingPage/2.svg" alt="one" />
+            <p>Recommend suitable Apple solutions</p>
+        </div>
+
+        <div class="work-card">
+            <img src="assets/images/landingPage/3.svg" alt="one" />
+            <p>Coordinate deployment and setup</p>
+        </div>
+
+        <div class="work-card">
+            <img src="assets/images/landingPage/4.svg" alt="one" />
+            <p>Provide ongoing support</p>
+        </div>
+
+    </div>
+
+</section>
+<br>
+<section class="contact-section trusted-card">
+ <div style="display: block;">
+            <h2>Contact Us</h2>
+            <p>
+                If your organisation is planning to adopt or expand Apple usage,
+                our team can help you do it in a structured and reliable way.
+            </p>
+        </div>
+    <div class="contact-container">
+       
+        <!-- LEFT INFO -->
+        <div class="contact-info">
+
+
+            <div class="info-item">
+                📞 <span>+91 802311 6047</span>
+            </div>
+
+            <div class="info-item">
+                ✉️ <span>enquiry&#64;superiorsystems.in</span>
+            </div>
+
+            <div class="info-item">
+                📍 <span>
+                    No. 111, Ground Floor, 6th Main, MC Layout,
+                    MRCR Extn., Vijayanagar,
+                    Bangalore – 560040
+                </span>
+            </div>
+        </div>
+
+        <!-- RIGHT FORM -->
+        <div class="contact-form-card">
+
+            <form>
+
+                <input type="text" placeholder="Name" required>
+
+                <input type="email" placeholder="Email" required>
+
+                <input type="tel" placeholder="Phone">
+
+                <textarea placeholder="Your Message"></textarea>
+
+                <button type="submit">
+                    Request Call Back →
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+<br>

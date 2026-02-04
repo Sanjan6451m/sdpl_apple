@@ -137,7 +137,7 @@ export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
     },
     {
       src: '../assets/images/landingPage/12.png',
-      text: 'Enterprise1',
+      text: 'Enterprise',
       subtext: 'Hardware Solutions.',
       subtext1: 'Powered by apple.',
       subtext2: 'Apple Business Partner delivering reliable enterprise solutions across India.',
@@ -145,7 +145,7 @@ export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
     },
     {
       src: '../assets/images/landingPage/12.png',
-      text: 'Enterprise2',
+      text: 'Enterprise',
       subtext: 'Hardware Solutions.',
       subtext1: 'Powered by apple.',
       subtext2: 'Apple Business Partner delivering reliable enterprise solutions across India.',

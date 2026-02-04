@@ -296,15 +296,27 @@
         <!-- RIGHT FORM -->
         <div class="contact-form-card">
 
-            <form>
+            <form [formGroup]="contactForm" (ngSubmit)="onContactSubmit()">
 
-                <input type="text" placeholder="Name" required>
+                <input type="text" formControlName="name" placeholder="Name">
+                <span class="form-error" *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+                    Name is required (min 2 characters).
+                </span>
 
-                <input type="email" placeholder="Email" required>
+                <input type="email" formControlName="email" placeholder="Email">
+                <span class="form-error" *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+                    Please enter a valid email.
+                </span>
 
-                <input type="tel" placeholder="Phone">
+                <input type="tel" formControlName="phone" placeholder="Phone" maxlength="10">
+                <span class="form-error" *ngIf="contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched">
+                    Phone must be 10 digits.
+                </span>
 
-                <textarea placeholder="Your Message"></textarea>
+                <textarea formControlName="message" placeholder="Your Message"></textarea>
+                <span class="form-error" *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+                    Message is required (min 10 characters).
+                </span>
 
                 <button type="submit">
                     Request Call Back →
@@ -317,4 +329,12 @@
     </div>
 
 </section>
+
+<!-- Contact success dialog -->
+<div class="contact-dialog-overlay" *ngIf="showContactDialog" (click)="closeContactDialog()">
+    <div class="contact-dialog" (click)="$event.stopPropagation()">
+        <p class="contact-dialog-message">Our team will contact you shortly.</p>
+        <button type="button" class="contact-dialog-btn" (click)="closeContactDialog()">OK</button>
+    </div>
+</div>
 <br>

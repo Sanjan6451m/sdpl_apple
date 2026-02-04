@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, OnDestroy, OnInit, ViewChild, AfterViewInit, ChangeDetectorRef } from '@angular/core';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { OwlOptions, CarouselComponent } from 'ngx-owl-carousel-o';
 import { Router, RouterModule, NavigationEnd, ActivatedRoute } from '@angular/router';
@@ -10,7 +11,7 @@ import { ScrollRevealDirective } from '../../../directives/scroll-reveal.directi
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [CarouselModule, CommonModule, RouterModule, ScrollRevealDirective],
+  imports: [CarouselModule, CommonModule, RouterModule, ScrollRevealDirective, ReactiveFormsModule],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
@@ -168,15 +169,25 @@ export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
   private statsSectionInView = false;
   private statsObserver: IntersectionObserver | null = null;
 
+  contactForm: FormGroup;
+  showContactDialog = false;
+
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private sanitizer: DomSanitizer,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private fb: FormBuilder
   ) {
     this.mbAirUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
       'assets/embedded/MBA/mba_air.html'
     );
+    this.contactForm = this.fb.group({
+      name: ['', [Validators.required, Validators.minLength(2)]],
+      email: ['', [Validators.required, Validators.email]],
+      phone: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
+      message: ['', [Validators.required, Validators.minLength(10)]]
+    });
   }
 
   switchTab(event: Event, tab: string): void {
@@ -333,5 +344,17 @@ export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
 
   goToContact() {
     this.router.navigate(['/contact']);
+  }
+
+  onContactSubmit(): void {
+    this.contactForm.markAllAsTouched();
+    if (this.contactForm.valid) {
+      this.showContactDialog = true;
+      this.contactForm.reset();
+    }
+  }
+
+  closeContactDialog(): void {
+    this.showContactDialog = false;
   }
 }

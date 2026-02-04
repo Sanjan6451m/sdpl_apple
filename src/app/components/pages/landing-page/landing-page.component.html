@@ -5,7 +5,7 @@
         <div class="hero-banner-text">{{ bannerImages[currentIndex].text }}</div>
         <div class="hero-banner-subtext">{{ bannerImages[currentIndex].subtext }}</div>
         <div class="hero-banner-subtext1">{{ bannerImages[currentIndex].subtext1 }}</div>
-        <!-- <button class="hero-banner-cta" (click)="goToContact()">{{ bannerImages[currentIndex].btnText }}</button> -->
+        <div class="hero-banner-subtext2">{{ bannerImages[currentIndex].subtext2 }}</div>
         <button class="hero-arrow right-arrow" aria-label="Next" (click)="showNext()">&#8594;</button>
         <div class="hero-banner-dots">
             <span *ngFor="let img of bannerImages; let i = index" class="dot" [class.active]="i === currentIndex"
@@ -16,121 +16,78 @@
 <br>
 <section class="business-banner">
     <div class="business-card">
-
         <!-- Left Content -->
         <div class="business-left">
             <h2>Apple Solutions for<br>Business Use</h2>
-
             <p>
                 Superior Digital is an Apple Business Partner supporting organisations across India
                 with Apple solutions for professional and enterprise environments. We help businesses
                 plan, deploy, and support Apple devices as part of their overall IT setup.
                 We focus on long-term reliability rather than one-time transactions.
             </p>
-
             <a href="#" class="learn-btn">Learn More →</a>
         </div>
-
         <!-- Right Content -->
         <div class="business-right">
-            <img src="assets/images/landingPage/buss_partner.png" alt="buiness Partner" />
+            <img src="assets/images/landingPage/apple_business.svg" alt="Business Partner" />
         </div>
-
     </div>
 </section>
 <br>
 <section class="trusted-section trusted-card">
-    <!-- <div class="trusted-card"> -->
     <h2>Trusted by Leading Organisations Across India</h2>
 
     <p class="trusted-subtitle">
         Superior Digital has been delivering IT and Apple solutions for over a decade, working
         with organisations across technology, healthcare, finance, manufacturing, and
-        professional services. These should be individual boxes
+        professional services.
     </p>
-
     <div class="trusted-box">
         <div class="logo-grid">
 
             <div class="logo-card">
                 <img src="assets/images/landingPage/frame1.png" alt="Twilio">
             </div>
-
             <div class="logo-card">
                 <img src="assets/images/landingPage/frame1.png" alt="Vonage">
             </div>
-
             <div class="logo-card">
                 <img src="assets/images/landingPage/frame1.png" alt="Netskope">
             </div>
-
             <div class="logo-card">
                 <img src="assets/images/landingPage/frame1.png" alt="Loreal">
             </div>
-
             <div class="logo-card">
                 <img src="assets/images/landingPage/frame1.png" alt="Philips">
             </div>
-
             <div class="logo-card">
                 <img src="assets/images/landingPage/frame1.png" alt="AstraZeneca">
             </div>
-
             <div class="logo-card">
                 <img src="assets/images/landingPage/frame1.png" alt="Netskope">
             </div>
-
             <div class="logo-card">
                 <img src="assets/images/landingPage/frame1.png" alt="Netskope">
             </div>
-
             <div class="logo-card">
                 <img src="assets/images/landingPage/frame1.png" alt="Netskope">
             </div>
-
         </div>
     </div>
-    <!-- </div> -->
 </section>
 <br>
-<section class="stats-highlight trusted-card">
-
+<section #statsSection class="stats-highlight trusted-card">
     <h2>Think Digital. Choose Superior.</h2>
-
     <p class="stats-subtitle">
         "With 480+ clients and partnerships with global tech leaders, Superior Digital delivers
         tailored, future-ready solutions powered by deep expertise."
     </p>
-
     <div class="stats-row">
-
-        <div class="stat-item">
-            <h3>10</h3>
-            <p>Years of Excellence</p>
+        <div class="stat-item" *ngFor="let stat of stats; let i = index">
+            <h3>{{ getStatDisplay(i) }}</h3>
+            <p>{{ stat.label }}</p>
         </div>
-
-        <div class="stat-item">
-            <h3>500+</h3>
-            <p>Enterprise Customers</p>
-        </div>
-
-        <div class="stat-item">
-            <h3>40+</h3>
-            <p>Technology Partners</p>
-        </div>
-
-        <div class="stat-item">
-            <h3>100K+</h3>
-            <p>Devices Deployed</p>
-        </div>
-
-        <div class="stat-item">
-            <h3>16 <span>States</span></h3>
-            <p>Pan-India Coverage</p>
-        </div>
-
     </div>
-
     <a href="#" class="cta-btn">
         Book Your Free Mac Consultation →
     </a>
@@ -138,41 +95,32 @@
 </section>
 <br>
 <section class="apple-support trusted-card">
-
     <h2>Apple Solutions We Support</h2>
     <p class="support-subtitle">
         We work with businesses to manage Apple devices from procurement to deployment to device refresh
     </p>
-
     <div class="support-grid">
-
         <div class="support-card">
             <img src="assets/images/landingPage/icon1.svg" alt="">
             <p>Mac, iPad, iPhone, and Apple accessories</p>
         </div>
-
         <div class="support-card">
             <img src="assets/images/landingPage/icon1.svg" alt="">
             <p>Business procurement and deployment support</p>
         </div>
-
         <div class="support-card">
             <img src="assets/images/landingPage/icon1.svg" alt="">
             <p>Standard device configuration for employees</p>
         </div>
-
         <div class="support-card">
             <img src="assets/images/landingPage/icon1.svg" alt="">
             <p>Post-deployment support and coordination</p>
         </div>
-
         <div class="support-card">
             <img src="assets/images/landingPage/icon1.svg" alt="">
             <p>Device lifecycle and refresh planning</p>
         </div>
-
     </div>
-
 </section>
 <br>
 <section class="business-solutions trusted-card">
@@ -273,10 +221,6 @@
             Clear processes from planning to support
         </div>
 
-        <div class="why-item">
-            Clear processes from planning to support
-        </div>
-
     </div>
 
 </section>
@@ -288,23 +232,22 @@
     <div class="work-grid">
 
         <div class="work-card">
-            <!-- <div class="step">1</div> -->
-            <img src="assets/images/landingPage/1.svg" alt="one" />
+            <img src="assets/images/landingPage/1.svg" alt="Step 1" />
             <p>Understand your requirement</p>
         </div>
 
         <div class="work-card">
-            <img src="assets/images/landingPage/2.svg" alt="one" />
+            <img src="assets/images/landingPage/2.svg" alt="Step 2" />
             <p>Recommend suitable Apple solutions</p>
         </div>
 
         <div class="work-card">
-            <img src="assets/images/landingPage/3.svg" alt="one" />
+            <img src="assets/images/landingPage/3.svg" alt="Step 3" />
             <p>Coordinate deployment and setup</p>
         </div>
 
         <div class="work-card">
-            <img src="assets/images/landingPage/4.svg" alt="one" />
+            <img src="assets/images/landingPage/4.svg" alt="Step 4" />
             <p>Provide ongoing support</p>
         </div>
 
@@ -313,29 +256,32 @@
 </section>
 <br>
 <section class="contact-section trusted-card">
- <div style="display: block;">
-            <h2>Contact Us</h2>
-            <p>
-                If your organisation is planning to adopt or expand Apple usage,
-                our team can help you do it in a structured and reliable way.
-            </p>
-        </div>
+    <h2>Contact Us</h2>
+    <p>
+        If your organisation is planning to adopt or expand Apple usage,
+        our team can help you do it in a structured and reliable way.
+    </p>
     <div class="contact-container">
-       
+
         <!-- LEFT INFO -->
         <div class="contact-info">
 
 
             <div class="info-item">
-                📞 <span>+91 802311 6047</span>
+                <span><img src="assets/images/landingPage/Phone.svg" alt="Location" width="20" height="20" /></span> 
+
+                <a href="tel:+918023116047">+91 802311 6047</a>
             </div>
 
             <div class="info-item">
-                ✉️ <span>enquiry&#64;superiorsystems.in</span>
+                <span><img src="assets/images/landingPage/Mail.svg" alt="Location" width="20" height="20" /></span> 
+
+                <a href="mailto:enquiry@superiorsystems.in">enquiry&#64;superiorsystems.in</a>
             </div>
 
             <div class="info-item">
-                📍 <span>
+                <span><img src="assets/images/landingPage/Map pin.svg" alt="Location" width="20" height="20" /></span> 
+                <span>
                     No. 111, Ground Floor, 6th Main, MC Layout,
                     MRCR Extn., Vijayanagar,
                     Bangalore – 560040

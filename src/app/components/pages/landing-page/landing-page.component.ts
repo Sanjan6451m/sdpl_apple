@@ -1,8 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, ViewChild, AfterViewInit, ChangeDetectorRef } from '@angular/core';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { OwlOptions, CarouselComponent } from 'ngx-owl-carousel-o';
-
 import { Router, RouterModule, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { filter } from 'rxjs';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
@@ -14,8 +13,10 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
-export class LandingPageComponent {
-@ViewChild('gridCarousel') gridCarousel: CarouselComponent;
+
+export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
+  @ViewChild('gridCarousel') gridCarousel: CarouselComponent;
+  @ViewChild('statsSection') statsSectionRef: ElementRef<HTMLElement>;
 
   customOptions: OwlOptions = {
     loop: true,
@@ -131,28 +132,47 @@ export class LandingPageComponent {
       text: 'Enterprise',
       subtext: 'Hardware Solutions.',
       subtext1: 'Powered by apple.',
+      subtext2: 'Apple Business Partner delivering reliable enterprise solutions across India.',
       // btnText: 'Talk to an Apple Expert'
     },
     {
-      src: 'assets/images/appleent_new.png',
-      text: 'Buy Mac – Refresh after 3 years',
-      subtext: 'Enjoy hassle‑free upgrades with our 3‑year refresh guarantee.',
-       subtext1: 'Powered by apple.',
+      src: '../assets/images/landingPage/12.png',
+      text: 'Enterprise1',
+      subtext: 'Hardware Solutions.',
+      subtext1: 'Powered by apple.',
+      subtext2: 'Apple Business Partner delivering reliable enterprise solutions across India.',
       // btnText: 'Start Your Upgrade'
     },
     {
-      src: 'assets/images/appleent_new.png',
-      text: 'Experience Mac Firsthand – Get a POC Today',
-      subtext: 'Request a free POC unit and evaluate Mac performance in your environment.',
-       subtext1: 'Powered by apple.',
+      src: '../assets/images/landingPage/12.png',
+      text: 'Enterprise2',
+      subtext: 'Hardware Solutions.',
+      subtext1: 'Powered by apple.',
+      subtext2: 'Apple Business Partner delivering reliable enterprise solutions across India.',
       // btnText: 'Request Your Free POC'
     }
   ];
   currentIndex = 0;
   private intervalId: any;
 
+  // Stats count-up on scroll: target value, suffix (e.g. '+', 'K+', ' States'), label
+  stats = [
+    { target: 10, suffix: '', label: 'Years of Excellence' },
+    { target: 500, suffix: '+', label: 'Enterprise Customers' },
+    { target: 40, suffix: '+', label: 'Technology Partners' },
+    { target: 100, suffix: 'K+', label: 'Devices Deployed' },
+    { target: 16, suffix: ' States', label: 'Pan-India Coverage' }
+  ];
+  statDisplayValues: number[] = [0, 0, 0, 0, 0];
+  private statsSectionInView = false;
+  private statsObserver: IntersectionObserver | null = null;
 
-  constructor(private router: Router, private route: ActivatedRoute, private sanitizer: DomSanitizer) {
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private sanitizer: DomSanitizer,
+    private cdr: ChangeDetectorRef
+  ) {
     this.mbAirUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
       'assets/embedded/MBA/mba_air.html'
     );
@@ -178,6 +198,26 @@ export class LandingPageComponent {
         top: offsetPosition,
         behavior: 'smooth'
       });
+    }
+  }
+
+  ngAfterViewInit(): void {
+    if (this.statsSectionRef?.nativeElement) {
+      this.statsObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const nowInView = entry.isIntersecting;
+            if (nowInView && !this.statsSectionInView) {
+              this.statsSectionInView = true;
+              this.resetStatsAndAnimate();
+            } else if (!nowInView) {
+              this.statsSectionInView = false;
+            }
+          });
+        },
+        { threshold: 0.2, rootMargin: '0px' }
+      );
+      this.statsObserver.observe(this.statsSectionRef.nativeElement);
     }
   }
 
@@ -212,8 +252,49 @@ export class LandingPageComponent {
   }
 
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     this.clearAutoLoop();
+    this.statsObserver?.disconnect();
+  }
+
+  private resetStatsAndAnimate(): void {
+    this.statDisplayValues = [0, 0, 0, 0, 0];
+    this.cdr.detectChanges();
+    this.animateStats();
+  }
+
+  private animateStats(): void {
+    const duration = 2000;
+    const startTime = performance.now();
+
+    const easeOutQuart = (t: number) => 1 - (1 - t) ** 4;
+
+    const tick = (now: number) => {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = easeOutQuart(progress);
+
+      this.stats.forEach((stat, i) => {
+        this.statDisplayValues[i] = Math.round(stat.target * eased);
+      });
+      this.cdr.detectChanges();
+
+      if (progress < 1) {
+        requestAnimationFrame(tick);
+      } else {
+        this.stats.forEach((_, i) => {
+          this.statDisplayValues[i] = this.stats[i].target;
+        });
+        this.cdr.detectChanges();
+      }
+    };
+    requestAnimationFrame(tick);
+  }
+
+  getStatDisplay(index: number): string {
+    const value = this.statDisplayValues[index] ?? 0;
+    const suffix = this.stats[index]?.suffix ?? '';
+    return `${value}${suffix}`;
   }
 
   startAutoLoop() {

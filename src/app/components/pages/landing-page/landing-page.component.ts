@@ -5,11 +5,12 @@ import { OwlOptions, CarouselComponent } from 'ngx-owl-carousel-o';
 import { Router, RouterModule, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { filter } from 'rxjs';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { ScrollRevealDirective } from '../../../directives/scroll-reveal.directive';
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-   imports: [CarouselModule, CommonModule, RouterModule],
+  imports: [CarouselModule, CommonModule, RouterModule, ScrollRevealDirective],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })

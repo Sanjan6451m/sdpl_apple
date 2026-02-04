@@ -1,5 +1,16 @@
 // Landing page – styles used by landing-page.component.html only
 
+// Scroll reveal: sections animate in only when they enter the viewport
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.scroll-reveal.scroll-in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .hero-section {
   margin-top: 115px;
   width: 100%;

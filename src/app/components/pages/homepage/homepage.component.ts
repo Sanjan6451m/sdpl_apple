@@ -1,6 +1,4 @@
-
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, AfterViewInit, OnDestroy, ViewChild, ElementRef, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
@@ -16,8 +14,9 @@ import { filter } from 'rxjs/operators';
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss'
 })
-export class HomepageComponent implements OnInit {
-  
+export class HomepageComponent implements OnInit, AfterViewInit, OnDestroy {
+  @ViewChild('statsSection') statsSectionRef: ElementRef<HTMLElement>;
+
   statistics = [
     { value: 10, text: 'Years of Excellence' },
     { value: 500, text: 'Enterprise Customers', prefix: '+' },
@@ -28,7 +27,10 @@ export class HomepageComponent implements OnInit {
   ];
   contactForm: FormGroup;
   message: string = '';
-  displayedValues: number[] = [];
+  displayedValues: number[] = [0, 0, 0, 0, 0];
+  private statsSectionInView = false;
+  private statsObserver: IntersectionObserver | null = null;
+
   devices = [
     'MacBook Air',
     'MacBook Pro',
@@ -62,11 +64,12 @@ newsEvents = [
 ];
 
   constructor(
-    private fb: FormBuilder, 
+    private fb: FormBuilder,
     private http: HttpClient,
     private route: ActivatedRoute,
-    private router: Router
-) { 
+    private router: Router,
+    private cdr: ChangeDetectorRef
+  ) { 
     this.contactForm = this.fb.group({
         name: ['', [Validators.required]],
         email: ['', [Validators.required, Validators.email]],
@@ -82,17 +85,41 @@ newsEvents = [
     link.rel = 'stylesheet';
     link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
     document.head.appendChild(link);
-    this.initializeCounters();
   }
 
-  initializeCounters() {
+  ngAfterViewInit(): void {
+    if (this.statsSectionRef?.nativeElement) {
+      this.statsObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const nowInView = entry.isIntersecting;
+            if (nowInView && !this.statsSectionInView) {
+              this.statsSectionInView = true;
+              this.resetStatsAndAnimate();
+            } else if (!nowInView) {
+              this.statsSectionInView = false;
+            }
+          });
+        },
+        { threshold: 0.2, rootMargin: '0px' }
+      );
+      this.statsObserver.observe(this.statsSectionRef.nativeElement);
+    }
+  }
+
+  ngOnDestroy(): void {
+    this.statsObserver?.disconnect();
+  }
+
+  private resetStatsAndAnimate(): void {
+    this.displayedValues = this.statistics.map(() => 0);
+    this.cdr.detectChanges();
     this.statistics.forEach((stat, index) => {
-      this.displayedValues[index] = 0;
-      this.animateValue(index, 0, stat.value, 3000);
+      this.animateValue(index, 0, stat.value, 2000);
     });
   }
 
-  animateValue(index: number, start: number, end: number, duration: number) {
+  private animateValue(index: number, start: number, end: number, duration: number): void {
     const range = end - start;
     const minTimer = 50;
     const stepTime = Math.abs(Math.floor(duration / range));
@@ -105,6 +132,7 @@ newsEvents = [
       const remaining = Math.max((endTime - now) / duration, 0);
       const value = Math.round(end - (remaining * range));
       this.displayedValues[index] = value;
+      this.cdr.detectChanges();
 
       if (value < end) {
         setTimeout(run, timer);

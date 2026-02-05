@@ -55,7 +55,7 @@
 
 /* Enterprise – second tier, bold */
 .hero-banner-text {
-  top: 28%;
+  top: 30%;
   transform: translateY(-50%);
   font-size: 1.5rem;
   font-weight: 500;
@@ -380,30 +380,51 @@
   box-shadow:0 6px 18px rgba(0,0,0,0.05);
 }
 
-/* Grid */
-.logo-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(110px,1fr));
-  gap:15px;
+/* Horizontal scroll wrapper */
+.logo-scroll-wrap{
+  overflow:hidden;
+  width:100%;
 }
 
-/* Individual Card */
+/* Single row, auto-scrolling track */
+.logo-grid{
+  display:flex;
+  flex-direction:row;
+  flex-wrap:nowrap;
+  gap:15px;
+  width:max-content;
+  animation:logo-scroll 50s linear infinite;
+}
+
+.logo-grid.logo-track:hover{
+  animation-play-state:paused;
+}
+
+@keyframes logo-scroll{
+  0%{ transform:translateX(0); }
+  100%{ transform:translateX(-50%); }
+}
+
+/* Individual Card - fixed size for row */
 .logo-card{
-  background:#fff;
-  border:1px solid #e6e6e6;
+  flex-shrink:0;
+  width:150px;
+  height:95px;
+  background:#1e1e1e;
+  border:1px solid #1e1e1e;
   border-radius:12px;
-  padding:18px;
+  padding:5px;
   display:flex;
   align-items:center;
   justify-content:center;
-  height:100%;
   transition:0.3s ease;
 }
 
 .logo-card img{
   max-width:100%;
-  // max-height:40px;
+  max-height:100%;
   object-fit:contain;
+  background:#1e1e1e;
 }
 
 /* Hover effect */
@@ -419,14 +440,19 @@
   }
 
   .logo-card{
-    height:80px;
+    width:90px;
+    height:70px;
+  }
+
+  .logo-grid{
+    animation-duration:18s;
   }
 }
 
 
 .stats-highlight{
   text-align:center;
-  padding:80px 20px;
+  padding:30px 20px;
   background:#fff;
 }
 
@@ -461,6 +487,11 @@
   color:#1f1f2e;
 }
 
+.stat-item h3.stat-display{
+  font-style:italic;
+  font-family:Georgia, "Times New Roman", serif;
+}
+
 .stat-item h3 span{
   font-size:18px;
   margin-left:6px;
@@ -469,6 +500,11 @@
 .stat-item p{
   font-size:14px;
   color:#555;
+}
+
+.stat-item:last-child p{
+  font-size:17px;
+  margin-top: 25px;
 }
 
 /* CTA Button */
@@ -573,7 +609,7 @@
 }
 
 .business-solutions{
-  padding:80px 20px;
+  padding:30px 20px;
   text-align:center;
 }
 
@@ -700,10 +736,14 @@
 }
 
 .why-choose{
-  padding:70px 20px;
+  padding:30px 20px;
   text-align:center;
   border: 1px solid #eee;
   background:linear-gradient(90deg,#fff8ec,#eef3f8);
+  background-image:url("/assets/images/landingPage/whychoose_bg.png");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
   box-shadow:0 8px 20px rgba(0,0,0,0.06);
 }
 
@@ -719,15 +759,15 @@
   padding:30px 25px;
   border-radius:14px;
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
   gap:20px;
   //box-shadow:0 8px 20px rgba(0,0,0,0.06);
 }
 
 /* Item */
 .why-item{
-  font-size: 17px;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 400;
   color:#222;
 }
 

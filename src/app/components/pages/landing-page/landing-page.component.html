@@ -5,7 +5,7 @@
         <div class="hero-banner-text">{{ bannerImages[currentIndex].text }}</div>
         <div class="hero-banner-subtext">{{ bannerImages[currentIndex].subtext }}</div>
         <div class="hero-banner-subtext1">{{ bannerImages[currentIndex].subtext1 }}</div>
-        <div class="hero-banner-subtext2">{{ bannerImages[currentIndex].subtext2 }}</div>
+        <!-- <div class="hero-banner-subtext2">{{ bannerImages[currentIndex].subtext2 }}</div> -->
         <button class="hero-arrow right-arrow" aria-label="Next" (click)="showNext()">&#8594;</button>
         <div class="hero-banner-dots">
             <span *ngFor="let img of bannerImages; let i = index" class="dot" [class.active]="i === currentIndex"
@@ -20,12 +20,11 @@
         <div class="business-left">
             <h2>Apple Solutions for<br>Business Use</h2>
             <p>
-                Superior Digital is an Apple Business Partner supporting organisations across India
-                with Apple solutions for professional and enterprise environments. We help businesses
-                plan, deploy, and support Apple devices as part of their overall IT setup.
-                We focus on long-term reliability rather than one-time transactions.
+                Superior Digital is an Apple Business Partner supporting organisations across India with Apple solutions for professional and enterprise environments. We help businesses plan, deploy, and support Apple devices as part of their overall IT setup.
             </p>
-            <a href="#" class="learn-btn">Learn More →</a>
+            <p>We focus on long-term reliability rather than one-time transactions.</p>
+            <!-- <a href="#about-us" class="learn-btn">Learn More →</a> -->
+            <a href="#contact-us" class="learn-btn" (click)="navigateToContactSection($event)">Talk to Our Team →</a>
         </div>
         <!-- Right Content -->
         <div class="business-right">
@@ -43,57 +42,125 @@
         professional services.
     </p>
     <div class="trusted-box">
-        <div class="logo-grid">
-
-            <div class="logo-card">
-                <img src="assets/images/landingPage/frame1.png" alt="Twilio">
-            </div>
-            <div class="logo-card">
-                <img src="assets/images/landingPage/frame1.png" alt="Vonage">
-            </div>
-            <div class="logo-card">
-                <img src="assets/images/landingPage/frame1.png" alt="Netskope">
-            </div>
-            <div class="logo-card">
-                <img src="assets/images/landingPage/frame1.png" alt="Loreal">
-            </div>
-            <div class="logo-card">
-                <img src="assets/images/landingPage/frame1.png" alt="Philips">
-            </div>
-            <div class="logo-card">
-                <img src="assets/images/landingPage/frame1.png" alt="AstraZeneca">
-            </div>
-            <div class="logo-card">
-                <img src="assets/images/landingPage/frame1.png" alt="Netskope">
-            </div>
-            <div class="logo-card">
-                <img src="assets/images/landingPage/frame1.png" alt="Netskope">
-            </div>
-            <div class="logo-card">
-                <img src="assets/images/landingPage/frame1.png" alt="Netskope">
+        <div class="logo-scroll-wrap">
+            <div class="logo-grid logo-track">
+                <div class="logo-card">
+                    <img src="assets/images/landingPage/logos/logo1.png" alt="Twilio">
+                </div>
+                <div class="logo-card">
+                    <img src="assets/images/landingPage/logos/logo2.png" alt="Vonage">
+                </div>
+                <div class="logo-card">
+                    <img src="assets/images/landingPage/logos/logo3.png" alt="Netskope">
+                </div>
+                <div class="logo-card">
+                    <img src="assets/images/landingPage/logos/logo4.png" alt="Loreal">
+                </div>
+                <div class="logo-card">
+                    <img src="assets/images/landingPage/logos/logo5.png" alt="Philips">
+                </div>
+                <div class="logo-card">
+                    <img src="assets/images/landingPage/logos/logo6.png" alt="AstraZeneca">
+                </div>
+                <div class="logo-card">
+                    <img src="assets/images/landingPage/logos/logo7.png" alt="Netskope">
+                </div>
+                <div class="logo-card">
+                    <img src="assets/images/landingPage/logos/logo8.png" alt="Netskope">
+                </div>
+                <div class="logo-card">
+                    <img src="assets/images/landingPage/logos/logo9.png" alt="Netskope">
+                </div>
+                <div class="logo-card">
+                    <img src="assets/images/landingPage/logos/logo10.png" alt="AstraZeneca">
+                </div>
+                <div class="logo-card">
+                    <img src="assets/images/landingPage/logos/logo11.png" alt="Netskope">
+                </div>
+                <div class="logo-card">
+                    <img src="assets/images/landingPage/logos/logo12.png" alt="Netskope">
+                </div>
+                <div class="logo-card">
+                    <img src="assets/images/landingPage/logos/logo13.png" alt="Netskope">
+                </div>
+                <div class="logo-card">
+                    <img src="assets/images/landingPage/logos/logo14.png" alt="Netskope">
+                </div>
+                <div class="logo-card">
+                    <img src="assets/images/landingPage/logos/logo15.png" alt="Netskope">
+                </div>
+                <!-- Duplicate set for seamless loop -->
+                <div class="logo-card">
+                    <img src="assets/images/landingPage/logos/logo1.png" alt="Twilio">
+                </div>
+                <div class="logo-card">
+                    <img src="assets/images/landingPage/logos/logo2.png" alt="Vonage">
+                </div>
+                <div class="logo-card">
+                    <img src="assets/images/landingPage/logos/logo3.png" alt="Netskope">
+                </div>
+                <div class="logo-card">
+                    <img src="assets/images/landingPage/logos/logo4.png" alt="Loreal">
+                </div>
+                <div class="logo-card">
+                    <img src="assets/images/landingPage/logos/logo5.png" alt="Philips">
+                </div>
+                <div class="logo-card">
+                    <img src="assets/images/landingPage/logos/logo6.png" alt="AstraZeneca">
+                </div>
+                <div class="logo-card">
+                    <img src="assets/images/landingPage/logos/logo7.png" alt="Netskope">
+                </div>
+                <div class="logo-card">
+                    <img src="assets/images/landingPage/logos/logo8.png" alt="Netskope">
+                </div>
+                <div class="logo-card">
+                    <img src="assets/images/landingPage/logos/logo9.png" alt="Netskope">
+                </div>
+                <div class="logo-card">
+                    <img src="assets/images/landingPage/logos/logo10.png" alt="AstraZeneca">
+                </div>
+                <div class="logo-card">
+                    <img src="assets/images/landingPage/logos/logo11.png" alt="Netskope">
+                </div>
+                <div class="logo-card">
+                    <img src="assets/images/landingPage/logos/logo12.png" alt="Netskope">
+                </div>
+                <div class="logo-card">
+                    <img src="assets/images/landingPage/logos/logo13.png" alt="Netskope">
+                </div>
+                <div class="logo-card">
+                    <img src="assets/images/landingPage/logos/logo14.png" alt="Netskope">
+                </div>
+                <div class="logo-card">
+                    <img src="assets/images/landingPage/logos/logo15.png" alt="Netskope">
+                </div>
             </div>
         </div>
+    <div style="text-align: right; font-size: 15px; font-weight: bold; color: #555; margin-top: 12px; margin-right: 6px;">
+        &amp; many more.
+    </div>
     </div>
 </section>
-<br>
+
 <section #statsSection class="stats-highlight trusted-card" appScrollReveal>
-    <h2>Think Digital. Choose Superior.</h2>
-    <p class="stats-subtitle">
+    <h2>Our Experience at a Glance</h2>
+    <!-- <p class="stats-subtitle">
         "With 480+ clients and partnerships with global tech leaders, Superior Digital delivers
         tailored, future-ready solutions powered by deep expertise."
-    </p>
+    </p> -->
     <div class="stats-row">
         <div class="stat-item" *ngFor="let stat of stats; let i = index">
-            <h3>{{ getStatDisplay(i) }}</h3>
+            <h3 class="stat-display">{{ getStatDisplay(i) }}</h3>
             <p>{{ stat.label }}</p>
         </div>
     </div>
-    <a href="#" class="cta-btn">
+    <a href="#contact-us" (click)="navigateToContactSection($event)" class="cta-btn">
         Book Your Free Mac Consultation →
     </a>
 
 </section>
-<br>
+
 <section class="apple-support trusted-card" appScrollReveal>
     <h2>Apple Solutions We Support</h2>
     <p class="support-subtitle">
@@ -122,13 +189,13 @@
         </div>
     </div>
 </section>
-<br>
-<section class="business-solutions trusted-card" appScrollReveal>
+
+<section class="business-solutions trusted-card" appScrollReveal id="solutions">
 
     <h2>Solutions Designed for Different Business Needs</h2>
-    <p class="solutions-subtitle">
+    <!-- <p class="solutions-subtitle">
         Tailored Apple deployment and management solutions aligned to how different teams operate.
-    </p>
+    </p> -->
 
     <div class="solutions-grid">
 
@@ -162,7 +229,7 @@
     </div>
 
 </section>
-<br>
+
 <section class="industries-section trusted-card" appScrollReveal>
 
     <h2>Industries We Work With</h2>
@@ -170,7 +237,7 @@
     <div class="industries-grid">
 
         <div class="industry-card">
-            <p>IT and Software Companies</p>
+            <p>IT, SaaS and AI companies</p>
             <img src="assets/images/landingPage/Business Building.png" alt="" width="40" />
         </div>
 
@@ -180,7 +247,7 @@
         </div>
 
         <div class="industry-card">
-            <p>Financial Services</p>
+            <p>Fintech and Financial Services</p>
             <img src="assets/images/landingPage/Money Bag Rupee.png" alt="" width="40" />
         </div>
 
@@ -190,12 +257,12 @@
         </div>
 
         <div class="industry-card">
-            <p>Design, Media, and Creative Teams</p>
+            <p>M&E firms and Creative agencies</p>
             <img src="assets/images/landingPage/Windows 10 Personalization.png" alt="" width="40" />
         </div>
 
         <div class="industry-card">
-            <p>Education and Institutions</p>
+            <p>Educational Institutions </p>
             <img src="assets/images/landingPage/Graduation Cap.png" alt="" width="40" />
         </div>
 
@@ -222,7 +289,11 @@
         </div>
 
         <div class="why-item">
-            Clear processes from planning to support
+            Reliable execution and accountability
+        </div>
+
+        <div class="why-item">
+            Pan-India delivery and service coverage
         </div>
 
     </div>
@@ -259,30 +330,23 @@
 
 </section>
 <br>
-<section class="contact-section trusted-card" appScrollReveal>
-    <h2>Contact Us</h2>
+<section class="contact-section trusted-card" appScrollReveal id="contact-us">
+    <h2>Talk to Superior Digital</h2>
     <p>
-        If your organisation is planning to adopt or expand Apple usage,
-        our team can help you do it in a structured and reliable way.
+        If your organisation is planning to adopt or expand Apple usage, our team can help you do it in a structured and reliable way.
     </p>
     <div class="contact-container">
 
         <!-- LEFT INFO -->
-        <div class="contact-info">
-
-
+      <!--   <div class="contact-info">
             <div class="info-item">
                 <span><img src="assets/images/landingPage/Phone.svg" alt="Location" width="20" height="20" /></span> 
-
                 <a href="tel:+918023116047" style="color: black;">+91 802311 6047</a>
             </div>
-
             <div class="info-item">
                 <span><img src="assets/images/landingPage/Mail.svg" alt="Location" width="20" height="20" /></span> 
-
                 <a href="mailto:enquiry@superiorsystems.in" style="color: black;">enquiry&#64;superiorsystems.in</a>
             </div>
-
             <div class="info-item">
                 <span><img src="assets/images/landingPage/Map pin.svg" alt="Location" width="20" height="20" /></span> 
                 <span>
@@ -291,29 +355,35 @@
                     Bangalore – 560040
                 </span>
             </div>
-        </div>
+        </div> -->
 
         <!-- RIGHT FORM -->
         <div class="contact-form-card">
 
             <form [formGroup]="contactForm" (ngSubmit)="onContactSubmit()">
 
-                <input type="text" formControlName="name" placeholder="Name">
+                <input type="text" formControlName="name" placeholder="Full Name">
                 <span class="form-error" *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
                     Name is required (min 2 characters).
                 </span>
 
-                <input type="email" formControlName="email" placeholder="Email">
-                <span class="form-error" *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
-                    Please enter a valid email.
+                <input type="text" formControlName="company" placeholder="Company">
+                <span class="form-error" *ngIf="contactForm.get('company')?.invalid && contactForm.get('company')?.touched">
+                    Company name is required (min 3 characters).
                 </span>
 
-                <input type="tel" formControlName="phone" placeholder="Phone" maxlength="10">
+                <input type="email" formControlName="email" placeholder="Work Email">
+                <span class="form-error" *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+                    <span *ngIf="contactForm.get('email')?.errors?.['disallowedEmailDomain']">Personal email domains (e.g. Gmail, Yahoo, Outlook etc.) are not accepted. Please use your work or business email.</span>
+                    <span *ngIf="!contactForm.get('email')?.errors?.['disallowedEmailDomain']">Please enter a valid work or business email.</span>
+                </span>
+
+                <input type="tel" formControlName="phone" placeholder="Phone Number" maxlength="10">
                 <span class="form-error" *ngIf="contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched">
                     Phone must be 10 digits.
                 </span>
 
-                <textarea formControlName="message" placeholder="Your Message"></textarea>
+                <textarea formControlName="message" placeholder="Requirement"></textarea>
                 <span class="form-error" *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
                     Message is required (min 10 characters).
                 </span>
@@ -330,6 +400,9 @@
 
 </section>
 
+<section>
+    
+</section>
 <!-- Contact success dialog -->
 <div class="contact-dialog-overlay" *ngIf="showContactDialog" (click)="closeContactDialog()">
     <div class="contact-dialog" (click)="$event.stopPropagation()">

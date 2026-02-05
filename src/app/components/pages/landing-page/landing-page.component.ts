@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, OnDestroy, OnInit, ViewChild, AfterViewInit, ChangeDetectorRef } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { OwlOptions, CarouselComponent } from 'ngx-owl-carousel-o';
 import { Router, RouterModule, NavigationEnd, ActivatedRoute } from '@angular/router';
@@ -159,11 +159,11 @@ export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
 
   // Stats count-up on scroll: target value, suffix (e.g. '+', 'K+', ' States'), label
   stats = [
-    { target: 10, suffix: '', label: 'Years of Excellence' },
-    { target: 500, suffix: '+', label: 'Enterprise Customers' },
-    { target: 40, suffix: '+', label: 'Technology Partners' },
-    { target: 100, suffix: 'K+', label: 'Devices Deployed' },
-    { target: 16, suffix: ' States', label: 'Pan-India Coverage' }
+    { target: 10, suffix: '+', label: 'years of experience in IT solutions' },
+    { target: 500, suffix: '+', label: 'enterprise customers' },
+    { target: 100000, suffix: '+', label: 'devices deployed' },
+    { target: 40, suffix: '+', label: 'technology partners' },
+    { target: '', suffix: '', label: 'Pan India service capability' }
   ];
   statDisplayValues: number[] = [0, 0, 0, 0, 0];
   private statsSectionInView = false;
@@ -171,6 +171,17 @@ export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
 
   contactForm: FormGroup;
   showContactDialog = false;
+
+  private disallowedEmailDomains = ['gmail.com', 'googlemail.com', 'yahoo.com', 'yahoo.co.in', 'yahoo.co.uk', 'outlook.com', 'hotmail.com', 'hotmail.co.uk', 'live.com', 'msn.com'];
+
+  disallowedEmailDomainsValidator = (control: AbstractControl): { [key: string]: boolean } | null => {
+    const email = (control.value || '').trim().toLowerCase();
+    if (!email) return null;
+    const domain = email.split('@')[1];
+    if (!domain) return null;
+    const isDisallowed = this.disallowedEmailDomains.some(d => domain === d || domain.endsWith('.' + d));
+    return isDisallowed ? { disallowedEmailDomain: true } : null;
+  };
 
   constructor(
     private router: Router,
@@ -184,7 +195,8 @@ export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
     );
     this.contactForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
-      email: ['', [Validators.required, Validators.email]],
+      company: ['', [Validators.required, Validators.minLength(3)]],
+      email: ['', [Validators.required, Validators.email, this.disallowedEmailDomainsValidator]],
       phone: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
       message: ['', [Validators.required, Validators.minLength(10)]]
     });
@@ -197,6 +209,11 @@ export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
 
   navigateToAppleEnterprise() {
     this.router.navigate(['/enterprise-new']);
+  }
+
+  navigateToContactSection(event: Event): void {
+    event.preventDefault();
+    this.scrollToSection('contact-us');
   }
 
   scrollToSection(fragment: string): void {
@@ -287,7 +304,8 @@ export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
       const eased = easeOutQuart(progress);
 
       this.stats.forEach((stat, i) => {
-        this.statDisplayValues[i] = Math.round(stat.target * eased);
+        const target = stat.target;
+        this.statDisplayValues[i] = typeof target === 'number' ? Math.round(target * eased) : 0;
       });
       this.cdr.detectChanges();
 
@@ -295,7 +313,8 @@ export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
         requestAnimationFrame(tick);
       } else {
         this.stats.forEach((_, i) => {
-          this.statDisplayValues[i] = this.stats[i].target;
+          const target = this.stats[i].target;
+          this.statDisplayValues[i] = typeof target === 'number' ? target : 0;
         });
         this.cdr.detectChanges();
       }
@@ -304,8 +323,13 @@ export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   getStatDisplay(index: number): string {
+    const stat = this.stats[index];
+    const target = stat?.target;
+    if (target === undefined || target === null || target === '') {
+      return ''; // e.g. last stat: "Pan India service capability" – no number
+    }
     const value = this.statDisplayValues[index] ?? 0;
-    const suffix = this.stats[index]?.suffix ?? '';
+    const suffix = stat?.suffix ?? '';
     return `${value}${suffix}`;
   }
 

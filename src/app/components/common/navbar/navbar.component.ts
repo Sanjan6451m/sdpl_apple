@@ -27,6 +27,11 @@ export class NavbarComponent implements OnInit {
     isSuperiorVisible = true;
     isMobileMenuOpen = false;
     lastScrollTop = 0;
+    dropdownCloseTrigger = false;
+    /** True when any route under the Business dropdown is active (superior-enterprise or landing-page). */
+    isBusinessSectionActive = false;
+    /** True when any route under the Apple dropdown is active (enterprise-new). */
+    isAppleSectionActive = false;
 
     toggleClass() {
         this.classApplied = !this.classApplied;
@@ -36,7 +41,10 @@ export class NavbarComponent implements OnInit {
         link.rel = 'stylesheet';
         link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
         document.head.appendChild(link);
-        // Initialize component
+        this.currentLocation = this.location.path();
+        this.isBusinessSectionActive =
+            this.currentLocation === '/superior-enterprise' || this.currentLocation === '/landing-page';
+        this.isAppleSectionActive = this.currentLocation === '/enterprise-new';
     }
     activeIndex: number | null = null;
     subActiveIndex: number | null = null;
@@ -63,6 +71,9 @@ export class NavbarComponent implements OnInit {
             .pipe(filter(event => event instanceof NavigationEnd))
             .subscribe(() => {
                 this.currentLocation = this.location.path();
+                this.isBusinessSectionActive =
+                    this.currentLocation === '/superior-enterprise' || this.currentLocation === '/landing-page';
+                this.isAppleSectionActive = this.currentLocation === '/enterprise-new';
                 if (this.currentLocation == '/home-three') {
                     this.navbarClass = 'navbar-area three';
                 } else {
@@ -82,7 +93,7 @@ export class NavbarComponent implements OnInit {
 
     // Navbar Sticky
     @HostListener('window:scroll', ['$event'])
-    onScroll() {
+    onScroll(_event?: Event) {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
         // Handle superior navbar visibility
@@ -104,7 +115,7 @@ export class NavbarComponent implements OnInit {
 
     // Check screen size for mobile view
     @HostListener('window:resize', ['$event'])
-    checkScreenSize() {
+    checkScreenSize(_event?: Event) {
         this.isMobile = window.innerWidth <= 1024;
         // Close mobile menu when switching to desktop view
         if (!this.isMobile) {
@@ -137,6 +148,12 @@ export class NavbarComponent implements OnInit {
         // Close all dropdowns when closing menu
         const allItems = document.querySelectorAll('.nav-item');
         allItems.forEach(item => item.classList.remove('show'));
+    }
+
+    /** Close desktop dropdown when a dropdown link is clicked. */
+    closeDropdownOnLinkClick() {
+        this.dropdownCloseTrigger = true;
+        setTimeout(() => (this.dropdownCloseTrigger = false), 350);
     }
 
     toggleMobileMenu() {

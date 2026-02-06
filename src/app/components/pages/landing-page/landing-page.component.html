@@ -1,16 +1,17 @@
 <section class="hero-section" appScrollReveal>
     <div class="hero-banner-container">
-        <button class="hero-arrow left-arrow" aria-label="Previous" (click)="showPrev()">&#8592;</button>
-        <img [src]="bannerImages[currentIndex].src" alt="Banner" class="hero-banner-img" />
-        <div class="hero-banner-text">{{ bannerImages[currentIndex].text }}</div>
+        <!-- <button class="hero-arrow left-arrow" aria-label="Previous" (click)="showPrev()">&#8592;</button> -->
+        <video *ngIf="currentBannerIsVideo" #heroVideo [src]="bannerImages[currentIndex].src" class="hero-banner-img" autoplay muted loop playsinline></video>
+        <!-- <img *ngIf="!currentBannerIsVideo" [src]="bannerImages[currentIndex].src" alt="Banner" class="hero-banner-img" /> -->
+        <!-- <div class="hero-banner-text">{{ bannerImages[currentIndex].text }}</div>
         <div class="hero-banner-subtext">{{ bannerImages[currentIndex].subtext }}</div>
-        <div class="hero-banner-subtext1">{{ bannerImages[currentIndex].subtext1 }}</div>
+        <div class="hero-banner-subtext1">{{ bannerImages[currentIndex].subtext1 }}</div> -->
         <!-- <div class="hero-banner-subtext2">{{ bannerImages[currentIndex].subtext2 }}</div> -->
-        <button class="hero-arrow right-arrow" aria-label="Next" (click)="showNext()">&#8594;</button>
+       <!--  <button class="hero-arrow right-arrow" aria-label="Next" (click)="showNext()">&#8594;</button>
         <div class="hero-banner-dots">
             <span *ngFor="let img of bannerImages; let i = index" class="dot" [class.active]="i === currentIndex"
                 (click)="goToImage(i)"></span>
-        </div>
+        </div> -->
     </div>
 </section>
 <br>
@@ -307,22 +308,22 @@
     <div class="work-grid">
 
         <div class="work-card">
-            <img src="assets/images/landingPage/1.svg" alt="Step 1" />
+            <img src="assets/images/landingPage/visionsolution1.png" alt="Step 1" />
             <p>Understand your requirement</p>
         </div>
 
         <div class="work-card">
-            <img src="assets/images/landingPage/2.svg" alt="Step 2" />
+            <img src="assets/images/landingPage/visionsolution2.png" alt="Step 2" />
             <p>Recommend suitable Apple solutions</p>
         </div>
 
         <div class="work-card">
-            <img src="assets/images/landingPage/3.svg" alt="Step 3" />
+            <img src="assets/images/landingPage/visionsolution3.png" alt="Step 3" />
             <p>Coordinate deployment and setup</p>
         </div>
 
         <div class="work-card">
-            <img src="assets/images/landingPage/4.svg" alt="Step 4" />
+            <img src="assets/images/landingPage/visionsolution4.png" alt="Step 4" />
             <p>Provide ongoing support</p>
         </div>
 

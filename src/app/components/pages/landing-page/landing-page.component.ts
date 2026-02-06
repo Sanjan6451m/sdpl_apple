@@ -130,15 +130,15 @@ export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
 
   bannerImages = [
     {
-      src: '../assets/images/landingPage/12.png',
+      src: '../assets/images/landingPage/herovideo.mp4',
       text: 'Enterprise',
       subtext: 'Hardware Solutions.',
       subtext1: 'Powered by apple.',
       subtext2: 'Apple Business Partner delivering reliable enterprise solutions across India.',
       // btnText: 'Talk to an Apple Expert'
     },
-    {
-      src: '../assets/images/landingPage/12.png',
+    /* {
+      src: '../assets/images/landingPage/herovideo.mp4',
       text: 'Enterprise',
       subtext: 'Hardware Solutions.',
       subtext1: 'Powered by apple.',
@@ -146,13 +146,13 @@ export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
       // btnText: 'Start Your Upgrade'
     },
     {
-      src: '../assets/images/landingPage/12.png',
+      src: '../assets/images/landingPage/herovideo.mp4',
       text: 'Enterprise',
       subtext: 'Hardware Solutions.',
       subtext1: 'Powered by apple.',
       subtext2: 'Apple Business Partner delivering reliable enterprise solutions across India.',
       // btnText: 'Request Your Free POC'
-    }
+    } */
   ];
   currentIndex = 0;
   private intervalId: any;
@@ -364,6 +364,11 @@ export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
 
   get imageCount() {
     return this.bannerImages.length;
+  }
+
+  get currentBannerIsVideo(): boolean {
+    const src = this.bannerImages[this.currentIndex]?.src ?? '';
+    return src.toLowerCase().endsWith('.mp4');
   }
 
   goToContact() {

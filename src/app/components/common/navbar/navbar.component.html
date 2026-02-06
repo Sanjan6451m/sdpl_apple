@@ -165,61 +165,71 @@
                 <nav class="main-navbar">
                     <ul class="nav-list">
                         <li class="nav-item dropdown">
-                            <a routerLink="/enterprise-new" [class.nav-link-highlight]="isAppleSectionActive" (click)="closeDropdownOnLinkClick()">Apple<span class="arrow">&#9662;</span></a>
+                            <a href="/enterprise-new" [class.nav-link-highlight]="isAppleSectionActive" (click)="closeDropdownOnLinkClick()">Apple<span class="arrow">&#9662;</span></a>
                             <ul class="dropdown-menu">
-                                <li><a routerLink="/enterprise-new" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()">Apple at Work</a></li>
+                                <li><a href="/enterprise-new" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()">Apple at Work</a></li>
                                 <li class="dropdown-submenu">
-                                    <a routerLink="/enterprise-new" fragment="apple-products-mac" (click)="closeDropdownOnLinkClick()">Products <span
+                                    <a href="/enterprise-new#apple-products-mac" fragment="apple-products-mac" (click)="closeDropdownOnLinkClick()">Products <span
                                             class="arrow">&#9656;</span></a>
                                     <ul class="dropdown-menu right">
-                                        <li><a routerLink="/enterprise-new" fragment="apple-products-mac" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()">Mac</a></li>
+                                        <li><a href="/enterprise-new#apple-products-mac">Mac</a></li>
+                                        <li><a href="/enterprise-new#apple-products-iphone">iPhone</a></li>
+                                        <li><a href="/enterprise-new#apple-products-ipad">iPad</a></li>
+                                        <li><a href="/enterprise-new#apple-products-watch">Apple Watch</a></li>
+                                        <li><a href="/enterprise-new#apple-products-business">Apple Business Manager</a></li>
+                                        <li><a href="/enterprise-new#apple-products-applecare">Apple Care for Enterprise</a></li>
+                                       <!--  <li><a routerLink="/enterprise-new" fragment="apple-products-mac" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()">Mac</a></li>
                                         <li><a routerLink="/enterprise-new" fragment="apple-products-iphone" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()">iPhone</a></li>
                                         <li><a routerLink="/enterprise-new" fragment="apple-products-ipad" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()">iPad</a></li>
                                         <li><a routerLink="/enterprise-new" fragment="apple-products-watch" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()">Apple Watch</a></li>
                                         <li><a routerLink="/enterprise-new" fragment="apple-products-business" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()">Apple Business Manager</a></li>
-                                        <li><a routerLink="/enterprise-new" fragment="apple-products-applecare" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()">Apple Care for Enterprise</a></li>
+                                        <li><a routerLink="/enterprise-new" fragment="apple-products-applecare" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()">Apple Care for Enterprise</a></li> -->
                                     </ul>
                                 </li>
                                 <li class="dropdown-submenu">
-                                    <a routerLink="/enterprise-new" fragment="enterprise-solutions" (click)="closeDropdownOnLinkClick()">Apple's Business Initiatives <span class="arrow">&#9656;</span></a>
+                                    <a href="/enterprise-new#enterprise-solutions" fragment="enterprise-solutions" (click)="closeDropdownOnLinkClick()">Apple's Business Initiatives <span class="arrow">&#9656;</span></a>
                                     <ul class="dropdown-menu right">
-                                        <li><a routerLink="/enterprise-new" fragment="getting-started-with-mac" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()">Getting
+                                        <li><a href="/enterprise-new#getting-started-with-mac" fragment="getting-started-with-mac" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()">Getting
                                             Started with Mac</a></li>
-                                            <li><a routerLink="/enterprise-new" fragment="mac-startup-accelerator" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()">Mac
+                                            <li><a href="/enterprise-new#mac-startup-accelerator" fragment="mac-startup-accelerator" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()">Mac
                                                 Startup Accelerator</a></li>
-                                        <li><a routerLink="/enterprise-new" fragment="developer-powerhouse" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()"> Mac Developer's Powerhouse </a>
+                                        <li><a href="/enterprise-new#developer-powerhouse" fragment="developer-powerhouse" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()"> Mac Developer's Powerhouse </a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li class="dropdown-submenu">
-                                    <a routerLink="/enterprise-new" fragment="superior-packages" (click)="closeDropdownOnLinkClick()">Superior Solutions <span
+                                    <a href="/enterprise-new#superior-packages" fragment="superior-packages" (click)="closeDropdownOnLinkClick()">Superior Solutions <span
                                             class="arrow">&#9656;</span></a>
                                     <ul class="dropdown-menu right">
-                                        <li><a routerLink="/enterprise-new" fragment="superior-lite" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()">Superior Lite</a></li>
-                                        <li><a routerLink="/enterprise-new" fragment="superior-pro" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()">Superior Pro</a></li>
-                                        <li><a routerLink="/enterprise-new" fragment="superior-ultra" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()">Superior Ultra</a></li>
+                                        <li><a href="/enterprise-new#superior-lite">Superior Lite</a></li>
+                                        <li><a href="/enterprise-new#superior-pro">Superior Pro</a></li>
+                                        <li><a href="/enterprise-new#superior-ultra">Superior Ultra</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a routerLink="/superior-enterprise" [class.nav-link-highlight]="isBusinessSectionActive" (click)="closeDropdownOnLinkClick()">Business <span class="arrow">&#9662;</span></a>
+                            <a href="/superior-enterprise" [class.nav-link-highlight]="isBusinessSectionActive" (click)="closeDropdownOnLinkClick()">Business <span class="arrow">&#9662;</span></a>
                             <ul class="dropdown-menu">
-                                <li><a routerLink="/superior-enterprise" fragment="av-solutions-for-enterprises" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()">AV Solutions for
+                                <li><a href="/superior-enterprise#av-solutions-for-enterprises" fragment="av-solutions-for-enterprises" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()">AV Solutions for
                                     Business</a></li>
-                                    <li><a routerLink="/superior-enterprise" fragment="seamless-network-defense" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()">Seamless Network Defense</a>
+                                    <li><a href="/superior-enterprise#seamless-network-defense" fragment="seamless-network-defense" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()">Seamless Network Defense</a>
                                     </li>
-                                <li><a routerLink="/superior-enterprise" fragment="enterprise-computing-solutions" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()">Business Computing
+                                <li><a href="/superior-enterprise#enterprise-computing-solutions" fragment="enterprise-computing-solutions" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()">Business Computing
                                         Solutions</a></li>
-                                <li><a routerLink="/superior-enterprise" fragment="mobility-for-modern-enterprise" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()">Mobility for Modern
+                                <li><a href="/superior-enterprise#mobility-for-modern-enterprise" fragment="mobility-for-modern-enterprise" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()">Mobility for Modern
                                     Business</a></li>
-                                    <li><a routerLink="/landing-page" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()">Landing Page</a></li>
+                                    <li><a href="/landing-page" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()">Landing Page</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a routerLink="/case-studies" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()">Success Stories</a></li>
+                        <li class="nav-item"><a href="/case-studies">Success Stories</a></li>
+                        <li class="nav-item"><a href="/activity">Events</a></li>
+                        <li class="nav-item"><a href="/contact">Contact us</a></li>
+                        <li class="nav-item"><a href="#" style="color: #e23c36;">Superior Story</a></li>
+                      <!--   <li class="nav-item"><a routerLink="/case-studies" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()">Success Stories</a></li>
                         <li class="nav-item"><a routerLink="/activity" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()">Events</a></li>
                         <li class="nav-item"><a routerLink="/contact" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()">Contact us</a></li>
-                        <li class="nav-item"><a routerLink="/" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()">Superior Story</a></li>
+                        <li class="nav-item"><a routerLink="/" routerLinkActive="nav-link-highlight" (click)="closeDropdownOnLinkClick()">Superior Story</a></li> -->
                     </ul>
                     <div class="navbar-right">
                         <!-- style="background: linear-gradient(90deg, #e43a35, #ff7e5f, #feb47b, #e43a35); color: #fff; border-radius: 50px; padding: 8px 28px; font-weight: 600; font-size: 1rem; box-shadow: 0 4px 20px rgba(228, 58, 53, 0.15); transition: background-position 0.5s, transform 0.2s, box-shadow 0.2s; outline: none; border: none; display: inline-block; margin-left: 10px;" -->

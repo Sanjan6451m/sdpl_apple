@@ -39,6 +39,21 @@
   transform: translateX(-50%);
 }
 
+.hero-banner-overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0 20px;
+  pointer-events: none;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
 .hero-banner-text,
 .hero-banner-subtext,
 .hero-banner-subtext1,
@@ -68,11 +83,15 @@
 .hero-banner-subtext {
   top: 40%;
   transform: translateY(-50%);
-  font-size: 2.75rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 500;
   padding: 0;
   line-height: 1.15;
-  letter-spacing: -0.02em;
+  // letter-spacing: -0.02em;
+  background: linear-gradient(90deg, #ff44443d, #ff666694, #ff444485);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Powered by Apple – second tier, bold */

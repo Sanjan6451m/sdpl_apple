@@ -131,10 +131,10 @@ export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
   bannerImages = [
     {
       src: '../assets/images/landingPage/herovideo.mp4',
-      text: 'Enterprise',
-      subtext: 'Hardware Solutions.',
-      subtext1: 'Powered by apple.',
-      subtext2: 'Apple Business Partner delivering reliable enterprise solutions across India.',
+      text: 'Empower Your Workforce with Scalable Apple Solutions',
+      subtext: 'Empower Your Workforce with Scalable Apple Solutions',
+      subtext1: 'Empower Your Workforce with Scalable Apple Solutions',
+      subtext2: 'Empower Your Workforce with Scalable Apple Solutions',
       // btnText: 'Talk to an Apple Expert'
     },
     /* {

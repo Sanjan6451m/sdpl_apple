@@ -127,7 +127,7 @@ import { NewHomeComponent } from './new-home/new-home.component';
 // Products Pages
 
 const routes: Routes = [
-    {path: '', component: HomepageComponent},
+    {path: '', component: LandingPageComponent},
     {path: 'home-one', component: HomeOneComponent},
     {path: 'home-two', component: HomeTwoComponent},
     {path: 'home-three', component: HomeThreeComponent},

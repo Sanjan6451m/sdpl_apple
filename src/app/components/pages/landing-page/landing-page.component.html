@@ -2,11 +2,13 @@
     <div class="hero-banner-container">
         <!-- <button class="hero-arrow left-arrow" aria-label="Previous" (click)="showPrev()">&#8592;</button> -->
         <video *ngIf="currentBannerIsVideo" #heroVideo [src]="bannerImages[currentIndex].src" class="hero-banner-img" autoplay muted loop playsinline></video>
+        <!-- <div class="hero-banner-text">{{ bannerImages[currentIndex].text }}</div> -->
+        <!-- <p *ngIf="currentBannerIsVideo" class="hero-banner-overlay-text">Empower Your Workforce with Scalable Apple Solutions</p> -->
         <!-- <img *ngIf="!currentBannerIsVideo" [src]="bannerImages[currentIndex].src" alt="Banner" class="hero-banner-img" /> -->
-        <!-- <div class="hero-banner-text">{{ bannerImages[currentIndex].text }}</div>
+        <!-- <div class="hero-banner-text">{{ bannerImages[currentIndex].text }}</div> -->
         <div class="hero-banner-subtext">{{ bannerImages[currentIndex].subtext }}</div>
-        <div class="hero-banner-subtext1">{{ bannerImages[currentIndex].subtext1 }}</div> -->
-        <!-- <div class="hero-banner-subtext2">{{ bannerImages[currentIndex].subtext2 }}</div> -->
+        <!-- <div class="hero-banner-subtext1">{{ bannerImages[currentIndex].subtext1 }}</div>
+        <div class="hero-banner-subtext2">{{ bannerImages[currentIndex].subtext2 }}</div> -->
        <!--  <button class="hero-arrow right-arrow" aria-label="Next" (click)="showNext()">&#8594;</button>
         <div class="hero-banner-dots">
             <span *ngFor="let img of bannerImages; let i = index" class="dot" [class.active]="i === currentIndex"
@@ -25,7 +27,7 @@
             </p>
             <p>We focus on long-term reliability rather than one-time transactions.</p>
             <!-- <a href="#about-us" class="learn-btn">Learn More →</a> -->
-            <a href="#contact-us" class="learn-btn" (click)="navigateToContactSection($event)">Talk to Our Team →</a>
+            <a href="#contact-us" class="learn-btn" (click)="navigateToContactSection($event)">Get my free quote</a>
         </div>
         <!-- Right Content -->
         <div class="business-right">
@@ -205,7 +207,7 @@
             <img src="assets/images/landingPage/bs1.png" alt="">
             <h3>Enterprises and Corporate Teams</h3>
             <p>
-                Planned Apple rollouts across departments and locations with clear ownership and coordination.
+                Seamless Apple rollouts across departments and locations. Clear ownership bringing down hardware operating costs by 30%.
             </p>
         </div>
 
@@ -214,16 +216,16 @@
             <img src="assets/images/landingPage/bs2.png" alt="">
             <h3>Growing Businesses and Startups</h3>
             <p>
-                Structured Apple setup for teams with consistent configurations and predictable delivery.
+                Structured Apple device set up and a model that grows with you, eliminating huge upfront costs.
             </p>
         </div>
 
         <!-- Card 3 -->
         <div class="solution-card">
             <img src="assets/images/landingPage/bs3.png" alt="">
-            <h3>IT and Procurement Teams</h3>
+            <h3>Small and Medium Enterprises </h3>
             <p>
-                Clear recommendations, simplified coordination, and a single point of contact throughout the engagement.
+                Clear recommendations and a single point of contact for your device needs. Transparent offers based on company needs and size.
             </p>
         </div>
 
@@ -278,19 +280,19 @@
     <div class="why-box">
 
         <div class="why-item">
-            Apple Business Partner with enterprise focus
+            Apple Business Partner with special deals and early offers on latest hardware.
         </div>
 
         <div class="why-item">
-            Strong understanding of business IT environments
+            15+ years of IT deployment for businesses.
         </div>
 
         <div class="why-item">
-            Clear processes from planning to support
+            Clear and transparent processes from planning to after sales support
         </div>
 
         <div class="why-item">
-            Reliable execution and accountability
+            Dedicated account manager for execution and accountability
         </div>
 
         <div class="why-item">
@@ -314,17 +316,17 @@
 
         <div class="work-card">
             <img src="assets/images/landingPage/visionsolution2.png" alt="Step 2" />
-            <p>Recommend suitable Apple solutions</p>
+            <p>Recommend best suited and cost effective Apple solutions</p>
         </div>
 
         <div class="work-card">
             <img src="assets/images/landingPage/visionsolution3.png" alt="Step 3" />
-            <p>Coordinate deployment and setup</p>
+            <p>Complete support from deployment to setup</p>
         </div>
 
         <div class="work-card">
             <img src="assets/images/landingPage/visionsolution4.png" alt="Step 4" />
-            <p>Provide ongoing support</p>
+            <p>After sales support with dedicated point of contact</p>
         </div>
 
     </div>
@@ -332,7 +334,7 @@
 </section>
 <br>
 <section class="contact-section trusted-card" appScrollReveal id="contact-us">
-    <h2>Talk to Superior Digital</h2>
+    <h2>Book your free consultation</h2>
     <p>
         If your organisation is planning to adopt or expand Apple usage, our team can help you do it in a structured and reliable way.
     </p>

@@ -1,14 +1,7 @@
-<section class="hero-section" appScrollReveal>
+<section class="hero-section">
     <div class="hero-banner-container">
         <!-- <button class="hero-arrow left-arrow" aria-label="Previous" (click)="showPrev()">&#8592;</button> -->
-        <video *ngIf="currentBannerIsVideo" #heroVideo [src]="bannerImages[currentIndex].src" class="hero-banner-img" autoplay muted loop playsinline></video>
-        <!-- <div class="hero-banner-text">{{ bannerImages[currentIndex].text }}</div> -->
-        <!-- <p *ngIf="currentBannerIsVideo" class="hero-banner-overlay-text">Empower Your Workforce with Scalable Apple Solutions</p> -->
-        <!-- <img *ngIf="!currentBannerIsVideo" [src]="bannerImages[currentIndex].src" alt="Banner" class="hero-banner-img" /> -->
-        <!-- <div class="hero-banner-text">{{ bannerImages[currentIndex].text }}</div> -->
-        <div class="hero-banner-subtext">{{ bannerImages[currentIndex].subtext }}</div>
-        <!-- <div class="hero-banner-subtext1">{{ bannerImages[currentIndex].subtext1 }}</div>
-        <div class="hero-banner-subtext2">{{ bannerImages[currentIndex].subtext2 }}</div> -->
+        <video *ngIf="currentBannerIsVideo" #heroVideo [src]="bannerImages[currentIndex].src" class="hero-banner-img hero-banner-video" autoplay muted loop playsinline webkit-playsinline preload="auto" (loadeddata)="onVideoReady($event)" (canplay)="onVideoReady($event)"></video>
        <!--  <button class="hero-arrow right-arrow" aria-label="Next" (click)="showNext()">&#8594;</button>
         <div class="hero-banner-dots">
             <span *ngFor="let img of bannerImages; let i = index" class="dot" [class.active]="i === currentIndex"

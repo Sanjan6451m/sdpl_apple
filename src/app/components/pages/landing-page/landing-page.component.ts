@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, OnDestroy, OnInit, ViewChild, AfterViewInit, ChangeDetectorRef } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, ViewChild, AfterViewInit, ChangeDetectorRef, HostListener } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { OwlOptions, CarouselComponent } from 'ngx-owl-carousel-o';
@@ -19,6 +19,9 @@ import { ScrollRevealDirective } from '../../../directives/scroll-reveal.directi
 export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('gridCarousel') gridCarousel: CarouselComponent;
   @ViewChild('statsSection') statsSectionRef: ElementRef<HTMLElement>;
+  @ViewChild('heroVideo') heroVideoRef: ElementRef<HTMLVideoElement>;
+
+  private videoPlayAttempted = false;
 
   customOptions: OwlOptions = {
     loop: true,
@@ -385,5 +388,29 @@ export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
 
   closeContactDialog(): void {
     this.showContactDialog = false;
+  }
+
+  /** Ensures video plays on mobile where autoplay is often blocked. Call play() when ready. */
+  onVideoReady(event: Event): void {
+    const video = event?.target as HTMLVideoElement;
+    if (video && video.paused) {
+      video.muted = true; // Ensure muted for autoplay policies
+      video.play().catch(() => {
+        // Autoplay blocked - will retry on first user interaction
+      });
+    }
+  }
+
+  /** Retry video play on first user interaction (mobile often blocks autoplay until then). */
+  @HostListener('document:touchstart')
+  @HostListener('document:click')
+  onFirstUserInteraction(): void {
+    if (this.videoPlayAttempted || !this.currentBannerIsVideo) return;
+    const video = this.heroVideoRef?.nativeElement;
+    if (video && video.paused) {
+      this.videoPlayAttempted = true;
+      video.muted = true;
+      video.play().catch(() => {});
+    }
   }
 }

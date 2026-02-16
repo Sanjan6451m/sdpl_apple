@@ -133,7 +133,7 @@ export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
 
   bannerImages = [
     {
-      src: '../assets/images/landingPage/herovideo.mp4',
+      src: '../assets/images/landingPage/bannerVideo.mp4',
       text: 'Empower Your Workforce with Scalable Apple Solutions',
       subtext: 'Empower Your Workforce with Scalable Apple Solutions',
       subtext1: 'Empower Your Workforce with Scalable Apple Solutions',

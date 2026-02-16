@@ -813,13 +813,28 @@
 
 /* Grid */
 .work-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:22px;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  gap:12px 8px;
+}
+
+.work-arrow{
+  flex:0 0 auto;
+  color:#000;
+  font-size:24px;
+  line-height:1;
+  padding:0 4px;
+  align-self:center;
 }
 
 /* Card */
 .work-card{
+  flex:1 1 220px;
+  min-width:220px;
+  max-width:280px;
+  min-height: 280px;
   background:#fff;
   border:1px solid #eee;
   border-radius:12px;
@@ -859,6 +874,10 @@
 @media(max-width:768px){
   .how-work h2{
     font-size:26px;
+  }
+  .work-arrow{
+    transform:rotate(90deg);
+    padding:4px 0;
   }
 }
 

@@ -875,6 +875,14 @@
   .how-work h2{
     font-size:26px;
   }
+  .work-grid{
+    flex-direction: column;
+    align-items: center;
+  }
+  .work-card{
+    max-width: 100%;
+    width: 100%;
+  }
   .work-arrow{
     transform:rotate(90deg);
     padding:4px 0;
@@ -921,7 +929,7 @@
   background:#ffffff14;
   backdrop-filter:blur(10px);
   border-radius:16px;
-  padding:40px;
+  padding:20px;
   box-shadow:0 20px 40px rgba(0,0,0,0.12);
 }
 

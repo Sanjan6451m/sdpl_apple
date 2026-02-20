@@ -1106,7 +1106,7 @@
 
 /* Stat Item - card with frame background */
 .stat-item{
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 16px;
@@ -1163,8 +1163,8 @@
   }
 
   .stat-item {
-    min-height: 130px;
-    padding: 20px 16px;
+    min-height: 150px;
+    padding: 45px 16px;
   }
 
   .stat-item h3.stat-display {
@@ -1188,8 +1188,8 @@
   }
 
   .stat-item {
-    min-height: 120px;
-    padding: 18px 14px;
+    min-height: 150px;
+        padding: 45px 16px;
   }
 
   .stat-item .stat-label {
@@ -1223,18 +1223,20 @@
   }
 
   .stat-item {
-    min-height: 110px;
-    padding: 16px 12px;
+    min-height: 150px;
+    padding: 45px 16px;
     border-radius: 12px;
   }
 
   .stat-item .stat-label {
     font-size: 12px;
     margin-bottom: 6px;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
   }
 
   .stat-item h3.stat-display {
     font-size: 24px;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
   }
 
   .cta-btn {
@@ -1263,12 +1265,17 @@
   }
 
   .stat-item {
-    min-height: 100px;
-    padding: 14px 10px;
+    min-height: 150px;
+    padding: 45px 16px;
+  }
+
+  .stat-item .stat-label {
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
   }
 
   .stat-item h3.stat-display {
     font-size: 22px;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
   }
 
   .cta-btn {
@@ -1280,14 +1287,27 @@
 
 @media (max-width: 500px) {
   .stats-row {
-    grid-template-columns: 1fr;
-    gap: 12px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
     margin-bottom: 24px;
   }
 
   .stat-item {
-    min-height: 100px;
-    padding: 18px 16px;
+    min-height: 120px;
+    padding: 50px 10px;
+  }
+
+  .stat-item .stat-label {
+    font-size: 11px;
+    line-height: 1.3;
+    margin-bottom: 4px;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  }
+
+  .stat-item h3.stat-display {
+    font-size: 18px;
+    line-height: 1.2;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
   }
 }
 
@@ -1300,8 +1320,23 @@
     font-size: 20px;
   }
 
+  .stats-row {
+    gap: 8px;
+  }
+
+  .stat-item {
+    min-height: 110px;
+    padding: 50px 8px;
+  }
+
+  .stat-item .stat-label {
+    font-size: 10px;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  }
+
   .stat-item h3.stat-display {
-    font-size: 20px;
+    font-size: 16px;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
   }
 }
 

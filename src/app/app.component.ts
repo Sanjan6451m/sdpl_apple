@@ -36,8 +36,9 @@ export class AppComponent {
             if (!(event instanceof NavigationEnd)) {
                 return;
             }
-            // Hide header and footer for login page
-            this.showHeaderFooter = this.location !== '/login';
+            // Hide header and footer for login page and landing page
+            const noHeaderFooterRoutes = ['/login', '/', '/landing-page'];
+            this.showHeaderFooter = !noHeaderFooterRoutes.includes(this.location);
             window.scrollTo(0, 0);
         });
     }

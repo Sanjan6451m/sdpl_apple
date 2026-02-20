@@ -1,12 +1,27 @@
+<header class="landing-header">
+    <div class="landing-header-inner">
+        <a routerLink="/" class="landing-header-left">
+            <img src="assets/images/Minimal-Business-Logo-Reveal-f-unscreen.gif" alt="Superior Digital" class="landing-logo" />
+            <div class="landing-brand-text">
+                <img src="assets/images/text.png" alt="Superior Digital Text" class="landing-text-logo" style="border-radius: 0px !important;" />
+            </div>
+            <img src="assets/images/Apple_Biz_Partner_Logo_2ln_Blk_CI_050725.svg" alt="Apple Authorized Reseller" class="landing-apple-badge" />
+        </a>
+        <a href="https://superiorsystems.in/" target="_blank" rel="noopener noreferrer" class="landing-header-cta">
+            Superior Digital →
+        </a>
+    </div>
+</header>
 <section class="hero-section">
-    <div class="hero-banner-container">
-        <!-- <button class="hero-arrow left-arrow" aria-label="Previous" (click)="showPrev()">&#8592;</button> -->
+    <div class="hero-banner-container" (click)="scrollToSection('contact-us')">
+        <button class="hero-arrow left-arrow" aria-label="Previous" (click)="showPrev(); $event.stopPropagation()">&#8592;</button>
         <video *ngIf="currentBannerIsVideo" #heroVideo [src]="bannerImages[currentIndex].src" class="hero-banner-img hero-banner-video" autoplay muted loop playsinline webkit-playsinline preload="auto" (loadeddata)="onVideoReady($event)" (canplay)="onVideoReady($event)"></video>
-       <!--  <button class="hero-arrow right-arrow" aria-label="Next" (click)="showNext()">&#8594;</button>
-        <div class="hero-banner-dots">
+        <img *ngIf="!currentBannerIsVideo" [src]="bannerImages[currentIndex].src" class="hero-banner-img" alt="" />
+        <button class="hero-arrow right-arrow" aria-label="Next" (click)="showNext(); $event.stopPropagation()">&#8594;</button>
+        <div class="hero-banner-dots" (click)="$event.stopPropagation()">
             <span *ngFor="let img of bannerImages; let i = index" class="dot" [class.active]="i === currentIndex"
                 (click)="goToImage(i)"></span>
-        </div> -->
+        </div>
     </div>
 </section>
 <br>
@@ -146,9 +161,9 @@
         tailored, future-ready solutions powered by deep expertise."
     </p> -->
     <div class="stats-row">
-        <div class="stat-item" *ngFor="let stat of stats; let i = index">
+        <div class="stat-item" *ngFor="let stat of stats; let i = index" [style.backgroundImage]="'url(assets/images/landingPage/frame_' + (i + 1) + '.svg)'">
+            <p class="stat-label">{{ stat.label }}</p>
             <h3 class="stat-display">{{ getStatDisplay(i) }}</h3>
-            <p>{{ stat.label }}</p>
         </div>
     </div>
     <a href="#contact-us" (click)="navigateToContactSection($event)" class="cta-btn">
@@ -398,6 +413,38 @@
     </div>
 
 </section>
+
+<footer class="landing-footer">
+    <div class="landing-footer-inner">
+        <div class="landing-footer-left">
+            <a routerLink="/" class="landing-footer-logo">
+                <img src="assets/images/Minimal-Business-Logo-Reveal-f-unscreen.gif" alt="Superior Digital" class="landing-logo" />
+                <div class="landing-brand-text">
+                    <img src="assets/images/text.png" alt="Superior Digital Text" class="landing-text-logo" style="border-radius: 0px !important;" />
+                </div>  
+            </a>
+            <p class="landing-footer-desc">Superior Digital Private Limited is your trusted Apple Authorised Reseller. Receive expert advice on Apple products and accessories.</p>
+            <div class="landing-footer-social">
+                <a href="https://x.com/superior_digi" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class='bx bxl-twitter'></i></a>
+                <a href="https://wa.me/918023116047" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://www.linkedin.com/company/superior-digital-pvt-ltd/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://www.facebook.com/superiorsystems.in/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/superior_digital/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+            </div>
+        </div>
+        <div class="landing-footer-right">
+            <h3 class="landing-footer-contact-title">Contact</h3>
+            <div class="landing-footer-contact">
+                <a href="tel:+918023116047"><i class='bx bx-phone'></i> +91 802311 6047</a>
+                <a href="mailto:enquiry@superiorsystems.in"><i class='bx bxs-envelope'></i> enquiry&#64;superiorsystems.in</a>
+                <span><i class='bx bxs-map'></i> No. 111, Ground Floor, 6th Main, MC Layout, MRCR Extn., Vijayanagar, Bangalore – 560040</span>
+            </div>
+        </div>
+    </div>
+    <div class="landing-footer-copy">
+        <p>Superior Digital Private Limited. © 2025. All Right Reserved. Designed By <a href="https://softcons.com/" target="_blank" rel="noopener noreferrer">Softcons</a></p>
+    </div>
+</footer>
 
 <section>
     

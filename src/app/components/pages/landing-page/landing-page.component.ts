@@ -133,40 +133,46 @@ export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
 
   bannerImages = [
     {
-      src: '../assets/images/landingPage/bannerVideo.mp4',
-      text: 'Empower Your Workforce with Scalable Apple Solutions',
-      subtext: 'Empower Your Workforce with Scalable Apple Solutions',
-      subtext1: 'Empower Your Workforce with Scalable Apple Solutions',
-      subtext2: 'Empower Your Workforce with Scalable Apple Solutions',
+      src: '../assets/images/landingPage/banner1.png',
+      // text: 'Empower Your Workforce with Scalable Apple Solutions',
+      // subtext: 'Empower Your Workforce with Scalable Apple Solutions',
+      // subtext1: 'Empower Your Workforce with Scalable Apple Solutions',
+      // subtext2: 'Empower Your Workforce with Scalable Apple Solutions',
       // btnText: 'Talk to an Apple Expert'
     },
-    /* {
-      src: '../assets/images/landingPage/herovideo.mp4',
-      text: 'Enterprise',
+    {
+      src: '../assets/images/landingPage/banner2.png',
+      /* text: 'Enterprise',
       subtext: 'Hardware Solutions.',
       subtext1: 'Powered by apple.',
-      subtext2: 'Apple Business Partner delivering reliable enterprise solutions across India.',
+      subtext2: 'Apple Business Partner delivering reliable enterprise solutions across India.', */
       // btnText: 'Start Your Upgrade'
     },
     {
-      src: '../assets/images/landingPage/herovideo.mp4',
-      text: 'Enterprise',
+      src: '../assets/images/landingPage/banner3.png',
+     /*  text: 'Enterprise',
       subtext: 'Hardware Solutions.',
       subtext1: 'Powered by apple.',
-      subtext2: 'Apple Business Partner delivering reliable enterprise solutions across India.',
+      subtext2: 'Apple Business Partner delivering reliable enterprise solutions across India.', */
       // btnText: 'Request Your Free POC'
-    } */
+    },
+    {
+      src: '../assets/images/landingPage/banner4.png',
+    },
+    {
+      src: '../assets/images/landingPage/banner5.png',
+    }
   ];
   currentIndex = 0;
   private intervalId: any;
 
-  // Stats count-up on scroll: target value, suffix (e.g. '+', 'K+', ' States'), label
+  // Stats count-up on scroll: target value, suffix (e.g. '+', 'K+'), label
   stats = [
-    { target: 10, suffix: '+', label: 'years of experience in IT solutions' },
-    { target: 500, suffix: '+', label: 'enterprise customers' },
-    { target: 100000, suffix: '+', label: 'devices deployed' },
-    { target: 40, suffix: '+', label: 'technology partners' },
-    { target: '', suffix: '', label: 'Pan India service capability' }
+    { target: 10, suffix: '', label: 'Years of Excellence' },
+    { target: 500, suffix: '+', label: 'Enterprise Customers' },
+    { target: 40, suffix: '+', label: 'Technology Partners' },
+    { target: 100, suffix: 'K+', label: 'Devices Deployed' },
+    { target: 16, suffix: '', label: 'Pan-India Covered States' }
   ];
   statDisplayValues: number[] = [0, 0, 0, 0, 0];
   private statsSectionInView = false;
@@ -328,8 +334,8 @@ export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
   getStatDisplay(index: number): string {
     const stat = this.stats[index];
     const target = stat?.target;
-    if (target === undefined || target === null || target === '') {
-      return ''; // e.g. last stat: "Pan India service capability" – no number
+    if (target == null) {
+      return '';
     }
     const value = this.statDisplayValues[index] ?? 0;
     const suffix = stat?.suffix ?? '';

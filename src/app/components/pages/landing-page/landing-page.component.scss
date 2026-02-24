@@ -531,6 +531,24 @@
   position: relative;
 }
 
+// Web view: visible on desktop, hidden on mobile
+.hero-section-web {
+  display: block;
+  @media (max-width: 768px) {
+    display: none !important;
+  }
+}
+
+// Mobile view: hidden on desktop, visible on mobile
+.hero-section-mobile {
+  display: none;
+  @media (max-width: 768px) {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .hero-banner-container {
   position: relative;
   width: 100vw;

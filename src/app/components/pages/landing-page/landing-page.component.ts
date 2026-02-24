@@ -131,6 +131,16 @@ export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
   currentTab: string = 'tab3';
   mbAirUrl: SafeResourceUrl;
 
+  mobileBannerImages = [
+    { src: 'assets/images/landingPage/mobile_banner1.png' },
+    { src: 'assets/images/landingPage/mobilebanner2.png' },
+    { src: 'assets/images/landingPage/mobilebanner3.png' },
+    { src: 'assets/images/landingPage/mobilebanner4.png' },
+    { src: 'assets/images/landingPage/mobilebanner5.png' }
+  ];
+  mobileCurrentIndex = 0;
+  private mobileIntervalId: any;
+
   bannerImages = [
     {
       src: '../assets/images/landingPage/banner1.png',
@@ -261,6 +271,7 @@ export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit(): void {
     this.startAutoLoop();
+    this.startMobileAutoLoop();
     // Handle both initial navigation and subsequent fragment changes
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
@@ -292,6 +303,7 @@ export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.clearAutoLoop();
+    this.clearMobileAutoLoop();
     this.statsObserver?.disconnect();
   }
 
@@ -369,6 +381,35 @@ export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
   goToImage(idx: number) {
     this.currentIndex = idx;
     this.startAutoLoop();
+  }
+
+  startMobileAutoLoop() {
+    this.clearMobileAutoLoop();
+    this.mobileIntervalId = setInterval(() => {
+      this.showNextMobile();
+    }, 5000);
+  }
+
+  clearMobileAutoLoop() {
+    if (this.mobileIntervalId) {
+      clearInterval(this.mobileIntervalId);
+      this.mobileIntervalId = null;
+    }
+  }
+
+  showPrevMobile() {
+    this.mobileCurrentIndex = (this.mobileCurrentIndex - 1 + this.mobileBannerImages.length) % this.mobileBannerImages.length;
+    this.startMobileAutoLoop();
+  }
+
+  showNextMobile() {
+    this.mobileCurrentIndex = (this.mobileCurrentIndex + 1) % this.mobileBannerImages.length;
+    this.startMobileAutoLoop();
+  }
+
+  goToMobileImage(idx: number) {
+    this.mobileCurrentIndex = idx;
+    this.startMobileAutoLoop();
   }
 
   get imageCount() {

@@ -12,7 +12,8 @@
         </a>
     </div>
 </header>
-<section class="hero-section">
+<!-- Web view hero section -->
+<section class="hero-section hero-section-web">
     <div class="hero-banner-container" (click)="scrollToSection('contact-us')">
         <button class="hero-arrow left-arrow" aria-label="Previous" (click)="showPrev(); $event.stopPropagation()">&#8592;</button>
         <video *ngIf="currentBannerIsVideo" #heroVideo [src]="bannerImages[currentIndex].src" class="hero-banner-img hero-banner-video" autoplay muted loop playsinline webkit-playsinline preload="auto" (loadeddata)="onVideoReady($event)" (canplay)="onVideoReady($event)"></video>
@@ -21,6 +22,18 @@
         <div class="hero-banner-dots" (click)="$event.stopPropagation()">
             <span *ngFor="let img of bannerImages; let i = index" class="dot" [class.active]="i === currentIndex"
                 (click)="goToImage(i)"></span>
+        </div>
+    </div>
+</section>
+<!-- Mobile view hero section -->
+<section class="hero-section hero-section-mobile">
+    <div class="hero-banner-container" (click)="scrollToSection('contact-us')">
+        <button class="hero-arrow left-arrow" aria-label="Previous" (click)="showPrevMobile(); $event.stopPropagation()">&#8592;</button>
+        <img [src]="mobileBannerImages[mobileCurrentIndex].src" class="hero-banner-img" alt="" />
+        <button class="hero-arrow right-arrow" aria-label="Next" (click)="showNextMobile(); $event.stopPropagation()">&#8594;</button>
+        <div class="hero-banner-dots" (click)="$event.stopPropagation()">
+            <span *ngFor="let img of mobileBannerImages; let i = index" class="dot" [class.active]="i === mobileCurrentIndex"
+                (click)="goToMobileImage(i)"></span>
         </div>
     </div>
 </section>

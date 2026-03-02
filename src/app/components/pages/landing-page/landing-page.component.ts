@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, OnDestroy, OnInit, ViewChild, AfterViewInit, ChangeDetectorRef, HostListener } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import emailjs from '@emailjs/browser';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { OwlOptions, CarouselComponent } from 'ngx-owl-carousel-o';
 import { Router, RouterModule, NavigationEnd, ActivatedRoute } from '@angular/router';
@@ -190,6 +191,7 @@ export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
 
   contactForm: FormGroup;
   showContactDialog = false;
+  message = '';
 
   private disallowedEmailDomains = ['gmail.com', 'googlemail.com', 'yahoo.com', 'yahoo.co.in', 'yahoo.co.uk', 'outlook.com', 'hotmail.com', 'hotmail.co.uk', 'live.com', 'msn.com'];
 
@@ -209,6 +211,7 @@ export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
     private cdr: ChangeDetectorRef,
     private fb: FormBuilder
   ) {
+    emailjs.init('PTmfxUAnOlAZlyhRB');
     this.mbAirUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
       'assets/embedded/MBA/mba_air.html'
     );
@@ -428,8 +431,27 @@ export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
   onContactSubmit(): void {
     this.contactForm.markAllAsTouched();
     if (this.contactForm.valid) {
-      this.showContactDialog = true;
-      this.contactForm.reset();
+      this.message = 'Sending message...';
+      emailjs.send('service_kuiothp', 'template_g8fkwgh', {
+        to_name: 'SDPL',
+        from_name: this.contactForm.value.name,
+        company: this.contactForm.value.company,
+        device: this.contactForm.value.company,
+        email: this.contactForm.value.email,
+        phone: this.contactForm.value.phone,
+        message: this.contactForm.value.message,
+        reply_to: this.contactForm.value.email
+      })
+        .then((response) => {
+          this.message = 'Message sent successfully!';
+          this.contactForm.reset();
+          this.router.navigate(['/thank-you']);
+        }, (error) => {
+          this.message = 'Error sending message. Please try again later.';
+          console.error('FAILED...', error);
+        });
+    } else {
+      this.message = 'Please fill in all required fields correctly.';
     }
   }
 

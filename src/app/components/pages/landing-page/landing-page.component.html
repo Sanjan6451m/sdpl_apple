@@ -44,9 +44,9 @@
         <div class="business-left">
             <h2>Apple Solutions for<br>Business Use</h2>
             <p>
-                Superior Digital is an Apple Business Partner supporting organisations across India with Apple solutions for professional and enterprise environments. We help businesses plan, deploy, and support Apple devices as part of their overall IT setup.
+                Superior Digital is an Apple Business Partner enabling organisations across India to adopt Apple solutions for professional and enterprise environments. We work closely with businesses to plan, deploy, and support Apple devices as a seamless part of their larger IT ecosystem.
             </p>
-            <p>We focus on long-term reliability rather than one-time transactions.</p>
+            <p>We believe in building partnerships that last. Our focus is not on one-time deals, but on delivering consistent performance, dependable support, and long-term value that organisations can rely on year after year.</p>
             <!-- <a href="#about-us" class="learn-btn">Learn More →</a> -->
             <a href="#contact-us" class="learn-btn" (click)="navigateToContactSection($event)">Get my free quote</a>
         </div>
@@ -61,7 +61,7 @@
     <h2>Trusted by Leading Organisations Across India</h2>
 
     <p class="trusted-subtitle">
-        Superior Digital has been delivering IT and Apple solutions for over a decade, working
+        Superior Digital has been Delivering IT end to end solutions for over a decade, working
         with organisations across technology, healthcare, finance, manufacturing, and
         professional services.
     </p>
@@ -161,7 +161,7 @@
                 </div>
             </div>
         </div>
-    <div class="trusted-more">&amp; many more.</div>
+        <div class="trusted-more">&amp; many more.</div>
     </div>
 </section>
 
@@ -279,7 +279,7 @@
         </div>
 
         <div class="industry-card">
-            <p>M&E firms and Creative agencies</p>
+            <p>Media & Entertainment and Creative Agencies</p>
             <img src="assets/images/landingPage/Windows 10 Personalization.png" alt="" />
         </div>
 
@@ -299,23 +299,23 @@
     <div class="why-box">
 
         <div class="why-item">
-            Apple Business Partner with special deals and early offers on latest hardware.
+            Early access. Better pricing. Smart bundles. Real value.
         </div>
 
         <div class="why-item">
-            15+ years of IT deployment for businesses.
+            10+ years of experience delivering IT deployment solutions for businesses.
         </div>
 
         <div class="why-item">
-            Clear and transparent processes from planning to after sales support
+            Clear and transparent processes from initial planning through to after-sales support.
         </div>
 
         <div class="why-item">
-            Dedicated account manager for execution and accountability
+            Dedicated account manager ensuring seamless execution and full accountability
         </div>
 
         <div class="why-item">
-            Pan-India delivery and service coverage
+            Pan-India delivery and service coverage with an integrated device tracking portal.
         </div>
 
     </div>
@@ -412,6 +412,8 @@
                 <span class="form-error" *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
                     Message is required (min 10 characters).
                 </span>
+
+                <span class="form-status" *ngIf="message">{{ message }}</span>
 
                 <button type="submit">
                     Request Call Back →

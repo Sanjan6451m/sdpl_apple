@@ -1056,18 +1056,19 @@
   flex-wrap:nowrap;
   gap:15px;
   width:max-content;
-  animation:logo-scroll 25s linear infinite;
+  animation:logo-scroll 9s linear infinite;
+  
+  // backface-visibility:hidden;
+}
+
+@keyframes logo-scroll{
+  0%{ transform:translate3d(0, 0, 0); }
+  100%{ transform:translate3d(-50%, 0, 0); }
 }
 
 .logo-grid.logo-track:hover{
   animation-play-state:paused;
 }
-
-@keyframes logo-scroll{
-  0%{ transform:translateX(0); }
-  100%{ transform:translateX(-50%); }
-}
-
 /* Individual Card - fixed size for row */
 .logo-card{
   flex-shrink:0;
@@ -2654,6 +2655,13 @@
   color: #e23c36;
   font-size: 12px;
   margin-top: -8px;
+  margin-bottom: 4px;
+}
+
+.contact-form-card .form-status {
+  display: block;
+  font-size: 13px;
+  margin-top: 4px;
   margin-bottom: 4px;
 }
 

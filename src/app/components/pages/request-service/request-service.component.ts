@@ -43,6 +43,7 @@ export class RequestServiceComponent implements OnInit {
       this.message = 'Sending message...';
       
       emailjs.send("service_kuiothp", "template_xa36knk", {
+          to_email: "superiordigital4@gmail.com",
           to_name: "SDPL",
           from_name: this.contactForm.value.name,
           email: this.contactForm.value.email,

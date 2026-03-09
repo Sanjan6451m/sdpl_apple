@@ -204,6 +204,10 @@ export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
     return isDisallowed ? { disallowedEmailDomain: true } : null;
   };
 
+  private readonly EMAILJS_PUBLIC_KEY = 'PTmfxUAnOlAZlyhRB';
+  private readonly EMAILJS_SERVICE_ID = 'service_kuiothp';
+  private readonly EMAILJS_TEMPLATE_ID = 'template_g8fkwgh';
+
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -211,7 +215,6 @@ export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
     private cdr: ChangeDetectorRef,
     private fb: FormBuilder
   ) {
-    emailjs.init('PTmfxUAnOlAZlyhRB');
     this.mbAirUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
       'assets/embedded/MBA/mba_air.html'
     );
@@ -273,6 +276,7 @@ export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    emailjs.init(this.EMAILJS_PUBLIC_KEY);
     this.startAutoLoop();
     this.startMobileAutoLoop();
     // Handle both initial navigation and subsequent fragment changes
@@ -432,7 +436,10 @@ export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
     this.contactForm.markAllAsTouched();
     if (this.contactForm.valid) {
       this.message = 'Sending message...';
-      emailjs.send('service_kuiothp', 'template_g8fkwgh', {
+      this.cdr.detectChanges();
+
+      const templateParams = {
+        to_email: 'superiordigital4@gmail.com',
         to_name: 'SDPL',
         from_name: this.contactForm.value.name,
         company: this.contactForm.value.company,
@@ -441,17 +448,36 @@ export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
         phone: this.contactForm.value.phone,
         message: this.contactForm.value.message,
         reply_to: this.contactForm.value.email
-      })
-        .then((response) => {
-          this.message = 'Message sent successfully!';
-          this.contactForm.reset();
-          this.router.navigate(['/thank-you']);
-        }, (error) => {
+      };
+
+      emailjs
+        .send(
+          this.EMAILJS_SERVICE_ID,
+          this.EMAILJS_TEMPLATE_ID,
+          templateParams,
+          { publicKey: this.EMAILJS_PUBLIC_KEY }
+        )
+        .then(
+          (response) => {
+            this.message = 'Message sent successfully!';
+            this.contactForm.reset();
+            this.cdr.detectChanges();
+            this.router.navigate(['/thank-you']);
+          },
+          (error) => {
+            this.message = 'Error sending message. Please try again later.';
+            console.error('EmailJS failed:', error?.status, error?.text ?? error);
+            this.cdr.detectChanges();
+          }
+        )
+        .catch((err) => {
           this.message = 'Error sending message. Please try again later.';
-          console.error('FAILED...', error);
+          console.error('EmailJS error:', err);
+          this.cdr.detectChanges();
         });
     } else {
       this.message = 'Please fill in all required fields correctly.';
+      this.cdr.detectChanges();
     }
   }
 
